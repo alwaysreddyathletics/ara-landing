@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legal | Always Reddy Athletics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a0a;--charcoal:#111;--iron:#1a1a1a;--gold:#c8a96e;--white:#f4f2ef;--silver:#b8b8b8;--muted:#888;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:'Barlow',sans-serif;font-weight:400;line-height:1.7;}
+
+nav{background:var(--charcoal);border-bottom:1px solid rgba(200,169,110,.1);padding:18px 48px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;letter-spacing:.15em;text-transform:uppercase;color:var(--white);text-decoration:none;}
+.nav-logo span{color:var(--gold);}
+.nav-back{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;}
+
+.tab-bar{background:var(--iron);border-bottom:1px solid rgba(255,255,255,.06);padding:0 48px;display:flex;gap:0;}
+.tab{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:18px 28px;cursor:pointer;border-bottom:2px solid transparent;text-decoration:none;transition:all .2s;}
+.tab:hover{color:var(--silver);}
+.tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+
+.content{max-width:800px;margin:0 auto;padding:64px 48px;}
+.doc{display:none;}
+.doc.active{display:block;}
+
+.doc-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.8rem;text-transform:uppercase;letter-spacing:-.01em;color:var(--white);margin-bottom:8px;line-height:1;}
+.doc-title em{font-style:normal;color:var(--gold);}
+.doc-date{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:48px;display:block;}
+
+h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;text-transform:uppercase;letter-spacing:.08em;color:var(--white);margin-top:40px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(200,169,110,.15);}
+p{font-size:.95rem;color:var(--silver);line-height:1.8;margin-bottom:16px;}
+p strong{color:var(--white);}
+ul{list-style:none;margin-bottom:16px;display:flex;flex-direction:column;gap:10px;}
+ul li{font-size:.95rem;color:var(--silver);line-height:1.6;padding-left:20px;position:relative;}
+ul li::before{content:'—';position:absolute;left:0;color:var(--gold);}
+a{color:var(--gold);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+.highlight-box{background:var(--iron);border-left:3px solid var(--gold);padding:20px 24px;margin:24px 0;}
+.highlight-box p{margin:0;font-size:.9rem;}
+
+footer{background:var(--charcoal);border-top:1px solid rgba(255,255,255,.05);padding:32px 48px;text-align:center;}
+footer p{font-size:.78rem;color:var(--muted);}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://alwaysreddyathletics.github.io/ara-landing/" class="nav-logo">Always <span>Reddy</span> Athletics</a>
+  <a href="https://alwaysreddyathletics.github.io/ara-landing/" class="nav-back">← Back to Main Page</a>
+</nav>
+
+<div class="tab-bar">
+  <a class="tab active" onclick="showDoc('privacy', this)">Privacy Policy</a>
+  <a class="tab" onclick="showDoc('terms', this)">Terms & Conditions</a>
+  <a class="tab" onclick="showDoc('disclaimer', this)">Disclaimer</a>
+</div>
+
+<div class="content">
+
+  <!-- PRIVACY POLICY -->
+  <div class="doc active" id="privacy">
+    <div class="doc-title">Privacy <em>Policy</em></div>
+    <span class="doc-date">Effective Date: April 19, 2026 · Last Updated: April 19, 2026</span>
+
+    <div class="highlight-box">
+      <p>Always Reddy Athletics is operated by Tyler Reddy as a sole proprietorship based in Pennsylvania. We take your privacy seriously. This policy explains what information we collect, how we use it, and your rights regarding that information.</p>
+    </div>
+
+    <h3>1. Information We Collect</h3>
+    <p>We collect information you voluntarily provide when you:</p>
+    <ul>
+      <li>Submit a coaching application through our Google Form</li>
+      <li>Schedule a discovery call through Calendly</li>
+      <li>Contact us directly via email or social media</li>
+      <li>Make a payment through Stripe</li>
+    </ul>
+    <p>This information may include your name, email address, phone number, athletic background, fitness goals, health information, and payment details. We do not store payment information directly — all payments are processed securely through Stripe.</p>
+
+    <h3>2. How We Use Your Information</h3>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li>Review and respond to coaching applications</li>
+      <li>Deliver the coaching services you have enrolled in</li>
+      <li>Communicate with you about your program, progress, and scheduling</li>
+      <li>Send relevant updates, resources, or offers related to Always Reddy Athletics (you may opt out at any time)</li>
+      <li>Improve our programs and services</li>
+    </ul>
+    <p>We do <strong>not</strong> sell, rent, or share your personal information with third parties for their marketing purposes.</p>
+
+    <h3>3. Third-Party Services</h3>
+    <p>We use the following third-party platforms to operate our business. Each has its own privacy policy:</p>
+    <ul>
+      <li><strong>Google Forms</strong> — for coaching applications (policies.google.com/privacy)</li>
+      <li><strong>Calendly</strong> — for scheduling discovery calls (calendly.com/privacy)</li>
+      <li><strong>Stripe</strong> — for payment processing (stripe.com/privacy)</li>
+      <li><strong>Skool</strong> — for community access (skool.com/privacy)</li>
+    </ul>
+
+    <h3>4. Data Retention</h3>
+    <p>We retain your personal information for as long as necessary to deliver our services and comply with legal obligations. If you would like your data deleted, please contact us at <a href="mailto:alwaysreddyathletics@gmail.com">alwaysreddyathletics@gmail.com</a> and we will respond within 30 days.</p>
+
+    <h3>5. Cookies</h3>
+    <p>Our landing page does not use cookies directly. Third-party services embedded in or linked from our page (such as Google Forms and Calendly) may set their own cookies subject to their respective privacy policies.</p>
+
+    <h3>6. Children's Privacy</h3>
+    <p>Our services are intended for adults aged 18 and older. We do not knowingly collect personal information from anyone under 18. If you believe a minor has submitted information to us, please contact us immediately.</p>
+
+    <h3>7. Your Rights</h3>
+    <p>You have the right to access, correct, or request deletion of any personal information we hold about you. To exercise these rights, contact us at <a href="mailto:alwaysreddyathletics@gmail.com">alwaysreddyathletics@gmail.com</a>.</p>
+
+    <h3>8. Changes to This Policy</h3>
+    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. Continued use of our services after changes constitutes your acceptance of the updated policy.</p>
+
+    <h3>9. Contact</h3>
+    <p>For any privacy-related questions, contact:<br>
+    <strong>Tyler Reddy</strong><br>
+    Always Reddy Athletics<br>
+    Pennsylvania, United States<br>
+    <a href="mailto:alwaysreddyathletics@gmail.com">alwaysreddyathletics@gmail.com</a></p>
+  </div>
+
+  <!-- TERMS & CONDITIONS -->
+  <div class="doc" id="terms">
+    <div class="doc-title">Terms & <em>Conditions</em></div>
+    <span class="doc-date">Effective Date: April 19, 2026 · Last Updated: April 19, 2026</span>
+
+    <div class="highlight-box">
+      <p>By applying for, enrolling in, or purchasing any program or service offered by Always Reddy Athletics, you agree to be bound by these Terms & Conditions. Please read them carefully before proceeding.</p>
+    </div>
+
+    <h3>1. About Always Reddy Athletics</h3>
+    <p>Always Reddy Athletics is operated by Tyler Reddy as a sole proprietorship in the Commonwealth of Pennsylvania. We offer online athletic coaching, training programs, and community membership services.</p>
+
+    <h3>2. Eligibility</h3>
+    <p>You must be at least 18 years of age to purchase or enroll in any Always Reddy Athletics program. By enrolling, you confirm that you are 18 or older and legally capable of entering into a binding agreement.</p>
+
+    <h3>3. The Athletic Rebuild Program</h3>
+    <p>The Athletic Rebuild is a 12-week 1-on-1 online coaching program. Enrollment requires:</p>
+    <ul>
+      <li>Completion of a coaching application and approval by Coach Tyler Reddy</li>
+      <li>A minimum 3-month financial commitment at $397 per month</li>
+      <li>Active participation including weekly coaching calls and consistent communication</li>
+    </ul>
+    <p>Always Reddy Athletics reserves the right to decline any application at its sole discretion.</p>
+
+    <h3>4. Payment Terms</h3>
+    <p>Payment is processed monthly via Stripe. By enrolling, you authorize Always Reddy Athletics to charge your payment method $397 on a monthly basis for the duration of your commitment period. You are responsible for ensuring your payment method remains valid.</p>
+    <p>Failure to make payment may result in suspension or termination of your coaching services without refund of amounts already paid.</p>
+
+    <h3>5. Refund Policy</h3>
+    <p>Due to the custom, time-intensive nature of 1-on-1 coaching, <strong>all sales are generally final.</strong> However, refund requests submitted within 7 days of your initial payment date will be reviewed on a case-by-case basis at the sole discretion of Tyler Reddy.</p>
+    <p>After 7 days, no refunds will be issued for any reason, including but not limited to: lack of results, schedule conflicts, change of mind, or failure to participate in the program. Cancellation of future monthly payments is available with 30 days written notice after the initial 3-month commitment period is complete.</p>
+
+    <h3>6. Client Responsibilities</h3>
+    <p>To get the most from the program and to hold up your end of the agreement, you agree to:</p>
+    <ul>
+      <li>Attend scheduled weekly coaching calls or provide advance notice of cancellation</li>
+      <li>Complete your training sessions as programmed to the best of your ability</li>
+      <li>Communicate honestly with your coach about your progress, limitations, and concerns</li>
+      <li>Consult a licensed physician before beginning any new exercise program</li>
+    </ul>
+
+    <h3>7. Health & Medical Disclaimer</h3>
+    <p>Participation in any exercise program involves inherent risk of injury. You voluntarily assume all risks associated with your participation in the Always Reddy Athletics program. You represent that you are in adequate physical health to participate in an athletic training program and that you have consulted or will consult a physician before beginning.</p>
+    <p>Tyler Reddy and Always Reddy Athletics are not licensed medical professionals. Nothing in our program constitutes medical advice, diagnosis, or treatment.</p>
+
+    <h3>8. Results Disclaimer</h3>
+    <p>Individual results will vary based on factors including but not limited to: starting fitness level, consistency of effort, adherence to programming, nutrition, sleep, and genetics. Always Reddy Athletics makes no guarantee of specific outcomes.</p>
+
+    <h3>9. Intellectual Property</h3>
+    <p>All training programs, materials, content, and resources provided by Always Reddy Athletics are the intellectual property of Tyler Reddy. You may not reproduce, distribute, resell, or share this content with any third party without express written consent.</p>
+
+    <h3>10. Termination</h3>
+    <p>Always Reddy Athletics reserves the right to terminate a client's enrollment at any time for conduct deemed harmful, disrespectful, or contrary to the values of the program. In such cases, remaining monthly payments will be canceled but no refunds will be issued for amounts already paid.</p>
+
+    <h3>11. Limitation of Liability</h3>
+    <p>To the maximum extent permitted by Pennsylvania law, Always Reddy Athletics and Tyler Reddy shall not be liable for any indirect, incidental, special, or consequential damages arising from your participation in any program or use of our services. Our total liability shall not exceed the amount paid by you in the 30 days preceding any claim.</p>
+
+    <h3>12. Governing Law</h3>
+    <p>These Terms & Conditions shall be governed by and construed in accordance with the laws of the Commonwealth of Pennsylvania. Any disputes shall be resolved in the courts of Pennsylvania.</p>
+
+    <h3>13. Changes to These Terms</h3>
+    <p>We reserve the right to update these Terms & Conditions at any time. Continued use of our services after changes constitutes acceptance of the updated terms.</p>
+
+    <h3>14. Contact</h3>
+    <p>For any questions regarding these Terms & Conditions:<br>
+    <strong>Tyler Reddy</strong><br>
+    Always Reddy Athletics · Pennsylvania, United States<br>
+    <a href="mailto:alwaysreddyathletics@gmail.com">alwaysreddyathletics@gmail.com</a></p>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="doc" id="disclaimer">
+    <div class="doc-title">Health & Earnings <em>Disclaimer</em></div>
+    <span class="doc-date">Effective Date: April 19, 2026 · Last Updated: April 19, 2026</span>
+
+    <div class="highlight-box">
+      <p>Please read this disclaimer carefully before enrolling in any Always Reddy Athletics program or relying on any information provided through our website, social media, or coaching services.</p>
+    </div>
+
+    <h3>1. Not Medical Advice</h3>
+    <p>Tyler Reddy and Always Reddy Athletics are <strong>not licensed physicians, physical therapists, registered dietitians, or medical professionals of any kind.</strong> Nothing communicated through our website, coaching sessions, training plans, nutrition guidance, or any other medium constitutes medical advice, diagnosis, or treatment.</p>
+    <p>Always consult a qualified physician or healthcare provider before beginning any new exercise or nutrition program, particularly if you have any pre-existing medical conditions, injuries, or health concerns. If you experience pain, discomfort, dizziness, or any adverse symptoms during exercise, stop immediately and seek medical attention.</p>
+
+    <h3>2. Assumption of Risk</h3>
+    <p>Physical exercise involves inherent risk of injury, including serious injury or death. By participating in the Always Reddy Athletics program, you voluntarily and knowingly assume all such risks. You agree that Tyler Reddy and Always Reddy Athletics are not responsible or liable for any injury, loss, or damage of any kind arising from your participation in our programs.</p>
+
+    <h3>3. Individual Results Vary</h3>
+    <p>Any results — including but not limited to improvements in strength, body composition, endurance, athletic performance, or overall fitness — mentioned on our website, in testimonials, or in any marketing materials are not typical and are not guaranteed.</p>
+    <p>Results depend on many individual factors including but not limited to:</p>
+    <ul>
+      <li>Starting fitness level and athletic background</li>
+      <li>Consistency and effort applied to the program</li>
+      <li>Nutrition, sleep, stress levels, and recovery habits</li>
+      <li>Genetics and individual physiology</li>
+      <li>Adherence to coaching recommendations</li>
+    </ul>
+    <p>Testimonials shown on our website reflect the real experiences of individual clients but are not guarantees that you will achieve the same or similar results.</p>
+
+    <h3>4. Nutrition Information</h3>
+    <p>Any nutritional guidance provided as part of the Always Reddy Athletics program is general in nature and is not intended to replace personalized advice from a registered dietitian or nutritionist. We do not provide medical nutrition therapy or dietary treatment for any health condition.</p>
+
+    <h3>5. No Professional-Client Relationship</h3>
+    <p>Viewing our website, reading our content, or following us on social media does not establish a coach-client relationship. A formal coaching relationship only begins upon execution of a coaching agreement and receipt of payment.</p>
+
+    <h3>6. External Links</h3>
+    <p>Our website may contain links to third-party websites or services. Always Reddy Athletics is not responsible for the content, accuracy, or privacy practices of any third-party sites. Links do not constitute endorsement.</p>
+
+    <h3>7. Contact</h3>
+    <p>Questions about this disclaimer can be directed to:<br>
+    <strong>Tyler Reddy</strong><br>
+    Always Reddy Athletics · Pennsylvania, United States<br>
+    <a href="mailto:alwaysreddyathletics@gmail.com">alwaysreddyathletics@gmail.com</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Always Reddy Athletics · Tyler Reddy · Pennsylvania, United States · <a href="mailto:alwaysreddyathletics@gmail.com">alwaysreddyathletics@gmail.com</a></p>
+</footer>
+
+<script>
+function showDoc(id, tab) {
+  document.querySelectorAll('.doc').forEach(d => d.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  tab.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
