@@ -106,55 +106,24 @@
   </div>
 
   <script>
-    async function handleSubmit() {
-      const email = document.getElementById('email-input').value.trim();
-      const btn = document.getElementById('submit-btn');
-      const errorMsg = document.getElementById('error-msg');
+<script>
+  function handleSubmit() {
+    const email = document.getElementById('email-input').value.trim();
+    const errorMsg = document.getElementById('error-msg');
 
-      if (!email || !email.includes('@')) {
-        errorMsg.style.display = 'block';
-        errorMsg.textContent = 'Please enter a valid email address.';
-        return;
-      }
-
-      btn.disabled = true;
-      btn.textContent = 'Sending...';
-      errorMsg.style.display = 'none';
-
-      try {
-        const res = await fetch('https://api.beehiiv.com/v2/publications/pub_e7463d8d-691c-4337-b54e-c54776158fa1/subscriptions', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            email: email,
-            reactivate_existing: false,
-            send_welcome_email: true,
-            utm_source: 'website',
-            utm_medium: 'organic',
-            utm_campaign: 'training-guide'
-          })
-        });
-
-        if (res.ok || res.status === 201) {
-          document.getElementById('form-wrap').style.display = 'none';
-          document.querySelector('.note').style.display = 'none';
-          document.getElementById('success-box').style.display = 'block';
-        } else {
-          throw new Error('API error');
-        }
-      } catch(e) {
-        btn.disabled = false;
-        btn.textContent = 'Send It →';
-        errorMsg.style.display = 'block';
-        errorMsg.textContent = 'Something went wrong. Please try again.';
-      }
+    if (!email || !email.includes('@')) {
+      errorMsg.style.display = 'block';
+      errorMsg.textContent = 'Please enter a valid email address.';
+      return;
     }
 
-    document.getElementById('email-input').addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') handleSubmit();
-    });
+    window.location.href = 'https://alwaysreddyathletics.beehiiv.com/subscribe?email=' + encodeURIComponent(email);
+  }
+
+  document.getElementById('email-input').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') handleSubmit();
+  });
+</script>
   </script>
 </body>
 </html>
