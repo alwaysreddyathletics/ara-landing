@@ -408,10 +408,10 @@
       <div class="section-label" style="text-align:center">Not ready to apply?</div>
       <h3>Get the Free <em>ARA Training Guide</em></h3>
       <p>The exact framework Coach Tyler uses to rebuild athletes from the ground up. Free. No strings attached.</p>
-      <form class="email-form" action="https://alwaysreddyathletics.beehiiv.com/subscribe" method="POST" target="_blank">
-        <input type="email" name="email" class="email-input" placeholder="Your email address" required>
-        <button type="submit" class="btn-primary">Send It →</button>
-      </form>
+      <form class="email-form" onsubmit="window.open('https://alwaysreddyathletics.beehiiv.com/subscribe?email='+encodeURIComponent(this.email.value),'_blank');return false;">
+  <input type="email" name="email" class="email-input" placeholder="Your email address" required>
+  <button type="submit" class="btn-primary">Send It →</button>
+</form>
       <div class="email-note">No spam. Unsubscribe anytime. We send training content worth reading.</div>
     </div>
   </div>
