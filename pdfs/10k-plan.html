@@ -6,319 +6,266 @@
   <title>8-Week 10K Training Plan | Always Reddy Athletics</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root { --black:#0a0a0a; --white:#f4f2ef; --muted:#888; --accent:#c8a96e; }
-    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
-    body { font-family:'Barlow',sans-serif; background:var(--black); color:var(--white); font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased; }
-    h1,h2,h3,h4 { font-family:'Barlow Condensed',sans-serif; }
-    em { font-style:normal; color:var(--accent); }
-    .page { max-width:900px; margin:0 auto; padding:40px 32px; }
-    .print-bar { background:var(--accent); color:var(--black); padding:12px 24px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100; }
-    .print-bar p { font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; }
-    .print-btn { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; background:var(--black); color:var(--white); border:none; padding:8px 20px; cursor:pointer; }
-    .print-btn:hover { background:#222; }
-    .doc-header { background:#111; border-bottom:2px solid var(--accent); padding:40px 32px; }
-    .doc-header .ara-label { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--muted); margin-bottom:12px; }
-    .doc-header h1 { font-size:clamp(2.4rem,5vw,3.8rem); font-weight:900; line-height:1.05; margin-bottom:6px; }
-    .doc-header .tagline { font-family:'Barlow Condensed',sans-serif; font-size:1.1rem; font-weight:600; color:var(--accent); letter-spacing:0.06em; text-transform:uppercase; }
-    .stats-bar { display:flex; border-bottom:1px solid rgba(255,255,255,0.07); }
-    .stat { flex:1; padding:20px 24px; border-right:1px solid rgba(255,255,255,0.07); background:#0d0d0d; }
-    .stat:last-child { border-right:none; }
-    .stat-num { font-family:'Barlow Condensed',sans-serif; font-size:2rem; font-weight:900; color:var(--accent); line-height:1; }
-    .stat-label { font-size:0.65rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; margin-top:5px; line-height:1.3; }
-    .doc-section { padding:36px 32px; border-bottom:1px solid rgba(255,255,255,0.06); }
-    .doc-section:last-child { border-bottom:none; }
-    .section-title { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:14px; }
-    .who-list { list-style:none; }
-    .who-list li { padding:10px 0; border-bottom:0.5px solid rgba(255,255,255,0.06); font-size:0.92rem; color:rgba(244,242,239,0.75); display:flex; gap:12px; align-items:flex-start; }
-    .who-list li::before { content:'—'; color:var(--accent); flex-shrink:0; margin-top:2px; font-weight:700; }
-    .phases { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(255,255,255,0.06); }
-    .phase { background:#0d0d0d; padding:24px; }
-    .phase-label { font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); margin-bottom:6px; }
-    .phase-title { font-family:'Barlow Condensed',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
-    .phase-desc { font-size:0.85rem; color:rgba(244,242,239,0.65); line-height:1.55; }
-    .week-wrap { margin-bottom:28px; }
-    .week-header { background:rgba(200,169,110,0.12); padding:10px 12px; font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); }
-    table { width:100%; border-collapse:collapse; font-size:0.85rem; }
-    th { font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:9px 10px; background:#0d0d0d; color:var(--muted); border:0.5px solid rgba(255,255,255,0.07); text-align:center; }
-    td { padding:9px 10px; border:0.5px solid rgba(255,255,255,0.07); color:rgba(244,242,239,0.75); text-align:center; vertical-align:middle; line-height:1.45; }
-    .td-race { color:var(--accent); font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.88rem; }
-    .td-rest { color:var(--muted); font-size:0.8rem; font-style:italic; }
-    .td-key { color:var(--white); font-weight:500; }
-    .td-deload { color:rgba(200,169,110,0.5); font-size:0.82rem; }
-    .session-legend { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:16px; }
-    .legend-item { background:#111; border:0.5px solid rgba(255,255,255,0.07); padding:16px; }
-    .legend-item h4 { font-family:'Barlow Condensed',sans-serif; font-size:0.9rem; font-weight:700; color:var(--accent); margin-bottom:6px; }
-    .legend-item p { font-size:0.82rem; color:rgba(244,242,239,0.6); line-height:1.5; }
-    .coach-note { background:rgba(200,169,110,0.05); border-top:2px solid var(--accent); padding:36px 32px; }
-    .coach-note .note-label { font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
-    .coach-note h3 { font-family:'Barlow Condensed',sans-serif; font-size:1.8rem; font-weight:900; margin-bottom:14px; }
-    .coach-note p { font-size:0.92rem; color:rgba(244,242,239,0.75); line-height:1.75; margin-bottom:12px; }
-    .coach-note p:last-child { margin-bottom:0; font-size:0.8rem; color:var(--muted); }
-    .doc-footer { background:var(--accent); color:var(--black); padding:14px 32px; display:flex; justify-content:space-between; align-items:center; font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; }
-    @media print {
-      .print-bar { display:none; }
-      body { background:var(--black); }
-      .page { padding:0; max-width:100%; }
-    }
-    @media(max-width:600px) {
-      .stats-bar,.phases,.session-legend { flex-direction:column; }
-      .stat { border-right:none; border-bottom:1px solid rgba(255,255,255,0.07); }
-      .phases { grid-template-columns:1fr; }
-      .session-legend { grid-template-columns:1fr; }
-      .doc-footer { flex-direction:column; gap:4px; text-align:center; }
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background-color: #0a0a0a; color: #f4f2ef; font-family: 'Barlow', sans-serif; font-size: 14px; line-height: 1.6; }
+    .print-bar { position: sticky; top: 0; z-index: 100; background-color: #c8a96e; color: #0a0a0a; padding: 10px 32px; display: flex; align-items: center; justify-content: space-between; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .print-bar .hint { font-weight: 400; font-size: 11px; opacity: 0.75; text-transform: none; letter-spacing: 0; }
+    .print-btn { background-color: #0a0a0a; color: #f4f2ef; border: none; padding: 8px 20px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; }
+    .page { max-width: 960px; margin: 0 auto; padding: 60px 72px; }
+    .ara-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #c8a96e; margin-bottom: 20px; }
+    h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 80px; line-height: 0.95; color: #f4f2ef; margin-bottom: 4px; }
+    h1 .gold { color: #c8a96e; display: block; }
+    .tagline { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: #c8a96e; margin: 16px 0 20px; }
+    .desc { font-size: 14px; color: #f4f2ef; line-height: 1.75; max-width: 720px; }
+    .rule { height: 1px; background-color: #c8a96e; margin: 28px 0; }
+    .stats { display: flex; border: 1px solid #2a2a2a; margin: 32px 0; }
+    .stat { flex: 1; padding: 24px 16px; border-right: 1px solid #2a2a2a; text-align: center; }
+    .stat:last-child { border-right: none; }
+    .stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 56px; font-weight: 900; color: #c8a96e; line-height: 1; }
+    .stat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #f4f2ef; margin-top: 8px; }
+    .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #c8a96e; margin-bottom: 12px; }
+    .section-headline { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 800; color: #f4f2ef; margin-bottom: 8px; line-height: 1.05; }
+    .section-underline { width: 40px; height: 3px; background-color: #c8a96e; margin-bottom: 20px; }
+    .who-item { margin-bottom: 16px; }
+    .who-item .who-key { color: #c8a96e; font-weight: 700; }
+    .who-item p { color: #f4f2ef; font-size: 14px; line-height: 1.65; padding-left: 20px; }
+    .phase-row { border-bottom: 1px solid #1e1e1e; padding: 18px 0; }
+    .phase-row:last-child { border-bottom: none; }
+    .phase-wk { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #c8a96e; margin-bottom: 4px; }
+    .phase-title { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 800; color: #f4f2ef; margin-bottom: 4px; }
+    .phase-desc { font-size: 13px; color: #c8c6c2; line-height: 1.6; }
+    .calendar-header { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #c8a96e; margin-bottom: 4px; }
+    .cal-day-headers { display: grid; grid-template-columns: repeat(7, 1fr); border: 1px solid #2a2a2a; border-bottom: none; }
+    .cal-day-headers div { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #c8a96e; text-align: center; padding: 10px 4px; border-right: 1px solid #2a2a2a; }
+    .cal-day-headers div:last-child { border-right: none; }
+    .week-block { margin-bottom: 36px; }
+    .week-title-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 0 6px; }
+    .week-num { font-family: 'Barlow Condensed', sans-serif; font-size: 32px; font-weight: 900; color: #c8a96e; line-height: 1; }
+    .phase-badge { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 5px 14px; }
+    .badge-base    { background-color: #1a2e1a; color: #c8a96e; }
+    .badge-build   { background-color: #1a2e1a; color: #c8a96e; }
+    .badge-peak    { background-color: #2e2400; color: #c8a96e; }
+    .badge-deload  { background-color: #1e1e1e; color: #888888; }
+    .badge-interval { background-color: #1a1f2e; color: #c8a96e; }
+    .badge-taper   { background-color: #0d1a2e; color: #c8a96e; }
+    .badge-race    { background-color: #c8a96e; color: #0a0a0a; }
+    .cal-row { display: grid; grid-template-columns: repeat(7, 1fr); border: 1px solid #2a2a2a; border-top: none; }
+    .cal-cell { padding: 12px 10px; border-right: 1px solid #2a2a2a; min-height: 80px; }
+    .cal-cell:last-child { border-right: none; }
+    .cal-cell .day-name { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; color: #f4f2ef; margin-bottom: 4px; }
+    .cal-cell .day-desc { font-size: 12px; color: #c8c6c2; line-height: 1.5; }
+    .cal-cell .day-miles { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; color: #f4f2ef; }
+    .cal-cell.rest .day-desc { color: #555555; font-style: italic; }
+    .cal-cell.race-day { background-color: #1e1600; }
+    .cal-cell.race-day .day-desc { color: #c8a96e; font-weight: 600; }
+    .cal-cell.tempo { background-color: #0f1a0f; }
+    .cal-cell.interval { background-color: #0f0f1a; }
+    .cal-cell.xt { background-color: #121212; }
+    .guide-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    .guide-table th { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 10px 14px; background-color: #141414; color: #c8a96e; border: 1px solid #2a2a2a; text-align: left; }
+    .guide-table td { padding: 12px 14px; border: 1px solid #2a2a2a; color: #f4f2ef; font-size: 13px; line-height: 1.55; vertical-align: top; }
+    .guide-table td:first-child { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; color: #c8a96e; white-space: nowrap; }
+    .coach-section { margin-top: 48px; padding-top: 40px; border-top: 1px solid #2a2a2a; }
+    .coach-headline { font-family: 'Barlow Condensed', sans-serif; font-size: 48px; font-weight: 900; color: #f4f2ef; line-height: 1.05; margin-bottom: 8px; }
+    .coach-body { font-size: 14px; color: #f4f2ef; line-height: 1.8; max-width: 720px; }
+    .coach-body p { margin-bottom: 16px; }
+    .cta-bar { background-color: #c8a96e; color: #0a0a0a; text-align: center; padding: 18px 32px; font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 32px; }
+    .doc-footer { text-align: center; font-size: 11px; color: #555555; margin-top: 20px; padding-top: 16px; border-top: 1px solid #1e1e1e; }
+    @media print { .print-bar { display: none; } body { background-color: #0a0a0a; } .page { padding: 40px 60px; } .week-block { page-break-inside: avoid; } }
   </style>
 </head>
 <body>
 
 <div class="print-bar">
-  <p>8-Week 10K Training Plan — Always Reddy Athletics</p>
-  <button class="print-btn" onclick="window.print()">Save as PDF ↓</button>
+  <span>8-Week 10K Training Plan — Always Reddy Athletics</span>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <span class="hint">In print dialog → More settings → enable "Background graphics"</span>
+    <button class="print-btn" onclick="window.print()">Save as PDF ↓</button>
+  </div>
 </div>
 
 <div class="page">
 
-  <div class="doc-header">
-    <div class="ara-label">Always Reddy Athletics · Training Plan</div>
-    <h1>8-Week 10K<br><em>Training Plan</em></h1>
-    <div class="tagline">Step It Up.</div>
-  </div>
+  <div class="ara-label">Always Reddy Athletics · Training Plan</div>
+  <h1>8-Week 10K<br><span class="gold">Training Plan</span></h1>
+  <div class="tagline">Step It Up.</div>
+  <p class="desc">An 8-week plan built for runners who have a base and want to race a 10K properly. Four runs per week. Tempo work, interval sessions, and a long run that peaks at 7 miles before a full taper. This is the plan that teaches you how to actually race 6.2 miles.</p>
+  <div class="rule"></div>
 
-  <div class="stats-bar">
-    <div class="stat"><div class="stat-num">8</div><div class="stat-label">Weeks</div></div>
-    <div class="stat"><div class="stat-num">4</div><div class="stat-label">Runs per Week</div></div>
-    <div class="stat"><div class="stat-num">45–60</div><div class="stat-label">Min per Session</div></div>
+  <div class="stats">
+    <div class="stat"><div class="stat-num">8</div><div class="stat-label">Week Program</div></div>
+    <div class="stat"><div class="stat-num">4</div><div class="stat-label">Runs Per Week</div></div>
+    <div class="stat"><div class="stat-num">45–60</div><div class="stat-label">Min Per Session</div></div>
     <div class="stat"><div class="stat-num">10K</div><div class="stat-label">Goal: PR Ready</div></div>
   </div>
 
-  <div class="doc-section">
-    <div class="section-title">Who This Is For</div>
-    <ul class="who-list">
-      <li><strong style="color:var(--white)">Experience required:</strong> You've run a 5K before or have been training consistently for at least 4 weeks</li>
-      <li><strong style="color:var(--white)">Time commitment:</strong> 4 sessions per week, 45–60 minutes each</li>
-      <li><strong style="color:var(--white)">Equipment:</strong> Running shoes and GPS watch (recommended) or phone with running app</li>
-      <li><strong style="color:var(--white)">Progression:</strong> Base building → Tempo development → Interval work → Peak week → Taper</li>
-    </ul>
+  <div class="section-label">Who This Is For</div>
+  <div class="section-headline">You've run a 5K. Now race a 10K.</div>
+  <div class="section-underline"></div>
+  <p class="desc" style="margin-bottom:24px;">This plan assumes you can run 3 miles comfortably before starting. If you've completed the 6-Week 5K plan or have been running consistently for at least a month, you're ready for this.</p>
+
+  <div class="who-item">
+    <p><span class="who-key">— Experience required</span><br>You've run a 5K or have been running 3–4 times per week for at least 4 weeks.</p>
+  </div>
+  <div class="who-item">
+    <p><span class="who-key">— Time commitment</span><br>4 runs per week, 45–60 minutes each. Long run peaks at 7 miles in Week 7.</p>
+  </div>
+  <div class="who-item">
+    <p><span class="who-key">— Pace guidance</span><br>Easy = conversational. Tempo = comfortably hard. Intervals = your best current 5K race effort.</p>
+  </div>
+  <div class="who-item">
+    <p><span class="who-key">— The only rule</span><br>Start slower than you think on race day. Athletes who go out controlled always pass athletes who went out hot.</p>
   </div>
 
-  <div class="doc-section" style="padding:0;">
-    <div style="padding:36px 32px 24px;"><div class="section-title">The Structure</div></div>
-    <div class="phases">
-      <div class="phase">
-        <div class="phase-label">Weeks 1–2</div>
-        <div class="phase-title">Base Building</div>
-        <p class="phase-desc">Four easy runs per week with a long run on Friday. The goal is aerobic base, not performance. Easy pace throughout. Cross-training on Saturday is optional — walking, cycling, swimming.</p>
-      </div>
-      <div class="phase">
-        <div class="phase-label">Weeks 3–4</div>
-        <div class="phase-title">Tempo Development</div>
-        <p class="phase-desc">Tempo runs introduced Wednesday. Week 4 is a deload — reduced volume to allow adaptation. Don't skip the deload because you feel good. It's there for a reason.</p>
-      </div>
-      <div class="phase">
-        <div class="phase-label">Weeks 5–6</div>
-        <div class="phase-title">Interval Work</div>
-        <p class="phase-desc">Interval sessions replace Wednesday's tempo. 800m repeats at 5K pace. Long run increases to 5.5 miles. This is the hardest phase — the fitness you build here shows up on race day.</p>
-      </div>
-      <div class="phase">
-        <div class="phase-label">Week 7</div>
-        <div class="phase-title">Peak Week</div>
-        <p class="phase-desc">Your highest-volume week. Longest tempo run (5 miles total) and peak long run at 7 miles. Do the work, then trust the taper.</p>
-      </div>
-      <div class="phase">
-        <div class="phase-label">Week 8</div>
-        <div class="phase-title">Taper + Race</div>
-        <p class="phase-desc">Volume drops hard. Three short, easy runs leading to race day. Your legs are ready. Your job is to show up fresh and execute your pacing strategy.</p>
-      </div>
-      <div class="phase" style="background:#0d0d0d;">
-        <div class="phase-label" style="color:var(--muted);">The Rule</div>
-        <div class="phase-title" style="color:var(--accent);">Start Slower. Finish Stronger.</div>
-        <p class="phase-desc">In every race, in every tempo session. The athlete who goes out controlled always passes the athlete who went out hot.</p>
-      </div>
-    </div>
+  <div class="rule"></div>
+
+  <div class="section-label">The Structure</div>
+  <div class="section-headline">PRs Don't Happen by Accident.</div>
+  <div class="section-underline"></div>
+
+  <div class="phase-row"><div class="phase-wk">Weeks 1–2</div><div class="phase-title">Base Building</div><p class="phase-desc">Four easy runs per week. Long run builds from 3 to 4 miles. Aerobic base only — no intensity yet. Optional cross-training on Saturday.</p></div>
+  <div class="phase-row"><div class="phase-wk">Weeks 3–4</div><div class="phase-title">Tempo Development</div><p class="phase-desc">Tempo sessions introduced Wednesday. Week 4 is a deload — reduced volume to let your body absorb the work. Don't skip the deload.</p></div>
+  <div class="phase-row"><div class="phase-wk">Weeks 5–6</div><div class="phase-title">Interval Work</div><p class="phase-desc">800m interval sessions replace Wednesday tempo. Long run increases to 5.5 miles. This phase builds the gear you'll use to race.</p></div>
+  <div class="phase-row"><div class="phase-wk">Week 7</div><div class="phase-title">Peak Week</div><p class="phase-desc">Highest volume week. Longest tempo run (5 miles total) and peak long run at 7 miles. Do the work, then trust the taper.</p></div>
+  <div class="phase-row"><div class="phase-wk">Week 8</div><div class="phase-title">Taper + Race Week</div><p class="phase-desc">Volume drops hard. Three short easy runs. Your legs are ready — your job now is to show up fresh and execute the race.</p></div>
+
+  <div class="rule"></div>
+
+  <div class="calendar-header">The Plan · Always Reddy Athletics</div>
+  <div class="cal-day-headers">
+    <div>MON</div><div>TUE</div><div>WED</div><div>THU</div><div>FRI</div><div>SAT</div><div>SUN</div>
   </div>
 
-  <div class="doc-section">
-    <div class="section-title">Full Training Schedule</div>
-
-    <div class="week-wrap">
-      <div class="week-header">Week 1 — Base Building</div>
-      <table>
-        <thead><tr><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th><th>SUN</th></tr></thead>
-        <tbody><tr>
-          <td class="td-key">Easy Run<br>2 mi</td>
-          <td class="td-rest">Rest</td>
-          <td class="td-key">Easy Run<br>2 mi</td>
-          <td class="td-rest">Rest</td>
-          <td class="td-key">Long Run<br>3 mi easy</td>
-          <td class="td-deload">XT or Rest</td>
-          <td class="td-rest">Rest</td>
-        </tr></tbody>
-      </table>
-    </div>
-
-    <div class="week-wrap">
-      <div class="week-header">Week 2 — Base Building</div>
-      <table>
-        <thead><tr><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th><th>SUN</th></tr></thead>
-        <tbody><tr>
-          <td class="td-key">Easy Run<br>2.5 mi</td>
-          <td class="td-rest">Rest</td>
-          <td class="td-key">Easy Run<br>2.5 mi</td>
-          <td class="td-rest">Rest</td>
-          <td class="td-key">Long Run<br>4 mi easy</td>
-          <td class="td-deload">XT or Rest</td>
-          <td class="td-rest">Rest</td>
-        </tr></tbody>
-      </table>
-    </div>
-
-    <div class="week-wrap">
-      <div class="week-header">Week 3 — Tempo Development</div>
-      <table>
-        <thead><tr><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th><th>SUN</th></tr></thead>
-        <tbody><tr>
-          <td class="td-key">Easy Run<br>2.5 mi</td>
-          <td class="td-rest">Rest</td>
-          <td>Tempo Run<br><span style="color:var(--accent);font-size:0.8rem;">1E + 1T + 1E</span><br><span style="font-size:0.75rem;color:var(--muted)">3 mi total</span></td>
-          <td class="td-rest">Rest</td>
-          <td class="td-key">Long Run<br>4 mi easy</td>
-          <td class="td-deload">XT or Rest</td>
-          <td class="td-rest">Rest</td>
-        </tr></tbody>
-      </table>
-    </div>
-
-    <div class="week-wrap">
-      <div class="week-header">Week 4 — Deload Week</div>
-      <table>
-        <thead><tr><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th><th>SUN</th></tr></thead>
-        <tbody><tr>
-          <td class="td-deload">Easy Run<br>2 mi</td>
-          <td class="td-rest">Rest</td>
-          <td class="td-deload">Easy Run<br>2 mi</td>
-          <td class="td-rest">Rest</td>
-          <td class="td-deload">Easy Run<br>3 mi</td>
-          <td class="td-rest">Rest</td>
-          <td class="td-rest">Rest</td>
-        </tr></tbody>
-      </table>
-    </div>
-
-    <div class="week-wrap">
-      <div class="week-header">Week 5 — Interval Work</div>
-      <table>
-        <thead><tr><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th><th>SUN</th></tr></thead>
-        <tbody><tr>
-          <td class="td-key">Easy Run<br>3 mi</td>
-          <td class="td-rest">Rest</td>
-          <td>Tempo Run<br><span style="color:var(--accent);font-size:0.8rem;">1E + 2T + 1E</span><br><span style="font-size:0.75rem;color:var(--muted)">4 mi total</span></td>
-          <td class="td-rest">Rest</td>
-          <td class="td-key">Long Run<br>5 mi easy</td>
-          <td class="td-deload">XT or Rest</td>
-          <td class="td-rest">Rest</td>
-        </tr></tbody>
-      </table>
-    </div>
-
-    <div class="week-wrap">
-      <div class="week-header">Week 6 — Interval Work</div>
-      <table>
-        <thead><tr><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th><th>SUN</th></tr></thead>
-        <tbody><tr>
-          <td class="td-key">Easy Run<br>3 mi</td>
-          <td class="td-rest">Rest</td>
-          <td>Intervals<br><span style="color:var(--accent);font-size:0.8rem;">4 × 800m @ 5K pace</span><br><span style="font-size:0.75rem;color:var(--muted)">90 sec rest between</span></td>
-          <td class="td-rest">Rest</td>
-          <td class="td-key">Long Run<br>5.5 mi easy</td>
-          <td class="td-deload">XT or Rest</td>
-          <td class="td-rest">Rest</td>
-        </tr></tbody>
-      </table>
-    </div>
-
-    <div class="week-wrap">
-      <div class="week-header">Week 7 — Peak Week</div>
-      <table>
-        <thead><tr><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th><th>SUN</th></tr></thead>
-        <tbody><tr>
-          <td class="td-key">Easy Run<br>3 mi</td>
-          <td class="td-rest">Rest</td>
-          <td>Tempo Run<br><span style="color:var(--accent);font-size:0.8rem;">1E + 3T + 1E</span><br><span style="font-size:0.75rem;color:var(--muted)">5 mi total</span></td>
-          <td class="td-rest">Rest</td>
-          <td class="td-key">Long Run<br>7 mi easy</td>
-          <td class="td-rest">Rest</td>
-          <td class="td-rest">Rest</td>
-        </tr></tbody>
-      </table>
-    </div>
-
-    <div class="week-wrap">
-      <div class="week-header">Week 8 — Taper + Race Week</div>
-      <table>
-        <thead><tr><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th><th>SUN</th></tr></thead>
-        <tbody><tr>
-          <td class="td-key">Easy Run<br>2.5 mi</td>
-          <td class="td-rest">Rest</td>
-          <td class="td-key">Easy Run<br>2 mi</td>
-          <td class="td-rest">Rest</td>
-          <td>Shakeout<br><span style="font-size:0.8rem;">1.5 mi + 4 strides</span></td>
-          <td class="td-race">RACE DAY</td>
-          <td class="td-rest">Rest + Recover</td>
-        </tr></tbody>
-      </table>
-    </div>
-
-    <p style="font-size:0.8rem;color:var(--muted);margin-top:8px;font-style:italic;">E = Easy pace · T = Tempo pace (comfortably hard) · XT = Cross-train (bike, swim, walk) · All distances in miles</p>
-  </div>
-
-  <div class="doc-section">
-    <div class="section-title">Session Key</div>
-    <div class="session-legend">
-      <div class="legend-item">
-        <h4>Easy Run</h4>
-        <p>Conversational pace. Full sentences. You could hold this for hours. Most of your weekly miles are here.</p>
-      </div>
-      <div class="legend-item">
-        <h4>Tempo Run</h4>
-        <p>Comfortably hard. 3–4 words per breath. Hold race effort for the tempo segment, not the warm-up or cool-down.</p>
-      </div>
-      <div class="legend-item">
-        <h4>Intervals (800m)</h4>
-        <p>800 meters = half a mile. Run each repeat at your best current 5K race pace. Full 90 seconds rest between each.</p>
-      </div>
+  <div class="week-block">
+    <div class="week-title-row"><div class="week-num">Week 1</div><div class="phase-badge badge-base">Base Building</div></div>
+    <div class="cal-row">
+      <div class="cal-cell"><div class="day-name">MON</div><div class="day-desc">Easy Run</div><div class="day-miles">2 miles</div></div>
+      <div class="cal-cell rest"><div class="day-name">TUE</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell"><div class="day-name">WED</div><div class="day-desc">Easy Run</div><div class="day-miles">2 miles</div></div>
+      <div class="cal-cell rest"><div class="day-name">THU</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell"><div class="day-name">FRI</div><div class="day-desc">Long Run</div><div class="day-miles">3 miles easy</div></div>
+      <div class="cal-cell xt"><div class="day-name">SAT</div><div class="day-desc">Cross-Train or Rest</div></div>
+      <div class="cal-cell rest"><div class="day-name">SUN</div><div class="day-desc">Rest</div></div>
     </div>
   </div>
 
-  <div class="doc-section">
-    <div class="section-title">Universal Warm-Up (Every Run)</div>
-    <table>
-      <thead><tr><th style="text-align:left;">Exercise</th><th>Duration / Reps</th></tr></thead>
-      <tbody>
-        <tr><td>Leg swings (front/back + lateral)</td><td>10 each leg, each direction</td></tr>
-        <tr><td>Hip circles</td><td>10 each direction</td></tr>
-        <tr><td>High knees</td><td>30 seconds</td></tr>
-        <tr><td>Butt kicks</td><td>30 seconds</td></tr>
-        <tr><td>A-skips</td><td>2 × 20m</td></tr>
-        <tr><td>Easy jog</td><td>5 minutes</td></tr>
-      </tbody>
-    </table>
+  <div class="week-block">
+    <div class="week-title-row"><div class="week-num">Week 2</div><div class="phase-badge badge-base">Base Building</div></div>
+    <div class="cal-row">
+      <div class="cal-cell"><div class="day-name">MON</div><div class="day-desc">Easy Run</div><div class="day-miles">2.5 miles</div></div>
+      <div class="cal-cell rest"><div class="day-name">TUE</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell"><div class="day-name">WED</div><div class="day-desc">Easy Run</div><div class="day-miles">2.5 miles</div></div>
+      <div class="cal-cell rest"><div class="day-name">THU</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell"><div class="day-name">FRI</div><div class="day-desc">Long Run</div><div class="day-miles">4 miles easy</div></div>
+      <div class="cal-cell xt"><div class="day-name">SAT</div><div class="day-desc">Cross-Train or Rest</div></div>
+      <div class="cal-cell rest"><div class="day-name">SUN</div><div class="day-desc">Rest</div></div>
+    </div>
   </div>
 
-  <div class="coach-note">
-    <div class="note-label">A Note from Coach Tyler</div>
-    <h3>PRs Don't Happen <em>By Accident.</em></h3>
-    <p>Eight weeks of deliberate, progressive work — built with a deload so your body adapts, an interval block so your legs find a gear they forgot they had, and a peak week that will feel hard until you hit race day and realize why you did it.</p>
-    <p>The athletes who nail the 10K are almost always the ones who respected the easy days. Run your easy runs easy so your hard runs can be hard. That's the whole game. Every session in this plan has a purpose. Don't improvise.</p>
-    <p>See you on the other side of week 8.</p>
-    <p>— Coach Tyler Reddy · Always Reddy Athletics</p>
+  <div class="week-block">
+    <div class="week-title-row"><div class="week-num">Week 3</div><div class="phase-badge badge-build">Tempo Development</div></div>
+    <div class="cal-row">
+      <div class="cal-cell"><div class="day-name">MON</div><div class="day-desc">Easy Run</div><div class="day-miles">2.5 miles</div></div>
+      <div class="cal-cell rest"><div class="day-name">TUE</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell tempo"><div class="day-name">WED</div><div class="day-desc">Tempo Run<br>1 mi easy + 1 mi tempo + 1 mi easy</div><div class="day-miles">3 miles</div></div>
+      <div class="cal-cell rest"><div class="day-name">THU</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell"><div class="day-name">FRI</div><div class="day-desc">Long Run</div><div class="day-miles">4 miles easy</div></div>
+      <div class="cal-cell xt"><div class="day-name">SAT</div><div class="day-desc">Cross-Train or Rest</div></div>
+      <div class="cal-cell rest"><div class="day-name">SUN</div><div class="day-desc">Rest</div></div>
+    </div>
   </div>
 
-  <div class="doc-footer">
-    <span>Always Reddy Athletics</span>
-    <span>alwaysreddyathletics.com</span>
-    <span>@alwaysreddyathletics</span>
+  <div class="week-block">
+    <div class="week-title-row"><div class="week-num">Week 4</div><div class="phase-badge badge-deload">Deload Week</div></div>
+    <div class="cal-row">
+      <div class="cal-cell"><div class="day-name">MON</div><div class="day-desc">Easy Run</div><div class="day-miles">2 miles</div></div>
+      <div class="cal-cell rest"><div class="day-name">TUE</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell"><div class="day-name">WED</div><div class="day-desc">Easy Run</div><div class="day-miles">2 miles</div></div>
+      <div class="cal-cell rest"><div class="day-name">THU</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell"><div class="day-name">FRI</div><div class="day-desc">Long Run</div><div class="day-miles">3 miles easy</div></div>
+      <div class="cal-cell rest"><div class="day-name">SAT</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell rest"><div class="day-name">SUN</div><div class="day-desc">Rest</div></div>
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-title-row"><div class="week-num">Week 5</div><div class="phase-badge badge-interval">Interval Work</div></div>
+    <div class="cal-row">
+      <div class="cal-cell"><div class="day-name">MON</div><div class="day-desc">Easy Run</div><div class="day-miles">3 miles</div></div>
+      <div class="cal-cell rest"><div class="day-name">TUE</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell tempo"><div class="day-name">WED</div><div class="day-desc">Tempo Run<br>1 mi easy + 2 mi tempo + 1 mi easy</div><div class="day-miles">4 miles</div></div>
+      <div class="cal-cell rest"><div class="day-name">THU</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell"><div class="day-name">FRI</div><div class="day-desc">Long Run</div><div class="day-miles">5 miles easy</div></div>
+      <div class="cal-cell xt"><div class="day-name">SAT</div><div class="day-desc">Cross-Train or Rest</div></div>
+      <div class="cal-cell rest"><div class="day-name">SUN</div><div class="day-desc">Rest</div></div>
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-title-row"><div class="week-num">Week 6</div><div class="phase-badge badge-interval">Interval Work</div></div>
+    <div class="cal-row">
+      <div class="cal-cell"><div class="day-name">MON</div><div class="day-desc">Easy Run</div><div class="day-miles">3 miles</div></div>
+      <div class="cal-cell rest"><div class="day-name">TUE</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell interval"><div class="day-name">WED</div><div class="day-desc">Intervals<br>4 × 800m @ 5K pace<br>90 sec rest between</div></div>
+      <div class="cal-cell rest"><div class="day-name">THU</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell"><div class="day-name">FRI</div><div class="day-desc">Long Run</div><div class="day-miles">5.5 miles easy</div></div>
+      <div class="cal-cell xt"><div class="day-name">SAT</div><div class="day-desc">Cross-Train or Rest</div></div>
+      <div class="cal-cell rest"><div class="day-name">SUN</div><div class="day-desc">Rest</div></div>
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-title-row"><div class="week-num">Week 7</div><div class="phase-badge badge-peak">Peak Week</div></div>
+    <div class="cal-row">
+      <div class="cal-cell"><div class="day-name">MON</div><div class="day-desc">Easy Run</div><div class="day-miles">3 miles</div></div>
+      <div class="cal-cell rest"><div class="day-name">TUE</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell tempo"><div class="day-name">WED</div><div class="day-desc">Tempo Run<br>1 mi easy + 3 mi tempo + 1 mi easy</div><div class="day-miles">5 miles</div></div>
+      <div class="cal-cell rest"><div class="day-name">THU</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell"><div class="day-name">FRI</div><div class="day-desc">Long Run</div><div class="day-miles">7 miles easy</div></div>
+      <div class="cal-cell rest"><div class="day-name">SAT</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell rest"><div class="day-name">SUN</div><div class="day-desc">Rest</div></div>
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-title-row"><div class="week-num">Week 8</div><div class="phase-badge badge-race">Race Week</div></div>
+    <div class="cal-row">
+      <div class="cal-cell"><div class="day-name">MON</div><div class="day-desc">Easy Run</div><div class="day-miles">2.5 miles</div></div>
+      <div class="cal-cell rest"><div class="day-name">TUE</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell"><div class="day-name">WED</div><div class="day-desc">Easy Run</div><div class="day-miles">2 miles</div></div>
+      <div class="cal-cell rest"><div class="day-name">THU</div><div class="day-desc">Rest</div></div>
+      <div class="cal-cell"><div class="day-name">FRI</div><div class="day-desc">Shakeout<br>1.5 mi + 4 strides</div></div>
+      <div class="cal-cell race-day"><div class="day-name">SAT</div><div class="day-desc">RACE DAY<br>10K<br>Trust your training.</div></div>
+      <div class="cal-cell rest"><div class="day-name">SUN</div><div class="day-desc">Rest + Recover</div></div>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="section-label">Session Key</div>
+  <table class="guide-table">
+    <thead><tr><th>Session Type</th><th>What It Means</th><th>Effort Level</th></tr></thead>
+    <tbody>
+      <tr><td>Easy Run</td><td>Conversational pace. Full sentences throughout. The majority of your weekly miles. Most athletes run these too fast — slow down.</td><td>4–5 out of 10</td></tr>
+      <tr><td>Tempo Run</td><td>The structure is always: easy warm-up miles + tempo segment + easy cool-down miles. The tempo segment is comfortably hard — a few words, not sentences.</td><td>7–8 out of 10</td></tr>
+      <tr><td>Intervals (800m)</td><td>800 meters = half a mile. Run each at your best current 5K effort. Full 90 seconds rest between each repeat. Don't cut the rest short.</td><td>8–9 out of 10</td></tr>
+      <tr><td>Cross-Train</td><td>Optional. Cycling, swimming, rowing, or walking. Easy effort only. Keeps you moving without adding running stress.</td><td>3–5 out of 10</td></tr>
+    </tbody>
+  </table>
+
+  <div class="coach-section">
+    <div class="section-label">A Note from Coach Tyler</div>
+    <div class="coach-headline">PRs don't happen by accident.</div>
+    <div class="section-underline"></div>
+    <div class="coach-body">
+      <p>Eight weeks of deliberate, progressive work — a deload to let your body adapt, an interval block to find a gear you forgot you had, and a peak week that will feel hard until you hit race day and realize why you did it.</p>
+      <p>The athletes who nail the 10K are almost always the ones who respected the easy days. Run your easy runs easy so your hard runs can be hard. Every session in this plan has a purpose. Run it as written.</p>
+      <p>See you on the other side of week eight.</p>
+    </div>
+    <div class="cta-bar">APPLY FOR 1-ON-1 COACHING → alwaysreddyathletics.com</div>
+    <div class="doc-footer">Always Reddy Athletics · alwaysreddyathletics.com · @alwaysreddyathletics</div>
   </div>
 
 </div>
