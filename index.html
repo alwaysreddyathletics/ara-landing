@@ -235,6 +235,19 @@
     .apply-success h3 { font-size:2rem; margin-bottom:12px; }
     .apply-success p { color:rgba(244,242,239,0.7); font-size:0.95rem; line-height:1.65; max-width:440px; margin:0 auto; }
     @media(max-width:600px) { .modal-box { padding:32px 20px; } .frow { grid-template-columns:1fr; } }
+    /* Guide modal */
+    .guide-stats { display:flex; gap:0; margin-bottom:24px; border:0.5px solid rgba(255,255,255,0.08); border-radius:2px; overflow:hidden; }
+    .guide-stat { flex:1; padding:14px 8px; border-right:0.5px solid rgba(255,255,255,0.08); text-align:center; }
+    .guide-stat:last-child { border-right:none; }
+    .guide-stat-num { font-family:'Barlow Condensed',sans-serif; font-size:1.5rem; font-weight:800; color:var(--accent); line-height:1; }
+    .guide-stat-label { font-size:0.65rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.07em; margin-top:4px; line-height:1.3; }
+    .guide-includes { list-style:none; margin-bottom:24px; }
+    .guide-includes li { display:flex; gap:10px; padding:9px 0; border-bottom:0.5px solid rgba(255,255,255,0.06); font-size:0.88rem; color:rgba(244,242,239,0.7); align-items:flex-start; }
+    .guide-includes li::before { content:'✓'; color:var(--accent); font-weight:700; flex-shrink:0; margin-top:1px; }
+    .guide-success { display:none; text-align:center; padding:16px 0 8px; }
+    .guide-success .s-icon { font-size:3.5rem; line-height:1; margin-bottom:16px; color:var(--accent); font-family:'Barlow Condensed',sans-serif; font-weight:900; }
+    .guide-success h3 { font-size:2rem; margin-bottom:12px; }
+    .guide-success p { color:rgba(244,242,239,0.7); font-size:0.95rem; line-height:1.65; max-width:400px; margin:0 auto; }
   </style>
 </head>
 <body>
@@ -242,7 +255,7 @@
 <div class="announce-bar" id="announce-bar">
   <span class="announce-long">Free Download — The ARA Training Guide: Coach Tyler's exact framework for rebuilding former athletes.</span>
   <span class="announce-short">Free: The ARA Training Guide.</span>
-  &nbsp;<a href="/subscribe">Get it free →</a>
+  &nbsp;<a href="#guide" onclick="openGuideModal();return false;">Get it free →</a>
   <button class="announce-close" onclick="dismissAnnounce()" aria-label="Dismiss announcement">×</button>
 </div>
 
@@ -460,7 +473,7 @@
       <div class="section-label" style="text-align:center">Not ready to apply?</div>
       <h3>Get the Free <em>ARA Training Guide</em></h3>
       <p>The exact framework Coach Tyler uses to rebuild athletes from the ground up. Free. No strings attached.</p>
-      <a href="/subscribe" target="_blank" rel="noopener" class="btn-primary btn-large" style="display:inline-block;margin:0 auto;">Get the Free Guide →</a>
+      <a href="#guide" class="btn-primary btn-large" style="display:inline-block;margin:0 auto;" onclick="openGuideModal();return false;">Get the Free Guide →</a>
       <div class="email-note" style="margin-top:12px">No spam. Unsubscribe anytime. We send training content worth reading.</div>
     </div>
   </div>
@@ -675,6 +688,54 @@
   <div class="footer-copy">© 2026 Always Reddy Athletics · All Rights Reserved · Pennsylvania, USA</div>
 </footer>
 
+<!-- Guide Modal -->
+<div class="modal-overlay" id="guide-modal" role="dialog" aria-modal="true" aria-labelledby="guide-modal-title">
+  <div class="modal-box">
+    <button class="modal-x" onclick="closeGuideModal()" aria-label="Close">&times;</button>
+    <div id="guide-form-wrap">
+      <div class="section-label">Free Download</div>
+      <h2 id="guide-modal-title">The ARA <em>Training Guide</em></h2>
+      <p class="modal-sub">The exact framework Coach Tyler used to drop 1:18 off his marathon in under a year — and what he uses with every athlete he coaches. Free. No strings attached.</p>
+      <div class="guide-stats">
+        <div class="guide-stat"><div class="guide-stat-num">3:27</div><div class="guide-stat-label">Marathon PR</div></div>
+        <div class="guide-stat"><div class="guide-stat-num">1:18</div><div class="guide-stat-label">Faster. Same course. Under 12 months.</div></div>
+        <div class="guide-stat"><div class="guide-stat-num">100%</div><div class="guide-stat-label">Client PR rate</div></div>
+      </div>
+      <ul class="guide-includes">
+        <li>Why former athletes stay stuck — and the real reason it's not motivation</li>
+        <li>The 4 pillars of the Athletic Rebuild — strength, conditioning, mobility, discipline</li>
+        <li>Your 12-week roadmap broken into 3 phases</li>
+        <li>3 things you can do this week — free, no program needed</li>
+      </ul>
+      <form id="guide-form" onsubmit="submitGuide(event)">
+        <input type="hidden" name="access_key" value="5969fdbb-45c7-479c-b76e-ffb180def802">
+        <input type="hidden" name="subject" value="Free Guide Request">
+        <input type="hidden" name="from_name" value="ARA Website">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="frow">
+          <div class="fg">
+            <label>First Name</label>
+            <input type="text" name="name" placeholder="Your first name">
+          </div>
+          <div class="fg">
+            <label>Email <span class="req">*</span></label>
+            <input type="email" name="email" id="guide-email" required placeholder="you@email.com">
+          </div>
+        </div>
+        <div class="fg" style="margin-top:4px;">
+          <button type="submit" class="btn-primary btn-large" id="guide-submit-btn" style="width:100%;text-align:center;border:none;">Send Me the Guide →</button>
+        </div>
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:10px;text-align:center;">No spam. Unsubscribe anytime. We send training content worth reading.</p>
+      </form>
+    </div>
+    <div class="guide-success" id="guide-success">
+      <div class="s-icon">&#10003;</div>
+      <h3>Check Your <em>Email</em></h3>
+      <p>The ARA Training Guide is on its way. Check your inbox (and spam just in case).</p>
+    </div>
+  </div>
+</div>
+
 <!-- Application Modal -->
 <div class="modal-overlay" id="apply-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal-box">
@@ -685,7 +746,7 @@
       <p class="modal-sub">Fill out the form below and Coach Tyler will personally review your application. Every application gets a real response — no automated rejections.</p>
       <form id="apply-form" onsubmit="submitApplication(event)">
         <input type="hidden" name="access_key" value="5969fdbb-45c7-479c-b76e-ffb180def802">
-        <input type="hidden" name="subject" value="New Athletic Rebuild Application — Always Reddy Athletics">
+        <input type="hidden" name="subject" value="Applications">
         <input type="hidden" name="from_name" value="ARA Website">
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div class="frow">
@@ -788,6 +849,50 @@ function toggleFaq(btn) {
   const isOpen = item.classList.contains('open');
   document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
   if (!isOpen) item.classList.add('open');
+}
+
+function openGuideModal() {
+  document.getElementById('guide-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeGuideModal() {
+  document.getElementById('guide-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('guide-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeGuideModal();
+});
+
+async function submitGuide(e) {
+  e.preventDefault();
+  const btn = document.getElementById('guide-submit-btn');
+  const email = document.getElementById('guide-email').value.trim();
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(document.getElementById('guide-form'))
+    });
+    const data = await res.json();
+    if (data.success) {
+      document.getElementById('guide-form-wrap').style.display = 'none';
+      document.getElementById('guide-success').style.display = 'block';
+      setTimeout(function() {
+        window.open('https://alwaysreddyathletics.beehiiv.com/subscribe?email=' + encodeURIComponent(email), '_blank');
+      }, 1200);
+    } else {
+      btn.textContent = 'Send Me the Guide →';
+      btn.disabled = false;
+      alert('Something went wrong. Please try again.');
+    }
+  } catch {
+    btn.textContent = 'Send Me the Guide →';
+    btn.disabled = false;
+    alert('Network error. Please check your connection and try again.');
+  }
 }
 
 function openApplyModal() {
