@@ -6,269 +6,240 @@
   <title>Race Day Prep Guide | Always Reddy Athletics</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root { --black:#0a0a0a; --white:#f4f2ef; --muted:#888; --accent:#c8a96e; }
-    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
-    body { font-family:'Barlow',sans-serif; background:var(--black); color:var(--white); font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased; }
-    h1,h2,h3,h4 { font-family:'Barlow Condensed',sans-serif; }
-    em { font-style:normal; color:var(--accent); }
-    .page { max-width:900px; margin:0 auto; }
-    .print-bar { background:var(--accent); color:var(--black); padding:12px 24px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100; }
-    .print-bar p { font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; }
-    .print-btn { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; background:var(--black); color:var(--white); border:none; padding:8px 20px; cursor:pointer; }
-    .print-btn:hover { background:#222; }
-    .doc-header { background:#111; border-bottom:2px solid var(--accent); padding:40px 32px; }
-    .doc-header .ara-label { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--muted); margin-bottom:12px; }
-    .doc-header h1 { font-size:clamp(2.4rem,5vw,3.8rem); font-weight:900; line-height:1.05; margin-bottom:6px; }
-    .doc-header .tagline { font-family:'Barlow Condensed',sans-serif; font-size:1.1rem; font-weight:600; color:var(--accent); letter-spacing:0.06em; text-transform:uppercase; }
-    .stats-bar { display:flex; border-bottom:1px solid rgba(255,255,255,0.07); }
-    .stat { flex:1; padding:20px 24px; border-right:1px solid rgba(255,255,255,0.07); background:#0d0d0d; }
-    .stat:last-child { border-right:none; }
-    .stat-num { font-family:'Barlow Condensed',sans-serif; font-size:2rem; font-weight:900; color:var(--accent); line-height:1; }
-    .stat-label { font-size:0.65rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; margin-top:5px; line-height:1.3; }
-    .doc-section { padding:36px 32px; border-bottom:1px solid rgba(255,255,255,0.06); }
-    .section-title { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:14px; }
-    .section-title-lg { font-family:'Barlow Condensed',sans-serif; font-size:1.5rem; font-weight:800; margin-bottom:20px; }
-    table { width:100%; border-collapse:collapse; font-size:0.88rem; margin-bottom:16px; }
-    th { font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:9px 12px; background:rgba(200,169,110,0.12); color:var(--accent); border:0.5px solid rgba(255,255,255,0.08); text-align:left; }
-    td { padding:9px 12px; border:0.5px solid rgba(255,255,255,0.08); color:rgba(244,242,239,0.75); vertical-align:top; line-height:1.5; }
-    .td-accent { color:var(--accent); font-weight:600; }
-    .td-key { color:var(--white); font-weight:500; }
-    .td-rest { color:var(--muted); font-style:italic; }
-    .td-race { color:var(--accent); font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.9rem; letter-spacing:0.04em; }
-    /* Timeline */
-    .timeline-row { display:flex; gap:0; border-bottom:0.5px solid rgba(255,255,255,0.07); padding:0; }
-    .timeline-time { font-family:'Barlow Condensed',sans-serif; font-size:0.95rem; font-weight:700; color:var(--accent); min-width:120px; flex-shrink:0; padding:14px 16px 14px 0; }
-    .timeline-desc { font-size:0.88rem; color:rgba(244,242,239,0.75); line-height:1.55; padding:14px 0; }
-    .timeline-row.key-row .timeline-desc { color:var(--white); font-weight:500; }
-    .timeline-row.race-row .timeline-time { color:var(--accent); font-size:1.1rem; }
-    .timeline-row.race-row .timeline-desc { color:var(--accent); font-weight:600; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background-color: #0a0a0a; color: #f4f2ef; font-family: 'Barlow', sans-serif; font-size: 14px; line-height: 1.6; }
+    .print-bar { position: sticky; top: 0; z-index: 100; background-color: #c8a96e; color: #0a0a0a; padding: 10px 32px; display: flex; align-items: center; justify-content: space-between; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .print-bar .hint { font-weight: 400; font-size: 11px; opacity: 0.75; text-transform: none; letter-spacing: 0; }
+    .print-btn { background-color: #0a0a0a; color: #f4f2ef; border: none; padding: 8px 20px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; }
+    .page { max-width: 960px; margin: 0 auto; padding: 60px 72px; }
+    .ara-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #c8a96e; margin-bottom: 20px; }
+    h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 80px; line-height: 0.95; color: #f4f2ef; margin-bottom: 4px; }
+    h1 .gold { color: #c8a96e; display: block; }
+    .tagline { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: #c8a96e; margin: 16px 0 20px; }
+    .desc { font-size: 14px; color: #f4f2ef; line-height: 1.75; max-width: 720px; }
+    .rule { height: 1px; background-color: #c8a96e; margin: 28px 0; }
+    .stats { display: flex; border: 1px solid #2a2a2a; margin: 32px 0; }
+    .stat { flex: 1; padding: 24px 16px; border-right: 1px solid #2a2a2a; text-align: center; }
+    .stat:last-child { border-right: none; }
+    .stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 56px; font-weight: 900; color: #c8a96e; line-height: 1; }
+    .stat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #f4f2ef; margin-top: 8px; }
+    .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #c8a96e; margin-bottom: 12px; }
+    .section-headline { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 800; color: #f4f2ef; margin-bottom: 8px; line-height: 1.05; }
+    .section-underline { width: 40px; height: 3px; background-color: #c8a96e; margin-bottom: 20px; }
+    /* Content table */
+    .content-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    .content-table th { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 10px 14px; background-color: #141414; color: #c8a96e; border: 1px solid #2a2a2a; text-align: left; }
+    .content-table td { padding: 12px 14px; border: 1px solid #2a2a2a; color: #f4f2ef; font-size: 13px; line-height: 1.6; vertical-align: top; }
+    .content-table td.col-key { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; color: #c8a96e; white-space: nowrap; }
+    .content-table td.col-note { color: #888888; font-size: 12px; }
+    .content-table tr.highlight-row td { background-color: #1e1600; }
+    .content-table tr.highlight-row td.col-key { color: #c8a96e; }
+    /* Timeline rows */
+    .timeline-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    .timeline-table td { padding: 14px 16px; border-bottom: 1px solid #1e1e1e; vertical-align: top; }
+    .timeline-table tr:last-child td { border-bottom: none; }
+    .timeline-table .t-time { font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; color: #c8a96e; white-space: nowrap; width: 120px; }
+    .timeline-table .t-desc { font-size: 13px; color: #f4f2ef; line-height: 1.6; }
+    .timeline-table tr.key-row td { background-color: #0f0f0f; }
+    .timeline-table tr.gun-row td { background-color: #1e1600; }
+    .timeline-table tr.gun-row .t-time { font-size: 18px; }
+    .timeline-table tr.gun-row .t-desc { color: #c8a96e; font-weight: 600; font-size: 14px; }
     /* Pacing */
-    .pacing-row { display:flex; gap:0; border-bottom:0.5px solid rgba(255,255,255,0.07); }
-    .pacing-phase { font-family:'Barlow Condensed',sans-serif; font-size:0.88rem; font-weight:700; color:var(--accent); min-width:140px; flex-shrink:0; padding:16px 16px 16px 0; letter-spacing:0.03em; }
-    .pacing-content { padding:16px 0; }
-    .pacing-rule { font-size:0.92rem; color:var(--white); font-weight:500; margin-bottom:4px; }
-    .pacing-detail { font-size:0.85rem; color:rgba(244,242,239,0.6); line-height:1.55; }
-    /* Checklist */
-    .check-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; }
-    .check-card { background:#111; border:0.5px solid rgba(255,255,255,0.07); padding:20px; }
-    .check-card h4 { font-family:'Barlow Condensed',sans-serif; font-size:1rem; font-weight:700; color:var(--accent); margin-bottom:10px; }
-    .check-card ul { list-style:none; }
-    .check-card ul li { display:flex; gap:8px; padding:6px 0; border-bottom:0.5px solid rgba(255,255,255,0.05); font-size:0.82rem; color:rgba(244,242,239,0.65); }
-    .check-card ul li::before { content:'□'; color:rgba(200,169,110,0.4); flex-shrink:0; font-size:0.95rem; }
-    .callout { background:rgba(200,169,110,0.06); border-left:3px solid var(--accent); padding:16px 20px; margin:16px 0; }
-    .callout p { font-size:0.88rem; color:rgba(244,242,239,0.8); line-height:1.6; }
-    .callout strong { color:var(--white); }
-    .coach-note { background:rgba(200,169,110,0.05); border-top:2px solid var(--accent); padding:36px 32px; }
-    .coach-note .note-label { font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
-    .coach-note h3 { font-family:'Barlow Condensed',sans-serif; font-size:1.8rem; font-weight:900; margin-bottom:14px; }
-    .coach-note p { font-size:0.92rem; color:rgba(244,242,239,0.75); line-height:1.75; margin-bottom:12px; }
-    .coach-note p:last-child { margin-bottom:0; font-size:0.8rem; color:var(--muted); }
-    .doc-footer { background:var(--accent); color:var(--black); padding:14px 32px; display:flex; justify-content:space-between; align-items:center; font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; }
-    @media print { .print-bar { display:none; } .page { max-width:100%; } }
-    @media(max-width:600px) {
-      .stats-bar { flex-wrap:wrap; }
-      .stat { flex:1 1 50%; border-right:none; border-bottom:1px solid rgba(255,255,255,0.07); }
-      .check-grid { grid-template-columns:1fr; }
-      .doc-footer { flex-direction:column; gap:4px; text-align:center; }
-    }
+    .pacing-row { border-bottom: 1px solid #1e1e1e; padding: 20px 0; }
+    .pacing-row:last-child { border-bottom: none; }
+    .pacing-phase { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #c8a96e; margin-bottom: 6px; }
+    .pacing-rule { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 800; color: #f4f2ef; margin-bottom: 8px; line-height: 1.1; }
+    .pacing-detail { font-size: 13px; color: #c8c6c2; line-height: 1.65; max-width: 680px; }
+    /* Recovery grid */
+    .recovery-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background-color: #2a2a2a; margin: 16px 0; }
+    .recovery-card { background-color: #0a0a0a; padding: 20px; }
+    .recovery-card h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; color: #c8a96e; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .recovery-card ul { list-style: none; }
+    .recovery-card ul li { font-size: 12px; color: #c8c6c2; padding: 5px 0; border-bottom: 1px solid #1a1a1a; line-height: 1.45; }
+    .recovery-card ul li::before { content: '— '; color: #c8a96e; font-weight: 700; }
+    .recovery-card ul li:last-child { border-bottom: none; }
+    /* Coach note */
+    .coach-section { margin-top: 48px; padding-top: 40px; border-top: 1px solid #2a2a2a; }
+    .coach-headline { font-family: 'Barlow Condensed', sans-serif; font-size: 48px; font-weight: 900; color: #f4f2ef; line-height: 1.05; margin-bottom: 8px; }
+    .coach-body { font-size: 14px; color: #f4f2ef; line-height: 1.8; max-width: 720px; }
+    .coach-body p { margin-bottom: 16px; }
+    .cta-bar { background-color: #c8a96e; color: #0a0a0a; text-align: center; padding: 18px 32px; font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 32px; }
+    .doc-footer { text-align: center; font-size: 11px; color: #555555; margin-top: 20px; padding-top: 16px; border-top: 1px solid #1e1e1e; }
+    @media print { .print-bar { display: none; } body { background-color: #0a0a0a; } .page { padding: 40px 60px; } }
   </style>
 </head>
 <body>
 
 <div class="print-bar">
-  <p>Race Day Prep Guide — Always Reddy Athletics</p>
-  <button class="print-btn" onclick="window.print()">Save as PDF ↓</button>
+  <span>Race Day Prep Guide — Always Reddy Athletics</span>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <span class="hint">In print dialog → More settings → enable "Background graphics"</span>
+    <button class="print-btn" onclick="window.print()">Save as PDF ↓</button>
+  </div>
 </div>
 
 <div class="page">
 
-  <div class="doc-header">
-    <div class="ara-label">Always Reddy Athletics · Race Prep Guide</div>
-    <h1>Race Day<br><em>Prep Guide</em></h1>
-    <div class="tagline">Race Day. Owned.</div>
-  </div>
+  <div class="ara-label">Always Reddy Athletics · Race Prep Guide</div>
+  <h1>Race Day<br><span class="gold">Prep Guide</span></h1>
+  <div class="tagline">Race Day. Owned.</div>
+  <p class="desc">Most athletes train for the race but never train for race day. The morning timeline, warm-up sequence, pacing execution, and post-race recovery — this guide covers every hour from race week to finish line. Use it. Every time.</p>
+  <div class="rule"></div>
 
-  <div class="stats-bar">
+  <div class="stats">
     <div class="stat"><div class="stat-num">5</div><div class="stat-label">Sections</div></div>
     <div class="stat"><div class="stat-num">7</div><div class="stat-label">Race Week Days</div></div>
     <div class="stat"><div class="stat-num">1</div><div class="stat-label">Race Morning Checklist</div></div>
     <div class="stat"><div class="stat-num">0</div><div class="stat-label">Excuses Race Day</div></div>
   </div>
 
-  <div class="doc-section">
-    <div class="section-title">Section 1 · Race Week Schedule</div>
-    <div class="section-title-lg">The Week Before the Race</div>
-    <p style="font-size:0.9rem;color:rgba(244,242,239,0.6);margin-bottom:20px;line-height:1.65;">Race week isn't for getting fitter. It's for showing up fresh. The fitness is already in your legs — your job this week is to protect it, stay sharp, and not do anything stupid.</p>
-    <table>
-      <thead><tr><th style="width:14%">Day</th><th>Session</th><th>Key Notes</th></tr></thead>
-      <tbody>
-        <tr><td class="td-key">MON</td><td>Easy run 20–30 min + 4 strides (100m each)</td><td>Last real training stimulus. Easy conversational pace. Strides should feel fast but not hard.</td></tr>
-        <tr><td class="td-key">TUE</td><td>Rest or 20 min light yoga/mobility only</td><td>No running. Let the Monday session absorb.</td></tr>
-        <tr><td class="td-key">WED</td><td>Easy 20 min + 3 miles at race goal pace</td><td>Remind your legs what race pace feels like. Not a workout — just a reminder.</td></tr>
-        <tr><td class="td-key">THU</td><td>Complete rest</td><td>Off. Eat a full, normal day. Sleep 8+ hours. Don't try to "make up" anything.</td></tr>
-        <tr><td class="td-key">FRI</td><td>Shakeout run: 10–15 min easy + 4 strides</td><td>Just to move. No effort. The goal is loose legs, not fitness.</td></tr>
-        <tr><td class="td-race">SAT</td><td class="td-race">RACE DAY — See Race Morning Timeline below</td><td class="td-race">Execute the plan. Trust the training.</td></tr>
-        <tr><td class="td-key">SUN</td><td>Full rest + optional 20 min recovery walk</td><td>See Post-Race Recovery section.</td></tr>
-      </tbody>
-    </table>
-    <div class="callout">
-      <p><strong>If your race is on Sunday:</strong> Shift the whole schedule forward one day. Keep Friday as your last easy run and Saturday as complete rest.</p>
+  <!-- SECTION 1 -->
+  <div class="section-label">Section 1 · Race Week Schedule</div>
+  <div class="section-headline">The Week Before the Race.</div>
+  <div class="section-underline"></div>
+  <p class="desc" style="margin-bottom:20px;">Race week isn't for getting fitter. The fitness is already in your legs. Your only job this week is to protect it, stay sharp, and show up fresh.</p>
+
+  <table class="content-table">
+    <thead><tr><th style="width:80px;">Day</th><th>Session</th><th style="width:35%;">Notes</th></tr></thead>
+    <tbody>
+      <tr><td class="col-key">MON</td><td>Easy run 20–30 min + 4 strides (100m each)</td><td class="col-note">Last real training stimulus. Strides should feel fast, not hard.</td></tr>
+      <tr><td class="col-key">TUE</td><td>Rest or 20 min light yoga / mobility</td><td class="col-note">No running. Let Monday's session absorb.</td></tr>
+      <tr><td class="col-key">WED</td><td>Easy 20 min + 3 miles at goal race pace</td><td class="col-note">Remind your legs what race pace feels like. Not a workout.</td></tr>
+      <tr><td class="col-key">THU</td><td>Complete rest</td><td class="col-note">Off. Eat a full normal day. Sleep 8+ hours.</td></tr>
+      <tr><td class="col-key">FRI</td><td>Shakeout run 10–15 min easy + 4 strides</td><td class="col-note">Just to move. No effort. Loose legs only.</td></tr>
+      <tr class="highlight-row"><td class="col-key">SAT</td><td>RACE DAY — See Race Morning Timeline →</td><td class="col-note" style="color:#c8a96e;">Execute the plan. Trust the training.</td></tr>
+      <tr><td class="col-key">SUN</td><td>Full rest + optional 20 min recovery walk</td><td class="col-note">See Post-Race Recovery section.</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:12px;color:#555555;margin-top:8px;font-style:italic;">Race on Sunday? Shift the entire schedule forward one day. Keep Friday as your last easy run and Saturday as complete rest.</p>
+
+  <div class="rule"></div>
+
+  <!-- SECTION 2 -->
+  <div class="section-label">Section 2 · Race Morning Timeline</div>
+  <div class="section-headline">Hour by Hour to the Start Line.</div>
+  <div class="section-underline"></div>
+  <p class="desc" style="margin-bottom:20px;">All times are relative to your gun time (G). If your race starts at 8:00am, G = 8:00am. Work backwards from there.</p>
+
+  <table class="timeline-table">
+    <tbody>
+      <tr class="key-row"><td class="t-time">G − 3:00</td><td class="t-desc">Wake up. Eat your tested race-day breakfast — nothing new today. 16–20oz water immediately. Coffee if it's your routine.</td></tr>
+      <tr><td class="t-time">G − 2:30</td><td class="t-desc">Finish eating. Hydrate steadily. Lay out all gear — bib, shoes, watch, nutrition, safety pins. Verify everything now.</td></tr>
+      <tr><td class="t-time">G − 2:00</td><td class="t-desc">Arrive at venue. Locate start, bag drop, port-a-potties, your corral. First bathroom trip here — lines are shorter now.</td></tr>
+      <tr class="key-row"><td class="t-time">G − 1:30</td><td class="t-desc">Begin dynamic warm-up sequence (Section 3). This takes 15–20 minutes. Do not skip it. Cold muscles into race pace is how races fall apart.</td></tr>
+      <tr><td class="t-time">G − 1:00</td><td class="t-desc">Bag drop. Final gear check — bib pinned, GPS acquired, laces double-knotted. Small snack if your race is 10K or longer.</td></tr>
+      <tr><td class="t-time">G − 0:30</td><td class="t-desc">Last bathroom stop. Get in line. This is your final chance.</td></tr>
+      <tr><td class="t-time">G − 0:20</td><td class="t-desc">Easy jog 5–8 minutes at conversational pace. Legs moving, breathing settling, mind focusing.</td></tr>
+      <tr class="key-row"><td class="t-time">G − 0:10</td><td class="t-desc">Final 4 strides at race pace: 80–100m each, 60 seconds rest between. You should feel fast and ready — not tired. Move to corral.</td></tr>
+      <tr><td class="t-time">G − 0:05</td><td class="t-desc">Corral, settle, breathe. Review pacing plan one final time. Trust the training. The work is done.</td></tr>
+      <tr class="gun-row"><td class="t-time">GUN TIME</td><td class="t-desc">Start 15–20 seconds per mile slower than goal pace. You will thank yourself at the halfway mark.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="rule"></div>
+
+  <!-- SECTION 3 -->
+  <div class="section-label">Section 3 · Warm-Up Protocol</div>
+  <div class="section-headline">Pre-Race Activation. Every Time.</div>
+  <div class="section-underline"></div>
+  <p class="desc" style="margin-bottom:20px;">Complete in order. Total time: 15–20 minutes. Goal: raise core temperature, activate hips and glutes, prime the nervous system for race pace.</p>
+
+  <table class="content-table">
+    <thead><tr><th>Exercise</th><th style="width:22%;">Sets / Reps</th><th>Goal</th></tr></thead>
+    <tbody>
+      <tr><td>Leg swings — front to back</td><td class="col-key" style="color:#c8a96e;font-size:13px;">10 each leg</td><td>Hip flexor mobility, hamstring activation</td></tr>
+      <tr><td>Leg swings — side to side</td><td class="col-key" style="color:#c8a96e;font-size:13px;">10 each leg</td><td>Groin and hip abductor activation</td></tr>
+      <tr><td>Hip circles</td><td class="col-key" style="color:#c8a96e;font-size:13px;">10 each direction</td><td>Hip joint mobility</td></tr>
+      <tr><td>High knees</td><td class="col-key" style="color:#c8a96e;font-size:13px;">30 seconds</td><td>Hip flexor activation, cadence priming</td></tr>
+      <tr><td>Butt kicks</td><td class="col-key" style="color:#c8a96e;font-size:13px;">30 seconds</td><td>Hamstring activation, stride pattern</td></tr>
+      <tr><td>A-skips</td><td class="col-key" style="color:#c8a96e;font-size:13px;">2 × 20m</td><td>Running mechanics, hip drive</td></tr>
+      <tr><td>B-skips</td><td class="col-key" style="color:#c8a96e;font-size:13px;">2 × 20m</td><td>Stride extension, neuromuscular activation</td></tr>
+      <tr><td>Carioca</td><td class="col-key" style="color:#c8a96e;font-size:13px;">2 × 20m each direction</td><td>Hip mobility, lateral stability</td></tr>
+      <tr><td>Easy jog</td><td class="col-key" style="color:#c8a96e;font-size:13px;">5–8 minutes</td><td>Cardiovascular warm-up, body temperature</td></tr>
+      <tr><td>Race pace strides</td><td class="col-key" style="color:#c8a96e;font-size:13px;">4 × 80–100m</td><td>Neuromuscular priming, race pace feel</td></tr>
+    </tbody>
+  </table>
+
+  <div class="rule"></div>
+
+  <!-- SECTION 4 -->
+  <div class="section-label">Section 4 · Pacing Strategy</div>
+  <div class="section-headline">How to Actually Race It.</div>
+  <div class="section-underline"></div>
+  <p class="desc" style="margin-bottom:24px;">The single most common race day mistake: going out too fast in mile one. The adrenaline, the crowd energy, the fresh legs — everything tells you to push. The athletes who listen blow up before the halfway mark.</p>
+
+  <div class="pacing-row">
+    <div class="pacing-phase">Miles 1–2 (or first 20%)</div>
+    <div class="pacing-rule">Run 15–20 seconds per mile SLOWER than goal pace</div>
+    <p class="pacing-detail">This feels wrong. That's correct. You're banking energy. Your cardiovascular system needs 8–12 minutes to fully engage — running at goal pace before that means you're already in oxygen debt before you've gone anywhere. The athletes who go out controlled always pass the athletes who went out hot.</p>
+  </div>
+  <div class="pacing-row">
+    <div class="pacing-phase">Middle Miles</div>
+    <div class="pacing-rule">Lock into goal pace and hold it there</div>
+    <p class="pacing-detail">You'll feel good in the middle. The urge is to push. Resist it. Check your watch every mile, not every 400 meters. Discipline in the middle miles is what builds a PR — not heroics at mile two.</p>
+  </div>
+  <div class="pacing-row">
+    <div class="pacing-phase">Final Mile</div>
+    <div class="pacing-rule">Empty the tank — but only now</div>
+    <p class="pacing-detail">If you executed correctly, you'll have something left. Use it. Run the last mile as hard as you can sustain to the finish line. Cross with everything you had.</p>
+  </div>
+
+  <div class="rule"></div>
+
+  <!-- SECTION 5 -->
+  <div class="section-label">Section 5 · Post-Race Recovery</div>
+  <div class="section-headline">Protect the Work You've Done.</div>
+  <div class="section-underline"></div>
+  <p class="desc" style="margin-bottom:20px;">How you recover determines how fast you get back to training. Most athletes treat the finish line as the endpoint. The work you do in the next 7 days sets you up for everything that comes next.</p>
+
+  <div class="recovery-grid">
+    <div class="recovery-card">
+      <h4>First 30 Minutes</h4>
+      <ul>
+        <li>Keep walking 10–15 min minimum</li>
+        <li>Quick carbs within 20 min</li>
+        <li>Protein within 30 min</li>
+        <li>Water + electrolytes</li>
+        <li>Change out of wet clothes</li>
+        <li>Celebrate — you earned it</li>
+      </ul>
+    </div>
+    <div class="recovery-card">
+      <h4>Hours 2–24</h4>
+      <ul>
+        <li>Real meal within 2 hours</li>
+        <li>Compression socks if available</li>
+        <li>Ice bath 10–15 min (optional)</li>
+        <li>Light stretch before bed</li>
+        <li>8–9 hours sleep</li>
+        <li>No intensity today</li>
+      </ul>
+    </div>
+    <div class="recovery-card">
+      <h4>Days 2–7</h4>
+      <ul>
+        <li>Day 2: Rest or 15 min walk only</li>
+        <li>Day 3: Light yoga / mobility</li>
+        <li>Day 4–5: Easy jog 20 min if ready</li>
+        <li>Day 6–7: Return to normal easy</li>
+        <li>No intensity until Day 7</li>
+        <li>Plan your next race</li>
+      </ul>
     </div>
   </div>
 
-  <div class="doc-section">
-    <div class="section-title">Section 2 · Race Morning Timeline</div>
-    <div class="section-title-lg">Hour by Hour to the Start Line</div>
-    <p style="font-size:0.9rem;color:rgba(244,242,239,0.6);margin-bottom:20px;line-height:1.65;">Times are relative to gun time. If your race starts at 8:00am, Gun = 8:00am and work backwards.</p>
-    <div class="timeline-row key-row">
-      <div class="timeline-time">Gun − 3:00</div>
-      <div class="timeline-desc">Wake up. Eat your race-day breakfast — whatever you tested in training. Nothing new on race day. 16–20oz water immediately. Coffee if it's your routine.</div>
+  <div class="coach-section">
+    <div class="section-label">A Note from Coach Tyler</div>
+    <div class="coach-headline">Race day isn't the test. It's the reward.</div>
+    <div class="section-underline"></div>
+    <div class="coach-body">
+      <p>You did the training. You put in the early mornings, the tempo sessions that made your lungs burn, the long runs that ate into your weekends. Race day is just the day you get to show what you've built. The work was already done before you crossed the start line.</p>
+      <p>Use this guide. Trust your preparation. Go find out what you're made of — and when you cross the finish line, already be thinking about what's next.</p>
     </div>
-    <div class="timeline-row">
-      <div class="timeline-time">Gun − 2:30</div>
-      <div class="timeline-desc">Finish eating. Hydrate steadily. Lay out all gear — bib, shoes, watch, nutrition, safety pins. Verify everything now, not at the venue.</div>
-    </div>
-    <div class="timeline-row">
-      <div class="timeline-time">Gun − 2:00</div>
-      <div class="timeline-desc">Arrive at venue. Locate start area, bag drop, port-a-potties, and your corral. First bathroom trip here — lines are shorter now than they will be later.</div>
-    </div>
-    <div class="timeline-row key-row">
-      <div class="timeline-time">Gun − 1:30</div>
-      <div class="timeline-desc">Begin dynamic warm-up sequence (see Section 3). Takes 15–20 minutes. Do not skip this. Cold muscles into race pace is how injuries happen and races fall apart.</div>
-    </div>
-    <div class="timeline-row">
-      <div class="timeline-time">Gun − 1:00</div>
-      <div class="timeline-desc">Bag drop. Final gear check — bib pinned, watch GPS acquired, laces double-knotted. Small snack (gel, banana) if your race is 10K or longer.</div>
-    </div>
-    <div class="timeline-row">
-      <div class="timeline-time">Gun − 0:30</div>
-      <div class="timeline-desc">Last bathroom stop. Get in line. This is your final chance before the start — don't skip it.</div>
-    </div>
-    <div class="timeline-row">
-      <div class="timeline-time">Gun − 0:20</div>
-      <div class="timeline-desc">Easy jog 5–8 minutes at true conversational pace. Legs moving, breathing settling, mind focusing.</div>
-    </div>
-    <div class="timeline-row key-row">
-      <div class="timeline-time">Gun − 0:10</div>
-      <div class="timeline-desc">Final 4 strides at race pace: 80–100m each, 60 seconds rest between. You should feel fast and ready — not tired. Move to your corral.</div>
-    </div>
-    <div class="timeline-row">
-      <div class="timeline-time">Gun − 0:05</div>
-      <div class="timeline-desc">Corral, settle, breathe. Review your pacing plan one final time. Trust the training. The work is done — this is the easy part.</div>
-    </div>
-    <div class="timeline-row race-row" style="border-bottom:none;">
-      <div class="timeline-time">GUN TIME</div>
-      <div class="timeline-desc">Start 15–20 seconds per mile slower than goal pace. You will thank yourself at the halfway point.</div>
-    </div>
-  </div>
-
-  <div class="doc-section">
-    <div class="section-title">Section 3 · Warm-Up Protocol</div>
-    <div class="section-title-lg">Pre-Race Activation Sequence</div>
-    <p style="font-size:0.9rem;color:rgba(244,242,239,0.6);margin-bottom:20px;line-height:1.65;">Complete in order. Total time: 15–20 minutes. The goal: raise core temperature, activate hips and glutes, prime the nervous system for race pace effort.</p>
-    <table>
-      <thead><tr><th>Exercise</th><th style="width:22%">Sets / Reps</th><th>Goal</th></tr></thead>
-      <tbody>
-        <tr><td>Leg swings — front to back</td><td class="td-accent">10 each leg</td><td>Hip flexor mobility, hamstring wake-up</td></tr>
-        <tr><td>Leg swings — side to side</td><td class="td-accent">10 each leg</td><td>Groin and hip abductor activation</td></tr>
-        <tr><td>Hip circles (hands on hips)</td><td class="td-accent">10 each direction</td><td>Hip joint mobility</td></tr>
-        <tr><td>High knees</td><td class="td-accent">30 seconds</td><td>Hip flexor activation, cadence priming</td></tr>
-        <tr><td>Butt kicks</td><td class="td-accent">30 seconds</td><td>Hamstring activation, stride pattern</td></tr>
-        <tr><td>A-skips</td><td class="td-accent">2 × 20m</td><td>Running mechanics, hip drive</td></tr>
-        <tr><td>B-skips</td><td class="td-accent">2 × 20m</td><td>Stride extension, neuromuscular activation</td></tr>
-        <tr><td>Carioca</td><td class="td-accent">2 × 20m each direction</td><td>Hip mobility, lateral stability</td></tr>
-        <tr><td>Easy jog</td><td class="td-accent">5–8 minutes</td><td>Cardiovascular warm-up, body temperature</td></tr>
-        <tr><td>Race pace strides</td><td class="td-accent">4 × 80–100m</td><td>Neuromuscular priming, race pace feel</td></tr>
-      </tbody>
-    </table>
-    <div class="callout">
-      <p><strong>Short on time?</strong> Minimum effective warm-up: leg swings (all directions), high knees, butt kicks, 5 min easy jog, 4 strides. Under any circumstances, never go straight to race pace from a standing start.</p>
-    </div>
-  </div>
-
-  <div class="doc-section">
-    <div class="section-title">Section 4 · Pacing Strategy</div>
-    <div class="section-title-lg">How to Actually Race It</div>
-    <div class="callout" style="margin-bottom:20px;">
-      <p><strong>The single most common race day mistake:</strong> going out too fast in mile 1. The adrenaline, the crowd energy, the fresh legs — everything tells you to push. The athletes who listen blow up by mile 4. Don't be that athlete.</p>
-    </div>
-    <div class="pacing-row">
-      <div class="pacing-phase">Miles 1–2</div>
-      <div class="pacing-content">
-        <div class="pacing-rule">Run 15–20 sec/mile SLOWER than goal pace</div>
-        <div class="pacing-detail">This feels wrong. That's correct. You're banking energy. Your cardiovascular system needs 8–12 minutes to fully engage — running at goal pace before that means you're already in oxygen debt before you've gone anywhere.</div>
-      </div>
-    </div>
-    <div class="pacing-row">
-      <div class="pacing-phase">Middle Miles</div>
-      <div class="pacing-content">
-        <div class="pacing-rule">Lock into goal pace — hold it there</div>
-        <div class="pacing-detail">You'll feel good. The urge is to push. Resist it. Check your watch every mile, not every 400m. Discipline in the middle miles is what builds a PR — not heroics.</div>
-      </div>
-    </div>
-    <div class="pacing-row" style="border-bottom:none;">
-      <div class="pacing-phase">Final Mile</div>
-      <div class="pacing-content">
-        <div class="pacing-rule">Empty the tank — only now</div>
-        <div class="pacing-detail">If you executed correctly, you have something left. Use it. Run the last mile as hard as you can sustain to the line. If you have nothing — you raced correctly. Cross the line with everything you had.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="doc-section">
-    <div class="section-title">Section 5 · Post-Race Recovery</div>
-    <div class="section-title-lg">Protect the Work You've Done</div>
-    <div class="check-grid">
-      <div class="check-card">
-        <h4>First 30 Minutes</h4>
-        <ul>
-          <li>Keep walking 10–15 min minimum</li>
-          <li>Quick carbs within 20 min</li>
-          <li>Protein within 30 min</li>
-          <li>Water + electrolytes</li>
-          <li>Change out of wet clothes</li>
-          <li>Celebrate — you earned it</li>
-        </ul>
-      </div>
-      <div class="check-card">
-        <h4>Hours 2–24</h4>
-        <ul>
-          <li>Real meal within 2 hours</li>
-          <li>Compression socks if available</li>
-          <li>Ice bath 10–15 min (optional)</li>
-          <li>Light stretch before bed</li>
-          <li>8–9 hours sleep</li>
-          <li>No intensity today</li>
-        </ul>
-      </div>
-      <div class="check-card">
-        <h4>Days 2–7</h4>
-        <ul>
-          <li>Day 2: Rest or 15 min walk</li>
-          <li>Day 3: Light yoga/movement</li>
-          <li>Day 4–5: Easy 20 min jog</li>
-          <li>Day 6–7: Normal easy pace</li>
-          <li>No intensity until Day 7</li>
-          <li>Plan your next race</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="coach-note">
-    <div class="note-label">A Note from Coach Tyler</div>
-    <h3>Race Day Isn't the Test. <em>It's the Reward.</em></h3>
-    <p>You did the training. You put in the early mornings, the tempo sessions that made your lungs burn, the long runs that ate into your weekends. Race day is just the day you get to show what you've built. The work was already done before you crossed the start line.</p>
-    <p>Use this guide. Trust your preparation. Go find out what you're made of — and when you cross the finish line, already be thinking about what's next.</p>
-    <p>— Coach Tyler Reddy · Always Reddy Athletics</p>
-  </div>
-
-  <div class="doc-footer">
-    <span>Always Reddy Athletics</span>
-    <span>alwaysreddyathletics.com</span>
-    <span>@alwaysreddyathletics</span>
+    <div class="cta-bar">APPLY FOR 1-ON-1 COACHING → alwaysreddyathletics.com</div>
+    <div class="doc-footer">Always Reddy Athletics · alwaysreddyathletics.com · @alwaysreddyathletics</div>
   </div>
 
 </div>
