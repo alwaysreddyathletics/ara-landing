@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Return to Training Mini Course | Always Reddy Athletics</title>
+  <meta name="description" content="A free 5-lesson mini course for former athletes who haven't trained consistently in months or years. Coach Tyler's exact framework for rebuilding from zero.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --black:#0a0a0a; --white:#f4f2ef; --muted:#888; --accent:#c8a96e; --accent-dark:#a8893e; }
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Barlow',sans-serif; background:var(--black); color:var(--white); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+    h1,h2,h3,h4 { font-family:'Barlow Condensed',sans-serif; line-height:1.05; }
+    em { font-style:normal; color:var(--accent); }
+    .container { max-width:780px; margin:0 auto; padding:0 20px; }
+    nav { padding:20px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(200,169,110,0.1); }
+    .nav-logo { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1.05rem; letter-spacing:0.05em; text-transform:uppercase; color:var(--white); text-decoration:none; }
+    .nav-logo span { color:var(--accent); }
+    .btn-ghost { font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--white); text-decoration:none; padding:8px 16px; border:1px solid rgba(255,255,255,0.2); border-radius:2px; transition:all 0.2s; display:inline-block; }
+    .btn-ghost:hover { border-color:var(--accent); color:var(--accent); }
+    .btn-primary { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.95rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--black); background:var(--accent); text-decoration:none; padding:12px 24px; border-radius:2px; border:none; cursor:pointer; transition:all 0.2s; display:inline-block; }
+    .btn-primary:hover { background:var(--accent-dark); }
+    /* Hero */
+    .hero { padding:72px 0 56px; border-bottom:1px solid rgba(255,255,255,0.06); }
+    .eyebrow { font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:16px; display:flex; align-items:center; gap:12px; }
+    .eyebrow::before { content:''; display:inline-block; width:24px; height:2px; background:var(--accent); }
+    .hero h1 { font-size:clamp(2.8rem,7vw,4.5rem); font-weight:900; margin-bottom:16px; }
+    .hero p { font-size:1.05rem; color:rgba(244,242,239,0.65); max-width:580px; margin-bottom:32px; font-weight:300; line-height:1.75; }
+    .lessons-nav { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:0; }
+    .lesson-dot { font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:6px 14px; border:0.5px solid rgba(200,169,110,0.3); color:rgba(200,169,110,0.6); border-radius:2px; text-decoration:none; transition:all 0.2s; }
+    .lesson-dot:hover { border-color:var(--accent); color:var(--accent); background:rgba(200,169,110,0.06); }
+    /* Lesson */
+    .lesson { padding:72px 0; border-bottom:1px solid rgba(255,255,255,0.06); }
+    .lesson:last-child { border-bottom:none; }
+    .lesson-header { display:flex; align-items:flex-start; gap:24px; margin-bottom:32px; }
+    .lesson-num { font-family:'Barlow Condensed',sans-serif; font-size:4rem; font-weight:900; color:rgba(200,169,110,0.15); line-height:1; flex-shrink:0; }
+    .lesson-meta { }
+    .lesson-label { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; }
+    .lesson h2 { font-size:clamp(1.8rem,4vw,2.6rem); font-weight:800; }
+    .lesson-body { font-size:0.97rem; color:rgba(244,242,239,0.75); line-height:1.8; }
+    .lesson-body p { margin-bottom:20px; }
+    .lesson-body p:last-child { margin-bottom:0; }
+    .lesson-body strong { color:var(--white); }
+    .callout { background:rgba(200,169,110,0.06); border-left:3px solid var(--accent); padding:20px 24px; margin:24px 0; border-radius:0 2px 2px 0; }
+    .callout p { font-size:0.95rem; color:rgba(244,242,239,0.8); line-height:1.65; }
+    .action-box { background:#111; border:0.5px solid rgba(200,169,110,0.25); padding:28px; margin-top:32px; }
+    .action-label { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .action-box h4 { font-family:'Barlow Condensed',sans-serif; font-size:1.3rem; font-weight:700; margin-bottom:12px; }
+    .action-box ul { list-style:none; }
+    .action-box ul li { display:flex; gap:10px; padding:8px 0; border-bottom:0.5px solid rgba(255,255,255,0.05); font-size:0.9rem; color:rgba(244,242,239,0.7); align-items:flex-start; }
+    .action-box ul li::before { content:'→'; color:var(--accent); flex-shrink:0; margin-top:2px; font-family:'Barlow Condensed',sans-serif; font-weight:700; }
+    .week-table { width:100%; border-collapse:collapse; margin:20px 0; font-size:0.88rem; }
+    .week-table th { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:10px 12px; background:rgba(200,169,110,0.1); color:var(--accent); border:0.5px solid rgba(255,255,255,0.08); text-align:left; }
+    .week-table td { padding:10px 12px; border:0.5px solid rgba(255,255,255,0.08); color:rgba(244,242,239,0.7); vertical-align:top; line-height:1.5; }
+    .week-table .wk-label { font-family:'Barlow Condensed',sans-serif; font-weight:700; color:var(--accent); font-size:0.8rem; letter-spacing:0.05em; }
+    .check-list { list-style:none; margin:20px 0; }
+    .check-list li { display:flex; gap:12px; padding:10px 0; border-bottom:0.5px solid rgba(255,255,255,0.05); font-size:0.92rem; color:rgba(244,242,239,0.75); align-items:flex-start; }
+    .check-list li::before { content:'✓'; color:var(--accent); font-weight:700; flex-shrink:0; margin-top:2px; }
+    /* Final CTA */
+    .cta-section { background:#0f0f0f; padding:72px 0; border-top:1px solid rgba(255,255,255,0.06); }
+    .cta-section h2 { font-size:clamp(2rem,5vw,3.2rem); font-weight:900; margin-bottom:16px; }
+    .cta-section p { font-size:0.97rem; color:rgba(244,242,239,0.65); line-height:1.75; max-width:560px; margin-bottom:32px; }
+    .cta-actions { display:flex; gap:14px; flex-wrap:wrap; }
+    /* Footer */
+    footer { background:#060606; border-top:1px solid rgba(255,255,255,0.06); padding:28px 20px; text-align:center; }
+    .footer-logo { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:0.95rem; letter-spacing:0.05em; text-transform:uppercase; color:var(--white); margin-bottom:8px; }
+    .footer-logo span { color:var(--accent); }
+    .footer-copy { font-size:0.75rem; color:rgba(136,136,136,0.5); }
+    @media(max-width:600px) {
+      .lesson-header { flex-direction:column; gap:8px; }
+      .lesson-num { font-size:2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Always <span>Reddy</span> Athletics</a>
+  <a href="/" class="btn-ghost">← Back</a>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">Free Mini Course</div>
+    <h1>Return to<br><em>Training.</em></h1>
+    <p>You were an athlete. You know what hard work feels like — you just lost the structure that made it mean something. This free 5-lesson course gives you the framework, the schedule, and the mindset to build it back.</p>
+    <div class="lessons-nav">
+      <a href="#lesson-1" class="lesson-dot">Lesson 1</a>
+      <a href="#lesson-2" class="lesson-dot">Lesson 2</a>
+      <a href="#lesson-3" class="lesson-dot">Lesson 3</a>
+      <a href="#lesson-4" class="lesson-dot">Lesson 4</a>
+      <a href="#lesson-5" class="lesson-dot">Lesson 5</a>
+    </div>
+  </div>
+</section>
+
+<!-- Lesson 1 -->
+<section class="lesson" id="lesson-1">
+  <div class="container">
+    <div class="lesson-header">
+      <div class="lesson-num">01</div>
+      <div class="lesson-meta">
+        <div class="lesson-label">Lesson 1 of 5</div>
+        <h2>Why Former Athletes <em>Stay Stuck</em></h2>
+      </div>
+    </div>
+    <div class="lesson-body">
+      <p>Here's what nobody tells you when your competitive career ends: it's not about fitness. The people who struggle to get back aren't lazy. They're not weak. And it's not a motivation problem — if you're reading this, you already have motivation. You're reading a free course on training.</p>
+      <p>The real problem is <strong>identity dislocation.</strong> For years, you woke up as an athlete. Training was your structure. The team gave you accountability. The season gave you purpose. The game told you exactly what good looked like. Then it stopped. And nothing replaced it.</p>
+      <p>Most former athletes try to solve a structure problem with a motivation solution — podcasts, hype playlists, "getting back on track" Mondays that last four days. It doesn't work because the missing piece isn't desire. It's architecture.</p>
+      <div class="callout">
+        <p><strong>The athlete's identity doesn't disappear when the career ends.</strong> It goes underground. It's still there. That's why you still care. That's why you're reading this. The work is finding out how to build an athletic life that fits who you are now — not who you were at 20.</p>
+      </div>
+      <p>The other reason former athletes stay stuck: they benchmark themselves against their peak. You remember how you performed at your best — and anything short of that feels like failure. So you avoid the gym rather than face it. Or you go too hard trying to recreate it, get hurt, and spiral. Both responses make sense. Both keep you stuck.</p>
+      <p>The shift you need to make before anything else: <strong>your baseline is not where you were. Your baseline is where you are right now.</strong> Meeting yourself there isn't surrender. It's the only way to build from something real.</p>
+      <div class="action-box">
+        <div class="action-label">Lesson 1 Action</div>
+        <h4>Write This Down Before Lesson 2</h4>
+        <ul>
+          <li>What sport did you play and what did training look like at your best?</li>
+          <li>When did you last feel like an athlete? What were you doing?</li>
+          <li>What's one thing that's stopped you from getting back to it before now?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lesson 2 -->
+<section class="lesson" id="lesson-2">
+  <div class="container">
+    <div class="lesson-header">
+      <div class="lesson-num">02</div>
+      <div class="lesson-meta">
+        <div class="lesson-label">Lesson 2 of 5</div>
+        <h2>Your Movement <em>Baseline Assessment</em></h2>
+      </div>
+    </div>
+    <div class="lesson-body">
+      <p>Before you write a single workout, you need honest data. This is something former athletes often skip — they assume they know where they are because they know where they were. That assumption leads to injuries, frustration, and quitting inside 3 weeks.</p>
+      <p>The baseline assessment has two parts: honest self-reflection and a simple physical test. Neither will take more than 20 minutes. Both will tell you more than you expect.</p>
+      <p><strong>Part 1 — Self-Assessment Questions</strong></p>
+      <ul class="check-list">
+        <li>How many times per week are you currently moving with intentional effort (not just steps)?</li>
+        <li>Can you walk up 3 flights of stairs without getting winded?</li>
+        <li>Do you have any current injuries, chronic pain, or movement limitations?</li>
+        <li>What equipment do you have access to — gym, dumbbells, bodyweight only?</li>
+        <li>What time of day are you most likely to actually train?</li>
+        <li>What's the honest minimum number of days per week you can commit to?</li>
+      </ul>
+      <div class="callout">
+        <p><strong>On the last question:</strong> don't write down what you wish you could commit. Write down the number you would bet $100 on hitting every single week, no matter what. That's your real number. Build from that.</p>
+      </div>
+      <p><strong>Part 2 — Physical Baseline Test</strong></p>
+      <p>Complete this in one session. Record your results. You'll retest in Week 4.</p>
+      <table class="week-table">
+        <thead>
+          <tr><th>Test</th><th style="width:30%">What to Record</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Walk/jog 1 mile — whatever pace you can hold</td><td>Time to complete</td></tr>
+          <tr><td>Max push-ups — no rest, stop when form breaks</td><td>Total reps</td></tr>
+          <tr><td>Max bodyweight squats in 60 seconds</td><td>Total reps</td></tr>
+          <tr><td>Plank hold — stop when hips drop or you break</td><td>Total seconds</td></tr>
+          <tr><td>Sit-and-reach — seated, reach as far as you can toward toes</td><td>Inches past toes (or before)</td></tr>
+        </tbody>
+      </table>
+      <p>There are no good or bad results here. These are your numbers. They're not a judgement — they're a starting line. By Week 4, every single one of them will have moved.</p>
+      <div class="action-box">
+        <div class="action-label">Lesson 2 Action</div>
+        <h4>Before Lesson 3</h4>
+        <ul>
+          <li>Answer all six self-assessment questions honestly and write them down</li>
+          <li>Complete the physical baseline test and record your results</li>
+          <li>Take note of your most and least comfortable movement patterns</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lesson 3 -->
+<section class="lesson" id="lesson-3">
+  <div class="container">
+    <div class="lesson-header">
+      <div class="lesson-num">03</div>
+      <div class="lesson-meta">
+        <div class="lesson-label">Lesson 3 of 5</div>
+        <h2>Your First <em>4-Week Structure</em></h2>
+      </div>
+    </div>
+    <div class="lesson-body">
+      <p>This is the part most people get wrong. They come back with 5-day splits, hour-long sessions, and a plan they found for advanced athletes. Then they blow up in week 2 — either from fatigue, soreness, or the simple reality that that schedule doesn't fit their life.</p>
+      <p>The first 4 weeks have one goal: <strong>build the habit without breaking the body.</strong> You're training your schedule, your recovery systems, and your consistency — not just your muscles. The load will go up. Not yet.</p>
+      <p>Below is the 4-week starter framework. Three sessions per week, under 45 minutes each. If your baseline test shows you're already past this level, you can progress faster — but don't skip it. The movements matter more than the load at this stage.</p>
+      <table class="week-table">
+        <thead>
+          <tr><th style="width:16%">Week</th><th>Session A — Full Body Strength</th><th>Session B — Conditioning</th><th>Session C — Full Body + Core</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="wk-label">WEEK 1<br>Foundation</td>
+            <td>Goblet squat 3×10, Push-up 3×8, Single-leg RDL 3×8 each, Bent-over row 3×10, Plank 3×20s</td>
+            <td>20 min easy walk/jog + 4×30s high knees</td>
+            <td>DB lunges 3×10, Shoulder press 3×10, Hip thrust 3×12, Hollow hold 3×20s, Farmer carry 3×20m</td>
+          </tr>
+          <tr>
+            <td class="wk-label">WEEK 2<br>Foundation</td>
+            <td>Goblet squat 3×12, Push-up 3×10, Single-leg RDL 3×10 each, Bent-over row 3×12, Plank 3×30s</td>
+            <td>25 min easy jog + 4 strides (100m each)</td>
+            <td>DB lunges 3×12, Shoulder press 3×12, Hip thrust 3×15, Hollow hold 3×30s, Farmer carry 3×25m</td>
+          </tr>
+          <tr>
+            <td class="wk-label">WEEK 3<br>Progression</td>
+            <td>Add 5–10lbs to all DB movements. Same rep scheme week 2.</td>
+            <td>30 min easy + 2×5 min at moderately hard pace</td>
+            <td>Add 5–10lbs. Same rep scheme week 2. Add: 2×10 dead bugs</td>
+          </tr>
+          <tr>
+            <td class="wk-label">WEEK 4<br>Retest</td>
+            <td>Deload: 50% of week 3 volume. Focus on form.</td>
+            <td>Easy 20 min jog only</td>
+            <td>Retest baseline from Lesson 2. Record new numbers.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        <p><strong>On rest days:</strong> walk. Even 20 minutes of easy walking on off days accelerates recovery, reduces soreness, and keeps the habit loop going. The worst thing you can do in the first 4 weeks is treat rest days as complete inactivity — your body needs movement, even easy movement.</p>
+      </div>
+      <p>The warm-up for every session: 5 minutes of leg swings, hip circles, high knees, and butt kicks. Then one lighter set of each exercise before your working sets. This is not optional. Coming back after a long break means your joints and connective tissue need more warm-up time, not less.</p>
+      <p>The cool-down: 5 minutes of walking and basic stretching — hip flexors, quads, hamstrings, shoulders. Again: not optional. This is where you build the recovery habits that will keep you training for decades.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Lesson 4 -->
+<section class="lesson" id="lesson-4">
+  <div class="container">
+    <div class="lesson-header">
+      <div class="lesson-num">04</div>
+      <div class="lesson-meta">
+        <div class="lesson-label">Lesson 4 of 5</div>
+        <h2>The Nutrition Reset <em>That Actually Works</em></h2>
+      </div>
+    </div>
+    <div class="lesson-body">
+      <p>You don't need a meal plan. You don't need macros tracked to the gram. You don't need to overhaul everything at once. What you need are <strong>three habits that actually move the needle</strong> — and that you can sustain alongside real training.</p>
+      <p>Here's the reality: most nutrition advice for athletes assumes you're already training 5 days a week with consistent sleep and low stress. If you're returning from a long break, none of that is true yet. The goal right now isn't optimization. It's building the foundation that makes optimization possible later.</p>
+      <p><strong>The Three Non-Negotiables</strong></p>
+      <ul class="check-list">
+        <li><strong>Protein at every meal.</strong> Not a specific gram target — just make sure there's a real protein source at breakfast, lunch, and dinner. Eggs, chicken, Greek yogurt, cottage cheese, beef, fish. Former athletes typically undereat protein when they stop competing, and it's the single biggest reason for muscle loss and slow recovery.</li>
+        <li><strong>Vegetables at two meals.</strong> Not six. Not every meal. Just two. A handful of spinach, a cup of roasted vegetables, a big salad. Do this every day and you've already done more than most people do consistently.</li>
+        <li><strong>Water before everything else.</strong> Before coffee. Before training. 16–20oz of water when you wake up. Dehydration causes fatigue, poor performance, and false hunger cues. This is the lowest-effort, highest-return habit in this entire course.</li>
+      </ul>
+      <div class="callout">
+        <p><strong>On the things you're removing:</strong> don't start there. Adding good habits first is always easier than removing bad ones — and the good habits naturally crowd out some of the bad ones. When you're eating protein and vegetables consistently, you're less hungry for the junk.</p>
+      </div>
+      <p><strong>Around Training</strong></p>
+      <p>Before your session: a small carbohydrate source 30–60 minutes prior if you're training in the morning (banana, slice of toast, handful of dates). Nothing heavy. You just need fuel, not a full meal.</p>
+      <p>After your session: the most important meal of the day for recovery. Hit protein within 30 minutes of finishing. A shake, chocolate milk, Greek yogurt with fruit — it doesn't have to be elaborate. Just make sure it happens.</p>
+      <p><strong>On sleep:</strong> this is nutrition. Seven to nine hours per night. Not as a luxury — as a physiological requirement for the training you're about to do. Poor sleep increases cortisol, reduces anabolic hormones, drives hunger, impairs recovery, and tanks performance. You cannot train your way out of bad sleep. Fix sleep first.</p>
+      <div class="action-box">
+        <div class="action-label">Lesson 4 Action</div>
+        <h4>Pick One Habit to Lock In This Week</h4>
+        <ul>
+          <li>Choose one of the three non-negotiables and hit it every day for 7 days straight</li>
+          <li>Don't try all three at once — build one first, then layer the others on top</li>
+          <li>Track it simply: a checkmark on your phone or a sticky note on your fridge</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lesson 5 -->
+<section class="lesson" id="lesson-5">
+  <div class="container">
+    <div class="lesson-header">
+      <div class="lesson-num">05</div>
+      <div class="lesson-meta">
+        <div class="lesson-label">Lesson 5 of 5</div>
+        <h2>What Happens <em>After Week 4</em></h2>
+      </div>
+    </div>
+    <div class="lesson-body">
+      <p>If you've done the work in this course — completed the baseline test, run the 4-week program, built even one nutrition habit — you are already a different athlete than you were a month ago. You've built the most important thing: evidence that you can show up consistently.</p>
+      <p>Now the question is: what comes next? The honest answer depends on what your retests looked like and what your goals are. But here's the framework for how to think about it.</p>
+      <p><strong>If you struggled with consistency in weeks 1–3:</strong> don't jump to a more demanding program. Run another cycle of the 4-week structure. The foundation isn't built until you can hit three sessions per week without white-knuckling it. More volume before that baseline is solid just creates a more dramatic failure later.</p>
+      <p><strong>If you hit every session and want more structure:</strong> you're ready for a real plan. The options depend on your goal. Running a race? The 5K, 10K, or half marathon plans will take you from exactly where you are and give you a training schedule with a finish line on it. Getting significantly stronger? The beginner or intermediate strength programs will take over from the starter framework in this course and build on what you've already done.</p>
+      <p><strong>If you want the full rebuild with accountability:</strong> that's what The Athletic Rebuild coaching program is for. Coach Tyler works with you 1-on-1 for 12 weeks — custom plan, weekly check-ins, direct access, and the kind of accountability that comes from having a real coach in your corner. Every athlete Tyler has coached has hit a personal record. That's not a coincidence.</p>
+      <div class="callout">
+        <p><strong>Here's what I want you to know:</strong> the hardest part of coming back isn't the fitness. It's the decision to start — and then the second decision to keep going when it gets uncomfortable. You've already made the first one. Four weeks from now, you'll see exactly what you're capable of when you have a real structure and actually follow it. <em>— Coach Tyler</em></p>
+      </div>
+      <div class="action-box">
+        <div class="action-label">Your Next Step</div>
+        <h4>Choose Your Direction</h4>
+        <ul>
+          <li>Run the 4-week structure again if you need more consistency reps</li>
+          <li>Browse the training plans — 5K, 10K, half marathon, strength programs</li>
+          <li>Take the Athlete Match Quiz to get matched with the right plan</li>
+          <li>Apply for The Athletic Rebuild if you want the full 1-on-1 coaching experience</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Ready for More?</div>
+    <h2>You've Got the Foundation.<br><em>Now Build the House.</em></h2>
+    <p>The 4-week structure in this course is the starting point. The training plans and coaching programs below are where the real gains happen — when the habit is built and you're ready to push.</p>
+    <div class="cta-actions">
+      <a href="quiz.html" class="btn-primary" style="font-size:1rem;padding:14px 28px;">Find My Right Plan →</a>
+      <a href="/#plans" class="btn-ghost" style="padding:14px 24px;font-size:1rem;">Browse All Plans</a>
+      <a href="https://calendly.com/tylerreddy96/30min" target="_blank" rel="noopener" class="btn-ghost" style="padding:14px 24px;font-size:1rem;">Talk to Coach Tyler</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Always <span>Reddy</span> Athletics</div>
+  <div class="footer-copy">© 2026 Always Reddy Athletics · alwaysreddyathletics.com · @alwaysreddyathletics</div>
+</footer>
+
+</body>
+</html>

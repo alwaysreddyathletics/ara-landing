@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athlete Match Quiz | Always Reddy Athletics</title>
+  <meta name="description" content="Answer 6 quick questions and we'll match you with the right plan or tell you if 1-on-1 coaching is the better move.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --black:#0a0a0a; --white:#f4f2ef; --muted:#888; --accent:#c8a96e; --accent-dark:#a8893e; }
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Barlow',sans-serif; background:var(--black); color:var(--white); min-height:100vh; display:flex; flex-direction:column; -webkit-font-smoothing:antialiased; }
+    h1,h2,h3 { font-family:'Barlow Condensed',sans-serif; line-height:1.05; }
+    em { font-style:normal; color:var(--accent); }
+    nav { padding:20px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(200,169,110,0.1); }
+    .nav-logo { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1.05rem; letter-spacing:0.05em; text-transform:uppercase; color:var(--white); text-decoration:none; }
+    .nav-logo span { color:var(--accent); }
+    .btn-ghost { font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--white); text-decoration:none; padding:8px 16px; border:1px solid rgba(255,255,255,0.2); border-radius:2px; transition:all 0.2s; }
+    .btn-ghost:hover { border-color:var(--accent); color:var(--accent); }
+    .btn-primary { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:1rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--black); background:var(--accent); text-decoration:none; padding:14px 32px; border-radius:2px; border:none; cursor:pointer; transition:all 0.2s; display:inline-block; }
+    .btn-primary:hover { background:var(--accent-dark); }
+    main { flex:1; display:flex; align-items:center; justify-content:center; padding:48px 20px; }
+    .quiz-wrap { max-width:680px; width:100%; }
+    /* Intro */
+    .intro { text-align:center; }
+    .eyebrow { font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:16px; display:flex; align-items:center; justify-content:center; gap:12px; }
+    .eyebrow::before,.eyebrow::after { content:''; display:inline-block; width:24px; height:2px; background:var(--accent); }
+    .intro h1 { font-size:clamp(2.4rem,6vw,3.8rem); font-weight:900; margin-bottom:16px; }
+    .intro p { font-size:1rem; color:rgba(244,242,239,0.65); line-height:1.75; margin-bottom:32px; max-width:480px; margin-left:auto; margin-right:auto; }
+    .intro-meta { font-size:0.8rem; color:var(--muted); margin-top:16px; }
+    /* Progress */
+    .progress-bar { width:100%; height:3px; background:rgba(255,255,255,0.08); border-radius:2px; margin-bottom:8px; overflow:hidden; }
+    .progress-fill { height:100%; background:var(--accent); border-radius:2px; transition:width 0.4s ease; }
+    .progress-label { font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:32px; }
+    /* Question */
+    .question-wrap { display:none; }
+    .question-wrap.active { display:block; }
+    .q-label { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+    .q-text { font-family:'Barlow Condensed',sans-serif; font-size:clamp(1.6rem,4vw,2.2rem); font-weight:800; margin-bottom:28px; line-height:1.15; }
+    .options { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:32px; }
+    .option-btn { background:rgba(255,255,255,0.04); border:0.5px solid rgba(255,255,255,0.1); padding:16px 20px; text-align:left; cursor:pointer; transition:all 0.2s; color:var(--white); font-family:'Barlow',sans-serif; font-size:0.92rem; line-height:1.45; border-radius:2px; }
+    .option-btn:hover { border-color:var(--accent); background:rgba(200,169,110,0.07); }
+    .option-btn.selected { border-color:var(--accent); background:rgba(200,169,110,0.12); color:var(--accent); }
+    .option-btn .opt-label { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); display:block; margin-bottom:4px; }
+    .option-btn.selected .opt-label { color:rgba(200,169,110,0.7); }
+    .q-nav { display:flex; justify-content:space-between; align-items:center; }
+    .q-back { font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); background:none; border:none; cursor:pointer; padding:0; }
+    .q-back:hover { color:var(--white); }
+    /* Result */
+    .result-wrap { display:none; text-align:center; }
+    .result-badge { display:inline-block; font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--black); background:var(--accent); padding:5px 14px; margin-bottom:20px; }
+    .result-wrap h2 { font-size:clamp(2rem,5vw,3rem); font-weight:900; margin-bottom:16px; }
+    .result-desc { font-size:1rem; color:rgba(244,242,239,0.7); line-height:1.75; margin-bottom:32px; max-width:520px; margin-left:auto; margin-right:auto; }
+    .result-card { background:#111; border:0.5px solid rgba(200,169,110,0.3); padding:28px; margin-bottom:24px; text-align:left; }
+    .result-card-label { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; }
+    .result-card h3 { font-family:'Barlow Condensed',sans-serif; font-size:1.6rem; font-weight:800; margin-bottom:8px; }
+    .result-card p { font-size:0.9rem; color:rgba(244,242,239,0.65); line-height:1.65; margin-bottom:16px; }
+    .result-actions { display:flex; gap:12px; flex-wrap:wrap; }
+    .retake { font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); background:none; border:none; cursor:pointer; margin-top:24px; display:inline-block; }
+    .retake:hover { color:var(--accent); }
+    footer { border-top:1px solid rgba(255,255,255,0.06); padding:24px 20px; text-align:center; }
+    .footer-logo { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:0.9rem; letter-spacing:0.05em; text-transform:uppercase; color:var(--white); }
+    .footer-logo span { color:var(--accent); }
+    @media(max-width:500px) {
+      .options { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Always <span>Reddy</span> Athletics</a>
+  <a href="/" class="btn-ghost">← Back</a>
+</nav>
+
+<main>
+  <div class="quiz-wrap">
+
+    <!-- Intro -->
+    <div id="intro">
+      <div class="eyebrow">Free Quiz</div>
+      <h1 class="intro" style="font-size:clamp(2.4rem,6vw,3.8rem);font-weight:900;margin-bottom:16px;font-family:'Barlow Condensed',sans-serif;">Find Your <em>Right Plan.</em></h1>
+      <p style="font-size:1rem;color:rgba(244,242,239,0.65);line-height:1.75;margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;text-align:center;">Answer 6 questions about your background, goals, and schedule. We'll match you with the exact plan — or tell you if 1-on-1 coaching is the better move.</p>
+      <div style="text-align:center;margin-bottom:12px;">
+        <button class="btn-primary" onclick="startQuiz()">Start the Quiz →</button>
+      </div>
+      <p style="text-align:center;font-size:0.8rem;color:var(--muted);">Takes under 2 minutes. No email required.</p>
+    </div>
+
+    <!-- Quiz -->
+    <div id="quiz-container" style="display:none;">
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+      <div class="progress-label" id="progress-label">Question 1 of 6</div>
+
+      <!-- Q1 -->
+      <div class="question-wrap active" id="q1">
+        <div class="q-label">Question 1 of 6</div>
+        <div class="q-text">What sport did you compete in?</div>
+        <div class="options">
+          <button class="option-btn" onclick="selectOption(1,'running')"><span class="opt-label">Option A</span>Track, cross country, or road racing</button>
+          <button class="option-btn" onclick="selectOption(1,'team')"><span class="opt-label">Option B</span>Team sport — football, soccer, basketball, baseball, etc.</button>
+          <button class="option-btn" onclick="selectOption(1,'strength')"><span class="opt-label">Option C</span>Strength or power sport — wrestling, Olympic lifting, rowing</button>
+          <button class="option-btn" onclick="selectOption(1,'multi')"><span class="opt-label">Option D</span>Multiple sports — I played more than one seriously</button>
+        </div>
+        <div class="q-nav">
+          <span></span>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="question-wrap" id="q2">
+        <div class="q-label">Question 2 of 6</div>
+        <div class="q-text">How long has it been since you competed or trained like an athlete?</div>
+        <div class="options">
+          <button class="option-btn" onclick="selectOption(2,'recent')"><span class="opt-label">Option A</span>Less than 1 year</button>
+          <button class="option-btn" onclick="selectOption(2,'mid')"><span class="opt-label">Option B</span>1–3 years</button>
+          <button class="option-btn" onclick="selectOption(2,'long')"><span class="opt-label">Option C</span>3–5 years</button>
+          <button class="option-btn" onclick="selectOption(2,'verylong')"><span class="opt-label">Option D</span>5+ years</button>
+        </div>
+        <div class="q-nav">
+          <button class="q-back" onclick="goBack(2)">← Back</button>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="question-wrap" id="q3">
+        <div class="q-label">Question 3 of 6</div>
+        <div class="q-text">How often are you currently training?</div>
+        <div class="options">
+          <button class="option-btn" onclick="selectOption(3,'none')"><span class="opt-label">Option A</span>Not at all — starting from zero</button>
+          <button class="option-btn" onclick="selectOption(3,'light')"><span class="opt-label">Option B</span>1–2 times per week, inconsistently</button>
+          <button class="option-btn" onclick="selectOption(3,'moderate')"><span class="opt-label">Option C</span>3–4 times per week with some structure</button>
+          <button class="option-btn" onclick="selectOption(3,'active')"><span class="opt-label">Option D</span>5+ times per week — I'm already training seriously</button>
+        </div>
+        <div class="q-nav">
+          <button class="q-back" onclick="goBack(3)">← Back</button>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="question-wrap" id="q4">
+        <div class="q-label">Question 4 of 6</div>
+        <div class="q-text">What's your primary goal right now?</div>
+        <div class="options">
+          <button class="option-btn" onclick="selectOption(4,'race-short')"><span class="opt-label">Option A</span>Run a 5K or 10K race</button>
+          <button class="option-btn" onclick="selectOption(4,'race-long')"><span class="opt-label">Option B</span>Run a half marathon or full marathon</button>
+          <button class="option-btn" onclick="selectOption(4,'strength')"><span class="opt-label">Option C</span>Get significantly stronger and more athletic</button>
+          <button class="option-btn" onclick="selectOption(4,'everything')"><span class="opt-label">Option D</span>All of it — full rebuild, everything at once</button>
+        </div>
+        <div class="q-nav">
+          <button class="q-back" onclick="goBack(4)">← Back</button>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="question-wrap" id="q5">
+        <div class="q-label">Question 5 of 6</div>
+        <div class="q-text">How many hours per week can you commit to training?</div>
+        <div class="options">
+          <button class="option-btn" onclick="selectOption(5,'low')"><span class="opt-label">Option A</span>Under 3 hours</button>
+          <button class="option-btn" onclick="selectOption(5,'mid')"><span class="opt-label">Option B</span>3–5 hours</button>
+          <button class="option-btn" onclick="selectOption(5,'high')"><span class="opt-label">Option C</span>5–8 hours</button>
+          <button class="option-btn" onclick="selectOption(5,'max')"><span class="opt-label">Option D</span>8+ hours — I'm all in</button>
+        </div>
+        <div class="q-nav">
+          <button class="q-back" onclick="goBack(5)">← Back</button>
+        </div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="question-wrap" id="q6">
+        <div class="q-label">Question 6 of 6</div>
+        <div class="q-text">What's your biggest obstacle right now?</div>
+        <div class="options">
+          <button class="option-btn" onclick="selectOption(6,'no-plan')"><span class="opt-label">Option A</span>I don't have a structured plan to follow</button>
+          <button class="option-btn" onclick="selectOption(6,'accountability')"><span class="opt-label">Option B</span>I need accountability — I start but don't finish</button>
+          <button class="option-btn" onclick="selectOption(6,'lost')"><span class="opt-label">Option C</span>I don't know where to start after a long break</button>
+          <button class="option-btn" onclick="selectOption(6,'injury')"><span class="opt-label">Option D</span>Injury history or physical limitations I need to work around</button>
+        </div>
+        <div class="q-nav">
+          <button class="q-back" onclick="goBack(6)">← Back</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div id="result-wrap" style="display:none;text-align:center;">
+      <div id="result-badge" class="result-badge">Your Match</div>
+      <h2 id="result-title" style="font-size:clamp(2rem,5vw,3rem);font-weight:900;margin-bottom:16px;font-family:'Barlow Condensed',sans-serif;"></h2>
+      <p id="result-desc" class="result-desc"></p>
+      <div id="result-card" class="result-card" style="text-align:left;"></div>
+      <button class="retake" onclick="retake()">← Start Over</button>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-logo">Always <span>Reddy</span> Athletics</div>
+</footer>
+
+<script>
+  const answers = {};
+  const totalQ = 6;
+
+  function startQuiz() {
+    document.getElementById('intro').style.display = 'none';
+    document.getElementById('quiz-container').style.display = 'block';
+    updateProgress(1);
+  }
+
+  function updateProgress(qNum) {
+    const pct = Math.round(((qNum - 1) / totalQ) * 100);
+    document.getElementById('progress-fill').style.width = pct + '%';
+    document.getElementById('progress-label').textContent = 'Question ' + qNum + ' of ' + totalQ;
+  }
+
+  function selectOption(qNum, value) {
+    answers[qNum] = value;
+    document.querySelectorAll('#q' + qNum + ' .option-btn').forEach(btn => btn.classList.remove('selected'));
+    event.currentTarget.classList.add('selected');
+    setTimeout(() => {
+      if (qNum < totalQ) {
+        showQuestion(qNum + 1);
+      } else {
+        showResult();
+      }
+    }, 280);
+  }
+
+  function showQuestion(qNum) {
+    document.querySelectorAll('.question-wrap').forEach(q => q.classList.remove('active'));
+    const target = document.getElementById('q' + qNum);
+    if (target) {
+      target.classList.add('active');
+      updateProgress(qNum);
+      if (answers[qNum]) {
+        target.querySelectorAll('.option-btn').forEach(btn => {
+          btn.classList.remove('selected');
+        });
+      }
+    }
+  }
+
+  function goBack(currentQ) {
+    showQuestion(currentQ - 1);
+  }
+
+  function getResult() {
+    const timeSince = answers[2];
+    const currentTraining = answers[3];
+    const goal = answers[4];
+    const hours = answers[5];
+    const obstacle = answers[6];
+
+    // Completely new to training
+    if ((timeSince === 'verylong' || timeSince === 'long') && (currentTraining === 'none' || currentTraining === 'light')) {
+      return 'return-to-training';
+    }
+
+    // Needs coaching (accountability problem + all-in goal + time available)
+    if (goal === 'everything' || obstacle === 'accountability' || obstacle === 'injury') {
+      return 'coaching';
+    }
+
+    if (goal === 'race-short') {
+      if (currentTraining === 'none' || currentTraining === 'light') return '5k-plan';
+      return '10k-plan';
+    }
+
+    if (goal === 'race-long') {
+      if (currentTraining === 'none' || currentTraining === 'light') return 'beginner-half';
+      if (currentTraining === 'moderate') return 'intermediate-half';
+      return 'sub145-half';
+    }
+
+    if (goal === 'strength') {
+      if (currentTraining === 'none' || currentTraining === 'light') return 'beginner-strength';
+      if (currentTraining === 'moderate') return 'intermediate-strength';
+      return 'advanced-strength';
+    }
+
+    return 'coaching';
+  }
+
+  const results = {
+    'return-to-training': {
+      badge: 'Start Here',
+      title: 'Return to Training Mini Course',
+      desc: 'Before jumping into a plan, you need the foundation back. The Return to Training course was built for exactly where you are — athletes who\'ve been away from it and need a smart, structured path back.',
+      cardLabel: 'Free Course',
+      cardTitle: 'Return to Training',
+      cardDesc: 'A free 5-lesson mini course that takes you from zero back to consistent, structured training. No judgment. Just Coach Tyler\'s exact framework for rebuilding athletes who\'ve been out of it.',
+      cta1: { label: 'Start the Free Course →', href: 'return-to-training.html', primary: true },
+      cta2: { label: 'Browse All Plans', href: '/#plans', primary: false }
+    },
+    'coaching': {
+      badge: 'Best Fit',
+      title: 'The Athletic Rebuild — 1-on-1 Coaching',
+      desc: 'Your answers point to more than a plan — you need a real coaching relationship. The full rebuild, accountability, weekly check-ins, and a custom program built specifically for you.',
+      cardLabel: '12-Week Coaching Program',
+      cardTitle: 'The Athletic Rebuild',
+      cardDesc: 'A 12-week 1-on-1 coaching program engineered around your athletic history, your current life, and exactly where you want to be. Not a template. Not a PDF. Real coaching.',
+      cta1: { label: 'Apply for The Athletic Rebuild →', href: '/', primary: true },
+      cta2: { label: 'Book a Free Call First', href: 'https://calendly.com/tylerreddy96/30min', primary: false }
+    },
+    '5k-plan': {
+      badge: 'Your Match',
+      title: '6-Week 5K Plan',
+      desc: 'You have the background. You just need the structure. Six weeks of progressive runs, one tempo session per week, and a race week taper built for athletes who want to race — not just finish.',
+      cardLabel: '$17 · Instant Download',
+      cardTitle: '6-Week 5K Plan',
+      cardDesc: 'Six weeks. Three runs per week. Easy runs, one tempo session, and a race week taper that actually prepares you. Under 45 minutes per session.',
+      cta1: { label: 'Get This Plan →', href: '#', primary: true },
+      cta2: { label: 'Browse All Plans', href: '/#plans', primary: false }
+    },
+    '10k-plan': {
+      badge: 'Your Match',
+      title: '8-Week 10K Plan',
+      desc: 'You have the base, you have the consistency — now you need a plan with teeth. Eight weeks of progressive training, intervals, tempo work, and a long run that peaks at 7 miles.',
+      cardLabel: '$22 · Instant Download',
+      cardTitle: '8-Week 10K Plan',
+      cardDesc: 'Eight weeks. Four runs per week. Tempo work, interval sessions, and a race week taper. Built for athletes who know how to train and want a plan that matches.',
+      cta1: { label: 'Get This Plan →', href: '#', primary: true },
+      cta2: { label: 'Browse All Plans', href: '/#plans', primary: false }
+    },
+    'beginner-half': {
+      badge: 'Your Match',
+      title: 'Beginner Half Marathon Plan',
+      desc: 'Your first 13.1 — built the right way. Ten weeks, three runs per week, and a long run that peaks at 12 miles. The goal is simple: cross the finish line feeling strong.',
+      cardLabel: '$27 · Instant Download',
+      cardTitle: 'Beginner Half Marathon',
+      cardDesc: '10 weeks. Three runs per week. Long run peaks at 12 miles. Built-in deload and taper weeks. No prior race experience needed.',
+      cta1: { label: 'Get This Plan →', href: 'https://buy.stripe.com/3cIcN6a10eWceEGaWv1ZS04', primary: true },
+      cta2: { label: 'Browse All Plans', href: '/#plans', primary: false }
+    },
+    'intermediate-half': {
+      badge: 'Your Match',
+      title: 'Intermediate Half Marathon Plan',
+      desc: 'You\'ve done a half marathon — now it\'s time to race one faster. 14 weeks with two built-in deload weeks, tempo runs, mile repeats, and race pace long runs.',
+      cardLabel: '$37 · Instant Download',
+      cardTitle: 'Intermediate Half Marathon',
+      cardDesc: '14 weeks for runners who\'ve done a half marathon and want to run it faster. Tempo and interval sessions, race pace development, two deload weeks.',
+      cta1: { label: 'Get This Plan →', href: 'https://buy.stripe.com/9B6dRa0qq9BSeEGe8H1ZS03', primary: true },
+      cta2: { label: 'Browse All Plans', href: '/#plans', primary: false }
+    },
+    'sub145-half': {
+      badge: 'Your Match',
+      title: 'Sub 1:45 Half Marathon Plan',
+      desc: 'You\'re already training seriously — this plan takes you to a specific time target. 13 weeks of intervals, tempo work, and race pace long runs that make sub-1:45 feel inevitable.',
+      cardLabel: '$47 · Instant Download',
+      cardTitle: 'Sub 1:45 Half Marathon',
+      cardDesc: '13 weeks built for runners chasing a specific time goal. Intervals, tempo work, and race pace long runs. Built for athletes with a base and a goal.',
+      cta1: { label: 'Get This Plan →', href: 'https://buy.stripe.com/28E28sgpo7tK7cee8H1ZS02', primary: true },
+      cta2: { label: 'Browse All Plans', href: '/#plans', primary: false }
+    },
+    'beginner-strength': {
+      badge: 'Your Match',
+      title: '4-Week Beginner Strength Plan',
+      desc: 'The foundation every former athlete needs. Three workouts per week, under 30 minutes each, dumbbells only. Build the habit, learn the movements, come out stronger than you started.',
+      cardLabel: '$17 · Instant Download',
+      cardTitle: '4-Week Beginner Strength',
+      cardDesc: '4 weeks, 3 days per week, under 30 minutes per session. Dumbbells only — no barbell needed. Progressions built into weeks 3–4.',
+      cta1: { label: 'Get This Plan →', href: 'https://buy.stripe.com/6oU6oI5KK15m1RU5Cb1ZS05', primary: true },
+      cta2: { label: 'Browse All Plans', href: '/#plans', primary: false }
+    },
+    'intermediate-strength': {
+      badge: 'Your Match',
+      title: '6-Week Intermediate Strength Plan',
+      desc: 'You\'ve got the base. Now you build on it. Four days per week, two strength days and two functional movement days. Progressive overload every week. This is where real change happens.',
+      cardLabel: '$27 · Instant Download',
+      cardTitle: '6-Week Intermediate Strength',
+      cardDesc: '6 weeks, 4 days per week. Two strength days, two functional days. Progressive overload every week. Full gym required.',
+      cta1: { label: 'Get This Plan →', href: 'https://buy.stripe.com/14AfZic98cO44023u31ZS06', primary: true },
+      cta2: { label: 'Browse All Plans', href: '/#plans', primary: false }
+    },
+    'advanced-strength': {
+      badge: 'Your Match',
+      title: '8-Week Advanced Strength Plan',
+      desc: 'You\'re training hard and want a program that actually challenges you. Six days per week, heavy compound movements, conditioning finishers, and two peak weeks. This program finds your ceiling — then removes it.',
+      cardLabel: '$37 · Instant Download',
+      cardTitle: '8-Week Advanced Strength',
+      cardDesc: '8 weeks, 5–6 days per week. Two peak weeks built in. Full warm-up and cool-down protocols. Progressive overload every week.',
+      cta1: { label: 'Get This Plan →', href: 'https://buy.stripe.com/aFa28s1uu7tK68a3u31ZS07', primary: true },
+      cta2: { label: 'Browse All Plans', href: '/#plans', primary: false }
+    }
+  };
+
+  function showResult() {
+    document.getElementById('quiz-container').style.display = 'none';
+    const key = getResult();
+    const r = results[key];
+    document.getElementById('result-badge').textContent = r.badge;
+    document.getElementById('result-title').innerHTML = r.title.replace(/(1-on-1 Coaching|Mini Course|Plan|Program)/g, '<em>$1</em>');
+    document.getElementById('result-desc').textContent = r.desc;
+    document.getElementById('result-card').innerHTML = `
+      <div class="result-card-label">${r.cardLabel}</div>
+      <h3>${r.cardTitle}</h3>
+      <p>${r.cardDesc}</p>
+      <div class="result-actions">
+        <a href="${r.cta1.href}" class="btn-primary">${r.cta1.label}</a>
+        ${r.cta2 ? `<a href="${r.cta2.href}" class="btn-ghost" style="padding:14px 20px;">${r.cta2.label}</a>` : ''}
+      </div>
+    `;
+    document.getElementById('result-wrap').style.display = 'block';
+  }
+
+  function retake() {
+    Object.keys(answers).forEach(k => delete answers[k]);
+    document.getElementById('result-wrap').style.display = 'none';
+    document.getElementById('quiz-container').style.display = 'block';
+    document.querySelectorAll('.question-wrap').forEach(q => q.classList.remove('active'));
+    document.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('selected'));
+    document.getElementById('q1').classList.add('active');
+    updateProgress(1);
+  }
+</script>
+
+</body>
+</html>

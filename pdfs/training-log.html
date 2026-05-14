@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12-Week Training Log | Always Reddy Athletics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --black:#0a0a0a; --white:#f4f2ef; --muted:#888; --accent:#c8a96e; }
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:'Barlow',sans-serif; background:var(--black); color:var(--white); font-size:14px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+    h1,h2,h3,h4 { font-family:'Barlow Condensed',sans-serif; }
+    em { font-style:normal; color:var(--accent); }
+    .page { max-width:900px; margin:0 auto; }
+    .print-bar { background:var(--accent); color:var(--black); padding:12px 24px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100; }
+    .print-bar p { font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; }
+    .print-btn { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; background:var(--black); color:var(--white); border:none; padding:8px 20px; cursor:pointer; }
+    .print-btn:hover { background:#222; }
+    /* Header */
+    .doc-header { background:#111; border-bottom:2px solid var(--accent); padding:40px 32px; }
+    .doc-header .ara-label { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--muted); margin-bottom:12px; }
+    .doc-header h1 { font-size:clamp(2.4rem,5vw,3.8rem); font-weight:900; line-height:1.05; margin-bottom:6px; }
+    .doc-header .tagline { font-family:'Barlow Condensed',sans-serif; font-size:1.1rem; font-weight:600; color:var(--accent); letter-spacing:0.06em; text-transform:uppercase; }
+    .stats-bar { display:flex; border-bottom:1px solid rgba(255,255,255,0.07); }
+    .stat { flex:1; padding:20px 24px; border-right:1px solid rgba(255,255,255,0.07); background:#0d0d0d; }
+    .stat:last-child { border-right:none; }
+    .stat-num { font-family:'Barlow Condensed',sans-serif; font-size:2rem; font-weight:900; color:var(--accent); line-height:1; }
+    .stat-label { font-size:0.65rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; margin-top:5px; line-height:1.3; }
+    /* How to use */
+    .how-section { padding:28px 32px; border-bottom:1px solid rgba(255,255,255,0.06); background:#0d0d0d; }
+    .how-section h3 { font-family:'Barlow Condensed',sans-serif; font-size:1rem; font-weight:700; color:var(--accent); margin-bottom:12px; letter-spacing:0.05em; text-transform:uppercase; font-size:0.72rem; }
+    .how-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .how-item { font-size:0.82rem; color:rgba(244,242,239,0.65); line-height:1.55; }
+    .how-item strong { display:block; color:var(--accent); font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; margin-bottom:4px; letter-spacing:0.04em; text-transform:uppercase; }
+    /* Week block */
+    .week-block { padding:28px 32px; border-bottom:1px solid rgba(255,255,255,0.1); }
+    .week-block:last-child { border-bottom:none; }
+    .week-header-row { display:flex; align-items:center; justify-content:space-between; margin-bottom:20px; }
+    .week-label { font-family:'Barlow Condensed',sans-serif; font-size:1.4rem; font-weight:900; color:var(--white); }
+    .week-meta { display:flex; gap:24px; }
+    .week-field { display:flex; align-items:center; gap:8px; font-size:0.78rem; color:var(--muted); font-family:'Barlow Condensed',sans-serif; text-transform:uppercase; letter-spacing:0.06em; }
+    .field-line { width:120px; height:1px; background:rgba(255,255,255,0.15); display:inline-block; }
+    .day-table { width:100%; border-collapse:collapse; font-size:0.8rem; margin-bottom:16px; }
+    .day-table th { font-family:'Barlow Condensed',sans-serif; font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:8px 10px; background:rgba(200,169,110,0.1); color:var(--accent); border:0.5px solid rgba(255,255,255,0.08); text-align:left; }
+    .day-table td { padding:11px 10px; border:0.5px solid rgba(255,255,255,0.07); color:rgba(244,242,239,0.4); vertical-align:middle; }
+    .day-table td.day-name { font-family:'Barlow Condensed',sans-serif; font-weight:700; color:var(--white); font-size:0.85rem; min-width:50px; }
+    .day-table td.write-field { color:transparent; border-bottom:0.5px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.01); }
+    .day-table td.session-type { min-width:90px; }
+    .day-table tr:hover td { background:rgba(255,255,255,0.015); }
+    /* Exercise table */
+    .ex-table { width:100%; border-collapse:collapse; font-size:0.78rem; margin:12px 0 20px; }
+    .ex-table th { font-family:'Barlow Condensed',sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:7px 10px; background:rgba(200,169,110,0.08); color:var(--accent); border:0.5px solid rgba(255,255,255,0.07); text-align:left; }
+    .ex-table td { padding:8px 10px; border:0.5px solid rgba(255,255,255,0.06); height:32px; }
+    /* Reflection */
+    .reflection { background:#0d0d0d; border:0.5px solid rgba(255,255,255,0.08); padding:20px; margin-top:8px; }
+    .reflection h4 { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:14px; }
+    .refl-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .refl-item { }
+    .refl-label { font-size:0.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:8px; font-family:'Barlow Condensed',sans-serif; }
+    .refl-line { width:100%; height:1px; background:rgba(255,255,255,0.12); margin-bottom:6px; }
+    .refl-line + .refl-line { margin-top:14px; }
+    .mini-metrics { display:flex; gap:20px; margin-top:12px; padding-top:12px; border-top:0.5px solid rgba(255,255,255,0.07); }
+    .mini-metric { flex:1; }
+    .mini-metric .m-label { font-size:0.68rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; font-family:'Barlow Condensed',sans-serif; margin-bottom:5px; }
+    .mini-metric .m-line { width:100%; height:1px; background:rgba(255,255,255,0.15); }
+    /* Monthly review */
+    .monthly-review { padding:28px 32px; background:#0d0d0d; border-top:2px solid rgba(200,169,110,0.3); }
+    .monthly-review h3 { font-family:'Barlow Condensed',sans-serif; font-size:1.4rem; font-weight:800; margin-bottom:16px; }
+    .review-table { width:100%; border-collapse:collapse; font-size:0.82rem; }
+    .review-table th { font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:9px 12px; background:rgba(200,169,110,0.1); color:var(--accent); border:0.5px solid rgba(255,255,255,0.08); }
+    .review-table td { padding:10px 12px; border:0.5px solid rgba(255,255,255,0.07); height:36px; color:rgba(244,242,239,0.35); }
+    .review-table td:first-child { color:var(--muted); font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:0.8rem; letter-spacing:0.04em; text-transform:uppercase; }
+    /* Coach note */
+    .coach-note { background:rgba(200,169,110,0.05); border-top:2px solid var(--accent); padding:36px 32px; }
+    .coach-note .note-label { font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+    .coach-note h3 { font-family:'Barlow Condensed',sans-serif; font-size:1.8rem; font-weight:900; margin-bottom:14px; }
+    .coach-note p { font-size:0.92rem; color:rgba(244,242,239,0.75); line-height:1.75; margin-bottom:12px; }
+    .coach-note p:last-child { margin-bottom:0; font-size:0.8rem; color:var(--muted); }
+    .doc-footer { background:var(--accent); color:var(--black); padding:14px 32px; display:flex; justify-content:space-between; align-items:center; font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; }
+    @media print {
+      .print-bar { display:none; }
+      .week-block { page-break-inside:avoid; page-break-after:always; }
+      .week-block:last-child { page-break-after:auto; }
+      body { background:var(--black); }
+    }
+    @media(max-width:600px) {
+      .stats-bar { flex-wrap:wrap; }
+      .stat { flex:1 1 50%; border-right:none; border-bottom:1px solid rgba(255,255,255,0.07); }
+      .how-grid { grid-template-columns:1fr 1fr; }
+      .week-header-row { flex-direction:column; align-items:flex-start; gap:10px; }
+      .refl-grid { grid-template-columns:1fr; }
+      .doc-footer { flex-direction:column; gap:4px; text-align:center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="print-bar">
+  <p>12-Week Training Log — Always Reddy Athletics</p>
+  <button class="print-btn" onclick="window.print()">Save as PDF ↓</button>
+</div>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div class="ara-label">Always Reddy Athletics · Training Log</div>
+    <h1>12-Week<br><em>Training Log</em></h1>
+    <div class="tagline">Track. Improve. Dominate.</div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-num">12</div><div class="stat-label">Weeks</div></div>
+    <div class="stat"><div class="stat-num">84</div><div class="stat-label">Daily Log Pages</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">Monthly Reviews</div></div>
+    <div class="stat"><div class="stat-num">1</div><div class="stat-label">Goal: PR Everything</div></div>
+  </div>
+
+  <div class="how-section">
+    <h3>How to Use This Log</h3>
+    <div class="how-grid">
+      <div class="how-item"><strong>Log Same Day</strong>Fill in each day immediately after your session — don't wait. Details fade fast. The more honest your log entries, the more useful the data.</div>
+      <div class="how-item"><strong>RPE Scale</strong>Rate every session 1–10. 1 = effortless walk. 10 = absolute maximum. Most sessions should be 6–7. If everything is 9–10, you're overtraining.</div>
+      <div class="how-item"><strong>Weekly Reflection</strong>Write something — even two sentences. Patterns you can't see session-to-session become obvious over 4 weeks of written entries.</div>
+      <div class="how-item"><strong>Monthly Review</strong>At the end of each 4-week block, compare your numbers. This is where the progress becomes undeniable — and where you decide what to push next.</div>
+    </div>
+  </div>
+
+  <!-- Generate weeks 1-12 using JS for DRY code -->
+  <div id="weeks-container"></div>
+
+  <div class="monthly-review">
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Month 1 Review · Weeks 1–4</div>
+    <h3>Month 1: <em>Foundation</em></h3>
+    <table class="review-table">
+      <thead><tr><th>Metric</th><th>Week 1</th><th>Week 2</th><th>Week 3</th><th>Week 4</th><th>Change</th></tr></thead>
+      <tbody>
+        <tr><td>Sessions Completed</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Total Volume (miles or sessions)</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Average RPE</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Average Sleep (hrs/night)</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Best Lift / Best Pace</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Energy Level (1–10 avg)</td><td></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+    <div style="margin-top:14px;">
+      <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'Barlow Condensed',sans-serif;">Month 1 — What changed? What needs to change?</div>
+      <div style="width:100%;height:1px;background:rgba(255,255,255,0.12);margin-bottom:14px;"></div>
+      <div style="width:100%;height:1px;background:rgba(255,255,255,0.12);margin-bottom:14px;"></div>
+      <div style="width:100%;height:1px;background:rgba(255,255,255,0.12);"></div>
+    </div>
+  </div>
+
+  <div class="monthly-review" style="border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Month 2 Review · Weeks 5–8</div>
+    <h3>Month 2: <em>Progression</em></h3>
+    <table class="review-table">
+      <thead><tr><th>Metric</th><th>Week 5</th><th>Week 6</th><th>Week 7</th><th>Week 8</th><th>Change</th></tr></thead>
+      <tbody>
+        <tr><td>Sessions Completed</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Total Volume</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Average RPE</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Average Sleep</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Best Lift / Best Pace</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Energy Level avg</td><td></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+    <div style="margin-top:14px;">
+      <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'Barlow Condensed',sans-serif;">Month 2 — How does this compare to Month 1?</div>
+      <div style="width:100%;height:1px;background:rgba(255,255,255,0.12);margin-bottom:14px;"></div>
+      <div style="width:100%;height:1px;background:rgba(255,255,255,0.12);margin-bottom:14px;"></div>
+      <div style="width:100%;height:1px;background:rgba(255,255,255,0.12);"></div>
+    </div>
+  </div>
+
+  <div class="monthly-review" style="border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Month 3 Review · Weeks 9–12</div>
+    <h3>Month 3: <em>Peak</em></h3>
+    <table class="review-table">
+      <thead><tr><th>Metric</th><th>Week 9</th><th>Week 10</th><th>Week 11</th><th>Week 12</th><th>Change</th></tr></thead>
+      <tbody>
+        <tr><td>Sessions Completed</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Total Volume</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Average RPE</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Average Sleep</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Best Lift / Best Pace</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Energy Level avg</td><td></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+    <div style="margin-top:14px;">
+      <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'Barlow Condensed',sans-serif;">Final review — 12-week transformation. What did you build?</div>
+      <div style="width:100%;height:1px;background:rgba(255,255,255,0.12);margin-bottom:14px;"></div>
+      <div style="width:100%;height:1px;background:rgba(255,255,255,0.12);margin-bottom:14px;"></div>
+      <div style="width:100%;height:1px;background:rgba(255,255,255,0.12);"></div>
+    </div>
+  </div>
+
+  <div class="coach-note">
+    <div class="note-label">A Note from Coach Tyler</div>
+    <h3>The Athlete Who Tracks <em>Is the Athlete Who Improves.</em></h3>
+    <p>I've coached athletes who trained hard and athletes who trained hard AND logged everything they did. The ones who log their training — the load, the sleep, the RPE, the reflection — they improve faster. Not because the log makes them fitter. Because it makes them self-aware, and self-aware athletes make better decisions week over week.</p>
+    <p>Twelve weeks of entries in this log will tell you more about yourself as an athlete than any personality test or fitness assessment. Use it. Fill it in honestly, especially on the bad days. Those are the entries that matter most.</p>
+    <p>— Coach Tyler Reddy · Always Reddy Athletics</p>
+  </div>
+
+  <div class="doc-footer">
+    <span>Always Reddy Athletics</span>
+    <span>alwaysreddyathletics.com</span>
+    <span>@alwaysreddyathletics</span>
+  </div>
+
+</div>
+
+<script>
+  const days = ['MON','TUE','WED','THU','FRI','SAT','SUN'];
+  const container = document.getElementById('weeks-container');
+  const months = ['Foundation','Foundation','Foundation','Foundation','Progression','Progression','Progression','Progression','Peak','Peak','Peak','Peak'];
+
+  for (let w = 1; w <= 12; w++) {
+    const block = document.createElement('div');
+    block.className = 'week-block';
+    let daysHTML = days.map(d => `
+      <tr>
+        <td class="day-name">${d}</td>
+        <td class="write-field session-type"></td>
+        <td class="write-field"></td>
+        <td class="write-field"></td>
+        <td class="write-field"></td>
+        <td class="write-field"></td>
+        <td class="write-field"></td>
+      </tr>`).join('');
+
+    block.innerHTML = `
+      <div class="week-header-row">
+        <div class="week-label">Week ${w} <span style="color:var(--accent);font-size:0.9rem;font-weight:600;letter-spacing:0.04em;font-family:'Barlow',sans-serif;margin-left:8px;">${months[w-1]}</span></div>
+        <div class="week-meta">
+          <div class="week-field">Dates: <span class="field-line"></span></div>
+          <div class="week-field">Goal: <span class="field-line" style="width:180px;"></span></div>
+        </div>
+      </div>
+      <table class="day-table">
+        <thead>
+          <tr>
+            <th style="width:60px;">Day</th>
+            <th style="width:110px;">Session Type</th>
+            <th>Distance / Load</th>
+            <th>Duration</th>
+            <th style="width:60px;">RPE (1–10)</th>
+            <th style="width:60px;">Sleep (hrs)</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>${daysHTML}</tbody>
+      </table>
+      <div class="reflection">
+        <h4>Week ${w} Reflection</h4>
+        <div class="refl-grid">
+          <div class="refl-item">
+            <div class="refl-label">What went well this week?</div>
+            <div class="refl-line"></div>
+            <div class="refl-line" style="margin-top:14px;"></div>
+          </div>
+          <div class="refl-item">
+            <div class="refl-label">What was hard / what to improve?</div>
+            <div class="refl-line"></div>
+            <div class="refl-line" style="margin-top:14px;"></div>
+          </div>
+        </div>
+        <div class="mini-metrics">
+          <div class="mini-metric"><div class="m-label">Sessions hit / planned</div><div class="m-line"></div></div>
+          <div class="mini-metric"><div class="m-label">Avg sleep (hrs/night)</div><div class="m-line"></div></div>
+          <div class="mini-metric"><div class="m-label">Energy level avg (1–10)</div><div class="m-line"></div></div>
+          <div class="mini-metric"><div class="m-label">Goal for next week</div><div class="m-line"></div></div>
+        </div>
+      </div>
+    `;
+    container.appendChild(block);
+  }
+</script>
+
+</body>
+</html>
