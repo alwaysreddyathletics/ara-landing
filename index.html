@@ -151,6 +151,15 @@
     .product-price { font-family:'Barlow Condensed',sans-serif; font-size:1.8rem; font-weight:800; color:#f4f2ef; }
     .btn-product { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.85rem; letter-spacing:0.06em; text-transform:uppercase; color:#0a0a0a; background:#c8a96e; padding:10px 18px; text-decoration:none; transition:background 0.2s; white-space:nowrap; }
     .btn-product:hover { background:#a8893e; }
+    .product-instant { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em; color:rgba(200,169,110,0.55); margin-top:12px; }
+    .product-quote { margin-top:12px; padding-top:12px; border-top:0.5px solid rgba(255,255,255,0.05); }
+    .product-quote p { font-size:0.78rem; font-style:italic; color:rgba(244,242,239,0.4); line-height:1.5; margin-bottom:5px; }
+    .product-quote cite { font-size:0.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; font-style:normal; }
+    .quiz-nudge { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; background:rgba(200,169,110,0.04); border:0.5px solid rgba(200,169,110,0.15); padding:18px 24px; margin-bottom:40px; }
+    .quiz-nudge p { font-size:0.88rem; color:rgba(244,242,239,0.65); line-height:1.5; margin:0; }
+    .quiz-nudge p strong { color:#f4f2ef; }
+    .btn-quiz { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.82rem; letter-spacing:0.08em; text-transform:uppercase; color:#c8a96e; text-decoration:none; white-space:nowrap; padding:9px 18px; border:1px solid rgba(200,169,110,0.35); transition:all 0.2s; flex-shrink:0; display:inline-block; }
+    .btn-quiz:hover { background:rgba(200,169,110,0.08); }
     .guarantee { background:var(--black); }
     .guarantee-box { border:1px solid rgba(200,169,110,0.3); padding:48px; border-radius:2px; text-align:center; max-width:700px; margin:48px auto 0; }
     .guarantee-badge { font-family:'Barlow Condensed',sans-serif; font-size:5rem; font-weight:900; color:var(--accent); line-height:1; margin-bottom:8px; }
@@ -494,6 +503,10 @@
     <div class="section-label" style="text-align:center">Training Plans</div>
     <h2>Built on Real Results.<br><em>Built for You.</em></h2>
     <p class="products-sub">Every plan below was used by a real athlete to hit a real result. Download it, follow it, run faster.</p>
+    <div class="quiz-nudge">
+      <p><strong>Not sure which plan is right for you?</strong> Answer 6 questions and we'll match you to the exact plan — or tell you if 1-on-1 coaching is the better move.</p>
+      <a href="quiz.html" class="btn-quiz">Take the Quiz →</a>
+    </div>
     <div class="products-category-label">MARATHON PLANS</div>
     <div class="products-grid">
       <div class="product-card product-card--featured">
@@ -512,6 +525,7 @@
           <div class="product-price">$77</div>
           <a href="https://buy.stripe.com/28E14oc984hy546aWv1ZS01" target="_blank" class="btn-product">Get This Plan →</a>
         </div>
+        <div class="product-instant">⚡ Instant download</div>
       </div>
       <div class="product-card">
         <div class="product-result">Coach Tyler ran 3:27 on this exact plan</div>
@@ -527,6 +541,11 @@
         <div class="product-footer">
           <div class="product-price">$67</div>
           <a href="https://buy.stripe.com/3cIbJ2ehgcO4gMO4y71ZS00" target="_blank" class="btn-product">Get This Plan →</a>
+        </div>
+        <div class="product-instant">⚡ Instant download</div>
+        <div class="product-quote">
+          <p>"Running longer distances faster kept getting easier — and I was still hitting my strength work."</p>
+          <cite>— Riana, ARA Client</cite>
         </div>
       </div>
     </div>
@@ -546,6 +565,7 @@
           <div class="product-price">$47</div>
           <a href="https://buy.stripe.com/28E28sgpo7tK7cee8H1ZS02" target="_blank" class="btn-product">Get This Plan →</a>
         </div>
+        <div class="product-instant">⚡ Instant download</div>
       </div>
       <div class="product-card">
         <div class="product-result">Used by an ARA athlete to set a new PR</div>
@@ -561,6 +581,7 @@
           <div class="product-price">$37</div>
           <a href="https://buy.stripe.com/9B6dRa0qq9BSeEGe8H1ZS03" target="_blank" class="btn-product">Get This Plan →</a>
         </div>
+        <div class="product-instant">⚡ Instant download</div>
       </div>
       <div class="product-card">
         <div class="product-result">Built for your first 13.1</div>
@@ -575,6 +596,11 @@
         <div class="product-footer">
           <div class="product-price">$27</div>
           <a href="https://buy.stripe.com/3cIcN6a10eWceEGaWv1ZS04" target="_blank" class="btn-product">Get This Plan →</a>
+        </div>
+        <div class="product-instant">⚡ Instant download</div>
+        <div class="product-quote">
+          <p>"I ran my first half-marathon thanks to Always Reddy Athletics. Couldn't have done it without the programming."</p>
+          <cite>— Jake, ARA Client</cite>
         </div>
       </div>
     </div>
@@ -594,6 +620,7 @@
           <div class="product-price">$37</div>
           <a href="https://buy.stripe.com/aFa28s1uu7tK68a3u31ZS07" target="_blank" class="btn-product">Get This Plan →</a>
         </div>
+        <div class="product-instant">⚡ Instant download</div>
       </div>
       <div class="product-card">
         <div class="product-result">For athletes ready to train with structure</div>
@@ -609,6 +636,7 @@
           <div class="product-price">$27</div>
           <a href="https://buy.stripe.com/14AfZic98cO44023u31ZS06" target="_blank" class="btn-product">Get This Plan →</a>
         </div>
+        <div class="product-instant">⚡ Instant download</div>
       </div>
       <div class="product-card">
         <div class="product-result">The foundation every athlete needs</div>
@@ -623,6 +651,11 @@
         <div class="product-footer">
           <div class="product-price">$17</div>
           <a href="https://buy.stripe.com/6oU6oI5KK15m1RU5Cb1ZS05" target="_blank" class="btn-product">Get This Plan →</a>
+        </div>
+        <div class="product-instant">⚡ Instant download</div>
+        <div class="product-quote">
+          <p>"Once I had a real plan, I felt 100% every session. The structure made all the difference."</p>
+          <cite>— Tom, ARA Client</cite>
         </div>
       </div>
     </div>
@@ -643,6 +676,7 @@
           <div class="product-price">$17</div>
           <a href="https://buy.stripe.com/28EbJ28WW15meEG3u31ZS08" target="_blank" rel="noopener" class="btn-product">Get This Plan →</a>
         </div>
+        <div class="product-instant">⚡ Instant download</div>
       </div>
       <div class="product-card">
         <div class="product-badge">New</div>
@@ -659,6 +693,7 @@
           <div class="product-price">$22</div>
           <a href="https://buy.stripe.com/cNicN63CC3dufIK4y71ZS09" target="_blank" rel="noopener" class="btn-product">Get This Plan →</a>
         </div>
+        <div class="product-instant">⚡ Instant download</div>
       </div>
       <div class="product-card product-card--featured">
         <div class="product-badge">Race Week Essential</div>
