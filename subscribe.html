@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get the Free ARA Training Guide | Always Reddy Athletics</title>
-  <meta name="description" content="The exact framework Coach Tyler uses to rebuild athletes from the ground up. Free. No strings attached.">
+  <title>Free Training Guide — The Athletic Rebuild Framework | Always Reddy Athletics</title>
+  <meta name="description" content="Coach Tyler dropped 1:18 off his marathon in under a year. This is the exact framework he used — and what he gives every athlete he coaches. Free download.">
+  <link rel="canonical" href="https://www.alwaysreddyathletics.com/subscribe">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -12,94 +14,152 @@
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{font-family:'Barlow',sans-serif;background:#0a0a0a;color:#f4f2ef;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 1.25rem;-webkit-font-smoothing:antialiased}
-    .wrap{max-width:560px;width:100%;text-align:center}
-    .nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:#f4f2ef;text-decoration:none;display:block;margin-bottom:3rem}
-    .nav-logo span{color:#c8a96e}
-    .eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#c8a96e;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:12px}
-    .eyebrow::before,.eyebrow::after{content:'';display:inline-block;width:24px;height:2px;background:#c8a96e}
-    h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.4rem,7vw,4rem);font-weight:900;line-height:1.05;margin-bottom:16px}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:520px;width:100%}
+    .logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:#f4f2ef;display:block;margin-bottom:3rem;text-align:center}
+    .logo span{color:#c8a96e}
+    .eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#c8a96e;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+    .eyebrow::before,.eyebrow::after{content:'';flex:1;height:1.5px;background:rgba(200,169,110,0.35)}
+    h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.6rem,8vw,4.2rem);font-weight:900;line-height:1.04;margin-bottom:14px;letter-spacing:-.01em}
     h1 em{font-style:normal;color:#c8a96e}
-    .sub{font-size:1rem;color:rgba(244,242,239,0.65);line-height:1.7;margin-bottom:2rem;font-weight:300}
-    .stats{display:flex;gap:0;margin-bottom:2.5rem;border:0.5px solid rgba(255,255,255,0.08);border-radius:4px;overflow:hidden}
-    .stat{flex:1;padding:16px 8px;border-right:0.5px solid rgba(255,255,255,0.08)}
-    .stat:last-child{border-right:none}
-    .stat-num{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:800;color:#c8a96e;line-height:1}
-    .stat-label{font-size:.65rem;color:#888;text-transform:uppercase;letter-spacing:.07em;margin-top:4px;line-height:1.3}
-    .input-row{display:flex;gap:10px;margin-bottom:10px}
-    .email-input{flex:1;padding:14px 18px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:2px;color:#f4f2ef;font-family:'Barlow',sans-serif;font-size:.95rem;outline:none;transition:border-color .2s}
-    .email-input::placeholder{color:#666}
+    .sub{font-size:.98rem;color:rgba(244,242,239,0.6);line-height:1.75;margin-bottom:2rem;font-weight:300}
+    .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-bottom:2rem;border:.5px solid rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
+    .proof-stat{padding:14px 8px;text-align:center;border-right:.5px solid rgba(255,255,255,0.08)}
+    .proof-stat:last-child{border-right:none}
+    .proof-num{font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;color:#c8a96e;line-height:1}
+    .proof-label{font-size:.62rem;color:#666;text-transform:uppercase;letter-spacing:.07em;margin-top:5px;line-height:1.3}
+    .form-wrap{margin-bottom:.75rem}
+    .input-row{display:flex;gap:8px}
+    .email-input{flex:1;padding:14px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.14);border-radius:2px;color:#f4f2ef;font-family:'Barlow',sans-serif;font-size:.95rem;outline:none;transition:border-color .2s}
+    .email-input::placeholder{color:#555}
     .email-input:focus{border-color:#c8a96e}
-    .btn{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;color:#0a0a0a;background:#c8a96e;border:none;padding:14px 24px;border-radius:2px;cursor:pointer;transition:all .2s;white-space:nowrap}
+    .btn{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.92rem;letter-spacing:.08em;text-transform:uppercase;color:#0a0a0a;background:#c8a96e;border:none;padding:14px 22px;border-radius:2px;cursor:pointer;transition:background .2s;white-space:nowrap}
     .btn:hover{background:#a8893e}
-    .error-msg{font-size:.8rem;color:#e05555;margin-bottom:8px;display:none;text-align:left}
-    .note{font-size:.78rem;color:#555;margin-bottom:2.5rem}
-    .divider{height:.5px;background:rgba(255,255,255,0.08);margin:2rem 0}
-    .what-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#c8a96e;margin-bottom:12px;text-align:left}
-    .item{display:flex;gap:10px;padding:10px 0;border-bottom:.5px solid rgba(255,255,255,0.06);font-size:.9rem;color:rgba(244,242,239,0.7);align-items:flex-start;text-align:left}
+    .btn:disabled{opacity:.6;cursor:not-allowed}
+    .err{font-size:.78rem;color:#e05555;margin-top:7px;display:none}
+    .note{font-size:.75rem;color:#444;margin-bottom:2rem;text-align:center}
+    .divider{height:.5px;background:rgba(255,255,255,0.07);margin:1.75rem 0}
+    .inside-label{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#c8a96e;margin-bottom:10px}
+    .item{display:flex;gap:10px;padding:9px 0;border-bottom:.5px solid rgba(255,255,255,0.05);font-size:.88rem;color:rgba(244,242,239,0.65);align-items:flex-start}
     .item:last-child{border-bottom:none}
     .item::before{content:'✓';color:#c8a96e;font-weight:700;flex-shrink:0;margin-top:1px}
-    .back-link{display:inline-block;margin-top:2rem;font-family:'Barlow Condensed',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#555;text-decoration:none;transition:color .2s}
-    .back-link:hover{color:#c8a96e}
-    @media(max-width:480px){
-      .input-row{flex-direction:column}
-      .btn{width:100%}
-      .stats{flex-direction:column}
-      .stat{border-right:none;border-bottom:.5px solid rgba(255,255,255,0.08)}
-      .stat:last-child{border-bottom:none}
-    }
+    .success{display:none;text-align:center;padding:2rem 0}
+    .success-icon{font-size:2.5rem;margin-bottom:16px}
+    .success h2{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:900;margin-bottom:10px}
+    .success h2 em{font-style:normal;color:#c8a96e}
+    .success p{font-size:.9rem;color:rgba(244,242,239,0.6);line-height:1.7;margin-bottom:20px}
+    .btn-plans{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:#c8a96e;border:1px solid rgba(200,169,110,0.35);padding:10px 20px;border-radius:2px;display:inline-block;transition:background .2s}
+    .btn-plans:hover{background:rgba(200,169,110,0.08)}
+    .back{display:block;margin-top:2rem;font-family:'Barlow Condensed',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#444;text-align:center;transition:color .2s}
+    .back:hover{color:#c8a96e}
+    @media(max-width:480px){.input-row{flex-direction:column}.btn{width:100%}.proof{grid-template-columns:1fr 1fr 1fr}}
   </style>
 </head>
 <body>
   <div class="wrap">
+    <a href="/" class="logo">Always <span>Reddy</span> Athletics</a>
 
-    <a href="/" class="nav-logo">Always <span>Reddy</span> Athletics</a>
+    <div id="form-section">
+      <div class="eyebrow">Free Download</div>
+      <h1>The Athletic<br><em>Rebuild</em> Framework</h1>
+      <p class="sub">Coach Tyler dropped 1:18 off his marathon on the same course in under a year. This is the exact framework he used — and what he gives every athlete he coaches. Free, no strings.</p>
 
-    <div class="eyebrow">Free Download</div>
-    <h1>The Athletic<br><em>Rebuild</em> Framework</h1>
-    <p class="sub">The exact system Coach Tyler used to drop 1:18 off his marathon on the same course in under a year — and what he uses with every athlete he coaches. Free. No strings attached.</p>
+      <div class="proof">
+        <div class="proof-stat">
+          <div class="proof-num">3:27</div>
+          <div class="proof-label">Marathon PR</div>
+        </div>
+        <div class="proof-stat">
+          <div class="proof-num">1:18</div>
+          <div class="proof-label">Faster. Same course. Under a year.</div>
+        </div>
+        <div class="proof-stat">
+          <div class="proof-num">100%</div>
+          <div class="proof-label">Client PR rate</div>
+        </div>
+      </div>
 
-    <div class="stats">
-      <div class="stat">
-        <div class="stat-num">3:27</div>
-        <div class="stat-label">Marathon PR</div>
+      <div class="form-wrap">
+        <div class="input-row">
+          <input type="email" id="email-input" class="email-input" placeholder="Your email address" autocomplete="email">
+          <button class="btn" id="submit-btn" onclick="submitGuide()">Send It →</button>
+        </div>
+        <div class="err" id="err-msg"></div>
       </div>
-      <div class="stat">
-        <div class="stat-num">1:18</div>
-        <div class="stat-label">Faster. Same course. Under 12 months.</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">Client PR rate</div>
-      </div>
+      <div class="note">No spam. Unsubscribe anytime.</div>
+
+      <div class="divider"></div>
+
+      <div class="inside-label">What's inside</div>
+      <div class="item">Why former athletes stay stuck — and the real reason it's not motivation</div>
+      <div class="item">The 4 pillars of the Athletic Rebuild: strength, conditioning, mobility, discipline</div>
+      <div class="item">Your 12-week roadmap broken into 3 clear phases</div>
+      <div class="item">3 things you can do this week — free, no program needed</div>
+
+      <a href="/" class="back">← Back to alwaysreddyathletics.com</a>
     </div>
 
-    <div class="input-row">
-      <input type="email" id="email-input" class="email-input" placeholder="Your email address">
-      <button class="btn" onclick="
-        var e = document.getElementById('email-input').value.trim();
-        var err = document.getElementById('error-msg');
-        if (!e || !e.includes('@')) {
-          err.style.display = 'block';
-          err.textContent = 'Please enter a valid email address.';
-          return;
-        }
-        err.style.display = 'none';
-        window.location.href = 'https://alwaysreddyathletics.beehiiv.com/subscribe?email=' + encodeURIComponent(e);
-      ">Send It →</button>
+    <div class="success" id="success-section">
+      <div class="success-icon">⚡</div>
+      <h2>Your guide is <em>downloading.</em></h2>
+      <p>If the download doesn't start automatically, <a href="/ARA_Training_Guide.pdf" download style="color:#c8a96e;">click here</a>.<br>Coach Tyler will follow up by email within 24 hours.</p>
+      <a href="/#plans" class="btn-plans">Browse Training Plans →</a>
     </div>
-    <div class="error-msg" id="error-msg"></div>
-    <div class="note">No spam. Unsubscribe anytime. We send training content worth reading.</div>
-
-    <div class="divider"></div>
-
-    <div class="what-label">What's inside</div>
-    <div class="item">Why former athletes stay stuck — and the real reason it's not motivation</div>
-    <div class="item">The 4 pillars of the Athletic Rebuild — strength, conditioning, mobility, discipline</div>
-    <div class="item">Your 12-week roadmap broken into 3 phases</div>
-    <div class="item">3 things you can do this week — free, no program needed</div>
-
-    <a href="/" class="back-link">← Back to alwaysreddyathletics.com</a>
-
   </div>
+
+  <script>
+    async function submitGuide() {
+      const email = document.getElementById('email-input').value.trim();
+      const err = document.getElementById('err-msg');
+      const btn = document.getElementById('submit-btn');
+
+      if (!email || !email.includes('@')) {
+        err.style.display = 'block';
+        err.textContent = 'Please enter a valid email address.';
+        return;
+      }
+
+      err.style.display = 'none';
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            access_key: '5969fdbb-45c7-479c-b76e-ffb180def802',
+            subject: 'New Free Guide Download — ARA',
+            from_name: 'Always Reddy Athletics',
+            email: email,
+            message: `New free guide download request from: ${email}`
+          })
+        });
+
+        if (res.ok) {
+          const link = document.createElement('a');
+          link.href = '/ARA_Training_Guide.pdf';
+          link.download = 'ARA_Training_Guide.pdf';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+
+          document.getElementById('form-section').style.display = 'none';
+          document.getElementById('success-section').style.display = 'block';
+        } else {
+          throw new Error();
+        }
+      } catch {
+        err.style.display = 'block';
+        err.textContent = 'Something went wrong. Please try again.';
+        btn.disabled = false;
+        btn.textContent = 'Send It →';
+      }
+    }
+
+    document.getElementById('email-input').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') submitGuide();
+    });
+  </script>
 </body>
 </html>
