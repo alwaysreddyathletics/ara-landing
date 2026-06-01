@@ -97,7 +97,7 @@
       <div style="text-align:center;margin-bottom:12px;">
         <button class="btn-primary" onclick="startQuiz()">Start the Quiz →</button>
       </div>
-      <p style="text-align:center;font-size:0.8rem;color:var(--muted);">Takes under 2 minutes. No email required.</p>
+      <p style="text-align:center;font-size:0.8rem;color:var(--muted);">Takes under 2 minutes.</p>
     </div>
 
     <!-- Quiz -->
@@ -194,6 +194,24 @@
           <button class="q-back" onclick="goBack(6)">← Back</button>
         </div>
       </div>
+    </div>
+
+    <!-- Email Gate -->
+    <div id="email-gate" style="display:none;text-align:center;">
+      <div class="eyebrow">Almost There</div>
+      <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:900;margin-bottom:12px;">Your Match is Ready.</h2>
+      <p style="font-size:1rem;color:rgba(244,242,239,0.65);line-height:1.75;margin-bottom:28px;max-width:440px;margin-left:auto;margin-right:auto;">Enter your email to see your personalized recommendation — plus we'll send you the free ARA Training Guide.</p>
+      <form id="email-gate-form" style="max-width:400px;margin:0 auto;">
+        <input type="hidden" name="access_key" value="5be40f47-7b0f-468e-9e63-c17f80dd5bcf">
+        <input type="hidden" name="subject" value="Quiz Lead">
+        <input type="hidden" id="gate-result-field" name="quiz_result" value="">
+        <div style="display:flex;gap:10px;margin-bottom:12px;">
+          <input type="email" name="email" id="gate-email" required placeholder="Your email address" style="flex:1;background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.15);color:#f4f2ef;font-family:'Barlow',sans-serif;font-size:0.95rem;padding:13px 16px;border-radius:2px;outline:none;">
+          <button type="submit" class="btn-primary" style="white-space:nowrap;">See My Match →</button>
+        </div>
+        <p style="font-size:0.75rem;color:var(--muted);">No spam. Unsubscribe anytime.</p>
+      </form>
+      <button class="retake" style="margin-top:20px;" onclick="skipGate()">Skip — just show my results</button>
     </div>
 
     <!-- Results -->
@@ -402,6 +420,41 @@
   function showResult() {
     document.getElementById('quiz-container').style.display = 'none';
     const key = getResult();
+
+    // Show email gate first
+    document.getElementById('gate-result-field').value = key;
+    document.getElementById('email-gate').style.display = 'block';
+
+    // Wire up form submission once
+    const form = document.getElementById('email-gate-form');
+    if (!form.dataset.wired) {
+      form.dataset.wired = '1';
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = form.querySelector('button[type=submit]');
+        btn.textContent = 'Loading...';
+        btn.disabled = true;
+        try {
+          await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: new FormData(form)
+          });
+        } catch(err) {}
+        document.getElementById('email-gate').style.display = 'none';
+        renderResult(key);
+      });
+    }
+
+    const r = results[key];
+    void r; // will render after gate
+  }
+
+  function skipGate() {
+    document.getElementById('email-gate').style.display = 'none';
+    renderResult(document.getElementById('gate-result-field').value);
+  }
+
+  function renderResult(key) {
     const r = results[key];
     document.getElementById('result-badge').textContent = r.badge;
     document.getElementById('result-title').innerHTML = r.title.replace(/(1-on-1 Coaching|Mini Course|Plan|Program)/g, '<em>$1</em>');
