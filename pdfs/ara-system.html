@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The ARA System — Self-Guided Athletic Rebuild | Always Reddy Athletics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background-color: #0a0a0a; color: #f4f2ef; font-family: 'Barlow', sans-serif; font-size: 14px; line-height: 1.6; }
+
+    /* Print bar */
+    .print-bar { position: sticky; top: 0; z-index: 100; background-color: #c8a96e; color: #0a0a0a; padding: 10px 32px; display: flex; align-items: center; justify-content: space-between; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .print-bar .hint { font-weight: 400; font-size: 11px; opacity: 0.75; text-transform: none; letter-spacing: 0; }
+    .print-btn { background-color: #0a0a0a; color: #f4f2ef; border: none; padding: 8px 20px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; }
+
+    /* Page layout */
+    .page { max-width: 960px; margin: 0 auto; padding: 60px 72px; }
+    .page-break { page-break-before: always; padding-top: 60px; }
+
+    /* Typography */
+    .ara-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #c8a96e; margin-bottom: 20px; }
+    h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 80px; line-height: 0.95; color: #f4f2ef; margin-bottom: 4px; }
+    h1 .gold { color: #c8a96e; display: block; }
+    h1 .sub-word { font-size: 48px; }
+    .tagline { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: #c8a96e; margin: 16px 0 20px; }
+    .desc { font-size: 14px; color: #f4f2ef; line-height: 1.75; max-width: 720px; }
+    .rule { height: 1px; background-color: #c8a96e; margin: 28px 0; }
+    .rule-dim { height: 1px; background-color: #2a2a2a; margin: 28px 0; }
+
+    /* Stats bar */
+    .stats { display: flex; border: 1px solid #2a2a2a; margin: 32px 0; }
+    .stat { flex: 1; padding: 24px 16px; border-right: 1px solid #2a2a2a; text-align: center; }
+    .stat:last-child { border-right: none; }
+    .stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 48px; font-weight: 900; color: #c8a96e; line-height: 1; }
+    .stat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #f4f2ef; margin-top: 8px; }
+
+    /* Section headers */
+    .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #c8a96e; margin-bottom: 12px; }
+    .section-headline { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 800; color: #f4f2ef; margin-bottom: 8px; line-height: 1.05; }
+    .section-underline { width: 40px; height: 3px; background-color: #c8a96e; margin-bottom: 20px; }
+
+    /* Tables */
+    .content-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    .content-table th { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 10px 14px; background-color: #141414; color: #c8a96e; border: 1px solid #2a2a2a; text-align: left; }
+    .content-table td { padding: 12px 14px; border: 1px solid #2a2a2a; color: #f4f2ef; font-size: 13px; line-height: 1.6; vertical-align: top; }
+    .content-table td.col-key { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; color: #c8a96e; white-space: nowrap; }
+    .content-table td.col-note { color: #888888; font-size: 12px; }
+    .content-table tr.highlight-row td { background-color: #1a1200; }
+    .content-table tr.highlight-row td.col-key { color: #c8a96e; }
+    .content-table tr.phase-header td { background-color: #141414; }
+    .content-table tr.phase-header td.col-key { font-size: 16px; color: #f4f2ef; }
+
+    /* Phase blocks */
+    .phase-block { margin: 24px 0; border: 1px solid #2a2a2a; }
+    .phase-header-bar { background-color: #141414; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #2a2a2a; }
+    .phase-name { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 800; color: #f4f2ef; }
+    .phase-weeks { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #c8a96e; }
+    .phase-goal { font-size: 12px; color: #888888; padding: 12px 20px; border-bottom: 1px solid #1e1e1e; background-color: #0d0d0d; font-style: italic; }
+    .phase-table { width: 100%; border-collapse: collapse; }
+    .phase-table th { font-family: 'Barlow Condensed', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 8px 14px; background-color: #111; color: #666; border-bottom: 1px solid #2a2a2a; text-align: left; }
+    .phase-table td { padding: 10px 14px; border-bottom: 1px solid #1a1a1a; font-size: 12.5px; color: #c8c6c2; vertical-align: top; line-height: 1.55; }
+    .phase-table tr:last-child td { border-bottom: none; }
+    .phase-table td.day-label { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; color: #c8a96e; white-space: nowrap; width: 90px; }
+    .phase-table td.session-type { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; color: #f4f2ef; width: 160px; }
+    .phase-table tr.rest-row td { color: #444; }
+    .phase-table tr.key-row td { background-color: #0f0f0f; }
+    .phase-table tr.key-row td.session-type { color: #c8a96e; }
+
+    /* Assessment grid */
+    .assess-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background-color: #2a2a2a; margin: 16px 0; }
+    .assess-card { background-color: #0a0a0a; padding: 20px 24px; }
+    .assess-card h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; color: #c8a96e; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .assess-card p { font-size: 12.5px; color: #c8c6c2; line-height: 1.65; margin-bottom: 10px; }
+    .assess-card .input-line { height: 1px; background-color: #2a2a2a; margin: 18px 0 4px; }
+    .assess-card .input-label { font-size: 10px; color: #555; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    /* Nutrition table */
+    .macro-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background-color: #2a2a2a; margin: 16px 0; }
+    .macro-card { background-color: #0a0a0a; padding: 20px; text-align: center; }
+    .macro-name { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #c8a96e; margin-bottom: 10px; }
+    .macro-num { font-family: 'Barlow Condensed', sans-serif; font-size: 42px; font-weight: 900; color: #f4f2ef; line-height: 1; }
+    .macro-unit { font-size: 11px; color: #666; margin-top: 6px; }
+    .macro-note { font-size: 11px; color: #888; margin-top: 10px; line-height: 1.5; }
+
+    /* Recovery grid */
+    .recovery-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background-color: #2a2a2a; margin: 16px 0; }
+    .recovery-card { background-color: #0a0a0a; padding: 20px; }
+    .recovery-card h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; color: #c8a96e; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .recovery-card ul { list-style: none; }
+    .recovery-card ul li { font-size: 12px; color: #c8c6c2; padding: 5px 0; border-bottom: 1px solid #1a1a1a; line-height: 1.45; }
+    .recovery-card ul li::before { content: '— '; color: #c8a96e; font-weight: 700; }
+    .recovery-card ul li:last-child { border-bottom: none; }
+
+    /* Checkin template */
+    .checkin-block { border: 1px solid #2a2a2a; margin: 20px 0; }
+    .checkin-header { background-color: #141414; padding: 12px 20px; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 800; color: #f4f2ef; border-bottom: 1px solid #2a2a2a; }
+    .checkin-row { display: flex; border-bottom: 1px solid #1a1a1a; }
+    .checkin-row:last-child { border-bottom: none; }
+    .checkin-q { padding: 12px 20px; font-size: 12.5px; color: #888; width: 260px; flex-shrink: 0; border-right: 1px solid #1a1a1a; font-style: italic; }
+    .checkin-a { padding: 12px 20px; flex: 1; font-size: 12px; color: #333; }
+
+    /* Callout boxes */
+    .callout { background-color: #0d0d0d; border-left: 3px solid #c8a96e; padding: 16px 20px; margin: 20px 0; }
+    .callout-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #c8a96e; margin-bottom: 8px; }
+    .callout p { font-size: 13px; color: #c8c6c2; line-height: 1.7; }
+
+    /* Coach note */
+    .coach-section { margin-top: 48px; padding-top: 40px; border-top: 1px solid #2a2a2a; }
+    .coach-headline { font-family: 'Barlow Condensed', sans-serif; font-size: 48px; font-weight: 900; color: #f4f2ef; line-height: 1.05; margin-bottom: 8px; }
+    .coach-body { font-size: 14px; color: #f4f2ef; line-height: 1.8; max-width: 720px; }
+    .coach-body p { margin-bottom: 16px; }
+
+    /* CTA */
+    .cta-bar { background-color: #c8a96e; color: #0a0a0a; text-align: center; padding: 20px 32px; font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 32px; }
+    .cta-bar a { color: #0a0a0a; text-decoration: none; }
+    .cta-bar .cta-sub { font-size: 11px; letter-spacing: 0.05em; margin-top: 4px; opacity: 0.75; text-transform: none; font-weight: 400; }
+
+    /* Upgrade section */
+    .upgrade-box { border: 1px solid rgba(200,169,110,0.4); padding: 36px; margin-top: 40px; background-color: rgba(200,169,110,0.03); }
+    .upgrade-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #c8a96e; margin-bottom: 16px; }
+    .upgrade-headline { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 900; color: #f4f2ef; line-height: 1.05; margin-bottom: 16px; }
+    .upgrade-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background-color: #2a2a2a; margin: 20px 0; }
+    .upgrade-col { background-color: #0a0a0a; padding: 20px; }
+    .upgrade-col-label { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin-bottom: 14px; }
+    .upgrade-col ul { list-style: none; }
+    .upgrade-col ul li { font-size: 12.5px; color: #c8c6c2; padding: 6px 0; border-bottom: 1px solid #1a1a1a; }
+    .upgrade-col ul li:last-child { border-bottom: none; }
+    .upgrade-col ul li::before { content: '✓ '; color: #c8a96e; font-weight: 700; }
+    .upgrade-col.the-rebuild .upgrade-col-label { color: #c8a96e; }
+    .upgrade-col.the-rebuild ul li { color: #f4f2ef; }
+
+    /* Footer */
+    .doc-footer { text-align: center; font-size: 11px; color: #555555; margin-top: 20px; padding-top: 16px; border-top: 1px solid #1e1e1e; }
+
+    @media print {
+      .print-bar { display: none; }
+      body { background-color: #0a0a0a; }
+      .page { padding: 40px 60px; }
+      .page-break { page-break-before: always; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="print-bar">
+  <span>The ARA System — Always Reddy Athletics</span>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <span class="hint">In print dialog → More settings → enable "Background graphics"</span>
+    <button class="print-btn" onclick="window.print()">Save as PDF ↓</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ COVER -->
+<div class="page">
+  <div class="ara-label">Always Reddy Athletics</div>
+
+  <h1>
+    The ARA
+    <span class="gold">System</span>
+  </h1>
+
+  <div class="tagline">Self-Guided Athletic Rebuild — 12 Weeks</div>
+
+  <div class="rule"></div>
+
+  <p class="desc">
+    This is the same framework Coach Tyler uses with every 1:1 client — the periodization structure, the nutrition protocol, the recovery system, and the weekly self-check process. The only difference is you are the coach. This document gives you everything you need to run it yourself.
+  </p>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">12</div>
+      <div class="stat-label">Weeks</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">5</div>
+      <div class="stat-label">Training Phases</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Core Pillars</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">1</div>
+      <div class="stat-label">System That Works</div>
+    </div>
+  </div>
+
+  <div class="rule-dim"></div>
+
+  <div class="section-label">What's Inside</div>
+  <table class="content-table">
+    <thead>
+      <tr><th>Section</th><th>What You'll Get</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-key">01 — Your Athlete Profile</td><td>Baseline assessment to set your starting point across all four training pillars</td></tr>
+      <tr><td class="col-key">02 — The ARA Framework</td><td>The philosophy and principles behind every training decision in this system</td></tr>
+      <tr><td class="col-key">03 — 12-Week Training Structure</td><td>Five phases, week-by-week layout, intensity targets, and key sessions per phase</td></tr>
+      <tr><td class="col-key">04 — Nutrition Protocol</td><td>The ARA nutrition framework — macros, timing, training-day vs. rest-day approach</td></tr>
+      <tr><td class="col-key">05 — Recovery System</td><td>Sleep, mobility, stress management, and deload principles built into the program</td></tr>
+      <tr><td class="col-key">06 — Weekly Check-In Templates</td><td>12 self-coaching check-in sheets — one per week — to keep you honest and on track</td></tr>
+      <tr class="highlight-row"><td class="col-key">07 — The Upgrade Path</td><td>How to know when you've outgrown self-guided and what 1:1 coaching changes</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="callout-label">Important — Read First</div>
+    <p>This program is not one-size-fits-all — no program is. The structure here is built around how Coach Tyler programs for real athletes, and it will work if you do the work. But if you are coming off injury, have specific race goals with tight timelines, or find yourself consistently unable to hit the prescribed outputs, the 1:1 program is the better investment. See Section 07 for the full breakdown.</p>
+  </div>
+
+  <div class="doc-footer">alwaysreddyathletics.com · The ARA System · Self-Guided Athletic Rebuild</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ SECTION 01 — ATHLETE PROFILE -->
+<div class="page page-break">
+  <div class="section-label">Section 01</div>
+  <div class="section-headline">Your Athlete Profile</div>
+  <div class="section-underline"></div>
+
+  <p class="desc" style="margin-bottom:24px;">Complete this before Week 1. Your honest answers here are the baseline. You will re-assess at Week 4, Week 8, and Week 12. Do not skip this. Coaches live and die by baselines — so do self-coached athletes.</p>
+
+  <div class="assess-grid">
+    <div class="assess-card">
+      <h4>Training Background</h4>
+      <p>How many days per week have you trained consistently for the last 90 days?</p>
+      <div class="input-line"></div><div class="input-label">Days / week</div>
+      <p style="margin-top:18px;">What does your current training look like? (running, lifting, mixed, none)</p>
+      <div class="input-line"></div><div class="input-label">Current training type</div>
+      <p style="margin-top:18px;">Last time you trained consistently for 8+ weeks straight:</p>
+      <div class="input-line"></div><div class="input-label">Date / time period</div>
+    </div>
+    <div class="assess-card">
+      <h4>Your Primary Goal</h4>
+      <p>What is the single most important outcome from these 12 weeks?</p>
+      <div class="input-line"></div><div class="input-label"></div>
+      <div class="input-line" style="margin-top:8px;"></div><div class="input-label">Primary goal</div>
+      <p style="margin-top:18px;">Is there a specific event, date, or race tied to this goal?</p>
+      <div class="input-line"></div><div class="input-label">Target date / event</div>
+      <p style="margin-top:18px;">How important is this goal on a scale of 1–10?</p>
+      <div class="input-line"></div><div class="input-label">Motivation score</div>
+    </div>
+    <div class="assess-card">
+      <h4>Running Baseline</h4>
+      <p>Current easy pace per mile (comfortable conversational run):</p>
+      <div class="input-line"></div><div class="input-label">Easy pace (min/mile)</div>
+      <p style="margin-top:18px;">Current weekly mileage (honest average, last 4 weeks):</p>
+      <div class="input-line"></div><div class="input-label">Miles / week</div>
+      <p style="margin-top:18px;">Longest run in the last 8 weeks:</p>
+      <div class="input-line"></div><div class="input-label">Distance / duration</div>
+    </div>
+    <div class="assess-card">
+      <h4>Strength Baseline</h4>
+      <p>Bodyweight push-ups to failure (one set, full range):</p>
+      <div class="input-line"></div><div class="input-label">Reps</div>
+      <p style="margin-top:18px;">Can you hold a 2-minute plank? (yes / no / how long)</p>
+      <div class="input-line"></div><div class="input-label">Plank hold</div>
+      <p style="margin-top:18px;">Any active injuries or pain that limits training?</p>
+      <div class="input-line"></div><div class="input-label">Injury notes</div>
+    </div>
+  </div>
+
+  <div class="assess-grid" style="margin-top:1px;">
+    <div class="assess-card">
+      <h4>Recovery & Lifestyle</h4>
+      <p>Average sleep per night (honest):</p>
+      <div class="input-line"></div><div class="input-label">Hours / night</div>
+      <p style="margin-top:18px;">Stress level at work / life right now (1–10):</p>
+      <div class="input-line"></div><div class="input-label">Stress score</div>
+    </div>
+    <div class="assess-card">
+      <h4>Nutrition Starting Point</h4>
+      <p>Are you currently tracking food in any way? (yes / no / sometimes)</p>
+      <div class="input-line"></div><div class="input-label">Current tracking habit</div>
+      <p style="margin-top:18px;">Approximate daily protein intake:</p>
+      <div class="input-line"></div><div class="input-label">Grams / day (estimate)</div>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top:24px;">
+    <div class="callout-label">Re-Assessment Weeks</div>
+    <p>Repeat this profile at the end of Week 4, Week 8, and Week 12 using the blank templates at the back of this document. Tracking the delta — not just the number — is what separates athletes who improve from athletes who plateau.</p>
+  </div>
+
+  <div class="doc-footer">alwaysreddyathletics.com · The ARA System · Section 01 — Athlete Profile</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ SECTION 02 — FRAMEWORK -->
+<div class="page page-break">
+  <div class="section-label">Section 02</div>
+  <div class="section-headline">The ARA Framework</div>
+  <div class="section-underline"></div>
+
+  <p class="desc" style="margin-bottom:24px;">Every decision in this program is built on four pillars. Understand them and the training makes sense. Skip them and you are just following a spreadsheet with no idea why.</p>
+
+  <table class="content-table">
+    <thead>
+      <tr><th width="180">Pillar</th><th>The Principle</th><th>What It Means in Practice</th></tr>
+    </thead>
+    <tbody>
+      <tr class="highlight-row">
+        <td class="col-key">01 — Progressive Stress</td>
+        <td>The body adapts to stress that is slightly beyond its current capacity. Too much breaks you. Too little does nothing.</td>
+        <td>Every phase of this program increases demand across at least one variable — volume, intensity, or density. You will never train at the same level two phases in a row.</td>
+      </tr>
+      <tr>
+        <td class="col-key">02 — Structured Recovery</td>
+        <td>Fitness is not built during training. It is built during recovery. Training is the stimulus; sleep and food are the adaptation.</td>
+        <td>Deload weeks are programmed, not optional. You will reduce volume by ~40% every fourth week. Most athletes want to skip this. Do not skip this.</td>
+      </tr>
+      <tr class="highlight-row">
+        <td class="col-key">03 — Specificity</td>
+        <td>You get better at what you train. General fitness helps. Specific training is what produces specific results.</td>
+        <td>As the program progresses, training becomes more specific to your goal. Early weeks build the base. Later weeks target the exact output you care about.</td>
+      </tr>
+      <tr>
+        <td class="col-key">04 — Consistency Over Intensity</td>
+        <td>The athlete who trains at 80% consistently for 12 weeks beats the athlete who trains at 100% for three weeks and breaks down.</td>
+        <td>When life gets in the way, reduce intensity before you reduce frequency. Showing up at 70% is always better than not showing up. Use the RPE guide in each phase.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="rule-dim"></div>
+
+  <div class="section-label">The 12-Week Arc</div>
+  <div class="section-headline" style="font-size:28px;">Five Phases. One Goal.</div>
+  <div class="section-underline"></div>
+
+  <table class="content-table" style="margin-bottom:0;">
+    <thead>
+      <tr><th>Phase</th><th>Weeks</th><th>Focus</th><th>Key Output</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-key">Phase 1 — Base</td><td>1 – 3</td><td>Build aerobic base, establish strength habits, set movement standards</td><td>Consistency of attendance. Hit 90% of sessions.</td></tr>
+      <tr class="highlight-row"><td class="col-key">Phase 2 — Build</td><td>4 – 6</td><td>Increase volume. Introduce threshold work. Week 4 is a deload.</td><td>First real test of fitness. 5K time trial or strength benchmark.</td></tr>
+      <tr><td class="col-key">Phase 3 — Threshold</td><td>7 – 9</td><td>Push lactate threshold. Race-pace work enters. Volume stays high.</td><td>Sustained effort at goal pace. Discomfort becomes familiar.</td></tr>
+      <tr class="highlight-row"><td class="col-key">Phase 4 — Peak</td><td>10 – 11</td><td>Highest intensity of the program. Sharpening. Week 10 is hard. Week 11 pulls back.</td><td>Peak performance output. This is what you've been building toward.</td></tr>
+      <tr><td class="col-key">Phase 5 — Taper / Test</td><td>12</td><td>Volume drops by 50%. Intensity maintained. Race, test, or benchmark.</td><td>Execute. Trust the process you followed for 11 weeks.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout" style="margin-top:24px;">
+    <div class="callout-label">On RPE (Rate of Perceived Exertion)</div>
+    <p>Every session in this program is prescribed by effort level, not just pace or weight. RPE 6 means you could hold a conversation. RPE 8 means you could say a sentence but it would be uncomfortable. RPE 10 means maximal effort. Use these numbers honestly. Athletes who lie to themselves about RPE plateau fastest.</p>
+  </div>
+
+  <div class="doc-footer">alwaysreddyathletics.com · The ARA System · Section 02 — The Framework</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ SECTION 03 — TRAINING -->
+<div class="page page-break">
+  <div class="section-label">Section 03</div>
+  <div class="section-headline">12-Week Training Structure</div>
+  <div class="section-underline"></div>
+
+  <p class="desc" style="margin-bottom:24px;">The structure below is built for an athlete training 5 days per week. If you can only manage 4 days, drop the Tuesday session each week. Never drop the long run or the key session. Adjust everything else before you adjust those two.</p>
+
+  <!-- Phase 1 -->
+  <div class="phase-block">
+    <div class="phase-header-bar">
+      <span class="phase-name">Phase 1 — Base</span>
+      <span class="phase-weeks">Weeks 1, 2 & 3 · RPE Target: 6–7</span>
+    </div>
+    <div class="phase-goal">Goal: Establish the training habit. Your body is adapting. Keep intensity controlled. Volume matters more than pace or load right now.</div>
+    <table class="phase-table">
+      <thead><tr><th>Day</th><th>Session Type</th><th>Description</th><th>Duration / Volume</th></tr></thead>
+      <tbody>
+        <tr><td class="day-label">Monday</td><td class="session-type">Rest or Mobility</td><td>Full rest or 20 min light mobility / foam rolling. No training stress.</td><td>0–20 min</td></tr>
+        <tr class="key-row"><td class="day-label">Tuesday</td><td class="session-type">Strength A</td><td>Lower body compound focus. Squat pattern, hinge pattern, single-leg work. 3 sets × 8–12 reps. RPE 7.</td><td>45–55 min</td></tr>
+        <tr><td class="day-label">Wednesday</td><td class="session-type">Easy Run</td><td>Conversational pace. Nasal breathing only if possible. This run should feel almost too easy. That is correct.</td><td>25–35 min · RPE 5–6</td></tr>
+        <tr class="key-row"><td class="day-label">Thursday</td><td class="session-type">Strength B</td><td>Upper body push / pull focus. Press, row, carry variations. Core work finisher. 3 sets × 8–12 reps. RPE 7.</td><td>45–55 min</td></tr>
+        <tr><td class="day-label">Friday</td><td class="session-type">Rest</td><td>Full rest. Prepare for Saturday.</td><td>—</td></tr>
+        <tr class="key-row"><td class="day-label">Saturday</td><td class="session-type">Long Run</td><td>Week 1: 45 min. Week 2: 50 min. Week 3: 55 min. Entirely easy effort. Do not race this run.</td><td>45–55 min · RPE 5–6</td></tr>
+        <tr><td class="day-label">Sunday</td><td class="session-type">Active Recovery</td><td>Walk, easy bike, swim, or full rest. Light movement only.</td><td>20–40 min</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Phase 2 -->
+  <div class="phase-block">
+    <div class="phase-header-bar">
+      <span class="phase-name">Phase 2 — Build</span>
+      <span class="phase-weeks">Weeks 4, 5 & 6 · RPE Target: 7–8 (Week 4 is deload at RPE 5–6)</span>
+    </div>
+    <div class="phase-goal">Week 4 is a deload — reduce volume by 40%, keep intensity. Weeks 5–6 increase weekly mileage by 10–15% and add your first tempo sessions.</div>
+    <table class="phase-table">
+      <thead><tr><th>Day</th><th>Session Type</th><th>Description</th><th>Duration / Volume</th></tr></thead>
+      <tbody>
+        <tr><td class="day-label">Monday</td><td class="session-type">Rest or Mobility</td><td>Full rest. Week 4 especially — honor the deload.</td><td>—</td></tr>
+        <tr class="key-row"><td class="day-label">Tuesday</td><td class="session-type">Strength A</td><td>Same movement patterns as Phase 1. Add load (5–10%) in Weeks 5–6. Keep form priority.</td><td>50–60 min</td></tr>
+        <tr><td class="day-label">Wednesday</td><td class="session-type">Tempo Run</td><td>Weeks 5–6: 10 min easy warm-up, 15–20 min at RPE 7–8 (comfortably hard), 10 min easy cool-down.</td><td>35–40 min</td></tr>
+        <tr class="key-row"><td class="day-label">Thursday</td><td class="session-type">Strength B</td><td>Add load to upper body compound lifts. Introduce a conditioning finisher: 3 rounds of kettlebell or bodyweight circuit.</td><td>55–65 min</td></tr>
+        <tr><td class="day-label">Friday</td><td class="session-type">Easy Run</td><td>Easy effort only. No tempo on Fridays regardless of how good you feel. Conserve.</td><td>25–30 min · RPE 5</td></tr>
+        <tr class="key-row"><td class="day-label">Saturday</td><td class="session-type">Long Run</td><td>Week 4: 40 min (deload). Week 5: 60 min. Week 6: 70 min. Still easy effort — resist the urge to push.</td><td>40–70 min</td></tr>
+        <tr><td class="day-label">Sunday</td><td class="session-type">Active Recovery</td><td>Walk or easy movement only. No additional training stress.</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="doc-footer">alwaysreddyathletics.com · The ARA System · Section 03 — Training Structure</div>
+</div>
+
+<!-- Training continued -->
+<div class="page page-break">
+  <!-- Phase 3 -->
+  <div class="phase-block">
+    <div class="phase-header-bar">
+      <span class="phase-name">Phase 3 — Threshold</span>
+      <span class="phase-weeks">Weeks 7, 8 & 9 · RPE Target: 7–9</span>
+    </div>
+    <div class="phase-goal">This is the hardest sustained block in the program. Volume is at its peak. Intensity is increasing. Week 8 introduces race-pace intervals. Expect discomfort. That is the point.</div>
+    <table class="phase-table">
+      <thead><tr><th>Day</th><th>Session Type</th><th>Description</th><th>Duration / Volume</th></tr></thead>
+      <tbody>
+        <tr><td class="day-label">Monday</td><td class="session-type">Rest</td><td>Non-negotiable rest day. You need it coming off Sunday.</td><td>—</td></tr>
+        <tr class="key-row"><td class="day-label">Tuesday</td><td class="session-type">Intervals</td><td>6 × 800m at goal race pace (or RPE 8–9) with 90-second recovery jogs between. Warm-up and cool-down 10 min each.</td><td>50–60 min</td></tr>
+        <tr><td class="day-label">Wednesday</td><td class="session-type">Strength A</td><td>Strength maintenance focus. Do not push for new PRs during this phase. Hold the loads from Phase 2.</td><td>45 min</td></tr>
+        <tr class="key-row"><td class="day-label">Thursday</td><td class="session-type">Tempo Run</td><td>20–25 min at sustained RPE 7–8 within a 40–45 min total session. This is your weekly threshold stimulus.</td><td>40–45 min</td></tr>
+        <tr><td class="day-label">Friday</td><td class="session-type">Easy Run</td><td>Truly easy. Protect your legs for Saturday.</td><td>25 min · RPE 5</td></tr>
+        <tr class="key-row"><td class="day-label">Saturday</td><td class="session-type">Long Run</td><td>Week 7: 75 min. Week 8: 80 min with last 20 min at marathon effort. Week 9: 85 min easy.</td><td>75–85 min</td></tr>
+        <tr><td class="day-label">Sunday</td><td class="session-type">Active Recovery</td><td>Walk only. Your body is under serious cumulative stress.</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Phase 4 -->
+  <div class="phase-block">
+    <div class="phase-header-bar">
+      <span class="phase-name">Phase 4 — Peak</span>
+      <span class="phase-weeks">Weeks 10 & 11 · Week 10: RPE 9 · Week 11: RPE 6–7 (Pullback)</span>
+    </div>
+    <div class="phase-goal">Week 10 is your hardest week. Week 11 reduces volume by 30% while maintaining intensity to allow adaptation before the final week. Do not train hard on Week 11 — let the work land.</div>
+    <table class="phase-table">
+      <thead><tr><th>Day</th><th>Session Type</th><th>Description</th><th>Duration / Volume</th></tr></thead>
+      <tbody>
+        <tr><td class="day-label">Monday</td><td class="session-type">Rest</td><td>Rest. Week 10 starts hard on Tuesday.</td><td>—</td></tr>
+        <tr class="key-row"><td class="day-label">Tuesday</td><td class="session-type">Key Session</td><td>Week 10: 8 × 1000m at goal race pace. Week 11: 4 × 1000m, same pace. The work matters; the volume drops.</td><td>60–70 min (Wk10) / 45 min (Wk11)</td></tr>
+        <tr><td class="day-label">Wednesday</td><td class="session-type">Easy Run</td><td>Easy both weeks. RPE 5 max.</td><td>25–30 min</td></tr>
+        <tr class="key-row"><td class="day-label">Thursday</td><td class="session-type">Strength</td><td>Abbreviated session. Main compound lifts only, 2 sets each. Drop accessory work entirely.</td><td>35 min</td></tr>
+        <tr><td class="day-label">Friday</td><td class="session-type">Rest</td><td>Rest both weeks.</td><td>—</td></tr>
+        <tr class="key-row"><td class="day-label">Saturday</td><td class="session-type">Long Run</td><td>Week 10: 90 min (longest run of the program). Week 11: 55 min easy.</td><td>55–90 min</td></tr>
+        <tr><td class="day-label">Sunday</td><td class="session-type">Rest</td><td>Full rest.</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Phase 5 -->
+  <div class="phase-block">
+    <div class="phase-header-bar">
+      <span class="phase-name">Phase 5 — Taper & Test</span>
+      <span class="phase-weeks">Week 12 · Volume –50% · Intensity Maintained</span>
+    </div>
+    <div class="phase-goal">The work is done. Volume drops by half. Short, sharp sessions keep the legs primed. Execute your test, race, or benchmark on Saturday or Sunday of Week 12.</div>
+    <table class="phase-table">
+      <thead><tr><th>Day</th><th>Session Type</th><th>Description</th><th>Duration / Volume</th></tr></thead>
+      <tbody>
+        <tr><td class="day-label">Monday</td><td class="session-type">Rest</td><td>Rest.</td><td>—</td></tr>
+        <tr class="key-row"><td class="day-label">Tuesday</td><td class="session-type">Shakeout Run</td><td>20 min easy with 4 × 30-second strides at goal pace. Wake the legs up, do not fatigue them.</td><td>25 min</td></tr>
+        <tr><td class="day-label">Wednesday</td><td class="session-type">Rest or Walk</td><td>Rest or 20 min walk. Nothing more.</td><td>—</td></tr>
+        <tr class="key-row"><td class="day-label">Thursday</td><td class="session-type">Final Prep Run</td><td>15 min easy, 3 × 1 min at race effort, 10 min easy. Legs should feel sharp, not tired.</td><td>30 min</td></tr>
+        <tr><td class="day-label">Friday</td><td class="session-type">Rest</td><td>Rest. Eat well. Sleep 8+ hours.</td><td>—</td></tr>
+        <tr class="key-row"><td class="day-label">Saturday</td><td class="session-type">Race / Test Day</td><td>Execute. You have 11 weeks of fitness in your legs. Trust it, run your pace, finish strong.</td><td>Goal event</td></tr>
+        <tr><td class="day-label">Sunday</td><td class="session-type">Recovery</td><td>Walk. Eat. Reflect. Re-assess your Athlete Profile from Section 01.</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="doc-footer">alwaysreddyathletics.com · The ARA System · Section 03 — Training Structure</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ SECTION 04 — NUTRITION -->
+<div class="page page-break">
+  <div class="section-label">Section 04</div>
+  <div class="section-headline">Nutrition Protocol</div>
+  <div class="section-underline"></div>
+
+  <p class="desc" style="margin-bottom:24px;">This is not a diet. It is a fueling framework. The goal is to give your body enough of the right inputs to absorb the training, recover faster, and perform at a higher ceiling. Simple. Repeatable. Sustainable.</p>
+
+  <div class="section-label" style="margin-bottom:12px;">Daily Targets — Training Day</div>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <div class="macro-name">Protein</div>
+      <div class="macro-num">0.8–1g</div>
+      <div class="macro-unit">per lb of bodyweight</div>
+      <div class="macro-note">The non-negotiable. Every meal should have a protein anchor. Chicken, eggs, Greek yogurt, fish, beef — pick your sources and hit the number.</div>
+    </div>
+    <div class="macro-card">
+      <div class="macro-name">Carbohydrates</div>
+      <div class="macro-num">2–3g</div>
+      <div class="macro-unit">per lb of bodyweight</div>
+      <div class="macro-note">Your primary fuel. Prioritize around training: pre-run and post-session. Rice, oats, potatoes, fruit. Do not fear carbs during heavy training weeks.</div>
+    </div>
+    <div class="macro-card">
+      <div class="macro-name">Fats</div>
+      <div class="macro-num">0.4g</div>
+      <div class="macro-unit">per lb of bodyweight</div>
+      <div class="macro-note">Support hormones and joint health. Olive oil, avocado, nuts, fatty fish. Fill this target — do not chase zero fat as a performance strategy.</div>
+    </div>
+  </div>
+
+  <div class="rule-dim"></div>
+
+  <div class="section-label" style="margin-bottom:12px;">Timing Protocol</div>
+  <table class="content-table">
+    <thead>
+      <tr><th>Window</th><th>What to Eat</th><th>Why</th></tr>
+    </thead>
+    <tbody>
+      <tr class="highlight-row">
+        <td class="col-key">90 min Pre-Training</td>
+        <td>Carb-forward meal, moderate protein, low fat and fiber. Example: oats + banana + eggs.</td>
+        <td>Fuel is in the bloodstream and muscles when the session starts. Avoid fat and fiber — they slow gastric emptying.</td>
+      </tr>
+      <tr>
+        <td class="col-key">During (60+ min)</td>
+        <td>30–60g carbs per hour via gel, banana, or sports drink. Water throughout.</td>
+        <td>Sessions over 60 minutes deplete glycogen. Replace it in real time or pay for it in the final third of the session.</td>
+      </tr>
+      <tr class="highlight-row">
+        <td class="col-key">Within 30 min Post</td>
+        <td>25–40g protein + fast carbs. Example: protein shake + fruit, or Greek yogurt + granola.</td>
+        <td>The anabolic window is real for endurance athletes. Protein synthesis is elevated immediately post-session. Hit it.</td>
+      </tr>
+      <tr>
+        <td class="col-key">Rest Day Adjustment</td>
+        <td>Keep protein identical. Reduce carbs by 30–40%. Fat can increase slightly.</td>
+        <td>You need fewer carbs when you are not burning them. Protein stays constant because recovery is still happening.</td>
+      </tr>
+      <tr class="highlight-row">
+        <td class="col-key">Hard Session Eve</td>
+        <td>Carb-load the night before Tuesday intervals and Saturday long runs. Extra serving of rice, pasta, or sweet potato.</td>
+        <td>Glycogen storage peaks at ~24 hours. Fill the tank the night before your hardest sessions.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="callout-label">The One Thing Most Athletes Get Wrong</div>
+    <p>Under-eating on heavy training weeks. If you are training 5 days a week and feeling flat, fatigued, or unable to hit RPE targets — eat more first, sleep more second. More volume is almost never the answer when the output is dropping. The ARA approach: always look at recovery inputs before you adjust training outputs.</p>
+  </div>
+
+  <div class="doc-footer">alwaysreddyathletics.com · The ARA System · Section 04 — Nutrition Protocol</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ SECTION 05 — RECOVERY -->
+<div class="page page-break">
+  <div class="section-label">Section 05</div>
+  <div class="section-headline">Recovery System</div>
+  <div class="section-underline"></div>
+
+  <p class="desc" style="margin-bottom:24px;">Recovery is not passive. It is part of the training stimulus. The athletes who recover well train harder with less breakdown. These are the non-negotiables.</p>
+
+  <div class="recovery-grid">
+    <div class="recovery-card">
+      <h4>Sleep</h4>
+      <ul>
+        <li>Minimum 7 hours. Target 8+.</li>
+        <li>Same sleep / wake time 7 days a week. Consistency matters more than duration.</li>
+        <li>Phone out of the bedroom. Non-negotiable for athletes who claim they "can't sleep."</li>
+        <li>If sleep is under 6 hours the night before a key session, reduce intensity by 1 RPE point.</li>
+        <li>Track it weekly in your check-in sheet. Low sleep predicts performance drops before you feel them.</li>
+      </ul>
+    </div>
+    <div class="recovery-card">
+      <h4>Mobility & Soft Tissue</h4>
+      <ul>
+        <li>10 min mobility routine daily — hips, ankles, thoracic spine. Do it in the morning before coffee if you need a trigger.</li>
+        <li>Foam roll post-session: calves, quads, IT band, glutes. 60 seconds per area.</li>
+        <li>Dynamic warm-up before every run — leg swings, hip circles, A-skip, B-skip. Do not skip this in the name of time.</li>
+        <li>Static stretching post-session only. Never pre-session cold.</li>
+        <li>If a muscle feels tight for 3+ consecutive days, reduce training on that day and address it.</li>
+      </ul>
+    </div>
+    <div class="recovery-card">
+      <h4>Stress Management</h4>
+      <ul>
+        <li>Training stress and life stress are the same to your nervous system. When life is hard, back the training off before you break down.</li>
+        <li>Rate your readiness score each morning (1–10) in your check-in sheet. Below 5 = easy day, no exceptions.</li>
+        <li>Breathing protocol: 5 minutes of box breathing (4 in, 4 hold, 4 out, 4 hold) post hard sessions to bring HRV down.</li>
+        <li>Cold exposure (cold shower, 2–3 min) shown to reduce perceived fatigue between sessions.</li>
+        <li>Alcohol impairs recovery for 48–72 hours. This is a data point, not a judgment.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="rule-dim"></div>
+
+  <div class="section-label" style="margin-bottom:12px;">Deload Rules</div>
+  <table class="content-table">
+    <thead><tr><th>Trigger</th><th>Response</th></tr></thead>
+    <tbody>
+      <tr class="highlight-row"><td class="col-key">Scheduled Deload (Week 4)</td><td>Reduce total volume by 40%. Keep intensity identical to the week prior. Do not add training to fill the "extra" time.</td></tr>
+      <tr><td class="col-key">3 consecutive poor sleep nights</td><td>Drop the week's hardest session. Replace with easy 20 min run or full rest.</td></tr>
+      <tr class="highlight-row"><td class="col-key">Readiness score below 5 for 3 days</td><td>Unplanned deload. One week at 50% volume. Re-assess.</td></tr>
+      <tr><td class="col-key">Any pain that alters gait or movement pattern</td><td>Stop. Rest 48 hours. If pain persists, seek professional assessment before continuing.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="doc-footer">alwaysreddyathletics.com · The ARA System · Section 05 — Recovery System</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ SECTION 06 — CHECK-INS -->
+<div class="page page-break">
+  <div class="section-label">Section 06</div>
+  <div class="section-headline">Weekly Check-In Templates</div>
+  <div class="section-underline"></div>
+
+  <p class="desc" style="margin-bottom:24px;">Complete one of these at the end of each week — Sunday evening works well. Be honest. No one is grading you. These exist because self-coached athletes who track their check-ins outperform those who don't by a wide margin. The data compounds.</p>
+
+  <!-- Check-in 1 -->
+  <div class="checkin-block">
+    <div class="checkin-header">Week 1 Check-In</div>
+    <div class="checkin-row"><div class="checkin-q">Sessions completed this week:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Sessions missed and why:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Average sleep this week (hours/night):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Energy level this week (1–10):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Hardest moment this week:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">What went well:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">One thing to adjust next week:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Bodyweight (optional):</div><div class="checkin-a"></div></div>
+  </div>
+
+  <!-- Check-in 2 -->
+  <div class="checkin-block">
+    <div class="checkin-header">Week 2 Check-In</div>
+    <div class="checkin-row"><div class="checkin-q">Sessions completed this week:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Sessions missed and why:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Average sleep this week (hours/night):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Energy level this week (1–10):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Hardest moment this week:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">What went well:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">One thing to adjust next week:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Bodyweight (optional):</div><div class="checkin-a"></div></div>
+  </div>
+
+  <!-- Check-in 3 -->
+  <div class="checkin-block">
+    <div class="checkin-header">Week 3 Check-In</div>
+    <div class="checkin-row"><div class="checkin-q">Sessions completed this week:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Sessions missed and why:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Average sleep this week (hours/night):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Energy level this week (1–10):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">What is working, what is not:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Phase 1 complete — rate your habit consistency (1–10):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Week 4 is a deload. Your plan:</div><div class="checkin-a"></div></div>
+  </div>
+
+  <!-- Check-in 4 -->
+  <div class="checkin-block">
+    <div class="checkin-header">Week 4 Check-In (Deload Week)</div>
+    <div class="checkin-row"><div class="checkin-q">Did you actually deload? (yes / no / partially):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">How did your body feel vs. last week:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">5K time trial result (if completed):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Strength benchmark (push-ups to failure):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Delta vs. Week 1 baseline (faster / stronger / same):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Confidence heading into Phase 2 (1–10):</div><div class="checkin-a"></div></div>
+  </div>
+
+  <div class="doc-footer">alwaysreddyathletics.com · The ARA System · Section 06 — Weekly Check-Ins</div>
+</div>
+
+<!-- Check-in page 2 -->
+<div class="page page-break">
+
+  <!-- Weeks 5–8 check-ins -->
+  <div class="checkin-block">
+    <div class="checkin-header">Week 5 Check-In</div>
+    <div class="checkin-row"><div class="checkin-q">Sessions completed this week:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Tempo run — how did it feel? Could you hold RPE 7–8?</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Average sleep (hours/night):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Energy / readiness this week (1–10):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">What to carry into next week:</div><div class="checkin-a"></div></div>
+  </div>
+
+  <div class="checkin-block">
+    <div class="checkin-header">Week 6 Check-In</div>
+    <div class="checkin-row"><div class="checkin-q">Sessions completed this week:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Long run distance and effort feel:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Strength loads vs. Phase 1 (increased / same / decreased):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Any pain or tightness to flag before Phase 3:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Overall Phase 2 rating (1–10):</div><div class="checkin-a"></div></div>
+  </div>
+
+  <div class="checkin-block">
+    <div class="checkin-header">Week 7 Check-In — Phase 3 Begins</div>
+    <div class="checkin-row"><div class="checkin-q">Intervals (6 × 800m) — pace and how they felt:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Sessions completed this week:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Sleep average (hours/night):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Fatigue level on a scale of 1–10 (10 = cooked):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Adjust next week? What and why:</div><div class="checkin-a"></div></div>
+  </div>
+
+  <div class="checkin-block">
+    <div class="checkin-header">Week 8 Check-In</div>
+    <div class="checkin-row"><div class="checkin-q">Long run with race-effort miles — result:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Can you sustain goal race pace? Yes / not yet / close:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Body feeling (fresh / normal / heavy / wrecked):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Any red flags heading into Week 9:</div><div class="checkin-a"></div></div>
+  </div>
+
+  <div class="checkin-block">
+    <div class="checkin-header">Week 9 Check-In</div>
+    <div class="checkin-row"><div class="checkin-q">Sessions completed this week:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">How does goal pace feel now vs. Week 7:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Confidence in your fitness right now (1–10):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Phase 3 complete — one word to describe it:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Ready for Peak Phase? What still feels shaky:</div><div class="checkin-a"></div></div>
+  </div>
+
+  <div class="checkin-block">
+    <div class="checkin-header">Week 10 Check-In — Peak Week</div>
+    <div class="checkin-row"><div class="checkin-q">8 × 1000m session — how did it go:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">90-min long run — pace and effort feel:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Energy this week overall (1–10):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Sleep average:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Anything to adjust in the taper:</div><div class="checkin-a"></div></div>
+  </div>
+
+  <div class="checkin-block">
+    <div class="checkin-header">Week 11 Check-In — Pullback</div>
+    <div class="checkin-row"><div class="checkin-q">Did volume come down? Did intensity stay? (yes / no):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Legs feeling (heavy / normal / sharp):</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Mental state heading into final week:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Race / test day logistics confirmed?</div><div class="checkin-a"></div></div>
+  </div>
+
+  <div class="checkin-block">
+    <div class="checkin-header">Week 12 Check-In — Final Week & Results</div>
+    <div class="checkin-row"><div class="checkin-q">Race / test day result:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Result vs. your goal from Section 01:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">What you would do differently:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">What you are most proud of:</div><div class="checkin-a"></div></div>
+    <div class="checkin-row"><div class="checkin-q">Next step — another cycle, or 1:1 coaching?</div><div class="checkin-a"></div></div>
+  </div>
+
+  <div class="doc-footer">alwaysreddyathletics.com · The ARA System · Section 06 — Weekly Check-Ins</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ SECTION 07 — UPGRADE -->
+<div class="page page-break">
+  <div class="section-label">Section 07</div>
+  <div class="section-headline">The Upgrade Path</div>
+  <div class="section-underline"></div>
+
+  <p class="desc" style="margin-bottom:24px;">The ARA System will produce real results for athletes who follow it with discipline. But there is a ceiling to self-coached training — and knowing when you have hit it is its own skill. Here is how to know.</p>
+
+  <div class="upgrade-box">
+    <div class="upgrade-label">The ARA System vs. The Athletic Rebuild (1:1)</div>
+    <div class="upgrade-headline">What Changes When<br>a Coach Is In the Room</div>
+
+    <div class="upgrade-compare">
+      <div class="upgrade-col">
+        <div class="upgrade-col-label">The ARA System (This Document)</div>
+        <ul>
+          <li>Proven 12-week framework</li>
+          <li>Periodized phases with clear structure</li>
+          <li>Nutrition protocol and recovery system</li>
+          <li>Weekly self-check-in process</li>
+          <li>Self-assessment at four checkpoints</li>
+          <li>Re-usable for multiple training cycles</li>
+        </ul>
+      </div>
+      <div class="upgrade-col the-rebuild">
+        <div class="upgrade-col-label">The Athletic Rebuild (1:1 Coaching)</div>
+        <ul>
+          <li>Custom plan built around your exact baseline</li>
+          <li>Weekly adjustments based on your real data</li>
+          <li>Form video review and technique correction</li>
+          <li>Weekly check-in calls with Coach Tyler</li>
+          <li>Direct messaging access between sessions</li>
+          <li>Nutrition plan personalized to your body weight, goals, and schedule</li>
+          <li>ARA Community access</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-label" style="margin-top:24px;margin-bottom:12px;">Signs You Have Outgrown Self-Guided Training</div>
+    <table class="content-table">
+      <tbody>
+        <tr class="highlight-row"><td class="col-key">You are plateauing</td><td>You followed a full cycle and did not hit your goal. The issue is almost never effort — it is diagnosis. A coach sees what you cannot.</td></tr>
+        <tr><td class="col-key">Recurring injury</td><td>The same thing keeps breaking down. This is a movement or load management problem. Self-coaching this is difficult without an outside eye on your form.</td></tr>
+        <tr class="highlight-row"><td class="col-key">High-stakes goal</td><td>You have a race with a specific time goal, or a personal milestone that actually matters to you. The margin for error is smaller. A coach narrows it.</td></tr>
+        <tr><td class="col-key">Accountability</td><td>You know what to do and consistently do not do it. A check-in call with a coach changes the math on skipped sessions faster than any app.</td></tr>
+        <tr class="highlight-row"><td class="col-key">You want to go faster</td><td>Specifically faster. Not just finish. Not just PR slightly. You have a number and want to build the exact program that produces it.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="cta-bar" style="margin-top:28px;">
+      <div>Apply for The Athletic Rebuild — 1:1 Coaching with Coach Tyler</div>
+      <div class="cta-sub">alwaysreddyathletics.com · Every application personally reviewed</div>
+    </div>
+  </div>
+
+  <div class="coach-section">
+    <div class="section-label">From Coach Tyler</div>
+    <div class="coach-headline">This System Works.<br><span style="color:#c8a96e;">If You Work It.</span></div>
+    <div class="coach-body">
+      <p>I built this because I know what it is like to want to train seriously and not have access to a coach. I dropped 1:18 off my marathon using these principles before I became a coach. The framework works.</p>
+      <p>But here is the honest truth: self-coaching has a ceiling. You cannot see your own gait. You cannot objectively assess whether your fatigue is productive or damaging. You cannot know if the reason you are not hitting your tempo pace is fitness, nutrition, sleep, or the fact that you are running the tempo too fast every single time.</p>
+      <p>Use this system. Commit to 12 weeks. Complete the check-ins. If you finish and still feel like there is more in the tank — that you are capable of more than you showed — that is the sign. That is when you apply.</p>
+      <p>I will review every application personally.</p>
+      <p style="color:#c8a96e;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;">— Coach Tyler</p>
+    </div>
+  </div>
+
+  <div class="doc-footer" style="margin-top:40px;">alwaysreddyathletics.com · The ARA System · Self-Guided Athletic Rebuild · © Always Reddy Athletics</div>
+</div>
+
+</body>
+</html>
