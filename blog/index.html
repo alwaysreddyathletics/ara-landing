@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLMH8N0R14"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QLMH8N0R14');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Training, Nutrition & Lifestyle | Always Reddy Athletics</title>
+  <meta name="description" content="Training tips, nutrition frameworks, lifestyle habits, and real athlete stories from Coach Tyler Reddy at Always Reddy Athletics.">
+  <link rel="canonical" href="https://www.alwaysreddyathletics.com/blog">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta property="og:title" content="Blog — Always Reddy Athletics">
+  <meta property="og:description" content="Training, nutrition, lifestyle, and real results from Coach Tyler Reddy.">
+  <meta property="og:url" content="https://www.alwaysreddyathletics.com/blog">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Barlow',sans-serif;background:#0a0a0a;color:#f4f2ef;-webkit-font-smoothing:antialiased;line-height:1.7}
+    a{text-decoration:none}
+    nav{padding:20px 24px;border-bottom:.5px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(10,10,10,0.95);backdrop-filter:blur(10px);z-index:100}
+    .nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:#f4f2ef}
+    .nav-logo span{color:#c8a96e}
+    .nav-right{display:flex;gap:20px;align-items:center}
+    .nav-link{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#888;transition:color .2s}
+    .nav-link:hover{color:#f4f2ef}
+    .nav-cta{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:#0a0a0a;background:#c8a96e;padding:8px 18px;transition:background .2s}
+    .nav-cta:hover{background:#a8893e}
+
+    .hero{padding:80px 24px 60px;max-width:900px;margin:0 auto;border-bottom:.5px solid rgba(255,255,255,0.07)}
+    .hero-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#c8a96e;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+    .hero-label::after{content:'';flex:1;height:1px;background:rgba(200,169,110,0.2)}
+    .hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.8rem,7vw,5rem);font-weight:900;line-height:.96;letter-spacing:-.02em;margin-bottom:18px}
+    .hero h1 em{font-style:normal;color:#c8a96e}
+    .hero p{font-size:1rem;color:rgba(244,242,239,0.55);max-width:560px;line-height:1.7}
+
+    .filter-bar{max-width:900px;margin:0 auto;padding:28px 24px;display:flex;gap:10px;flex-wrap:wrap;border-bottom:.5px solid rgba(255,255,255,0.05)}
+    .filter-btn{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 14px;border:.5px solid rgba(255,255,255,0.1);background:none;color:#666;cursor:pointer;transition:all .2s}
+    .filter-btn:hover,.filter-btn.active{border-color:rgba(200,169,110,0.4);color:#c8a96e}
+
+    .posts{max-width:900px;margin:0 auto;padding:0 24px 80px}
+    .posts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,0.04);margin-top:1px}
+    .post-card{background:#0a0a0a;padding:36px;display:flex;flex-direction:column;transition:background .2s;position:relative}
+    .post-card:hover{background:#0f0f0f}
+    .post-card--featured{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;background:#0d0d0d;border-bottom:.5px solid rgba(200,169,110,0.12)}
+    .post-card--featured:hover{background:#111}
+    .post-tag{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#c8a96e;margin-bottom:14px}
+    .post-card h2{font-family:'Barlow Condensed',sans-serif;font-size:1.55rem;font-weight:800;color:#f4f2ef;line-height:1.1;margin-bottom:12px;letter-spacing:-.01em}
+    .post-card--featured h2{font-size:clamp(1.8rem,3vw,2.4rem)}
+    .post-card p{font-size:.88rem;color:rgba(244,242,239,0.5);line-height:1.65;flex:1;margin-bottom:20px}
+    .post-meta-line{font-size:.72rem;color:#444;text-transform:uppercase;letter-spacing:.07em;margin-bottom:20px}
+    .post-link{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#c8a96e;display:flex;align-items:center;gap:6px;transition:gap .2s;margin-top:auto}
+    .post-link:hover{gap:10px}
+    .featured-badge{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0a0a0a;background:#c8a96e;padding:3px 9px;margin-bottom:14px}
+
+    .cta-strip{background:rgba(200,169,110,0.04);border-top:.5px solid rgba(200,169,110,0.15);border-bottom:.5px solid rgba(200,169,110,0.15);padding:48px 24px;text-align:center;margin-top:60px}
+    .cta-strip-inner{max-width:520px;margin:0 auto}
+    .cta-strip h3{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:900;color:#f4f2ef;margin-bottom:10px;line-height:1.05}
+    .cta-strip h3 em{font-style:normal;color:#c8a96e}
+    .cta-strip p{font-size:.9rem;color:rgba(244,242,239,0.55);margin-bottom:24px;line-height:1.65}
+    .btn-gold{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.88rem;letter-spacing:.1em;text-transform:uppercase;color:#0a0a0a;background:#c8a96e;padding:13px 28px;display:inline-block;transition:background .2s}
+    .btn-gold:hover{background:#a8893e}
+
+    footer{border-top:.5px solid rgba(255,255,255,0.06);padding:32px 24px;text-align:center}
+    footer a{font-size:.8rem;color:#555;transition:color .2s}
+    footer a:hover{color:#c8a96e}
+
+    @media(max-width:640px){
+      .posts-grid{grid-template-columns:1fr}
+      .post-card--featured{grid-column:1;grid-template-columns:1fr;gap:0}
+      .hero h1{font-size:2.8rem}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Always <span>Reddy</span> Athletics</a>
+  <div class="nav-right">
+    <a href="/#plans" class="nav-link">Programs</a>
+    <a href="/blog" class="nav-link" style="color:#f4f2ef">Blog</a>
+    <a href="/#apply" class="nav-cta">Apply Now</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-label">Always Reddy Athletics</div>
+  <h1>Training. Nutrition.<br><em>Life.</em></h1>
+  <p>Real talk on running, fueling, recovery, and building the kind of habits that make you better at everything — not just race day.</p>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active">All Posts</button>
+  <button class="filter-btn">Training</button>
+  <button class="filter-btn">Nutrition</button>
+  <button class="filter-btn">Lifestyle</button>
+  <button class="filter-btn">Mindset</button>
+</div>
+
+<div class="posts">
+  <div class="posts-grid">
+
+    <!-- Featured post -->
+    <div class="post-card post-card--featured">
+      <div>
+        <div class="featured-badge">Latest</div>
+        <div class="post-tag">Training · Marathon</div>
+        <h2>How to Run a Sub 3:30 Marathon</h2>
+        <p>Coach Tyler went from 4:46 to 3:27 in under a year — Honolulu to Pittsburgh, same distance, completely different result. Here's the exact training structure, key sessions, and what actually made the difference.</p>
+        <a href="/blog/how-to-run-sub-330-marathon.html" class="post-link">Read the full breakdown →</a>
+      </div>
+      <div>
+        <div class="post-meta-line">By Coach Tyler · May 2026 · 8 min read</div>
+        <div style="border:.5px solid rgba(255,255,255,0.06);padding:28px;background:#111;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#555;margin-bottom:16px;">The result</div>
+          <div style="display:flex;gap:0;border:.5px solid rgba(255,255,255,0.06);overflow:hidden;">
+            <div style="flex:1;padding:16px 12px;text-align:center;border-right:.5px solid rgba(255,255,255,0.06)">
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:900;color:#c8a96e;line-height:1">4:46</div>
+              <div style="font-size:.6rem;color:#555;text-transform:uppercase;letter-spacing:.06em;margin-top:5px">Before</div>
+            </div>
+            <div style="flex:1;padding:16px 12px;text-align:center;border-right:.5px solid rgba(255,255,255,0.06)">
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:900;color:#c8a96e;line-height:1">3:27</div>
+              <div style="font-size:.6rem;color:#555;text-transform:uppercase;letter-spacing:.06em;margin-top:5px">After</div>
+            </div>
+            <div style="flex:1;padding:16px 12px;text-align:center">
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:900;color:#c8a96e;line-height:1">−1:18</div>
+              <div style="font-size:.6rem;color:#555;text-transform:uppercase;letter-spacing:.06em;margin-top:5px">Same course</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post 2 -->
+    <div class="post-card">
+      <div class="post-tag">Training · Running</div>
+      <div class="post-meta-line">By Coach Tyler · May 2026 · 6 min read</div>
+      <h2>Beginner Half Marathon Training Plan</h2>
+      <p>10 weeks. Three runs per week. A complete breakdown of how to go from casual runner to half marathon finisher — without breaking down along the way.</p>
+      <a href="/blog/beginner-half-marathon-training-plan.html" class="post-link">Read →</a>
+    </div>
+
+    <!-- Post 3 — placeholder for new posts -->
+    <div class="post-card">
+      <div class="post-tag">Lifestyle · Training</div>
+      <div class="post-meta-line">By Coach Tyler · June 2026 · 7 min read</div>
+      <h2>How to Get Back Into Running After Years Off</h2>
+      <p>The biggest mistake former athletes make when they try to return. How to build back without the ego getting in the way — and why starting slower always gets you there faster.</p>
+      <a href="/blog/how-to-get-back-into-running.html" class="post-link">Read →</a>
+    </div>
+
+    <div class="post-card">
+      <div class="post-tag">Lifestyle · Training</div>
+      <div class="post-meta-line">By Coach Tyler · June 2026 · 6 min read</div>
+      <h2>Marathon Training While Working Full Time</h2>
+      <p>Training for a marathon while holding down a real job isn't about finding more time — it's about making better decisions with the time you already have.</p>
+      <a href="/blog/marathon-training-while-working-full-time.html" class="post-link">Read →</a>
+    </div>
+
+    <div class="post-card">
+      <div class="post-tag">Nutrition · Lifestyle</div>
+      <div class="post-meta-line">By Coach Tyler · June 2026 · 6 min read</div>
+      <h2>What to Eat as a Runner (A Real Framework)</h2>
+      <p>Not a diet. Not a meal plan. A fueling framework that actually works for people who train hard, have a life, and don't want to think about food all day.</p>
+      <a href="/blog/what-to-eat-as-a-runner.html" class="post-link">Read →</a>
+    </div>
+
+    <div class="post-card">
+      <div class="post-tag">Lifestyle · Mindset</div>
+      <div class="post-meta-line">By Coach Tyler · June 2026 · 5 min read</div>
+      <h2>How to Build a Morning Routine That Actually Sticks</h2>
+      <p>Most morning routines fail in week two. Here's what's different about the ones that don't — and how to build one around training without making your life worse.</p>
+      <a href="/blog/morning-routine-for-athletes.html" class="post-link">Read →</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="cta-strip">
+  <div class="cta-strip-inner">
+    <h3>Ready to Stop Reading<br>and <em>Start Training?</em></h3>
+    <p>The Athletic Rebuild System gives you the exact 12-week framework — training structure, nutrition protocol, recovery system, and weekly self-coaching tools. No coach required.</p>
+    <a href="https://buy.stripe.com/7sY5kE7SS6pGcwy4y71ZS0c" target="_blank" class="btn-gold">Get The Athletic Rebuild System — $97</a>
+    <div style="margin-top:14px;font-size:.78rem;color:#444">Or <a href="/#apply" style="color:#c8a96e">apply for 1:1 coaching with Coach Tyler →</a></div>
+  </div>
+</div>
+
+<footer>
+  <a href="/">alwaysreddyathletics.com</a>
+</footer>
+
+</body>
+</html>
