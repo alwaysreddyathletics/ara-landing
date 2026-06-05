@@ -1,25 +1,34 @@
 ARA SKOOL CONTENT — COACH TYLER
+Always Reddy Athletics — Athletic Performance Coaching
 Updated: June 5, 2026
 
+Note on positioning: Always Reddy Athletics is an athletic PERFORMANCE coaching brand,
+not a running-only program. Language throughout should reflect the full rebuild:
+strength, conditioning, endurance, nutrition, mindset, and lifestyle — not just running.
+
 ==============================================================
-PART 1: CLASSROOM COURSE
+PART 1: CLASSROOM COURSES
 ==============================================================
 
-HOW TO CREATE THE COURSE IN SKOOL:
-Go to Classroom > Create Course, then paste the fields below.
+You have 3 courses below. Create them in order — Foundation first.
 
---------------------------------------------------------------
+HOW TO CREATE A COURSE IN SKOOL:
+Classroom > Create Course > paste Name and Description below.
+Then add Pages inside each course using the Title and Content blocks.
+
+==============================================================
+COURSE 1 OF 3
+==============================================================
+
 NAME:
 The Athletic Rebuild Foundation
 
 DESCRIPTION:
-The core framework every ARA athlete starts with — training, nutrition, recovery, and how to put it all together. Four pages. Real frameworks. No fluff.
+The core framework every ARA athlete starts with — training structure, nutrition, recovery, and the mindset shift that makes it all stick. Four pages. Real frameworks built for former athletes coming back to compete.
+
 --------------------------------------------------------------
-
-
-==============================================================
 PAGE 1
-==============================================================
+--------------------------------------------------------------
 
 TITLE:
 Why Former Athletes Get Stuck (And How to Break the Pattern)
@@ -31,13 +40,13 @@ This is the foundation everything else builds on.
 
 Most former athletes don't struggle with motivation — they struggle with the gap between who they used to be and who they are now.
 
-You know what hard work feels like. You've done it. You've pushed through difficult training, competed under pressure, experienced what your body is capable of. You have a reference point — and your current fitness doesn't match it.
+You know what hard work feels like. You've done it. You've pushed through difficult training, competed under pressure, experienced what your body is capable of. You have a reference point — and your current performance doesn't match it.
 
 That's not a motivation problem. That's a disconnect problem.
 
 The gap between "who I was athletically" and "who I am right now" creates a psychological friction that makes it harder to train consistently, not easier.
 
-When former athletes show up to a workout, they subconsciously measure themselves against their peak. A 35-year-old who played college soccer at 21 doesn't just feel tired after a hard run — they feel the distance between now and then. And that distance feels like failure, even when it's just... time.
+When former athletes show up to a workout, they subconsciously measure themselves against their peak. A 35-year-old who played college soccer at 21 doesn't just feel tired after a hard session — they feel the distance between now and then. And that distance feels like failure, even when it's just... time.
 
 So they either push too hard (trying to reclaim the past quickly) or stop altogether (because slow progress toward a past standard feels pointless). Both paths lead to the same place: stuck.
 
@@ -46,11 +55,11 @@ WHY CONVENTIONAL FITNESS ADVICE MAKES IT WORSE
 
 Walk into any fitness community and you'll find advice built for one of two people: total beginners or elite athletes. The former athlete is neither.
 
-You don't need "getting started" content. You know what a squat is. You've trained before.
+You don't need "getting started" content. You know what hard training feels like. You've competed.
 
-But you also can't train like you did at 19 or 22 without consequences that 19-year-old you never experienced. Recovery takes longer. Overuse injuries are more likely. Life has real demands on your time.
+But you also can't train like you did at 19 or 22 without consequences that 19-year-old you never experienced. Recovery takes longer. Overuse injuries are more likely. Life has real demands on your time and energy.
 
-Generic training plans assume a clean slate. Former athletes don't have clean slates — they have complex histories. Old injuries, ingrained movement patterns, deeply held expectations, and a complicated relationship with their own performance.
+Generic programs assume a clean slate. Former athletes don't have clean slates — they have complex histories. Old injuries, ingrained movement patterns, deeply held performance expectations, and a complicated relationship with their own output.
 
 The advice doesn't fit the person. So the plan fails. And the former athlete concludes they're the problem.
 
@@ -61,16 +70,16 @@ THE PATTERN (AND WHERE IT BREAKS)
 
 The cycle looks like this:
 
-Step 1: Motivation arrives — a race, a health scare, or just "enough is enough"
+Step 1: Motivation arrives — an event, a health scare, or just "enough is enough"
 Step 2: You start training — often too hard, too fast, too much
-Step 3: Something breaks down — injury, exhaustion, life
+Step 3: Something breaks down — injury, exhaustion, life getting in the way
 Step 4: You stop
 Step 5: Months pass
 Step 6: Back to Step 1
 
 This can repeat for years. Each time, a little more confidence gets chipped away.
 
-The break doesn't come from more motivation or a better plan (at least not at first). It comes from a shift in how you define being an athlete NOW — not in comparison to who you were then.
+The break doesn't come from more motivation or a better plan. It comes from a shift in how you define being an athlete NOW — not in comparison to who you were then.
 
 You are not rebuilding who you used to be. You are building who you are becoming.
 
@@ -79,9 +88,9 @@ THE THREE PHASES OF THE REBUILD
 
 Phase 1 — Assessment: Understand where you actually are. Not where you used to be.
 
-Phase 2 — Foundation: Build aerobic capacity, movement quality, sustainable habits. Slow and unsexy and absolutely essential.
+Phase 2 — Foundation: Build aerobic capacity, strength, movement quality, and sustainable habits. Slow and unsexy and absolutely essential.
 
-Phase 3 — Performance: Layer in intensity and progression on top of a real foundation. This is where PRs happen.
+Phase 3 — Performance: Layer in intensity, specificity, and progression on top of a real foundation. This is where the PRs happen.
 
 Most people skip to Phase 3. That's why they get hurt and end up back at square one. We start at Phase 1.
 
@@ -94,19 +103,19 @@ Then write this — stated as a present-tense identity, not a future goal:
 
 "I am a ________________ who ________________."
 
-Example: "I am a competitive amateur runner who trains with discipline and takes my recovery as seriously as my training."
+Example: "I am a competitive athlete who trains with discipline and takes recovery as seriously as performance."
 
 Keep this. We'll come back to it.
 
 ------ stop copying here ------
 
 
-==============================================================
+--------------------------------------------------------------
 PAGE 2
-==============================================================
+--------------------------------------------------------------
 
 TITLE:
-Your Movement Baseline — The Assessment Every Athlete Needs Before Training
+Your Performance Baseline — The Assessment Every Returning Athlete Needs First
 
 CONTENT:
 ------ copy everything below this line ------
@@ -118,43 +127,43 @@ Before you build anything, you need honest data. This page walks you through it.
 
 PART 1: AEROBIC FITNESS BASELINE
 
-Option A — The Cooper Test (if you can run):
-Find a flat route or track. Run as far as you can in 12 minutes. Record the distance.
+Option A — The Cooper Test:
+Find a flat route or track. Move as fast as you can sustain for 12 minutes. Record the distance.
 
 Under 1.5 miles: developing aerobic base
 1.5 to 1.8 miles: moderate aerobic fitness
 1.8 to 2.0 miles: solid aerobic foundation
-Over 2.0 miles: good aerobic capacity
+Over 2.0 miles: strong aerobic capacity
 
 Option B — The Talk Test:
-Run at an easy effort. Can you speak in full sentences comfortably? That's your aerobic zone. If you can't, your base needs development before adding intensity.
+Exercise at an easy effort. Can you speak in full sentences comfortably? That's your aerobic zone. If you can't, your base needs development before adding intensity.
 
 Record your result. Don't judge it. This is day one data.
 
 
-PART 2: MOVEMENT QUALITY ASSESSMENT
+PART 2: STRENGTH BASELINE
 
-Run through all five:
+Run through these five checks:
 
 1. Squat Pattern
 Bodyweight squat, feet shoulder-width, toes slightly out. Squat as deep as comfortable with heels on the ground.
-Watch for: heels rising, knees caving inward, severe forward lean — signals limited ankle or hip mobility.
+Watch for: heels rising, knees caving inward, severe forward lean — signals limited mobility that will limit performance and increase injury risk.
 
 2. Single-Leg Balance
 Stand on one foot for 30 seconds, eyes open, then closed. Repeat on other side.
-Watch for: significant wobble, hip drop, or inability to hold 30 seconds — signals hip stability weakness.
+Watch for: significant wobble, hip drop, or inability to hold 30 seconds — signals hip stability weakness, critical for any sport.
 
 3. Hip Hinge
-Hinge forward at the hip, pushing hips back until you feel your hamstrings engage. Not the lower back.
-Watch for: rounding through the lower back — common and worth addressing before adding load.
+Hinge forward at the hip — not the lower back — pushing hips back until you feel your hamstrings engage.
+Watch for: rounding through the lower back — affects every pulling movement and athletic output.
 
 4. Hip Flexor Length
 Lunge position, one knee on floor, other foot forward. Squeeze the glute of the back leg and gently tuck pelvis.
-Watch for: significant tightness — very common in people who sit for work, affects running stride directly.
+Watch for: significant tightness — very common in people who sit for work, limits stride and power output.
 
 5. Ankle Mobility
 Stand 4-5 inches from a wall. Drive front knee toward the wall while keeping heel on floor. Can you touch?
-Watch for: inability to touch, or significant side-to-side difference — affects running gait directly.
+Watch for: inability to touch the wall, or significant side-to-side difference — limits power transfer in almost every athletic movement.
 
 
 PART 3: LIFESTYLE BASELINE
@@ -162,24 +171,24 @@ PART 3: LIFESTYLE BASELINE
 Answer these honestly:
 
 Sleep: How many hours of actual sleep per night?
-Nutrition: Are you eating enough to support training? Eating within 45 min after workouts?
+Nutrition: Are you eating enough to support training? Eating after workouts?
 Hydration: Drinking water consistently throughout the day?
 Current Activity: How many days per week are you moving intentionally right now?
-Stress: On a scale of 1-10, what is your average daily stress?
+Stress: On a scale of 1-10, what is your average daily stress level?
 
 Write actual answers. Your training prescription depends on all of them.
 
 
 ACTION ITEM
 
-Complete all three parts today. Write down your results and flag anything that stood out in the movement section. This is your baseline document — keep it. You'll reassess in four weeks.
+Complete all three parts today. Write down your results and flag anything that stood out in the movement section. This is your athletic baseline document — keep it. You'll reassess in four weeks.
 
 ------ stop copying here ------
 
 
-==============================================================
+--------------------------------------------------------------
 PAGE 3
-==============================================================
+--------------------------------------------------------------
 
 TITLE:
 How to Build Your First 4-Week Training Structure
@@ -194,7 +203,7 @@ In this page, you'll build a four-week structure grounded in your baseline, hone
 
 THE PRINCIPLE BEFORE THE PLAN
 
-In the first four weeks, consistency is the goal. Not fitness. Not speed. Not impressive sessions. Consistency.
+In the first four weeks, consistency is the goal. Not fitness. Not PRs. Not impressive sessions. Consistency.
 
 Four solid weeks of moderate, consistent training produces real adaptation. One great week followed by two weeks of inconsistency produces almost nothing.
 
@@ -208,32 +217,29 @@ Look at your actual schedule — not your ideal schedule. When are you realistic
 For most returning athletes, 3-4 training days per week in this first block is right.
 
 4-Day Template:
-Day 1 (e.g. Monday): Easy aerobic run or walk/run — 20-35 min
-Day 2 (e.g. Wednesday): Strength and mobility — 30-40 min
-Day 3 (e.g. Friday): Easy aerobic run — 25-40 min
-Day 4 (e.g. Saturday): Longer easy effort — 40-55 min
+Day 1: Aerobic conditioning — 20-35 min easy effort
+Day 2: Strength and mobility — 30-40 min
+Day 3: Aerobic conditioning — 25-40 min easy effort
+Day 4: Longer aerobic session or sport-specific work — 40-55 min
 
 3-Day Option:
-Day 1: Easy run — 20-30 min
+Day 1: Aerobic conditioning — 20-30 min
 Day 2: Strength and mobility — 30 min
-Day 3: Longer easy run — 35-45 min
+Day 3: Longer aerobic session — 35-45 min
 
 The specific days matter less than the pattern. Block the time.
 
 
 STEP 2: DEFINE "EASY" FOR YOUR CURRENT FITNESS
 
-Easy effort means you can speak in full sentences without laboring. If you're breathing too hard to hold a conversation, you're going too fast.
+Easy effort means you can speak in full sentences without laboring. If you're breathing too hard to hold a conversation, you're going too hard.
 
-Walk/Run structure for lower baseline fitness:
-Walk 2 min, jog 1 min. Repeat for 20-25 minutes. Shift progressively: 1:1 ratio, then 1:2, then a steady jog.
-
-All sessions in weeks 1-4 should be easy. No intentional intensity in this block. Resist the urge to push pace.
+All sessions in weeks 1-4 should be genuinely easy. No intentional intensity in this block. Resist the urge to push output.
 
 
 STEP 3: INCLUDE STRENGTH AND MOBILITY WORK
 
-Running without strength work is training with one hand tied behind your back.
+Athletic performance depends on strength. This is not optional.
 
 Hip Stability (every strength day):
 Glute bridge: 3 x 15
@@ -247,14 +253,14 @@ Reverse lunge: 3 x 10 per side
 Hip hinge: 3 x 12
 Push-up: 3 x moderate fatigue
 
-Mobility (daily if flagged in your assessment):
+Mobility (daily if flagged in your baseline assessment):
 Kneeling hip flexor stretch: 2 x 60 sec per side
 Wall ankle mobilization: 2 minutes
 
 
 STEP 4: THE 4-WEEK PROGRESSION
 
-Week 1: Conservative. Every session should finish with gas left in the tank. Build the pattern.
+Week 1: Conservative. Every session should finish with energy to spare. Build the pattern.
 Week 2: Same schedule. Allow duration to increase slightly if it feels natural.
 Week 3: You may feel cumulative fatigue. Don't increase load — that's the training working.
 Week 4: Intentional reduction in volume. Shorter sessions, same schedule. This is your deload. Your body adapts during recovery. Week 4 is programming, not slacking.
@@ -264,14 +270,14 @@ By end of week 4, you'll have one month of consistent training. That is the foun
 
 ACTION ITEM
 
-Build your actual 4-week schedule today. Open your calendar. Block your training days for the next four weeks. Write out Week 1 with specific details — duration, type, effort level. The plan should be ready to execute tomorrow.
+Build your actual 4-week schedule today. Open your calendar. Block your training days for the next four weeks. Write out Week 1 sessions with specific details — duration, type, effort level. The plan should be ready to execute tomorrow.
 
 ------ stop copying here ------
 
 
-==============================================================
+--------------------------------------------------------------
 PAGE 4
-==============================================================
+--------------------------------------------------------------
 
 TITLE:
 The Nutrition Framework That Supports Real Athletic Performance
@@ -279,7 +285,7 @@ The Nutrition Framework That Supports Real Athletic Performance
 CONTENT:
 ------ copy everything below this line ------
 
-Note: I'm a running coach, not a registered dietitian. What's here is based on what's worked for me and the athletes I train — not medical advice. Talk to a qualified professional if you have specific health conditions or dietary needs.
+Note: I'm an athletic performance coach, not a registered dietitian. What's here is based on what's worked for me and the athletes I train — not medical advice. Talk to a qualified professional if you have specific health conditions or dietary needs.
 
 Most nutrition advice for athletes is either too complex or too vague. This is a practical, flexible framework built for real people with real schedules.
 
@@ -288,7 +294,7 @@ THE FOUNDATION: FOOD IS FUEL
 
 Food is information for your body. It signals hormones, fuels performance, supports recovery, and either enables or limits adaptation.
 
-When you under-eat, over-restrict, or fuel inconsistently, your training suffers — regardless of how good the training itself is.
+When you under-eat, over-restrict, or fuel inconsistently, your performance suffers — regardless of how well the training itself is designed.
 
 The goal of nutrition for athletes is not minimization. It's optimization. Eat enough. Fuel intentionally. See food as an investment in the work you're doing.
 
@@ -296,12 +302,12 @@ The goal of nutrition for athletes is not minimization. It's optimization. Eat e
 THE THREE NON-NEGOTIABLES
 
 1. Eat enough total calories
-The most commonly violated rule. If you're training 4+ hours per week and eating at a significant caloric deficit, you are impairing recovery, elevating injury risk, disrupting sleep, and limiting performance.
+The most commonly violated rule. If you're training 4+ hours per week and eating at a significant caloric deficit, you are impairing recovery, elevating injury risk, disrupting sleep, and limiting performance gains.
 
-Rough starting estimate: body weight in pounds x 15-17 if training 4-6 hours per week. Adjust up for higher mileage.
+Rough starting estimate: body weight in pounds x 15-17 if training 4-6 hours per week. Adjust up for higher volume.
 
 2. Hit your protein target
-Endurance athletes need 1.4-1.7 grams of protein per kilogram of body weight daily. For most people: 110-150 grams per day.
+Athletes need 1.4-1.7 grams of protein per kilogram of body weight daily. For most people: 110-150 grams per day.
 
 Protein is the building material for muscle repair, connective tissue, and immune function. Without it, you don't recover — you accumulate damage.
 
@@ -316,7 +322,7 @@ Post-training (within 45 minutes): 20-30g protein plus carbohydrates to begin gl
 THE MACRONUTRIENT BREAKDOWN
 
 Carbohydrates — 45-55% of total daily calories
-Your primary fuel source. Non-optional for endurance athletes.
+Your primary fuel source for high-output training.
 Best sources: oats, rice, sweet potatoes, whole grain bread/pasta, fruit, legumes.
 
 Protein — 25-30% of total daily calories
@@ -327,8 +333,6 @@ Fat — 20-30% of total daily calories
 Hormonal health, satiety, long-duration energy.
 Best sources: avocado, olive oil, nuts, fatty fish, eggs.
 
-You don't need to track every gram every day. But understanding the balance helps you notice when something is off.
-
 
 PRACTICAL MEAL STRUCTURE
 
@@ -338,7 +342,7 @@ Examples: eggs and toast and fruit / Greek yogurt and granola and berries / oatm
 Lunch: Your largest meal. Protein + complex carbs + vegetables + healthy fat.
 Examples: grain bowl with chicken, rice, roasted veg, avocado / large salad with grilled protein and whole grain bread
 
-Afternoon snack: Bridges the gap, prevents arriving at dinner depleted.
+Afternoon snack: Bridges the gap, prevents arriving at training depleted.
 Examples: cottage cheese and fruit / apple and nut butter / protein shake and banana
 
 Dinner: Moderate. Protein + vegetables + starch if training again within 12-16 hours.
@@ -346,11 +350,9 @@ Dinner: Moderate. Protein + vegetables + starch if training again within 12-16 h
 
 HYDRATION
 
-Drink water consistently throughout the day — not in large quantities all at once.
-On training days over 60 minutes, add electrolytes.
+Drink water consistently throughout the day.
+On training sessions over 60 minutes, add electrolytes.
 Target: urine should be pale yellow.
-
-If you're chronically dehydrated during the workday, set a reminder to drink water every 60-90 minutes. One habit closes most hydration gaps.
 
 
 WHAT TO STOP WORRYING ABOUT
@@ -360,78 +362,620 @@ Exact timing to the minute — principles matter more than precision
 Cutting out entire food groups without a clear reason
 One difficult day — good weeks absorb hard days just fine
 
-Eat well most of the time. Hit your protein. Fuel around training. That's it.
-
 
 ACTION ITEM
 
-For the next three days, write down everything you eat — not to judge it, but to see it clearly. At the end, look at: average daily protein, whether you ate before and after training, and whether total intake seems adequate. Identify one specific change to make this week.
+For the next three days, write down everything you eat — not to judge it, but to see it clearly. Look at: average daily protein, whether you fueled before and after training, and whether total intake seems adequate. Identify one specific change to make this week.
 
 ------ stop copying here ------
 
 
 ==============================================================
-PART 2: 30-DAY COMMUNITY POSTS
+COURSE 2 OF 3
 ==============================================================
 
-All post text is included below. Copy the full text under each day directly into the Skool post editor.
+NAME:
+Strength & Performance Training for Returning Athletes
+
+DESCRIPTION:
+Most returning athletes skip the strength work — and it's why they plateau, get hurt, or never reach the level they know they're capable of. This course covers the strength foundation every former athlete needs: the movements, the programming, and how to build it around your sport.
 
 --------------------------------------------------------------
-DAY 1 — June 3 — Behind the Scenes
-POST TITLE: Why I Started This Community (The Honest Version)
+PAGE 1
+--------------------------------------------------------------
+
+TITLE:
+Why Strength Training Is Non-Negotiable for Athletic Performance
+
+CONTENT:
+------ copy everything below this line ------
+
+If you only do cardio or sport-specific training and skip the strength work, you are leaving performance on the table. Full stop.
+
+Here's what happens to athletes who neglect strength training:
+
+- Movement compensations from old injuries become permanent
+- Power output plateaus because the muscles supporting it aren't developed
+- Injury risk stays high — tendons, connective tissue, and stabilizers are undertrained
+- Aerobic performance hits a ceiling because the musculoskeletal system can't support higher demands
+- Recovery takes longer because the body lacks the structural capacity to absorb training stress
+
+Every elite endurance athlete lifts. Every elite team sport athlete lifts. There is no tier of athletic performance where strength work stops mattering.
+
+For returning athletes specifically, strength training is the most high-leverage investment you can make in your performance — bar none.
+
+
+WHAT "STRENGTH TRAINING" MEANS FOR PERFORMANCE ATHLETES
+
+We are not talking about bodybuilding. We are not chasing aesthetics or maximum muscle mass.
+
+Performance-focused strength training for athletes has four goals:
+
+1. Movement quality — reinforce the patterns your sport demands and fix the compensations you've built up
+2. Structural resilience — build the tendon, ligament, and connective tissue capacity to handle high training loads
+3. Power transfer — develop the strength to express speed, force, and explosiveness in your sport
+4. Injury prevention — close the gaps that cause overuse injuries before they happen
+
+The weight room is a support system for your athletic performance. It makes everything else work better.
+
+
+THE MOST IMPORTANT MOVEMENT PATTERNS FOR ATHLETES
+
+You don't need 20 exercises. You need to be strong in these patterns:
+
+Hip hinge (deadlift, Romanian deadlift, kettlebell swing)
+The foundation of athletic power. Every explosive movement — sprinting, jumping, changing direction — loads the hip hinge. If you're weak here, your ceiling is low.
+
+Squat pattern (goblet squat, back squat, split squat)
+Lower body strength and knee stability. Essential for any sport with running, cutting, or jumping.
+
+Single-leg work (Bulgarian split squat, step-up, single-leg deadlift)
+Athletes perform on one leg constantly. Bilateral training alone isn't enough. Single-leg work also exposes and corrects asymmetries.
+
+Push (push-up, dumbbell press, overhead press)
+Upper body pressing strength. Important for posture, shoulder stability, and power.
+
+Pull (row, pull-up, lat pulldown)
+The most undertrained pattern in recreational athletes. Pulling strength counterbalances the pressing work and is critical for shoulder health and posture.
+
+Core stability (not crunches — anti-rotation, anti-extension, anti-lateral flexion)
+The core's job in athletic movement is to resist force, not generate it. Planks, Pallof presses, carries. Not sit-ups.
+
+
+HOW OFTEN TO LIFT
+
+For athletic performance (not powerlifting or bodybuilding):
+2 days per week: maintenance and injury prevention
+3 days per week: meaningful strength development alongside sport training
+4 days per week: dedicated strength phase (typically off-season)
+
+Most returning athletes should start at 2-3 days per week and build from there.
+
+
+ACTION ITEM
+
+Identify which of the six movement patterns above you currently train and which are absent from your routine. Pick the two most neglected patterns and add one exercise from each to your next training week. Start there.
+
+------ stop copying here ------
+
+
+--------------------------------------------------------------
+PAGE 2
+--------------------------------------------------------------
+
+TITLE:
+The ARA Strength Template — Your Foundation Program
+
+CONTENT:
+------ copy everything below this line ------
+
+This is the strength template I use with returning athletes in the first 8-12 weeks. It's two days per week, covers all six movement patterns, and builds the base for everything that follows.
+
+This is not a program to impress anyone. It's a program designed to work.
+
+
+THE TEMPLATE
+
+You'll do this twice per week. Any two non-consecutive days work — Monday/Thursday, Tuesday/Friday, etc. Leave at least one day between sessions.
+
+Each session takes 35-50 minutes.
+
+
+WARM-UP (5-8 minutes — do this every session)
+
+Glute bridge: 2 x 15
+Clamshell: 2 x 12 per side
+Hip flexor stretch: 60 seconds per side
+Ankle mobilization: 10 circles each direction per ankle
+Bodyweight squat: 2 x 10 (slow, controlled)
+
+
+MAIN WORK
+
+A1. Goblet Squat
+Sets x Reps: 3 x 10
+Load: Dumbbell or kettlebell at chest. Choose a weight where the last 2-3 reps are challenging but form holds.
+Cue: Chest up, knees track over toes, squat to depth.
+
+A2. Dumbbell Romanian Deadlift
+Sets x Reps: 3 x 10
+Load: Both hands, hinge at the hip, weights track close to legs.
+Cue: Push hips back, feel hamstrings load, neutral spine throughout.
+
+B1. Single-Leg Step-Up
+Sets x Reps: 3 x 8 per side
+Load: Bodyweight to start. Add dumbbells when 8 reps per side feels easy.
+Cue: Step up through the heel, drive with the lead leg, don't push off the back foot.
+
+B2. Dumbbell Row
+Sets x Reps: 3 x 10 per side
+Load: Single dumbbell, brace on a bench or knee.
+Cue: Pull elbow back and up, shoulder blade retracts, no rotation.
+
+C1. Push-Up (or Dumbbell Bench Press)
+Sets x Reps: 3 x 8-12
+Load: Bodyweight push-up to start. When 12 is easy, add weight or progress to dumbbell bench.
+Cue: Straight line from head to heel, lower until chest nearly touches ground.
+
+C2. Plank or Pallof Press
+Sets x Reps: 3 x 20-30 seconds (plank) or 3 x 10 per side (Pallof)
+Cue: No hips sagging or piking, breathe consistently.
+
+
+REST PERIODS
+
+Between A1/A2, B1/B2, C1/C2: 45-60 seconds
+Between each pairing: 90 seconds
+
+
+PROGRESSION
+
+Weeks 1-2: Learn the movements. Don't push load.
+Weeks 3-4: Add small increments of weight where possible (2.5-5 lbs).
+Weeks 5-8: Increase load or reps each week on at least one exercise.
+Week 8+: Reassess and progress to a 3-day program or more specialized template.
+
+
+ACTION ITEM
+
+Schedule your two strength days for this week. Write them in your calendar before you close this page. Then complete your first session within the next 48 hours.
+
+------ stop copying here ------
+
+
+--------------------------------------------------------------
+PAGE 3
+--------------------------------------------------------------
+
+TITLE:
+Training Periodization — How to Build a Performance Calendar That Actually Works
+
+CONTENT:
+------ copy everything below this line ------
+
+Most athletes train the same way week after week until something breaks down or they plateau. Periodization is what separates athletes who keep improving from athletes who spin in place.
+
+
+WHAT PERIODIZATION IS
+
+Periodization is the organized variation of training stress over time to produce consistent improvement while managing fatigue and injury risk.
+
+In simple terms: you can't push hard all the time. But you also can't go easy all the time. Periodization is the science of when to push, when to hold, and when to recover — and how to sequence those phases so they build on each other.
+
+
+THE FOUR PHASES
+
+Phase 1 — Foundation (4-6 weeks)
+Goal: Build the base. Low intensity, high consistency, movement quality.
+Training looks like: Easy aerobic work, fundamental strength movements, mobility work.
+What you're building: Aerobic efficiency, structural resilience, movement patterns, the habit of training.
+Common mistake: Going too hard too early. Foundation work should feel almost too easy.
+
+Phase 2 — Development (4-6 weeks)
+Goal: Introduce progressive overload. Increase training volume moderately.
+Training looks like: Moderate intensity aerobic work, increased strength loads, first introduction of quality sessions.
+What you're building: Work capacity, strength gains, movement efficiency.
+Common mistake: Skipping this phase and jumping straight to high intensity.
+
+Phase 3 — Performance (4-6 weeks)
+Goal: Maximize output. High intensity, sport-specific work, peak performance.
+Training looks like: Tempo and interval work, heavy strength sessions, race or competition preparation.
+What you're building: Speed, power, competitive readiness.
+Common mistake: Staying in this phase too long. Sustained high intensity without recovery leads to breakdown.
+
+Phase 4 — Recovery (1-2 weeks every 8-12 weeks)
+Goal: Full recovery and adaptation consolidation.
+Training looks like: Easy movement, reduced volume, focus on sleep and nutrition.
+What you're building: The adaptation from everything you've done in the previous phases. This is where you actually get better.
+Common mistake: Skipping it entirely because it feels like going backwards.
+
+
+HOW TO PLAN YOUR YEAR
+
+Pick your goal event or performance target. Work backwards from that date.
+
+12+ weeks out: Foundation phase
+8-10 weeks out: Development phase
+4-6 weeks out: Performance phase
+1-2 weeks out: Taper/Recovery
+
+If you don't have a specific event, run 8-week blocks: 6 weeks of progressive training, 2 weeks of reduced volume. Repeat.
+
+The longer you're consistent with this structure, the more compounding it creates. Athletes who train in organized phases for 12+ months make gains that unstructured training can never match.
+
+
+ACTION ITEM
+
+Map your next 12 weeks on paper or in your calendar. Assign each block of weeks to a phase. Don't worry about the exact workouts yet — just establish the structure. Which weeks are foundation? Which are performance? Where are your recovery weeks?
+
+------ stop copying here ------
+
+
+==============================================================
+COURSE 3 OF 3
+==============================================================
+
+NAME:
+The Mental Performance Edge
+
+DESCRIPTION:
+The physical training is only half the equation. The athletes who sustain high performance over years are the ones who've developed the mental side — identity, consistency systems, competition mindset, and how to perform when it counts. Four pages on the psychology of athletic performance.
+
+--------------------------------------------------------------
+PAGE 1
+--------------------------------------------------------------
+
+TITLE:
+Athletic Identity — The Mindset Shift That Changes Everything
+
+CONTENT:
+------ copy everything below this line ------
+
+You don't rise to the level of your goals. You fall to the level of your identity.
+
+This is the most important concept in this entire community. Everything else — training structure, nutrition, recovery — is downstream of how you see yourself as an athlete.
+
+
+THE IDENTITY GAP
+
+Former athletes carry something most people don't: a reference point. You know what it feels like to be in shape, to compete, to perform. You've been there.
+
+That reference point is both your greatest asset and your biggest obstacle.
+
+It's an asset because you know the standard. You know what real training feels like and you're not satisfied with less.
+
+It's an obstacle because you're measuring your current self against a past version — and that comparison almost always feels like failure.
+
+The athlete who trained 4 hours a day at 19 with no life responsibilities is not a fair benchmark for the 35-year-old with a career, a family, and a mortgage. But that's who you're competing against every time you step into a gym and don't hit the number you used to hit.
+
+This comparison isn't just demoralizing. It actively prevents progress.
+
+
+THE REFRAME
+
+The shift that changes everything is this:
+
+Stop trying to rebuild who you were. Start building who you are becoming.
+
+These sound similar. They're completely different.
+
+"Who you were" is a fixed point in the past. Progress toward it always feels insufficient because you can never actually get back there — time has changed too much.
+
+"Who you are becoming" is a forward-facing identity. Every training session is progress toward it, not comparison against a standard you've already left behind.
+
+Practically, this means changing the language you use about yourself.
+
+Instead of: "I used to be able to squat 315."
+Try: "I'm an athlete who trains hard and gets stronger every week."
+
+Instead of: "I can't believe how out of shape I've gotten."
+Try: "I'm an athlete who is building back from the ground up and will be stronger than I've been in years."
+
+This is not positive self-talk. It's deliberately choosing an identity that supports the behavior you want — so the behavior follows naturally.
+
+
+IDENTITY-BASED DECISION MAKING
+
+When your identity is clear, decisions become easier.
+
+An athlete who identifies as "someone trying to get back into shape" will skip a training session when they're tired. It's not that important.
+
+An athlete who identifies as "a competitive athlete who trains consistently" will find a way to get something done — even if it's shorter than planned — because it's who they are.
+
+The training session is not a task. It's an expression of identity.
+
+This is why the action item at the end of Foundation Page 1 matters. The identity statement you wrote is not inspirational filler. It's a deliberate reframe that, when you actually use it and believe it, changes how you make decisions about your body and your training.
+
+
+ACTION ITEM
+
+Revisit the identity statement you wrote in Foundation Page 1. Does it reflect athletic performance, or does it hedge? Does it say "I am" or "I want to be"?
+
+Rewrite it if needed. Make it present-tense, specific, and performance-oriented.
+
+Then say it out loud before your next three training sessions. That's the practice.
+
+------ stop copying here ------
+
+
+--------------------------------------------------------------
+PAGE 2
+--------------------------------------------------------------
+
+TITLE:
+Building Consistency Systems — Why Motivation Fails and What Works Instead
+
+CONTENT:
+------ copy everything below this line ------
+
+Motivation is unreliable. The athletes who train consistently for years are not more motivated than you — they've built systems that don't require motivation to function.
+
+
+WHY MOTIVATION FAILS
+
+Motivation is an emotion. It fluctuates with sleep quality, stress levels, weather, how your last session went, what you saw on social media, and dozens of other factors you can't control.
+
+Relying on motivation to train means your training quality and consistency is tied to how you feel on any given day. And some days — many days — you won't feel like it.
+
+This is not a personal failing. It's just how motivation works.
+
+The athletes who train consistently don't feel like training every day either. They've just removed "feeling like it" from the equation.
+
+
+WHAT CONSISTENCY SYSTEMS LOOK LIKE
+
+1. Scheduled, non-negotiable training time
+Training happens at the same time on the same days. It's not something you fit in when you have time — it's blocked time that other things get scheduled around.
+
+This sounds simple. It's harder than it sounds. It requires deciding that training is a priority high enough to protect time for it, even when other things would love to fill that slot.
+
+Pick your days and your times. Write them in your calendar. Treat them like meetings with your most important client.
+
+2. Reduce decision friction
+Every decision point between you and training is an opportunity to quit. Remove them.
+
+Sleep in your training clothes if you train in the morning. Pack your bag the night before. Keep equipment accessible. Have a default workout ready for when motivation is low — something you can do without thinking.
+
+The session you actually do is infinitely better than the perfect session you planned and skipped.
+
+3. The "something is better than nothing" rule
+When life interferes — and it will — the default is to reduce, not cancel.
+
+Can't do 45 minutes? Do 20. Can't do the full workout? Do the main sets. Can't make it to the gym? Do bodyweight at home.
+
+Shortened sessions maintain the habit, preserve the identity, and keep the streak alive. A 15-minute session on a hard day is worth more than a missed session ever will be.
+
+4. Environment design
+Make training easier than not training. Put your shoes by the door. Keep the pull-up bar visible. Have a default playlist. Prep your post-workout meal.
+
+High-performing athletes don't rely on willpower — they design their environment to make the right choice the easy choice.
+
+5. Track, but simply
+You don't need a sophisticated training log. You need something that answers: did I train today? And what did I do?
+
+A simple calendar with an X on training days creates a visual streak you won't want to break. Progress tracking — weights, paces, times — gives you evidence that the work is working, which is its own source of motivation.
+
+
+ACTION ITEM
+
+Identify the one thing that most often prevents you from training. Write it down. Then build one system specifically designed to remove or reduce that obstacle. One system. Implement it before your next scheduled session.
+
+------ stop copying here ------
+
+
+--------------------------------------------------------------
+PAGE 3
+--------------------------------------------------------------
+
+TITLE:
+Competition Mindset — How to Perform When It Counts
+
+CONTENT:
+------ copy everything below this line ------
+
+Training is practice. Competition is performance. They require different mindsets — and most athletes only develop one.
+
+
+THE TRAINING MINDSET VS. THE COMPETITION MINDSET
+
+In training, the goal is progressive stress and adaptation. You're pushing into discomfort deliberately, making mistakes, working on weaknesses. Uncertainty is fine. Imperfection is the point.
+
+In competition, the goal is to execute. You're not trying to improve — you're trying to express what you've already built. Confidence, focus, and the ability to stay present under pressure are the skills that matter.
+
+Athletes who only know how to train often underperform in competition because they bring the training mindset with them. They're self-critical, second-guessing, focused on what's wrong rather than executing what they know.
+
+Athletes who perform their best in competition have learned to switch modes.
+
+
+THE THREE COMPETITION PERFORMANCE SKILLS
+
+1. Pre-performance routine
+High performers don't improvise their mental state before competing. They build a deliberate routine that puts them in an optimal performance state.
+
+Your pre-performance routine should:
+- Be consistent (the same before every competition)
+- Span the hour before performance
+- Include physical warm-up, mental focus, and emotional regulation
+- End with a clear performance cue (a phrase, a physical movement, a breath)
+
+What goes in it is individual. What matters is that it's consistent and deliberate.
+
+2. Process focus under pressure
+Pressure collapses focus onto outcomes: the time, the result, the place. Outcome focus during performance is almost always performance-limiting.
+
+The alternative is process focus: your attention is on what you can control right now — your effort, your form, your pacing, your next decision.
+
+When you notice your mind going to outcomes during competition, the redirect is simple: "What's the next right action?" Get your attention back to process.
+
+3. Bounce-back ability
+No competition goes perfectly. The athletes who perform best are not the ones who have perfect races — they're the ones who respond best when things go wrong.
+
+A bad split, a missed lift, an unexpected obstacle. What you do in the next 30 seconds after something goes wrong determines your result more than the mistake itself.
+
+Develop a bounce-back phrase. Mine is "next." One word that cuts the analysis, drops the emotion, and returns attention to execution.
+
+
+THE MINDSET BEFORE THE MINDSET
+
+All of these skills are trained, not innate. They get better through deliberate practice — not just in competition, but in hard training sessions.
+
+Every time training gets difficult, you have an opportunity to practice competition mindset. The workout that breaks you down is also the workout where you can rehearse staying process-focused, maintaining effort, and executing your bounce-back response.
+
+Train the body and train the mind. Both show up on race day.
+
+
+ACTION ITEM
+
+Write a 3-sentence pre-performance routine for your next competition or hard training session: what you'll do in the 10 minutes before it starts. It doesn't need to be complex. It needs to be consistent. Use it next time and notice whether it changes how you feel going in.
+
+------ stop copying here ------
+
+
+--------------------------------------------------------------
+PAGE 4
+--------------------------------------------------------------
+
+TITLE:
+Recovery as Performance — The Part Most Athletes Skip
+
+CONTENT:
+------ copy everything below this line ------
+
+Recovery is not the absence of training. It's an active part of the training process — and for most returning athletes, it's the most undertrained variable in their program.
+
+
+WHY RECOVERY IS A PERFORMANCE VARIABLE
+
+Your body doesn't adapt during training. It adapts during recovery.
+
+The training session is a stimulus — it breaks down muscle tissue, depletes energy stores, creates stress on connective tissue. The adaptation — getting stronger, faster, more resilient — happens when you rest.
+
+If you train hard and recover poorly, you accumulate fatigue faster than you accumulate fitness. Eventually something breaks.
+
+If you train hard and recover well, each training cycle produces genuine adaptation. You get better.
+
+Recovery is not passive. It's a set of active choices that either accelerate or impair your adaptation.
+
+
+THE FIVE RECOVERY LEVERS
+
+1. Sleep (highest priority)
+Sleep is when the majority of physiological adaptation happens — muscle protein synthesis, hormonal regulation, nervous system recovery, memory consolidation.
+
+7-9 hours is the target. Not "I can function on 6." Actual 7-9 hours.
+
+Every other recovery tool combined doesn't come close to the impact of consistent, quality sleep. If you're doing ice baths and compression and skimping on sleep, your priorities are wrong.
+
+2. Nutrition timing
+Post-training nutrition is time-sensitive. Within 45 minutes of finishing any significant session: 20-30g protein plus carbohydrates.
+
+This window is when your muscles are most primed to absorb nutrients for repair and glycogen replenishment. Missing it consistently is like training in a hole you never fully climb out of.
+
+3. Active recovery
+Easy movement on recovery days — not intense cross-training, not "light" workouts that are still taxing. Walking, easy cycling, mobility work, swimming at low intensity.
+
+The goal is circulation and movement without adding training stress. It accelerates recovery by increasing blood flow to worked muscles.
+
+4. Mobility and soft tissue work
+10-15 minutes of deliberate mobility work daily — not as a performance enhancement, but as maintenance. Athletes who maintain range of motion age better athletically than those who don't.
+
+Foam rolling, targeted stretching, controlled articular rotations. You don't need an hour. You need consistency.
+
+5. Stress management
+Your body doesn't distinguish between physical training stress and psychological life stress. Both draw from the same recovery capacity.
+
+High-stress weeks at work require adjusted training loads — not the same program you'd run in a calm week. Failing to account for life stress is one of the most common reasons returning athletes overtrain and break down.
+
+
+THE DELOAD WEEK
+
+Every 4th week of training should be a deload: same schedule, 30-40% reduction in volume, effort stays easy.
+
+This is not optional. It's not weakness. It's the programmed recovery period your body needs to consolidate adaptation from the previous three weeks.
+
+Athletes who skip deload weeks eventually pay for it. Athletes who take them consistently make better long-term progress.
+
+
+ACTION ITEM
+
+Rate your current recovery on each of the five levers: Sleep, Nutrition Timing, Active Recovery, Mobility, Stress Management. Score each 1-5. Identify your lowest score. Build one specific change around that lever this week.
+
+------ stop copying here ------
+
+
+==============================================================
+PART 2: 30-DAY COMMUNITY POSTS (UPDATED)
+==============================================================
+
+Positioning note: We are athletic performance coaches, not running-only coaches.
+Posts should speak to the full athletic rebuild — strength, conditioning, nutrition,
+mindset, lifestyle — not just running. Running content is fine when relevant.
+All post text is included below — copy directly into the Skool post editor.
+
+--------------------------------------------------------------
+DAY 1 — June 3
+POST TITLE: Why I Built This Community (The Honest Version)
 
 POST TEXT:
-I want to be upfront about why this community exists.
+Let me be straightforward about why this community exists.
 
-I was a former athlete who spent years being inconsistent. I knew what hard training felt like — I had done it. But I had zero structure, no accountability, and kept starting over.
+I was a former athlete who spent years being inconsistent. I knew what real training felt like — I had done it. But I had no structure, no accountability, and kept starting over every few months.
 
-In December 2025 I ran the Honolulu Marathon at a 10:09/mile pace. By May 2026 I ran Pittsburgh at a 7:55/mile pace. Same distance, completely different result. Not because I found some secret — because I finally built a real structure and stopped winging it.
+The results were exactly what you'd expect: zero real progress, a lot of frustration, and a growing gap between the athlete I knew I was and what I was actually doing.
 
-This community is for former athletes who are done winging it. People who know they have more in them and are ready to build it back the right way.
+In December 2025 I ran the Honolulu Marathon at a 10:09 per mile pace. Five months later I ran Pittsburgh at 7:55 per mile. But the running wasn't the point. The point was proving to myself that the system I'd built actually worked — that a former athlete, with a real job and real responsibilities, could rebuild athletic performance from the ground up.
 
-That's it. That's the honest version. Welcome.
+This community is for athletes who are done spinning their wheels. People who have the history, the discipline, and the hunger — they just need the structure.
+
+Welcome.
 
 --------------------------------------------------------------
-DAY 2 — June 4 — Training Tip
-POST TITLE: Stop Running More. Start Running Better.
+DAY 2 — June 4
+POST TITLE: Training Hard vs. Training Smart — There's a Difference
 
 POST TEXT:
-The most common mistake I see from returning runners:
+Most former athletes know how to train hard. That's not the problem.
 
-They add miles before they build capacity. They think more volume = faster progress. It doesn't.
+The problem is training hard without a structure that actually produces adaptation. And those are very different things.
 
-More volume on a weak aerobic base = more injury, more burnout, slower development.
+Training hard without structure looks like:
+- Every session at the same medium-hard effort
+- No organized progression from week to week
+- Strength work that's inconsistent or nonexistent
+- Recovery treated as optional
 
-The first thing I work on with every athlete is easy aerobic development. Not pace. Not distance. The ability to run consistently at a truly easy effort — and have that feel manageable, not miserable.
+Training smart with structure looks like:
+- Easy sessions that are genuinely easy, hard sessions that are genuinely hard
+- Progressive overload that builds week over week
+- Strength and conditioning work integrated into the plan
+- Recovery built in, not bolted on
 
-If every one of your runs feels hard, your easy pace is too fast. Slow down. For real. Not a little. A lot.
+The athletes I've worked with who made the fastest progress weren't the ones who trained hardest. They were the ones who trained most consistently, within a structure that had a logic to it.
 
-The athletes who build the fastest are the ones who are most disciplined about staying easy early.
-
-Question for the community: What does your easy pace actually look like right now?
+What does your training structure actually look like right now?
 
 --------------------------------------------------------------
-DAY 3 — June 5 — Nutrition
-POST TITLE: The Fueling Mistake That's Killing Your Training
+DAY 3 — June 5
+POST TITLE: The Fueling Mistake That's Wrecking Your Recovery
 
 POST TEXT:
-The number one nutrition mistake I see in athletes who are training hard but not recovering well:
+The most common nutrition mistake I see in athletes training hard but not recovering well:
 
-They're not eating enough.
+They're not eating enough. Specifically — they're not eating enough after training.
 
-Specifically — they're not eating enough after training. Post-workout nutrition is when your muscles are most primed to absorb protein and replenish glycogen. If you're skipping it or waiting 2-3 hours, you're leaving recovery on the table.
+Post-workout nutrition is when your muscles are most primed to absorb protein and replenish energy stores. If you're skipping it or waiting 2-3 hours, you're leaving recovery on the table every single session.
 
-Simple fix: Within 45 minutes of finishing any training session, get in 20-30g of protein and some carbohydrates.
+Simple fix: Within 45 minutes of finishing any significant training session, get in 20-30g of protein and some carbohydrates.
 
-It doesn't need to be elaborate. A protein shake and a banana works. Greek yogurt and a piece of fruit works. Chicken and rice works.
+It doesn't need to be elaborate. A protein shake and a banana works. Greek yogurt and fruit works. Chicken and rice works.
 
-The timing matters. Don't skip it.
+The timing matters. Make it a non-negotiable part of your training routine.
 
-What does your post-training nutrition look like right now?
+What does your post-training nutrition currently look like?
 
 --------------------------------------------------------------
-DAY 4 — June 6 — Mindset
-POST TITLE: You're Not "Too Busy." You're Making Different Choices.
+DAY 4 — June 6
+POST TITLE: "I'm Too Busy to Train" — Let's Be Honest About This
 
 POST TEXT:
 I'm going to say something that might sting a little.
@@ -440,508 +984,516 @@ I'm going to say something that might sting a little.
 
 What's actually true: training isn't currently a priority high enough to displace something else. That's not a judgment — it's just honest.
 
-Most people who tell me they can't find time to train are spending 1-2 hours per day on their phone. That's not a time problem.
+Most people who tell me they can't find time to train are spending 1-2 hours a day on their phone. That's not a time problem.
 
-The shift: Stop trying to find time. Start deciding what training replaces.
+The shift: stop trying to find time. Start deciding what training replaces.
 
-You don't need 90 minutes. Three 30-minute runs per week is enough to build real aerobic fitness. That's 1.5 hours out of 168.
+You don't need 90 minutes. Three 35-minute sessions per week is enough to build real athletic fitness. That's under two hours out of 168.
 
-I'm not saying it's easy to make that swap. I'm saying it's a choice, not a constraint.
+I'm not saying it's easy to protect that time. I'm saying it's a choice, not a constraint.
 
 What would you have to give up to make 3 training days per week non-negotiable?
 
 --------------------------------------------------------------
-DAY 5 — June 7 — Lifestyle/Recovery
-POST TITLE: Sleep Is the Best Performance Drug You're Not Taking Seriously
+DAY 5 — June 7
+POST TITLE: Sleep Is Your Most Powerful Performance Drug
 
 POST TEXT:
-If you had a pill that:
+If you had a supplement that:
 
-- Accelerated muscle repair
-- Improved running economy
-- Enhanced decision-making and motivation
+- Accelerated muscle repair and adaptation
+- Improved power output and reaction time
+- Enhanced decision-making and emotional regulation
 - Reduced injury risk
-- Cut cortisol levels
+- Lowered cortisol and improved hormonal balance
 
-...you would take it every day without question.
+...you would take it without question.
 
-That pill is 7-9 hours of sleep.
+That supplement is 7-9 hours of sleep.
 
-Sleep is when your body actually adapts to training. The work you did today gets processed and turned into adaptation tonight. If you're cutting sleep short, you're cutting your results short.
+Sleep is when your body actually adapts to training. The stress you applied in today's session gets processed and turned into adaptation tonight. Cut sleep short and you cut your results short.
 
-I prioritize sleep over almost everything else in my recovery protocol. More than stretching. More than ice baths. More than supplements.
+I prioritize sleep above almost every other recovery variable. More than ice baths. More than supplements. More than any recovery modality you can buy.
 
-If you're training hard and only getting 5-6 hours, that's the first thing I'd change before adjusting anything else.
+If you're training seriously and consistently sleeping 5-6 hours, that's the first thing I'd change — before anything else.
 
-What's your sleep actually looking like right now?
+What does your sleep actually look like right now?
 
 --------------------------------------------------------------
-DAY 6 — June 8 — Community
+DAY 6 — June 8
 POST TITLE: WIN OF THE WEEK — Let's Hear It
 
 POST TEXT:
-First WIN OF THE WEEK in this community.
+First WIN OF THE WEEK.
 
-Drop your win below — doesn't matter how big or small.
+Drop your win below. Doesn't matter the size.
 
-Ran your first mile without stopping? That's a win. Hit all your planned training days? Win. Made it out when you really didn't want to? Absolutely a win.
+Hit all your planned training days? Win. Finished a workout you almost skipped? Win. Made a better nutrition choice than last week? Win. PR in the gym? Absolutely a win.
 
-This is a weekly thing. Every week, I want to see what you accomplished.
+This is a weekly ritual. Every week I want to see what you built.
 
-I'll start: this week I hit all five planned training days and kept every run at a genuine easy effort — no ego runs. For me that's a win because I'm usually the guy who pushes too hard on recovery days.
+I'll start: this week I completed every planned training session and kept my easy days genuinely easy. For me that's significant — I'm usually the athlete who pushes too hard on recovery days. This week I didn't.
 
 Your turn.
 
 --------------------------------------------------------------
-DAY 7 — June 9 — Training
-POST TITLE: The Long Run Isn't What You Think It Is
+DAY 7 — June 9
+POST TITLE: Why "Just Work Harder" Is Incomplete Advice
 
 POST TEXT:
-Most runners do their long run wrong.
+The culture around athletic performance loves to tell you that the answer is always to work harder. More reps. More miles. More intensity.
 
-They go too fast. They treat it like a race effort. They finish it proud of their pace and then spend the rest of the week more fatigued than they should be.
+That advice is incomplete. And for returning athletes, it's often actively harmful.
 
-The long run is an aerobic development tool, not a fitness test.
+Hard work applied without structure creates fatigue, not adaptation. There's a difference between training stress that produces a positive adaptation and training stress that just breaks you down.
 
-The goal of a long run:
-- Build time on feet
-- Develop fat oxidation
-- Train your body to sustain effort over distance
-- Practice fueling and pacing
+The athletes who make consistent long-term gains are doing two things well:
 
-None of those goals require you to go fast. In fact, going fast actively works against most of them.
+1. They're applying hard work at the right times — in the right sessions, at the right intensities, with the right progressions.
 
-A properly executed long run should feel almost boring. Easy, conversational effort. If you're working hard, you're going too fast.
+2. They're recovering hard enough that the body can actually adapt to the work.
 
-Slow your long runs down. Your recovery will improve, your aerobic base will develop faster, and you'll actually be able to train the next day.
+Hard work is necessary. But so is smart structure. And so is real recovery.
 
-What pace do you typically run your long runs at?
+Which of those three is missing from your training right now?
 
 --------------------------------------------------------------
-DAY 8 — June 10 — Nutrition
-POST TITLE: Protein: The One Thing Most Runners Consistently Under-Eat
+DAY 8 — June 10
+POST TITLE: The Protein Problem Most Athletes Have (And Don't Know About)
 
 POST TEXT:
-Endurance athletes need more protein than most people think.
+Athletes need more protein than most people think. And most athletes I talk to are significantly under their target.
 
-The research is consistent: 1.4-1.7 grams of protein per kilogram of body weight per day for endurance athletes. For a 180 lb athlete, that's roughly 115-140 grams per day.
+The research is consistent: 1.4-1.7 grams of protein per kilogram of body weight per day for athletes doing regular training. For a 180-pound athlete, that's roughly 115-140 grams per day.
 
-Most people I talk to are getting 60-80g. That's a significant gap.
+Most people are getting 60-80g. That gap has real consequences:
+- Slower muscle repair after training
+- Higher injury risk (connective tissue rebuilds from protein)
+- Impaired immune function
+- Longer recovery times and more soreness
 
-Why it matters for runners specifically:
-- Running creates muscle damage that requires protein to repair
-- Connective tissue (tendons, ligaments) rebuilds from protein
-- Immune function depends on adequate protein intake
-- Low protein = longer recovery times, higher injury risk
+Practical target: aim for 30-40g of protein per meal, 3-4 times per day.
 
-Practical way to hit your target: aim for 30-40g per meal, 3-4 times per day. Stop treating protein as an afterthought.
+High-yield sources: chicken, turkey, salmon, beef, eggs, Greek yogurt, cottage cheese, protein powder when needed.
 
-High-yield sources: chicken, turkey, salmon, eggs, Greek yogurt, cottage cheese, lean beef, protein powder when needed.
+If you're training hard and still feel like recovery is slow — check your protein intake first. It's usually the culprit.
 
-How much protein are you actually getting per day right now? Be honest.
+How much protein are you actually getting per day? Be honest.
 
 --------------------------------------------------------------
-DAY 9 — June 11 — Lifestyle
-POST TITLE: How to Train When Life Gets in the Way
+DAY 9 — June 11
+POST TITLE: How to Train When Life Doesn't Cooperate
 
 POST TEXT:
-Life will get in the way. That's not a possibility — it's a guarantee.
+Life will interfere with your training. That's not a possibility — it's a guarantee.
 
-Work gets crazy. Kids get sick. Travel happens. You have a bad week mentally. Something breaks.
+Work gets intense. Kids get sick. Travel happens. You have a bad week mentally. Something breaks.
 
-The athletes who make consistent long-term progress aren't the ones who never miss a session — they're the ones who have a system for what to do when they do.
+The athletes who make consistent progress aren't the ones who never miss sessions — they're the ones who have a system for when they do.
 
-Three rules I follow:
+Three rules I use:
 
-1. Something is always better than nothing. A 20-minute run when you planned 45 still counts. It keeps the habit alive. Do not skip because you can't do the full session.
+1. Something is always better than nothing. A 20-minute session when you planned 45 still counts. It keeps the habit alive. Never skip a session just because you can't do the full version.
 
-2. Never miss twice in a row. One missed day is life. Two consecutive missed days starts a pattern. Draw the line there.
+2. Never miss twice in a row. One missed day is life. Two consecutive missed days starts a new pattern. Draw the line there.
 
-3. Reduce, don't cancel. If you're exhausted or overwhelmed, shorten the session — don't eliminate it. 15 easy minutes is worth more than zero.
+3. Reduce, don't cancel. If you're exhausted or overwhelmed, shorten the session — don't eliminate it. A 15-minute hard effort is worth more than zero.
 
 Consistency over months matters more than perfection over any single week.
 
-What's your "life gets in the way" strategy right now?
+What's your default strategy when life gets in the way?
 
 --------------------------------------------------------------
-DAY 10 — June 12 — Training
-POST TITLE: Easy Pace Is Not Slow. It's Strategy.
+DAY 10 — June 12
+POST TITLE: Aerobic Base — The Most Overlooked Foundation in Athletic Performance
 
 POST TEXT:
-One of the hardest things I had to learn as a returning athlete was to genuinely run easy.
+Whether you're training for a race, trying to get back to competitive fitness, or just rebuilding your athletic base — aerobic conditioning is the foundation everything else sits on.
 
-I would tell myself I was running easy. I was not. I was running at a pace my ego was comfortable with, which is completely different.
+Most returning athletes don't work on this enough. They train at a medium-hard effort most of the time — too hard for aerobic development, not hard enough for true performance adaptation.
 
-Easy effort means: you can speak in full sentences without breathing hard. Not short phrases. Full sentences. If you can't do that, slow down.
+Easy effort means this: you can speak in complete, full sentences without laboring. Not short phrases. Full sentences. If you can't, you're going too hard.
 
-Why easy pace matters so much:
-- 80% of your running should be in your aerobic zone
-- Aerobic development happens almost exclusively at easy effort
-- Running too hard on easy days impairs recovery from hard days
-- Most injury accumulation happens from chronic low-grade overeffort
+Why it matters:
+- 80% of training should be in the aerobic zone
+- Aerobic development enables higher quality hard sessions
+- Most overuse injuries accumulate from chronic low-grade overeffort
+- Aerobic efficiency is what separates athletes who can sustain performance from those who peak and fade
 
-Easy running is not a sign that you're not working hard enough. It's a sign that you understand how training actually works.
+Easy is not slow. Easy is strategic. It's how you build the engine.
 
-What's your honest easy pace right now?
+What does your easy training effort actually look like right now?
 
 --------------------------------------------------------------
-DAY 11 — June 13 — Mindset
-POST TITLE: The Identity Shift That Changes Everything
+DAY 11 — June 13
+POST TITLE: The Identity Shift That Makes Everything Else Work
 
 POST TEXT:
 You don't rise to the level of your goals. You fall to the level of your identity.
 
-If you think of yourself as someone who "used to be athletic," you'll train accordingly — inconsistently, with constant comparison to a past version of yourself.
+If you think of yourself as someone who "used to be athletic," you'll train accordingly — inconsistently, with constant comparison to a past version.
 
-If you think of yourself as an athlete right now — even while you're rebuilding — you'll make different decisions automatically. What you eat, when you sleep, how you approach training.
+If you think of yourself as an athlete right now — even while you're rebuilding — you'll make different decisions automatically. What you eat, when you sleep, how you respond when training gets hard.
 
-The shift I made that changed my training:
+The shift I made that changed everything:
 
-I stopped saying "I'm trying to get back into shape" and started saying "I'm an athlete who is building."
+I stopped saying "I'm trying to get back into shape" and started saying "I am an athlete who is building."
 
-That's not positive self-talk. It's a deliberate reframe of your identity so that consistent behavior follows naturally.
+Not the same thing.
 
-Who are you as an athlete right now — stated as a present-tense fact, not a future aspiration?
+"Trying to get back" is backward-facing. It measures progress against what you used to be.
 
-Write it in the comments. Saying it out loud matters.
+"Building" is forward-facing. Every session is progress toward who you're becoming, not comparison to who you were.
+
+Who are you as an athlete right now — stated as a present-tense fact?
+
+Write it in the comments. Saying it out loud is part of the practice.
 
 --------------------------------------------------------------
-DAY 12 — June 14 — Recovery
-POST TITLE: Why Your Recovery Days Are Actually Training Days
+DAY 12 — June 14
+POST TITLE: Recovery Days Are Training Days
 
 POST TEXT:
 Your body doesn't adapt during training. It adapts during recovery.
 
-The training session is a stimulus. It breaks down muscle tissue, depletes glycogen, creates stress on connective tissue. The adaptation — the getting stronger, faster, more efficient — happens when you rest.
+The session is a stimulus. The adaptation — getting stronger, faster, more resilient — happens in the hours and days after.
 
-If your recovery days are filled with intense cross-training, extra mileage, or "I'll just do a quick hard run," you're blocking the process your training created.
+If your recovery days are filled with additional intense training, you're blocking the process your previous sessions created.
 
-Recovery day does not mean do nothing (unless you need it). It means:
-- Easy walking
-- Light mobility work
-- Foam rolling
-- Extra sleep
-- Intentional fueling
+Recovery day does not mean do nothing. It means:
+- Easy walking or light movement
+- Deliberate mobility work
+- Quality sleep
+- Intentional nutrition and hydration
 
-Your hard days should be hard. Your easy days should be genuinely easy. The contrast is the point.
+Your hard days should be hard. Your easy days should be genuinely easy. The contrast is the entire point.
+
+The athletes who overtrain are not training too much — they're under-recovering. More training on top of inadequate recovery is how you get injured, plateau, and burn out.
 
 How do you actually spend your recovery days right now?
 
 --------------------------------------------------------------
-DAY 13 — June 15 — Community
-POST TITLE: POLL: What's Your Biggest Training Challenge Right Now?
+DAY 13 — June 15
+POST TITLE: POLL: What's Your Biggest Challenge Right Now?
 
 POST TEXT:
-Quick pulse check on where everyone is.
-
-Drop a number in the comments for your biggest challenge right now:
+Quick check-in. Drop a number for your biggest challenge right now:
 
 1. Consistency — I keep starting and stopping
-2. Pacing — every run ends up being too hard
-3. Nutrition — I don't know if I'm fueling right
-4. Time — genuinely struggling to fit training in
-5. Recovery — I'm always tired or sore
+2. Intensity — every session feels too hard
+3. Nutrition — I'm not sure I'm fueling right
+4. Strength — I'm skipping the weight room
+5. Recovery — always tired or sore
 6. Mindset — motivation comes and goes
+7. Time — genuinely hard to fit training in
 
-Pick the one that's most accurate right now.
+Pick the most accurate one.
 
-I'm going to use this to shape what we cover more in the coming weeks. So be honest — this helps me help you better.
-
---------------------------------------------------------------
-DAY 14 — June 16 — Training
-POST TITLE: The 3 Run Types Every Athlete Needs In Their Week
-
-POST TEXT:
-Not all runs are created equal. And most recreational runners only do one type.
-
-The three runs that should be in every training week:
-
-1. Easy runs (60-75% of your weekly mileage)
-Conversational effort. The aerobic foundation everything else is built on. These should feel almost boring. If they feel hard, slow down.
-
-2. Long run (20-30% of your weekly mileage)
-Extended time on feet at easy effort. Develops fat oxidation, trains your fueling system, builds the aerobic base for race day demands.
-
-3. Quality sessions — one per week maximum in early training
-Tempos, intervals, strides. Structured intensity with a specific purpose. These are not "run fast and see what happens."
-
-If you're only doing one kind of run — and most people are running everything at the same medium-hard effort — you're training in a gray zone that's too hard for recovery and too easy for real performance development.
-
-Which of these three is missing from your current training?
+I'm going to use this to shape content for the next few weeks. Be honest — this directly helps me help you better.
 
 --------------------------------------------------------------
-DAY 15 — June 17 — Nutrition
-POST TITLE: Carbs Are Not the Enemy (Especially If You Run)
+DAY 14 — June 16
+POST TITLE: The Three Training Zones Every Athlete Needs to Understand
 
 POST TEXT:
-This might be the most important nutrition post I write this month.
+Not all training sessions should feel the same. But most athletes train everything at one effort level.
 
-Carbohydrates are your primary fuel source for running. Full stop.
+The three zones that should be in your weekly training:
 
-During moderate to high-intensity effort, your body runs almost entirely on glycogen — the stored form of carbohydrates. Fat metabolism is too slow to keep up with the energy demands of anything above a light jog.
+Zone 1 — Easy (60-75% of training volume)
+Conversational effort. Aerobic development, active recovery, habit-building. If it feels too easy, it's probably right.
 
-When you restrict carbohydrates as a runner:
+Zone 2 — Moderate/Threshold (15-20% of training volume)
+Comfortably hard. You can speak but it takes effort. Improves lactate threshold and aerobic capacity ceiling.
+
+Zone 3 — Hard/High Intensity (5-10% of training volume)
+Intervals, sprints, max effort work. Short duration, full recovery between efforts. High stimulus, high adaptation — but only if zones 1 and 2 are built first.
+
+Most recreational athletes do almost everything in a gray zone between zones 1 and 2. Too hard for aerobic development, not hard enough for real intensity adaptation.
+
+The fix: make your easy sessions genuinely easy, and earn the hard sessions with proper base work.
+
+Where do most of your training sessions actually fall?
+
+--------------------------------------------------------------
+DAY 15 — June 17
+POST TITLE: Why Carbs Aren't the Enemy (Especially If You Train)
+
+POST TEXT:
+Let's settle this.
+
+Carbohydrates are the primary fuel source for high-output athletic training. This is not debatable — it's physiology.
+
+During moderate to high intensity effort, your body runs on glycogen — the stored form of carbohydrates. Fat metabolism is too slow to keep up with the energy demands of anything above easy aerobic work.
+
+What happens when athletes restrict carbs too aggressively:
 - Training feels harder than it should
-- You fatigue earlier
+- Performance plateaus despite consistent effort
 - Recovery takes longer
 - Mood and motivation drop
-- You're more likely to get sick or injured
+- Injury and illness risk increases
 
-The low-carb trend is completely at odds with endurance performance for most athletes.
+45-55% of daily calories from carbohydrates is appropriate for athletes training consistently. That is not excessive. That is fuel.
 
-45-55% of your daily calories should come from carbohydrates if you're training consistently. That is not excessive. That is fuel.
+The key is timing: prioritize carbohydrates around your training windows. That's where they do the most work.
 
-Are you eating enough carbs around your training?
+Are you eating enough carbohydrates to support your training?
 
 --------------------------------------------------------------
-DAY 16 — June 18 — Lifestyle
-POST TITLE: Morning vs. Evening Training — Which Is Actually Better?
+DAY 16 — June 18
+POST TITLE: Morning vs. Evening Training — What Actually Matters
 
 POST TEXT:
-I get this question a lot so let's settle it.
+The research shows that athletic performance is slightly better in the late afternoon and evening — body temperature is higher, reaction time is faster, strength output tends to peak.
 
-The research on morning vs. evening training shows that performance is slightly better in the evening — body temperature is higher, reaction time is faster, strength output tends to be a bit higher.
+But the research also shows that the best time to train is the time you will actually train consistently.
 
-But here's what the research also shows: the best time to train is the time you will actually train consistently.
+Morning training: slightly stiffer, more warm-up required, may need to fuel before longer sessions. But you get it done before the day has a chance to consume it.
 
-For me, that's morning. If I don't train in the morning, the day happens and it doesn't happen. That's just reality.
+Evening training: better raw performance output, but harder to protect the time and harder to sleep afterward for some people.
 
-Morning training trade-offs: slightly stiffer, more warm-up needed, may need to eat before if sessions are over 60 min.
+My recommendation: pick the time that fits your actual life and protect it like a professional obligation. The schedule you follow beats the optimal schedule you don't.
 
-Evening training trade-offs: generally better performance, but harder to protect the time, harder to fall asleep after intense sessions for some people.
+I train in the morning. Not because it's physiologically superior — because if I don't train before my day starts, my day finds a way to absorb the time.
 
-My recommendation: pick the time that fits your life and protect it like a meeting you can't reschedule.
-
-When do you train, and does that time actually work for you?
+When do you train, and is that time actually working for you?
 
 --------------------------------------------------------------
-DAY 17 — June 19 — Training
-POST TITLE: Strides: The 10-Minute Add-On That Changes Your Running
+DAY 17 — June 19
+POST TITLE: The Strength Movement Most Athletes Skip (And Shouldn't)
 
 POST TEXT:
-If you're not doing strides, start doing strides.
+If there's one movement pattern I see returning athletes consistently neglect, it's the hip hinge.
 
-Strides are short, controlled accelerations — about 20-30 seconds at roughly 90% effort, with full recovery between. That's it. You add 4-6 of them to the end of an easy run once or twice a week.
+The hip hinge — deadlift, Romanian deadlift, kettlebell swing — is the foundation of athletic power. Every explosive movement in sport loads this pattern: sprinting, jumping, change of direction, throwing, lifting overhead.
 
-Why they work:
-- Develop neuromuscular coordination and running efficiency
-- Improve stride length and turnover without significant aerobic stress
-- Teach your body what controlled fast running feels like
-- Add a small performance stimulus without meaningful fatigue
+If you're weak in the hip hinge, your power ceiling is low. No matter how fit you are aerobically, you'll leave output on the table.
 
-They take 10 extra minutes. They make a meaningful difference in how your easy running feels and in your race day performance.
+And most returning athletes are weak here because it's not intuitive. People know how to squat (or think they do). Almost nobody has been taught to hinge properly.
 
-How to do them: finish your easy run, then do 4-6 x 20 seconds at a fast but controlled effort. Not a sprint. Smooth, relaxed, quick. Walk or jog 60-90 seconds between each one.
+How to practice the hip hinge:
+Stand with feet hip-width. Push your hips backward as if reaching for a wall behind you. Feel your hamstrings load. Keep your back neutral. That's the pattern.
 
-If you haven't tried these, add them to your next easy run and let me know how it goes.
+Once you own the movement, progress to a dumbbell or kettlebell Romanian deadlift. Start light. Own the pattern before adding load.
+
+Is the hip hinge in your training right now?
 
 --------------------------------------------------------------
-DAY 18 — June 20 — Recovery
+DAY 18 — June 20
 POST TITLE: The Stress-Training Equation Nobody Talks About
 
 POST TEXT:
-Your body doesn't distinguish between physical stress and psychological stress.
+Your body doesn't distinguish between training stress and life stress.
 
-Cortisol — your primary stress hormone — is elevated by both hard training and hard life circumstances. And your total stress capacity is a fixed resource.
+Cortisol — the primary stress hormone — is elevated by hard training AND by a difficult week at work, a conflict in a relationship, financial pressure, poor sleep. All of it draws from the same recovery capacity.
 
-This means: a week with high work stress, poor sleep, relationship tension, and financial pressure is not the same as a normal week — even if your training plan says it is.
+This means: the same training load that's manageable in a normal week may be too much during a high-stress week. And pushing through anyway is a reliable path to injury, illness, or burnout.
 
-Training load that would be perfectly manageable in a calm week may be too much during a high-stress week. And pushing through anyway is a reliable path to injury, burnout, or illness.
+How I account for this:
+- I assess my life stress alongside my training load every week
+- High-stress weeks: reduce volume, keep intensity low, prioritize sleep above everything
+- Normal weeks: execute the program as designed
+- I never try to separate my training from my life
 
-What this means practically:
-- Track your life stress, not just your training stress
-- On high-stress weeks, reduce volume and keep effort easy
-- Sleep becomes even more important as life stress increases
-- Recovery is not optional when your life is demanding
+The athletes who train intelligently over the long term track both variables. Life stress is a training variable.
 
-I adjust my training every week based on how my life actually looks. That's not weakness — that's intelligent programming.
-
-How does your life stress right now affect your training decisions?
+On a scale of 1-10, what is your average life stress this week? And does your current training load account for that?
 
 --------------------------------------------------------------
-DAY 19 — June 21 — Community
+DAY 19 — June 21
 POST TITLE: WIN OF THE WEEK — Round 3
 
 POST TEXT:
 WIN OF THE WEEK.
 
-Three weeks in. Drop your win below — doesn't matter how big or small.
+Three weeks in. Drop yours below.
 
-The athletes who post these consistently are the ones building real momentum. Naming progress makes it real.
+The athletes in this community who post consistently are the ones building real momentum — not because the wins are always big, but because naming progress makes it real and compounds it.
 
-I'll go first: this week I ran my longest long run since coming back — 10 miles at a genuinely easy effort. Heart rate stayed controlled the whole time. A year ago I couldn't have done that without it being a suffer-fest.
+I'll go first: this week I hit a small strength PR on Romanian deadlifts. Nothing dramatic, but it's a movement I'd been inconsistent with for months. Showed up three weeks in a row and the numbers moved. That's the system working.
 
-What's yours?
+What's your win this week?
 
 --------------------------------------------------------------
-DAY 20 — June 22 — Mindset
+DAY 20 — June 22
 POST TITLE: Stop Waiting Until You're Ready
 
 POST TEXT:
-Here's the hard truth: you will never feel completely ready to start.
+Here's the reality: you will never feel completely ready to start.
 
-There will always be a reason to wait. The timing isn't right. Life is too busy. You want to lose a few pounds first. You want to feel more motivated. You want to wait until after the next thing.
+There will always be a better time. The schedule will clear up. The motivation will arrive. You'll lose a few pounds first. Wait until after the next thing.
 
 And meanwhile, months pass.
 
-The athletes I've seen make the fastest progress are not the ones who waited until they felt ready. They're the ones who decided to start before they felt ready — and built readiness through action, not through waiting.
+The athletes I've worked with who made the fastest progress were not the ones who waited until everything was aligned. They were the ones who started imperfect — and built readiness through action, not through waiting.
 
-You don't build momentum by waiting for it. You build it by moving and letting it catch up.
+You don't build momentum by waiting for it. You build it by moving first and letting it catch up.
 
-Start where you are. With what you have. This week.
-
-What's one thing you've been waiting to feel ready for?
+What would change about your training if you started this week exactly as you are — not when conditions improve?
 
 --------------------------------------------------------------
-DAY 21 — June 23 — Training
+DAY 21 — June 23
 POST TITLE: Injury Prevention: The Work You Do Before the Problem
 
 POST TEXT:
-The best injury prevention isn't treatment — it's what you do consistently before anything hurts.
+The best injury prevention is what you do consistently before anything hurts.
 
-The three most common running injuries I see in returning athletes:
+The most common overuse injuries I see in returning athletes:
 
-1. IT band syndrome — almost always from ramping mileage too fast combined with weak hip abductors
-2. Plantar fasciitis — combination of increased load, tight calves, poor foot strength
-3. Shin splints — too much too soon, often from running on hard surfaces with inadequate adaptation time
+Hip and IT band issues — almost always from increasing training load too fast combined with weak hip abductors and glutes.
+
+Lower leg and foot issues — combination of increased load, tight calves, inadequate structural buildup.
+
+Lower back issues — poor hip hinge mechanics, weak posterior chain, training volume outpacing structural capacity.
 
 What prevents all three:
 
-- Ramp up mileage gradually. The 10% rule (increase volume no more than 10% per week) is conservative for a reason.
-- Do the hip stability work. Glute bridges, clamshells, lateral band walks. Every week.
-- Build calf strength. Calf raises — eccentric especially. Single-leg, full range of motion.
-- Take your easy days actually easy. Most overuse injuries accumulate from chronic low-grade overeffort.
+Ramp up volume gradually. A 10% increase per week maximum is conservative for a reason.
 
-If something starts to ache, address it at the first sign — not when it becomes a real problem. The cost of a week of precaution is much lower than the cost of 6-8 weeks of forced rest.
+Do the hip stability work consistently. Glute bridges, clamshells, lateral band walks. Every single week.
 
-What preventive work do you currently do consistently?
+Strengthen your posterior chain. Romanian deadlifts, single-leg work, hip hinges. This is not optional.
+
+Take your easy sessions genuinely easy. Most overuse injuries accumulate from chronic low-grade overeffort, not from single events.
+
+At the first sign of an ache, address it. The cost of a week of caution is far lower than 6-8 weeks of forced rest.
+
+What preventive work are you currently doing consistently?
 
 --------------------------------------------------------------
-DAY 22 — June 24 — Nutrition
-POST TITLE: What Race Day Nutrition Actually Looks Like
+DAY 22 — June 24
+POST TITLE: Competition Preparation — What the Week Before Actually Looks Like
 
 POST TEXT:
-Race day nutrition is something most people figure out the hard way.
+Most athletes get the week before a competition wrong.
 
-Here's what's worked for me and the athletes I train:
+They either keep training hard right up to the event (arriving fatigued) or they stop training entirely (arriving detrained and stiff).
 
-The night before: Normal meal. Higher carb than usual. Nothing new. Nothing experimental. Early enough that you're not going to bed stuffed.
+Neither is correct.
 
-Race morning (for a half or full marathon): Wake up 3 hours before start if possible. 200-300 calories of easily digestible carbs. Low fiber, low fat. Nothing that's going to cause GI issues. Toast and peanut butter, oatmeal, a banana and a bagel. Coffee if that's your normal routine.
+The week before a competition or peak performance event:
 
-During the race: For anything over 60-75 minutes, you need to be taking in carbohydrates. 30-60g per hour. Gels, chews, sports drinks. Practice this in training first — never try a new fuel product on race day.
+Monday-Tuesday: Reduced volume, maintain some intensity. Short, sharp efforts that remind your body what fast feels like without creating fatigue.
 
-Post-race: Protein and carbohydrates within 45-60 minutes. Your body needs both after sustained effort.
+Wednesday: Easy movement only. Active recovery, mobility work, sleep priority.
 
-The biggest mistakes: not fueling at all during the race (bonking), eating something unfamiliar, waiting too long after the race to eat.
+Thursday: Short session with a few hard efforts at race/event pace. 15-20 minutes max. This is to prime the nervous system, not to build fitness.
 
-What does your race day nutrition currently look like?
+Friday: Rest or easy walk. Hydration and nutrition focus.
+
+Saturday/Sunday: Compete.
+
+The goal of the taper week is to arrive with full energy stores, a primed nervous system, and fresh legs — while maintaining the movement patterns and intensities your body is used to.
+
+What does your competition preparation currently look like?
 
 --------------------------------------------------------------
-DAY 23 — June 25 — Lifestyle
-POST TITLE: Being an Athlete in Your 30s and 40s (It's Different, Not Worse)
+DAY 23 — June 25
+POST TITLE: Athletic Performance in Your 30s and 40s — Different, Not Worse
 
 POST TEXT:
 I want to address something directly.
 
-Training in your 30s and 40s is not the same as training at 19 or 22. And the sooner you stop expecting it to be, the faster you'll actually make progress.
+Training in your 30s and 40s is not the same as training at 19 or 22. The sooner you stop expecting it to be, the faster you'll actually progress.
 
-What changes:
-- Recovery takes longer. Period.
-- Sleep matters more. Non-negotiable.
-- Warm-up time increases. Your 22-year-old self could jump into a workout cold. You cannot.
-- Volume ceiling is lower, at least initially. Quality over quantity matters more.
-- Life demands compete more directly with training.
+What changes with age:
+- Recovery takes longer. Not significantly at first, but the trend is real.
+- Warm-up requirements increase. Your 22-year-old self could jump into a hard session cold. You can't.
+- Volume ceiling decreases, especially initially. Quality over quantity matters more.
+- Life demands compete more directly with training time and recovery.
+- Soft tissue and connective tissue need more maintenance investment.
 
 What doesn't change:
-- Your capacity to improve
-- Your ability to compete and perform
+- Your capacity to improve performance
+- Your ability to compete and hit new personal records
 - The satisfaction of doing hard things well
-- The identity of being an athlete
+- Your identity as an athlete
 
-I've coached athletes in their 40s who ran their fastest marathon ever. Not because they trained like they were 25 — because they trained intelligently for who they are now.
+I've worked with athletes in their 40s who ran their fastest times ever. Not because they trained like they were 25 — because they trained intelligently for who they are now.
 
-The edge in your 30s and 40s: experience, discipline, and the ability to trust the process because you've seen what it takes.
+The advantage in your 30s and 40s: experience, discipline, and the capacity to trust the process because you've seen what it takes.
 
-What's one thing you've had to adjust in your training compared to when you were younger?
+What's one thing you've had to adjust about your training as you've gotten older?
 
 --------------------------------------------------------------
-DAY 24 — June 26 — Training
-POST TITLE: Heart Rate Training: What Zone 2 Actually Is and Why It Matters
+DAY 24 — June 26
+POST TITLE: Aerobic Zones Explained — What Zone 2 Actually Is
 
 POST TEXT:
-Zone 2 is one of the most talked about — and most misunderstood — concepts in endurance training.
+Zone 2 training is one of the most discussed and most misunderstood concepts in endurance and performance training.
 
 Here's what it actually is:
 
-Zone 2 is the intensity at which you can sustain a conversation. Aerobic, comfortable, sustainable. It's the intensity at which your body primarily uses fat as a fuel source and builds mitochondrial density — the foundation of all endurance performance.
+Zone 2 is the intensity at which you can sustain a full conversation. Aerobic, comfortable, sustainable. Your body is primarily using fat as a fuel source and building mitochondrial density — the foundation of all aerobic performance.
 
-What Zone 2 is NOT: the effort level that feels like you're working hard enough to count.
+What Zone 2 is NOT: the effort level where you feel like you're working hard enough for it to count.
 
-Most recreational athletes train at Zone 3 the majority of the time — too hard for aerobic development, not hard enough for performance adaptation. They're stuck in the gray zone.
+Most recreational athletes train at Zone 3 most of the time. It's too hard for genuine aerobic development and not hard enough for real performance adaptation. They're stuck in the gray zone and wondering why progress is slow.
 
-How to find your Zone 2: talk test (full sentences, no laboring) or heart rate (roughly 60-70% of max heart rate for most people). If you wear a heart rate monitor, see what your HR is on your easy days — if it's consistently above 75%, you're going too hard.
+How to find your Zone 2: the talk test. Full sentences, no laboring. If you're breathing hard, you're above it.
 
-The athletes who spend the most time in Zone 2 build the biggest aerobic engine. That's the whole game.
+Spending 70-80% of your training time in Zone 2 builds the aerobic engine that everything else runs on. This is true whether you're a marathoner, a team sport athlete, or a general fitness athlete.
 
-Do you know what your Zone 2 heart rate actually is?
+Do you know what your Zone 2 effort actually feels like?
 
 --------------------------------------------------------------
-DAY 25 — June 27 — Behind the Scenes
-POST TITLE: The 12 Weeks That Changed Everything (The Full Training Breakdown)
+DAY 25 — June 27
+POST TITLE: The 5 Months That Changed Everything — The Full Breakdown
 
 POST TEXT:
-In December 2025 I ran the Honolulu Marathon at a 10:09/mile pace.
+In December 2025, I ran the Honolulu Marathon at a 10:09 per mile pace.
 
-In May 2026 I ran the Pittsburgh Marathon at a 7:55/mile pace.
+In May 2026, I ran the Pittsburgh Marathon at a 7:55 per mile pace.
 
-Same distance. 12 weeks of structured training between those two races. Here's what actually changed:
+Same distance. Five months of structured training between them. Here's exactly what changed:
 
-1. I stopped running hard on easy days. Every easy run was genuinely easy — I used my heart rate monitor to enforce it. This felt wrong for the first two weeks and right for the following ten.
+1. I stopped training at the same medium-hard effort every session. Easy sessions became genuinely easy — enforced by heart rate. Hard sessions had a specific purpose and structure.
 
-2. I added one quality session per week. Tempo runs and marathon pace work. Not random hard runs — structured sessions with a specific purpose.
+2. I made strength work non-negotiable. Two sessions per week, every week. Hip hinge, squat, single-leg work, posterior chain. Not glamorous. Essential.
 
-3. I ate more. Specifically: more protein, more carbohydrates around training, and I stopped skipping post-run nutrition.
+3. I ate more — specifically more protein and more carbohydrates around training. And I stopped skipping post-training nutrition.
 
-4. I slept more. Prioritized 7.5-8 hours as a training variable, not a nice-to-have.
+4. I treated sleep as a performance variable, not a luxury. 7.5 hours minimum as a target, not a nice-to-have.
 
-5. I followed the structure even when I didn't feel like it. This is the one that actually made it all work.
+5. I followed the structure even when I didn't feel like it. That's the one that made everything else work.
 
-The training was not complicated. The discipline to execute it consistently was the variable.
+None of this was complicated. The discipline to execute it consistently was the variable.
 
-What's the one thing you think would make the biggest difference in your training right now?
+What's the one change you think would have the biggest impact on your performance right now?
 
 --------------------------------------------------------------
-DAY 26 — June 28 — Recovery
-POST TITLE: The Deload Week: Why Backing Off Makes You Better
+DAY 26 — June 28
+POST TITLE: Why Backing Off Makes You Better (The Deload Week)
 
 POST TEXT:
 Every fourth week in my training blocks, I cut volume by 30-40%.
 
-Fewer miles. Same schedule. Lower effort ceiling. It feels like I'm going backwards.
+Fewer sessions. Lower effort ceiling. It feels like going backwards.
 
-I'm not.
+It's not.
 
-Deload weeks exist because your body needs time to fully consolidate the adaptations from the previous three weeks of training. If you keep adding load week over week without a reduction, you accumulate fatigue faster than you accumulate fitness — and eventually something breaks down.
+Deload weeks exist because adaptation happens during recovery, not during training. If you apply load week after week without a planned reduction, you accumulate fatigue faster than you accumulate fitness. Eventually something gives.
 
 Signs you need a deload:
-- Legs feel heavy on easy runs
+- Legs or body feel heavy in sessions that should feel easy
 - Motivation is unusually low
 - Sleep quality is declining
 - Resting heart rate is elevated
-- Niggling soreness that isn't clearing
+- Persistent soreness that isn't clearing
 
 Signs a deload is working:
 - You feel better by day 3
-- Easy runs feel easy again by end of week
-- You're eager to train again
+- Easy sessions feel easy again
+- You're eager to train by end of week
 
-Don't confuse a deload with being lazy. It's structured programming. Week 4 being easier is the plan, not a deviation from it.
+A deload is not a break. It's structured recovery that's been programmed in advance because the physiology demands it.
+
+Week 4 being lighter is not slacking off. It's the plan working.
 
 Do you currently build deload weeks into your training?
 
 --------------------------------------------------------------
-DAY 27 — June 29 — Community
+DAY 27 — June 29
 POST TITLE: Community Check-In: Where Are You After 4 Weeks?
 
 POST TEXT:
@@ -954,78 +1506,80 @@ Answer any or all of these:
 3. What's still a struggle?
 4. What's one thing you've learned about yourself as an athlete this month?
 
-This community only works if we're honest with each other. Good weeks and hard weeks both belong here.
+This community works because people are honest here. Hard weeks and good weeks both belong.
 
-I'll share mine: consistency was solid this month. Nutrition was the area I let slip — specifically the post-run fueling. Going to make that the focus for July.
+I'll share mine: training consistency was solid. Nutrition was the area I let slip — post-training specifically. Making that the focus heading into the next month.
 
 What about you?
 
 --------------------------------------------------------------
-DAY 28 — June 30 — Lifestyle
-POST TITLE: Hydration: The Simple Version That Actually Works
+DAY 28 — June 30
+POST TITLE: Hydration — The Simple Framework That Actually Works
 
 POST TEXT:
-Hydration does not need to be complicated. Here's the version that actually works:
+Hydration doesn't need to be complicated.
 
-Drink water consistently throughout the day — not in large quantities all at once. Spacing it out is more effective than chugging.
+The framework:
 
-Check your urine color. Pale yellow is the target. Dark yellow means you're behind. Clear means you've over-hydrated (less common but not ideal either).
+Drink water consistently throughout the day — not in large quantities all at once. Spacing is more effective than chugging.
 
-On training days over 60 minutes, add electrolytes. Water alone isn't enough for extended effort — sodium, potassium, and magnesium matter for muscle function and preventing cramps.
+Check your urine color. Pale yellow is the target. Dark yellow means you're behind. Clear means over-hydrated.
 
-The hydration mistake I see most: athletes who drink almost nothing during the workday and then try to compensate by drinking a lot in the evening. You can't front-load hydration. It doesn't work that way.
+For training sessions over 60 minutes, add electrolytes. Water alone during extended effort isn't sufficient — sodium, potassium, and magnesium matter for muscle function and performance.
 
-Simple system:
-- Glass of water first thing in the morning before anything else
+The most common hydration mistake: drinking almost nothing during the workday and trying to catch up in the evening. You cannot front-load hydration. It doesn't work that way.
+
+Simple daily system:
+- Glass of water first thing in the morning
 - Water with every meal
-- Set a reminder every 60-90 minutes during your workday if you're inconsistent
-- Electrolytes on longer training days
+- Set a reminder every 60-90 minutes during the workday if you're consistently under
+- Electrolytes during any training session over 60 minutes
 
-That's it. No app required.
+That's the whole framework. No app required.
 
-How would you rate your hydration consistency right now?
+How would you rate your hydration consistency on a typical training day?
 
 --------------------------------------------------------------
-DAY 29 — July 1 — Mindset
-POST TITLE: The Comparison Trap (And How to Get Out of It)
+DAY 29 — July 1
+POST TITLE: The Comparison Trap
 
 POST TEXT:
-The most demoralizing thing you can do as a returning athlete is compare your current self to other people's highlight reels — or to your own best years.
+The most demoralizing thing you can do as a returning athlete is compare your current performance to other people's highlight reels — or to the best version of yourself from 10 years ago.
 
-I catch myself doing it. A 28-year-old running a 6:30 pace on Strava. A version of myself from 10 years ago that I've built up in memory as better than he probably was.
+I catch myself doing it. A 25-year-old lifting numbers I used to hit. A memory of my athletic peak that's probably more flattering than it was accurate.
 
-Neither of those comparisons helps me run better tomorrow.
+Neither comparison moves me forward.
 
-The only comparison that matters: you versus you, over time.
+The only comparison that produces useful information: you versus you, over time.
 
-Are you more consistent than you were 30 days ago? Are you recovering better? Are you making better decisions around training, sleep, and nutrition?
+Are you more consistent than 30 days ago? Recovering better? Stronger in the movements that matter? Making better decisions around training, sleep, and nutrition?
 
-Those are the metrics that drive real progress. Everything else is noise.
+Those metrics drive real progress. External comparisons are noise.
 
-The athlete I'm competing with is the one I was last month. He's the only useful benchmark I have.
+The athlete I'm competing with is the one I was last month. He's the only benchmark that tells me anything useful.
 
 Who are you competing with?
 
 --------------------------------------------------------------
-DAY 30 — July 2 — Community
-POST TITLE: Month 1 Complete — What's Next (And a Question for You)
+DAY 30 — July 2
+POST TITLE: Month 1 Complete — What's Next
 
 POST TEXT:
 Month one is done.
 
-If you've been showing up here, posting, reading, and working — that's not nothing. Most people who say they want to change their training never do anything past thinking about it. You did something.
+If you've been showing up — training, posting, reading, engaging — that's not nothing. Most people who say they want to change their athletic performance never take a single concrete action. You did.
 
-Here's what's coming in month two: we go deeper into training structure, race-specific preparation, the mental side of sustained effort, and how to keep building when the motivation of "new start" wears off.
+Here's what's coming in month two: deeper work on training progression, strength development, the psychology of sustained performance, and how to keep building when the initial motivation fades.
 
-But first — a question I genuinely want answered:
+One question before we move on:
 
 What do you want more of in this community?
 
-More training content? More nutrition detail? More community challenge stuff? More of my personal training breakdowns? More Q&A?
+More training content? More strength work? More nutrition? More of my personal breakdowns? More Q&A? More accountability structure?
 
 Drop it in the comments. I'll build July around what you actually need.
 
-And if you know another former athlete who's been saying they want to get back into training — this is a good month to invite them in.
+And if you know a former athlete who's been saying they want to get serious about their performance — this is a good time to bring them in.
 
 See you in month two.
 
