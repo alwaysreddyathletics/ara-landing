@@ -73,10 +73,24 @@
     footer a{font-size:.8rem;color:#555;transition:color .2s}
     footer a:hover{color:#c8a96e}
 
+    @media(max-width:768px){
+      nav{padding:14px 16px}
+      .nav-right{gap:12px}
+      .nav-link{display:none}
+      .nav-link:last-of-type{display:block}
+      .nav-cta{padding:7px 14px;font-size:.75rem}
+    }
     @media(max-width:640px){
       .posts-grid{grid-template-columns:1fr}
       .post-card--featured{grid-column:1;grid-template-columns:1fr;gap:0}
-      .hero h1{font-size:2.8rem}
+      .post-card{padding:24px}
+      .hero{padding:48px 16px 40px}
+      .hero h1{font-size:2.6rem}
+      .filter-bar{padding:20px 16px}
+      .posts{padding:0 16px 60px}
+      .cta-strip{padding:36px 16px}
+      .cta-strip h3{font-size:1.6rem}
+      .btn-gold{display:block;text-align:center;padding:14px 20px}
     }
   </style>
 </head>
@@ -86,7 +100,10 @@
   <a href="/" class="nav-logo">Always <span>Reddy</span> Athletics</a>
   <div class="nav-right">
     <a href="/#plans" class="nav-link">Programs</a>
+    <a href="/quiz.html" class="nav-link">Quiz</a>
+    <a href="/#about" class="nav-link">About</a>
     <a href="/blog" class="nav-link" style="color:#f4f2ef">Blog</a>
+    <a href="/contact.html" class="nav-link">Contact</a>
     <a href="/#apply" class="nav-cta">Apply Now</a>
   </div>
 </nav>
