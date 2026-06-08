@@ -336,6 +336,7 @@
   <a href="#" class="nav-logo">Always <span>Reddy</span> Athletics</a>
   <div class="nav-links">
     <a href="#athletic-rebuild">Programs</a>
+    <a href="plans/">Plans</a>
     <a href="quiz.html">Quiz</a>
     <a href="#about">About</a>
     <a href="blog/">Blog</a>
@@ -351,6 +352,7 @@
 
 <div class="mobile-menu" id="mobile-menu">
   <a href="#athletic-rebuild" onclick="closeMobileMenu()">Programs</a>
+  <a href="plans/" onclick="closeMobileMenu()">Plans</a>
   <a href="quiz.html" onclick="closeMobileMenu()">Quiz</a>
   <a href="#about" onclick="closeMobileMenu()">About</a>
   <a href="blog/" onclick="closeMobileMenu()">Blog</a>
@@ -559,7 +561,7 @@
 
     <div class="view-all-wrap" style="margin-top:32px;">
       <a href="quiz.html" class="btn-ghost" style="margin-right:16px;">Not sure where to start? Take the Quiz →</a>
-      <button class="btn-view-all" id="viewAllBtn" onclick="toggleAllPlans()">View All Plans ↓</button>
+      <a href="plans/" class="btn-view-all">View All Plans →</a>
     </div>
 
     <div id="plans-all" style="display:none;margin-top:40px;">
@@ -1122,14 +1124,6 @@ function toggleAllPlans() {
   var btn = document.getElementById('viewAllBtn');
   var isOpen = el.classList.toggle('open');
   btn.textContent = isOpen ? 'Hide Plans ↑' : 'View All Plans ↓';
-}
-
-function toggleAllPlans() {
-  var el = document.getElementById('plans-all');
-  var btn = document.getElementById('viewAllBtn');
-  var isOpen = el.style.display === 'block';
-  el.style.display = isOpen ? 'none' : 'block';
-  btn.textContent = isOpen ? 'View All Plans ↓' : 'Hide Plans ↑';
 }
 
 (function() {

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLMH8N0R14"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QLMH8N0R14');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training Plans — Running & Strength Programs | Always Reddy Athletics</title>
+  <meta name="description" content="Self-guided training plans from Coach Tyler Reddy. Marathon, half marathon, 5K, 10K, and strength programs — all built on the same framework used in 1-on-1 coaching.">
+  <link rel="canonical" href="https://www.alwaysreddyathletics.com/plans">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta property="og:title" content="Training Plans — Always Reddy Athletics">
+  <meta property="og:description" content="Self-guided plans from Coach Tyler Reddy. Marathon, half marathon, 5K, 10K, and strength programs.">
+  <meta property="og:url" content="https://www.alwaysreddyathletics.com/plans">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Barlow',sans-serif;background:#0a0a0a;color:#f4f2ef;-webkit-font-smoothing:antialiased;line-height:1.7}
+    a{text-decoration:none}
+    em{font-style:normal;color:#c8a96e}
+
+    nav{padding:20px 24px;border-bottom:.5px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(10,10,10,0.95);backdrop-filter:blur(10px);z-index:100}
+    .nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:#f4f2ef}
+    .nav-logo span{color:#c8a96e}
+    .nav-right{display:flex;gap:20px;align-items:center}
+    .nav-link{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#888;transition:color .2s}
+    .nav-link:hover{color:#f4f2ef}
+    .nav-cta{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:#0a0a0a;background:#c8a96e;padding:8px 18px;transition:background .2s}
+    .nav-cta:hover{background:#a8893e}
+
+    .hero{padding:80px 24px 60px;max-width:1100px;margin:0 auto;border-bottom:.5px solid rgba(255,255,255,0.07)}
+    .hero-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#c8a96e;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+    .hero-label::after{content:'';flex:1;height:1px;background:rgba(200,169,110,0.2)}
+    .hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.8rem,7vw,5rem);font-weight:900;line-height:.96;letter-spacing:-.02em;margin-bottom:18px}
+    .hero p{font-size:1rem;color:rgba(244,242,239,0.55);max-width:560px;line-height:1.7;margin-bottom:28px}
+    .quiz-nudge{display:inline-flex;align-items:center;gap:12px;background:rgba(200,169,110,0.06);border:.5px solid rgba(200,169,110,0.2);padding:14px 20px;font-size:.88rem;color:rgba(244,242,239,0.65)}
+    .quiz-nudge a{color:#c8a96e;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+    .quiz-nudge a:hover{text-decoration:underline}
+
+    .plans-wrap{max-width:1100px;margin:0 auto;padding:0 24px 80px}
+
+    .category{margin-top:64px}
+    .category-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c8a96e;margin-bottom:20px;padding-bottom:10px;border-bottom:.5px solid rgba(200,169,110,0.25)}
+
+    .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.05)}
+    .plans-grid--two{grid-template-columns:repeat(2,1fr)}
+
+    .plan-card{background:#0a0a0a;padding:32px;display:flex;flex-direction:column;transition:background .2s;position:relative}
+    .plan-card:hover{background:#0f0f0f}
+    .plan-card--featured{background:#0d0d0d;border-top:2px solid #c8a96e}
+    .plan-badge{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0a0a0a;background:#c8a96e;padding:3px 9px;margin-bottom:12px}
+    .plan-badge--outline{background:transparent;border:.5px solid #c8a96e;color:#c8a96e}
+    .plan-result{font-size:.78rem;color:#c8a96e;font-weight:600;margin-bottom:8px}
+    .plan-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:800;color:#f4f2ef;line-height:1.1;margin-bottom:10px}
+    .plan-desc{font-size:.88rem;color:rgba(244,242,239,0.55);line-height:1.65;flex:1;margin-bottom:16px}
+    .plan-includes{list-style:none;margin-bottom:20px}
+    .plan-includes li{font-size:.8rem;color:rgba(244,242,239,0.5);padding:5px 0;border-bottom:.5px solid rgba(255,255,255,0.05);display:flex;gap:8px;align-items:flex-start}
+    .plan-includes li::before{content:'✓';color:#c8a96e;font-weight:700;flex-shrink:0;margin-top:1px}
+    .plan-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:18px;border-top:.5px solid rgba(255,255,255,0.07)}
+    .plan-price{font-family:'Barlow Condensed',sans-serif;font-size:1.8rem;font-weight:800;color:#f4f2ef}
+    .plan-price--free{color:#c8a96e}
+    .btn-plan{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:#0a0a0a;background:#c8a96e;padding:10px 18px;white-space:nowrap;transition:background .2s}
+    .btn-plan:hover{background:#a8893e}
+    .plan-instant{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(200,169,110,0.5);margin-top:10px}
+    .plan-quote{margin-top:12px;padding-top:12px;border-top:.5px solid rgba(255,255,255,0.05)}
+    .plan-quote p{font-size:.78rem;font-style:italic;color:rgba(244,242,239,0.35);line-height:1.5;margin-bottom:4px}
+    .plan-quote cite{font-size:.7rem;color:#555;text-transform:uppercase;letter-spacing:.06em;font-style:normal}
+
+    .cta-strip{background:rgba(200,169,110,0.04);border-top:.5px solid rgba(200,169,110,0.15);border-bottom:.5px solid rgba(200,169,110,0.15);padding:60px 24px;text-align:center;margin-top:80px}
+    .cta-strip-inner{max-width:540px;margin:0 auto}
+    .cta-strip h3{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;color:#f4f2ef;margin-bottom:10px;line-height:1.05}
+    .cta-strip p{font-size:.95rem;color:rgba(244,242,239,0.5);margin-bottom:28px;line-height:1.65}
+    .btn-gold{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;color:#0a0a0a;background:#c8a96e;padding:14px 32px;display:inline-block;transition:background .2s}
+    .btn-gold:hover{background:#a8893e}
+
+    footer{border-top:.5px solid rgba(255,255,255,0.06);padding:32px 24px;text-align:center}
+    .footer-logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;color:#f4f2ef;margin-bottom:12px}
+    .footer-logo span{color:#c8a96e}
+    .footer-links{display:flex;gap:20px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+    footer a{font-size:.78rem;color:#555;transition:color .2s}
+    footer a:hover{color:#c8a96e}
+    .footer-copy{font-size:.75rem;color:rgba(136,136,136,0.4)}
+
+    @media(max-width:768px){
+      nav{padding:14px 16px}
+      .nav-right{gap:12px}
+      .nav-link{display:none}
+      .hero{padding:60px 16px 48px}
+      .plans-wrap{padding:0 16px 60px}
+      .plans-grid,.plans-grid--two{grid-template-columns:1fr}
+      .plan-footer{flex-direction:column;align-items:flex-start;gap:12px}
+      .btn-plan{width:100%;text-align:center;padding:13px}
+      .quiz-nudge{flex-direction:column;align-items:flex-start;gap:8px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Always <span>Reddy</span> Athletics</a>
+  <div class="nav-right">
+    <a href="/" class="nav-link">Home</a>
+    <a href="/blog/" class="nav-link">Blog</a>
+    <a href="/quiz.html" class="nav-link">Quiz</a>
+    <a href="/" onclick="setTimeout(()=>document.getElementById('apply-modal')&&openApplyModal(),200)" class="nav-cta">Apply Now</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-label">Programs &amp; Plans</div>
+  <h1>Every Plan.<br><em>Built to Perform.</em></h1>
+  <p>Self-guided programs built on the same framework Coach Tyler uses with 1-on-1 clients. Download, follow the plan, hit a PR.</p>
+  <div class="quiz-nudge">
+    <span>Not sure which plan fits you?</span>
+    <a href="/quiz.html">Take the 6-question quiz →</a>
+  </div>
+</div>
+
+<div class="plans-wrap">
+
+  <!-- MARATHON -->
+  <div class="category">
+    <div class="category-label">Marathon Plans</div>
+    <div class="plans-grid plans-grid--two">
+      <div class="plan-card plan-card--featured">
+        <div class="plan-badge">Most Comprehensive</div>
+        <div class="plan-result">Client ran sub-4:00 for the first time</div>
+        <h3>Sub 4:00 Marathon Plan</h3>
+        <p class="plan-desc">18 weeks. 6 training blocks. Base building through race week. The most detailed plan in the ARA lineup — built for serious first-timers and barrier-breakers.</p>
+        <ul class="plan-includes">
+          <li>18 weeks of structured training</li>
+          <li>6 distinct blocks with specific goals</li>
+          <li>Strength work integrated throughout</li>
+          <li>Recovery protocols on every day</li>
+          <li>Race week plan included</li>
+        </ul>
+        <div class="plan-footer">
+          <div class="plan-price">$77</div>
+          <a href="https://buy.stripe.com/28E14oc984hy546aWv1ZS01" target="_blank" class="btn-plan">Get This Plan →</a>
+        </div>
+        <div class="plan-instant">⚡ Instant download</div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-result">Coach Tyler ran 3:27 on this exact plan</div>
+        <h3>Sub 3:30 Marathon Plan</h3>
+        <p class="plan-desc">15 weeks. The exact program that took Coach Tyler from 4:46 to 3:27 in under a year. Proven. Documented. Ready to run.</p>
+        <ul class="plan-includes">
+          <li>15 weeks of structured training</li>
+          <li>Interval, tempo, and MP workouts</li>
+          <li>Strength template for weeks 1–4</li>
+          <li>Key workouts and race simulations</li>
+          <li>Full taper included</li>
+        </ul>
+        <div class="plan-footer">
+          <div class="plan-price">$67</div>
+          <a href="https://buy.stripe.com/3cIbJ2ehgcO4gMO4y71ZS00" target="_blank" class="btn-plan">Get This Plan →</a>
+        </div>
+        <div class="plan-instant">⚡ Instant download</div>
+        <div class="plan-quote">
+          <p>"Running longer distances faster kept getting easier — and I was still hitting my strength work."</p>
+          <cite>— Riana, ARA Client</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HALF MARATHON -->
+  <div class="category">
+    <div class="category-label">Half Marathon Plans</div>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-result">Built for your first 13.1</div>
+        <h3>Beginner Half Marathon</h3>
+        <p class="plan-desc">10 weeks. Three runs per week. Long run builds to 12 miles. No complicated workouts. One goal — cross the finish line feeling strong.</p>
+        <ul class="plan-includes">
+          <li>10 weeks, 3 runs per week</li>
+          <li>Long run peaks at 12 miles</li>
+          <li>Built-in deload and taper weeks</li>
+          <li>No prior race experience needed</li>
+        </ul>
+        <div class="plan-footer">
+          <div class="plan-price">$27</div>
+          <a href="https://buy.stripe.com/3cIcN6a10eWceEGaWv1ZS04" target="_blank" class="btn-plan">Get This Plan →</a>
+        </div>
+        <div class="plan-instant">⚡ Instant download</div>
+        <div class="plan-quote">
+          <p>"I ran my first half-marathon thanks to Always Reddy Athletics. Couldn't have done it without the programming."</p>
+          <cite>— Jake, ARA Client</cite>
+        </div>
+      </div>
+      <div class="plan-card plan-card--featured">
+        <div class="plan-result">ARA athlete ran 1:42 on this plan</div>
+        <h3>Sub 1:45 Half Marathon</h3>
+        <p class="plan-desc">13 weeks built for runners chasing a specific time goal. Intervals, tempo work, and race pace long runs that make sub-1:45 feel inevitable.</p>
+        <ul class="plan-includes">
+          <li>13 weeks of structured training</li>
+          <li>Interval and tempo sessions</li>
+          <li>Race pace long runs</li>
+          <li>Strength work integrated</li>
+        </ul>
+        <div class="plan-footer">
+          <div class="plan-price">$47</div>
+          <a href="https://buy.stripe.com/28E28sgpo7tK7cee8H1ZS02" target="_blank" class="btn-plan">Get This Plan →</a>
+        </div>
+        <div class="plan-instant">⚡ Instant download</div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-result">Used by an ARA athlete to set a new PR</div>
+        <h3>Intermediate Half Marathon</h3>
+        <p class="plan-desc">14 weeks for runners who've done a half marathon and are ready to race one faster. Tempo runs, mile repeats, and race pace long runs that build real competitive edge.</p>
+        <ul class="plan-includes">
+          <li>14 weeks of structured training</li>
+          <li>Two built-in deload weeks</li>
+          <li>Tempo and interval sessions</li>
+          <li>Race pace development built in</li>
+        </ul>
+        <div class="plan-footer">
+          <div class="plan-price">$37</div>
+          <a href="https://buy.stripe.com/9B6dRa0qq9BSeEGe8H1ZS03" target="_blank" class="btn-plan">Get This Plan →</a>
+        </div>
+        <div class="plan-instant">⚡ Instant download</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHORT RACES -->
+  <div class="category">
+    <div class="category-label">Short Race Plans</div>
+    <div class="plans-grid plans-grid--two">
+      <div class="plan-card">
+        <div class="plan-badge">New</div>
+        <div class="plan-result">For runners ready to step up from a 5K</div>
+        <h3>8-Week 10K Plan</h3>
+        <p class="plan-desc">Eight weeks. Four runs per week. Tempo work, interval sessions, and a long run that peaks at 7 miles before you taper into race week.</p>
+        <ul class="plan-includes">
+          <li>8 weeks, 4 runs per week</li>
+          <li>Interval and tempo sessions</li>
+          <li>Long run peaks at 7 miles</li>
+          <li>Built-in deload and race week taper</li>
+        </ul>
+        <div class="plan-footer">
+          <div class="plan-price">$22</div>
+          <a href="https://buy.stripe.com/cNicN63CC3dufIK4y71ZS09" target="_blank" rel="noopener" class="btn-plan">Get This Plan →</a>
+        </div>
+        <div class="plan-instant">⚡ Instant download</div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-badge">New</div>
+        <div class="plan-result">Built for your first or fastest 5K</div>
+        <h3>6-Week 5K Plan</h3>
+        <p class="plan-desc">Six weeks. Three runs per week. Easy runs, one tempo session, and a race week taper that actually prepares you. No complicated workouts — just the structure you need to cross the line strong.</p>
+        <ul class="plan-includes">
+          <li>6 weeks, 3 runs per week</li>
+          <li>Tempo and easy run progressions</li>
+          <li>Race week taper included</li>
+          <li>Under 45 minutes per session</li>
+        </ul>
+        <div class="plan-footer">
+          <div class="plan-price">$17</div>
+          <a href="https://buy.stripe.com/28EbJ28WW15meEG3u31ZS08" target="_blank" rel="noopener" class="btn-plan">Get This Plan →</a>
+        </div>
+        <div class="plan-instant">⚡ Instant download</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STRENGTH -->
+  <div class="category">
+    <div class="category-label">Strength Plans</div>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-result">The foundation every athlete needs</div>
+        <h3>4-Week Beginner Strength</h3>
+        <p class="plan-desc">Three workouts per week. Under 30 minutes each. Learn the movements, build the habit, come out stronger. Dumbbells and a bench — that's all you need.</p>
+        <ul class="plan-includes">
+          <li>4 weeks, 3 days per week</li>
+          <li>Under 30 minutes per session</li>
+          <li>Dumbbells only — no barbell needed</li>
+          <li>Progressions built into weeks 3–4</li>
+        </ul>
+        <div class="plan-footer">
+          <div class="plan-price">$17</div>
+          <a href="https://buy.stripe.com/6oU6oI5KK15m1RU5Cb1ZS05" target="_blank" class="btn-plan">Get This Plan →</a>
+        </div>
+        <div class="plan-instant">⚡ Instant download</div>
+        <div class="plan-quote">
+          <p>"Once I had a real plan, I felt 100% every session. The structure made all the difference."</p>
+          <cite>— Tom, ARA Client</cite>
+        </div>
+      </div>
+      <div class="plan-card plan-card--featured">
+        <div class="plan-result">For athletes ready to train with structure</div>
+        <h3>6-Week Intermediate Strength</h3>
+        <p class="plan-desc">Four days per week. Two strength days, two functional movement days. Progressive overload built in every week. This is where real change happens.</p>
+        <ul class="plan-includes">
+          <li>6 weeks, 4 days per week</li>
+          <li>Strength + functional days</li>
+          <li>Progressive overload every week</li>
+          <li>Full gym required</li>
+        </ul>
+        <div class="plan-footer">
+          <div class="plan-price">$27</div>
+          <a href="https://buy.stripe.com/14AfZic98cO44023u31ZS06" target="_blank" class="btn-plan">Get This Plan →</a>
+        </div>
+        <div class="plan-instant">⚡ Instant download</div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-result">For serious lifters ready to push</div>
+        <h3>8-Week Advanced Strength</h3>
+        <p class="plan-desc">Six days per week. Heavy compound movements, conditioning finishers, and two peak weeks. This program finds your ceiling — then removes it.</p>
+        <ul class="plan-includes">
+          <li>8 weeks, 5–6 days per week</li>
+          <li>Two peak weeks built in</li>
+          <li>Full warm-up and cool-down protocols</li>
+          <li>Progressive overload every week</li>
+        </ul>
+        <div class="plan-footer">
+          <div class="plan-price">$37</div>
+          <a href="https://buy.stripe.com/aFa28s1uu7tK68a3u31ZS07" target="_blank" class="btn-plan">Get This Plan →</a>
+        </div>
+        <div class="plan-instant">⚡ Instant download</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOOLS & FREE -->
+  <div class="category">
+    <div class="category-label">Tools &amp; Free Resources</div>
+    <div class="plans-grid">
+      <div class="plan-card plan-card--featured">
+        <div class="plan-badge">Race Week Essential</div>
+        <div class="plan-result">Built for athletes who undertrain race day itself</div>
+        <h3>Race Day Prep Guide</h3>
+        <p class="plan-desc">Everything you need for race week, race morning, and race day execution. Warm-up protocols, pacing strategy, nutrition timing, mental prep, and a full race morning checklist.</p>
+        <ul class="plan-includes">
+          <li>Race week training schedule</li>
+          <li>Race morning checklist and timing guide</li>
+          <li>Warm-up and activation protocols</li>
+          <li>Pacing strategy and mental frameworks</li>
+          <li>Post-race recovery plan</li>
+        </ul>
+        <div class="plan-footer">
+          <div class="plan-price">$17</div>
+          <a href="race-day.html" class="btn-plan">Get the Guide →</a>
+        </div>
+        <div class="plan-instant">⚡ Instant download</div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-badge">New</div>
+        <div class="plan-result">Track every session like a real athlete</div>
+        <h3>12-Week Training Log</h3>
+        <p class="plan-desc">A structured 12-week PDF template built for athletes who want to track their training seriously. Log sets, reps, pace, RPE, sleep, and notes — every session, every week.</p>
+        <ul class="plan-includes">
+          <li>12 weekly tracking sheets</li>
+          <li>Daily log: sets, reps, pace, RPE, notes</li>
+          <li>Weekly reflection and goal-setting prompts</li>
+          <li>Month-over-month performance comparison</li>
+          <li>Printable + fillable PDF</li>
+        </ul>
+        <div class="plan-footer">
+          <div class="plan-price">$17</div>
+          <a href="https://buy.stripe.com/00w3cw5KK9BSbsu2pZ1ZS0b" target="_blank" rel="noopener" class="btn-plan">Get the Log →</a>
+        </div>
+        <div class="plan-instant">⚡ Instant download</div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-badge plan-badge--outline">Free</div>
+        <div class="plan-result">The fastest path back to training like an athlete</div>
+        <h3>Return to Training</h3>
+        <p class="plan-desc">A free 5-lesson mini course for former athletes who haven't trained consistently in months or years. No judgment. Just the exact framework Coach Tyler uses to rebuild athletes from zero.</p>
+        <ul class="plan-includes">
+          <li>Lesson 1: Why Former Athletes Get Stuck</li>
+          <li>Lesson 2: Your Movement Baseline</li>
+          <li>Lesson 3: Your First 4-Week Structure</li>
+          <li>Lesson 4: The Nutrition Reset That Works</li>
+          <li>Lesson 5: What Happens After Week 4</li>
+        </ul>
+        <div class="plan-footer">
+          <div class="plan-price plan-price--free">Free</div>
+          <a href="/return-to-training.html" class="btn-plan">Start the Course →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end .plans-wrap -->
+
+<div class="cta-strip">
+  <div class="cta-strip-inner">
+    <h3>Want a Plan Built<br><em>Just For You?</em></h3>
+    <p>The Athletic Rebuild is 12 weeks of 1-on-1 coaching — a custom plan, weekly calls, and a coach who actually knows your history. Every client hits a personal record.</p>
+    <a href="/" class="btn-gold">Apply for Coaching →</a>
+    <p style="margin-top:14px;font-size:.8rem;color:rgba(244,242,239,0.3);">Not sure yet? <a href="/quiz.html" style="color:#c8a96e;">Take the quiz first →</a></p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Always <span>Reddy</span> Athletics</div>
+  <div class="footer-links">
+    <a href="/legal.html">Privacy Policy</a>
+    <a href="/legal.html">Terms &amp; Conditions</a>
+    <a href="/legal.html">Disclaimer</a>
+  </div>
+  <div class="footer-copy">© 2026 Always Reddy Athletics · All Rights Reserved · Pennsylvania, USA</div>
+</footer>
+
+</body>
+</html>
