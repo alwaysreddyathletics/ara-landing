@@ -559,11 +559,234 @@
 
     <div class="view-all-wrap" style="margin-top:32px;">
       <a href="quiz.html" class="btn-ghost" style="margin-right:16px;">Not sure where to start? Take the Quiz →</a>
-      <a href="#plans-all" class="btn-view-all" onclick="this.style.display='none';document.getElementById('plans-all').style.display='block';">View All Plans ↓</a>
+      <button class="btn-view-all" id="viewAllBtn" onclick="toggleAllPlans()">View All Plans ↓</button>
     </div>
 
     <div id="plans-all" style="display:none;margin-top:40px;">
-      <p style="text-align:center;color:rgba(244,242,239,0.5);font-size:0.9rem;margin-bottom:32px;">Running plans from $17 · Strength plans from $17 · <a href="quiz.html" style="color:var(--accent);text-decoration:none;">Take the quiz to find your match →</a></p>
+      <div class="products-category-label">Getting Started</div>
+      <div class="products-grid products-grid--three">
+        <div class="product-card">
+          <div class="product-result">Built for your first 13.1</div>
+          <h3>Beginner Half Marathon</h3>
+          <p class="product-desc">10 weeks. Three runs per week. Long run builds to 12 miles. No complicated workouts. One goal — cross the finish line feeling strong.</p>
+          <ul class="product-includes">
+            <li>10 weeks, 3 runs per week</li>
+            <li>Long run peaks at 12 miles</li>
+            <li>Built-in deload and taper weeks</li>
+            <li>No prior race experience needed</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">$27</div>
+            <a href="https://buy.stripe.com/3cIcN6a10eWceEGaWv1ZS04" target="_blank" class="btn-product">Get This Plan →</a>
+          </div>
+          <div class="product-instant">⚡ Instant download</div>
+          <div class="product-quote">
+            <p>"I ran my first half-marathon thanks to Always Reddy Athletics. Couldn't have done it without the programming."</p>
+            <cite>— Jake, ARA Client</cite>
+          </div>
+        </div>
+        <div class="product-card product-card--featured">
+          <div class="product-badge">Race Week Essential</div>
+          <div class="product-result">Built for athletes who undertrain race day itself</div>
+          <h3>Race Day Prep Guide</h3>
+          <p class="product-desc">Everything you need for race week, race morning, and race day execution. Warm-up protocols, pacing strategy, nutrition timing, mental prep, and a full race morning checklist.</p>
+          <ul class="product-includes">
+            <li>Race week training schedule</li>
+            <li>Race morning checklist and timing guide</li>
+            <li>Warm-up and activation protocols</li>
+            <li>Pacing strategy and mental frameworks</li>
+            <li>Post-race recovery plan</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">$17</div>
+            <a href="race-day.html" class="btn-product">Get the Guide →</a>
+          </div>
+          <div class="product-instant">⚡ Instant download</div>
+        </div>
+        <div class="product-card product-card--featured">
+          <div class="product-badge" style="background:transparent;border:1px solid #c8a96e;color:#c8a96e;">Free</div>
+          <div class="product-result">The fastest path back to training like an athlete</div>
+          <h3>Return to Training</h3>
+          <p class="product-desc">A free 5-lesson mini course for former athletes who haven't trained consistently in months or years. No judgment. Just the exact framework Coach Tyler uses to rebuild athletes from zero.</p>
+          <ul class="product-includes">
+            <li>Lesson 1: Why Former Athletes Get Stuck</li>
+            <li>Lesson 2: Your Movement Baseline</li>
+            <li>Lesson 3: Your First 4-Week Structure</li>
+            <li>Lesson 4: The Nutrition Reset That Works</li>
+            <li>Lesson 5: What Happens After Week 4</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price" style="color:#c8a96e;">Free</div>
+            <a href="return-to-training.html" class="btn-product">Start the Course →</a>
+          </div>
+        </div>
+      </div>
+      <div class="products-category-label">Half Marathon Plans</div>
+      <div class="products-grid products-grid--three">
+        <div class="product-card">
+          <div class="product-result">ARA athlete ran 1:42 on this plan</div>
+          <h3>Sub 1:45 Half Marathon</h3>
+          <p class="product-desc">13 weeks built for runners chasing a specific time goal. Intervals, tempo work, and race pace long runs that make sub-1:45 feel inevitable.</p>
+          <ul class="product-includes">
+            <li>13 weeks of structured training</li>
+            <li>Interval and tempo sessions</li>
+            <li>Race pace long runs</li>
+            <li>Strength work integrated</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">$47</div>
+            <a href="https://buy.stripe.com/28E28sgpo7tK7cee8H1ZS02" target="_blank" class="btn-product">Get This Plan →</a>
+          </div>
+          <div class="product-instant">⚡ Instant download</div>
+        </div>
+        <div class="product-card">
+          <div class="product-result">Used by an ARA athlete to set a new PR</div>
+          <h3>Intermediate Half Marathon</h3>
+          <p class="product-desc">14 weeks for runners who've done a half marathon and are ready to race one faster. Tempo runs, mile repeats, and race pace long runs that build real competitive edge.</p>
+          <ul class="product-includes">
+            <li>14 weeks of structured training</li>
+            <li>Two built-in deload weeks</li>
+            <li>Tempo and interval sessions</li>
+            <li>Race pace development built in</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">$37</div>
+            <a href="https://buy.stripe.com/9B6dRa0qq9BSeEGe8H1ZS03" target="_blank" class="btn-product">Get This Plan →</a>
+          </div>
+          <div class="product-instant">⚡ Instant download</div>
+        </div>
+        <div class="product-card">
+          <div class="product-badge">New</div>
+          <div class="product-result">For runners ready to step up from a 5K</div>
+          <h3>8-Week 10K Plan</h3>
+          <p class="product-desc">Eight weeks. Four runs per week. Tempo work, interval sessions, and a long run that peaks at 7 miles before you taper into race week.</p>
+          <ul class="product-includes">
+            <li>8 weeks, 4 runs per week</li>
+            <li>Interval and tempo sessions</li>
+            <li>Long run peaks at 7 miles</li>
+            <li>Built-in deload and race week taper</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">$22</div>
+            <a href="https://buy.stripe.com/cNicN63CC3dufIK4y71ZS09" target="_blank" rel="noopener" class="btn-product">Get This Plan →</a>
+          </div>
+          <div class="product-instant">⚡ Instant download</div>
+        </div>
+      </div>
+      <div class="products-category-label">Short Race Plans</div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-badge">New</div>
+          <div class="product-result">Built for your first or fastest 5K</div>
+          <h3>6-Week 5K Plan</h3>
+          <p class="product-desc">Six weeks. Three runs per week. Easy runs, one tempo session, and a race week taper that actually prepares you. No complicated workouts — just the structure you need to cross the line strong.</p>
+          <ul class="product-includes">
+            <li>6 weeks, 3 runs per week</li>
+            <li>Tempo and easy run progressions</li>
+            <li>Race week taper included</li>
+            <li>Under 45 minutes per session</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">$17</div>
+            <a href="https://buy.stripe.com/28EbJ28WW15meEG3u31ZS08" target="_blank" rel="noopener" class="btn-product">Get This Plan →</a>
+          </div>
+          <div class="product-instant">⚡ Instant download</div>
+        </div>
+        <div class="product-card product-card--featured">
+          <div class="product-badge" style="background:transparent;border:1px solid #c8a96e;color:#c8a96e;">Free</div>
+          <div class="product-result">Find the right plan for your exact situation</div>
+          <h3>Athlete Match Quiz</h3>
+          <p class="product-desc">Not sure where to start? Answer 6 quick questions about your background, goals, and schedule. We'll match you with the right plan — or tell you if 1-on-1 coaching is the better move.</p>
+          <ul class="product-includes">
+            <li>6 quick questions</li>
+            <li>Personalized plan recommendation</li>
+            <li>Takes under 2 minutes</li>
+            <li>No email required</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price" style="color:#c8a96e;">Free</div>
+            <a href="quiz.html" class="btn-product">Take the Quiz →</a>
+          </div>
+        </div>
+      </div>
+      <div class="products-category-label">Strength Plans</div>
+      <div class="products-grid products-grid--three">
+        <div class="product-card">
+          <div class="product-result">For serious lifters ready to push</div>
+          <h3>8-Week Advanced Strength</h3>
+          <p class="product-desc">Six days per week. Heavy compound movements, conditioning finishers, and two peak weeks. This program finds your ceiling — then removes it.</p>
+          <ul class="product-includes">
+            <li>8 weeks, 5–6 days per week</li>
+            <li>Two peak weeks built in</li>
+            <li>Full warm-up and cool-down protocols</li>
+            <li>Progressive overload every week</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">$37</div>
+            <a href="https://buy.stripe.com/aFa28s1uu7tK68a3u31ZS07" target="_blank" class="btn-product">Get This Plan →</a>
+          </div>
+          <div class="product-instant">⚡ Instant download</div>
+        </div>
+        <div class="product-card">
+          <div class="product-result">For athletes ready to train with structure</div>
+          <h3>6-Week Intermediate Strength</h3>
+          <p class="product-desc">Four days per week. Two strength days, two functional movement days. Progressive overload built in every week. This is where real change happens.</p>
+          <ul class="product-includes">
+            <li>6 weeks, 4 days per week</li>
+            <li>Strength + functional days</li>
+            <li>Progressive overload every week</li>
+            <li>Full gym required</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">$27</div>
+            <a href="https://buy.stripe.com/14AfZic98cO44023u31ZS06" target="_blank" class="btn-product">Get This Plan →</a>
+          </div>
+          <div class="product-instant">⚡ Instant download</div>
+        </div>
+        <div class="product-card">
+          <div class="product-result">The foundation every athlete needs</div>
+          <h3>4-Week Beginner Strength</h3>
+          <p class="product-desc">Three workouts per week. Under 30 minutes each. Learn the movements, build the habit, come out stronger. Dumbbells and a bench — that's all you need.</p>
+          <ul class="product-includes">
+            <li>4 weeks, 3 days per week</li>
+            <li>Under 30 minutes per session</li>
+            <li>Dumbbells only — no barbell needed</li>
+            <li>Progressions built into weeks 3–4</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">$17</div>
+            <a href="https://buy.stripe.com/6oU6oI5KK15m1RU5Cb1ZS05" target="_blank" class="btn-product">Get This Plan →</a>
+          </div>
+          <div class="product-instant">⚡ Instant download</div>
+          <div class="product-quote">
+            <p>"Once I had a real plan, I felt 100% every session. The structure made all the difference."</p>
+            <cite>— Tom, ARA Client</cite>
+          </div>
+        </div>
+      </div>
+      <div class="products-category-label">Training Tools</div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-badge">New</div>
+          <div class="product-result">Track every session like a real athlete</div>
+          <h3>12-Week Training Log</h3>
+          <p class="product-desc">A structured 12-week PDF template built for athletes who want to track their training seriously. Log sets, reps, pace, RPE, sleep, and notes — every session, every week.</p>
+          <ul class="product-includes">
+            <li>12 weekly tracking sheets</li>
+            <li>Daily log: sets, reps, pace, RPE, notes</li>
+            <li>Weekly reflection and goal-setting prompts</li>
+            <li>Month-over-month performance comparison</li>
+            <li>Printable + fillable PDF</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">$17</div>
+            <a href="https://buy.stripe.com/00w3cw5KK9BSbsu2pZ1ZS0b" target="_blank" rel="noopener" class="btn-product">Get the Log →</a>
+          </div>
+          <div class="product-instant">⚡ Instant download</div>
+        </div>
+        <div class="product-card" style="background:transparent;border-color:rgba(255,255,255,0.04);">
+        </div>
+      </div>
     </div>
 
   </div>
@@ -899,6 +1122,14 @@ function toggleAllPlans() {
   var btn = document.getElementById('viewAllBtn');
   var isOpen = el.classList.toggle('open');
   btn.textContent = isOpen ? 'Hide Plans ↑' : 'View All Plans ↓';
+}
+
+function toggleAllPlans() {
+  var el = document.getElementById('plans-all');
+  var btn = document.getElementById('viewAllBtn');
+  var isOpen = el.style.display === 'block';
+  el.style.display = isOpen ? 'none' : 'block';
+  btn.textContent = isOpen ? 'View All Plans ↓' : 'Hide Plans ↑';
 }
 
 (function() {
