@@ -342,7 +342,6 @@
     <a href="contact.html">Contact</a>
   </div>
   <div class="nav-actions">
-    <a href="#guide" class="btn-ghost nav-hide" onclick="openGuideModal();return false;">Free Guide</a>
     <a href="#apply" class="btn-primary" onclick="openApplyModal();return false;">Apply Now</a>
     <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -373,12 +372,13 @@
     </div>
     <div class="hero-actions">
       <a href="#apply" class="btn-primary btn-large" onclick="openApplyModal();return false;">Apply for The Athletic Rebuild →</a>
-      <a href="#guide" class="btn-ghost btn-large" onclick="openGuideModal();return false;">Get the Free Training Guide</a>
     </div>
+    <p style="font-size:0.85rem;color:rgba(244,242,239,0.4);margin-bottom:40px;">Not ready to apply? <a href="#guide" onclick="openGuideModal();return false;" style="color:var(--accent);text-decoration:none;">Get the free training guide →</a></p>
     <div class="hero-stats">
       <div><div class="hero-stat-num">12</div><div class="hero-stat-label">Week Program</div></div>
       <div><div class="hero-stat-num">1:1</div><div class="hero-stat-label">Private Coaching</div></div>
-      <div><div class="hero-stat-num">100%</div><div class="hero-stat-label">Built For You</div></div>
+      <div><div class="hero-stat-num">100%</div><div class="hero-stat-label">Client PR Rate</div></div>
+      <div><div class="hero-stat-num">1:18</div><div class="hero-stat-label">Faster. Same course. Under 12 months.</div></div>
     </div>
   </div>
 </section>
@@ -414,75 +414,10 @@
       <div class="pillar"><div class="pillar-num">03</div><div class="pillar-title">Mobility</div><p class="pillar-desc">Joint health and movement quality that keeps you training hard for decades — not just the next 12 weeks.</p></div>
       <div class="pillar"><div class="pillar-num">04</div><div class="pillar-title">Discipline</div><p class="pillar-desc">Real accountability. Weekly check-ins, progress reviews, and a coach who calls it when you're slacking.</p></div>
     </div>
-    <div class="includes-grid">
-      <div>
-        <div class="section-label">What You Get</div>
-        <ul class="includes-list">
-          <li>Athletic Assessment — full evaluation before day one</li>
-          <li>Custom 12-Week Training Plan — built specifically for you</li>
-          <li>Weekly 1-on-1 Coaching Calls — review and recalibrate every week</li>
-          <li>Direct coach access — message Tyler anytime</li>
-          <li>Performance Tracking System — know exactly how you're progressing</li>
-          <li>Nutrition Framework — practical guidance for real life</li>
-        </ul>
-      </div>
-      <div>
-        <div class="section-label">Community Access</div>
-        <ul class="includes-list">
-          <li>ARA Skool Community — train alongside other former athletes</li>
-          <li>Monthly Group Challenges — competition keeps the edge sharp</li>
-          <li>Exercise Library &amp; Video Form Reviews</li>
-          <li>Alumni Network — athletes who've already completed the rebuild</li>
-          <li>Priority Access to New Programs</li>
-          <li>3-Month Minimum Commitment — because real results take real time</li>
-        </ul>
-      </div>
-    </div>
   </div>
 </section>
 
-<section class="roadmap">
-  <div class="container">
-    <div class="section-label">The Journey</div>
-    <h2>Your 12-Week <em>Roadmap</em></h2>
-    <div class="phases">
-      <div class="phase"><div class="phase-num">Phase 01</div><div class="phase-weeks">Weeks 1–4</div><div class="phase-title">Foundation &amp; Assessment</div><p class="phase-desc">Deep dive into where you are right now. Movement patterns, strength baselines, conditioning levels. We build the map before we start the journey. No ego — just honest data and a clear starting point.</p></div>
-      <div class="phase"><div class="phase-num">Phase 02</div><div class="phase-weeks">Weeks 5–8</div><div class="phase-title">Load &amp; Adapt</div><p class="phase-desc">Progressive overload meets athletic conditioning. This is where the body starts responding. Strength climbs, conditioning improves, and the competitive edge starts coming back in a way that's hard to ignore.</p></div>
-      <div class="phase"><div class="phase-num">Phase 03</div><div class="phase-weeks">Weeks 9–12</div><div class="phase-title">Peak &amp; Perform</div><p class="phase-desc">You've built the base. Now we push. This is the phase where athletes say "I forgot I could feel like this." Performance tests, personal records, and a clear path forward beyond week 12.</p></div>
-    </div>
-  </div>
-</section>
 
-<section class="forwho">
-  <div class="container">
-    <div class="section-label">Is This For You?</div>
-    <h2>Built For <em>Former Athletes.</em> Period.</h2>
-    <div class="forwho-grid">
-      <div class="forwho-col yes">
-        <h3>✓ This Is For You If...</h3>
-        <ul class="forwho-list">
-          <li>You played competitive sports at any level</li>
-          <li>You're ready to train with real purpose again</li>
-          <li>You want a real coach — not just another program to ignore</li>
-          <li>You're busy but disciplined enough to show up 4–5x per week</li>
-          <li>You've outgrown beginner content and generic "get fit" messaging</li>
-          <li>You want accountability that feels like having a real coach again</li>
-          <li>You're ready to invest in yourself the way you did in your athletic career</li>
-        </ul>
-      </div>
-      <div class="forwho-col no">
-        <h3>✗ This Is NOT For You If...</h3>
-        <ul class="forwho-list">
-          <li>You're looking for a cheap, passive, do-it-yourself PDF plan</li>
-          <li>You're unwilling to be honest about where you currently are</li>
-          <li>You want quick fixes without real commitment behind them</li>
-          <li>You can't commit to at least 3 months of consistent effort</li>
-          <li>You expect results without engaging with your coach weekly</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="testimonials" id="testimonials">
   <div class="container">
@@ -560,31 +495,26 @@
         <a href="#apply" class="btn-primary" style="display:block;text-align:center;width:100%;" onclick="openApplyModal();return false;">Apply for The Athletic Rebuild →</a>
       </div>
     </div>
+    <div class="guarantee-box" style="margin-top:40px;">
+      <div class="guarantee-badge">100%</div>
+      <div class="guarantee-title">The Do The Work <em>Guarantee</em></div>
+      <p class="guarantee-text">Complete all 12 weeks — attend your check-ins, follow the plan, show up to your sessions.</p>
+      <p class="guarantee-text"><strong style="color:var(--white)">If you don't feel stronger, leaner, and more athletic than when you started — I'll coach you free for an additional 4 weeks until you do.</strong></p>
+      <p class="guarantee-text" style="font-size:0.85rem;margin-top:8px;">No fine print. No hoops. Just results.</p>
+    </div>
     <div class="not-ready">
       Not ready to apply yet? No pressure. <a href="https://calendly.com/tylerreddy96/30min" target="_blank" rel="noopener">Schedule a free 30-minute call with Tyler →</a>
-    </div>
-    <div class="email-capture">
-      <div class="section-label" style="text-align:center">Not ready to apply?</div>
-      <h3>Get the Free <em>ARA Training Guide</em></h3>
-      <p>The exact framework Coach Tyler uses to rebuild athletes from the ground up. Free. No strings attached.</p>
-      <a href="#guide" class="btn-primary btn-large" style="display:inline-block;margin:0 auto;" onclick="openGuideModal();return false;">Get the Free Guide →</a>
-      <div class="email-note" style="margin-top:12px">No spam. Unsubscribe anytime. We send training content worth reading.</div>
     </div>
   </div>
 </section>
 
 <section class="products" id="plans">
   <div class="container">
-    <div class="section-label" style="text-align:center">Programs &amp; Plans</div>
-    <h2>Built on Real Results.<br><em>Built for You.</em></h2>
-    <p class="products-sub">Every plan below was used by a real athlete to hit a real result. Download it, follow it, run faster.</p>
-    <div class="quiz-nudge">
-      <p><strong>Not sure which plan is right for you?</strong> Answer 6 questions and we'll match you to the exact plan — or tell you if 1-on-1 coaching is the better move.</p>
-      <a href="quiz.html" class="btn-quiz">Take the Quiz →</a>
-    </div>
+    <div class="section-label" style="text-align:center">Training Plans</div>
+    <h2>Not Ready for Coaching?<br><em>Start Here.</em></h2>
+    <p class="products-sub">Self-guided plans built on the same framework. Every plan was used by a real athlete to hit a real result.</p>
 
-    <!-- MARATHON PLANS -->
-    <div class="products-category-label">Marathon Plans</div>
+    <!-- FEATURED PLANS -->
     <div class="products-grid">
       <div class="product-card product-card--featured">
         <div class="product-badge">Most Comprehensive</div>
@@ -627,254 +557,18 @@
       </div>
     </div>
 
-    <!-- VIEW ALL toggle -->
-    <div class="view-all-wrap">
-      <button class="btn-view-all" id="viewAllBtn" onclick="toggleAllPlans()">View All Plans ↓</button>
+    <div class="view-all-wrap" style="margin-top:32px;">
+      <a href="quiz.html" class="btn-ghost" style="margin-right:16px;">Not sure where to start? Take the Quiz →</a>
+      <a href="#plans-all" class="btn-view-all" onclick="this.style.display='none';document.getElementById('plans-all').style.display='block';">View All Plans ↓</a>
     </div>
 
-    <!-- HIDDEN PLANS -->
-    <div class="all-plans" id="allPlans">
-      <div class="products-category-label" style="margin-top:60px;">Getting Started</div>
-      <div class="products-grid products-grid--three">
-        <div class="product-card">
-          <div class="product-result">Built for your first 13.1</div>
-          <h3>Beginner Half Marathon</h3>
-          <p class="product-desc">10 weeks. Three runs per week. Long run builds to 12 miles. No complicated workouts. One goal — cross the finish line feeling strong.</p>
-          <ul class="product-includes">
-            <li>10 weeks, 3 runs per week</li>
-            <li>Long run peaks at 12 miles</li>
-            <li>Built-in deload and taper weeks</li>
-            <li>No prior race experience needed</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price">$27</div>
-            <a href="https://buy.stripe.com/3cIcN6a10eWceEGaWv1ZS04" target="_blank" class="btn-product">Get This Plan →</a>
-          </div>
-          <div class="product-instant">⚡ Instant download</div>
-          <div class="product-quote">
-            <p>"I ran my first half-marathon thanks to Always Reddy Athletics. Couldn't have done it without the programming."</p>
-            <cite>— Jake, ARA Client</cite>
-          </div>
-        </div>
-        <div class="product-card product-card--featured">
-          <div class="product-badge">Race Week Essential</div>
-          <div class="product-result">Built for athletes who undertrain race day itself</div>
-          <h3>Race Day Prep Guide</h3>
-          <p class="product-desc">Everything you need for race week, race morning, and race day execution. Warm-up protocols, pacing strategy, nutrition timing, mental prep, and a full race morning checklist.</p>
-          <ul class="product-includes">
-            <li>Race week training schedule</li>
-            <li>Race morning checklist and timing guide</li>
-            <li>Warm-up and activation protocols</li>
-            <li>Pacing strategy and mental frameworks</li>
-            <li>Post-race recovery plan</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price">$17</div>
-            <a href="race-day.html" class="btn-product">Get the Guide →</a>
-          </div>
-          <div class="product-instant">⚡ Instant download</div>
-        </div>
-        <div class="product-card product-card--featured">
-          <div class="product-badge" style="background:transparent;border:1px solid #c8a96e;color:#c8a96e;">Free</div>
-          <div class="product-result">The fastest path back to training like an athlete</div>
-          <h3>Return to Training</h3>
-          <p class="product-desc">A free 5-lesson mini course for former athletes who haven't trained consistently in months or years. No judgment. Just the exact framework Coach Tyler uses to rebuild athletes from zero.</p>
-          <ul class="product-includes">
-            <li>Lesson 1: Why Former Athletes Get Stuck</li>
-            <li>Lesson 2: Your Movement Baseline</li>
-            <li>Lesson 3: Your First 4-Week Structure</li>
-            <li>Lesson 4: The Nutrition Reset That Works</li>
-            <li>Lesson 5: What Happens After Week 4</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price" style="color:#c8a96e;">Free</div>
-            <a href="return-to-training.html" class="btn-product">Start the Course →</a>
-          </div>
-        </div>
-      </div>
-      <div class="products-category-label">Half Marathon Plans</div>
-      <div class="products-grid products-grid--three">
-        <div class="product-card">
-          <div class="product-result">ARA athlete ran 1:42 on this plan</div>
-          <h3>Sub 1:45 Half Marathon</h3>
-          <p class="product-desc">13 weeks built for runners chasing a specific time goal. Intervals, tempo work, and race pace long runs that make sub-1:45 feel inevitable.</p>
-          <ul class="product-includes">
-            <li>13 weeks of structured training</li>
-            <li>Interval and tempo sessions</li>
-            <li>Race pace long runs</li>
-            <li>Strength work integrated</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price">$47</div>
-            <a href="https://buy.stripe.com/28E28sgpo7tK7cee8H1ZS02" target="_blank" class="btn-product">Get This Plan →</a>
-          </div>
-          <div class="product-instant">⚡ Instant download</div>
-        </div>
-        <div class="product-card">
-          <div class="product-result">Used by an ARA athlete to set a new PR</div>
-          <h3>Intermediate Half Marathon</h3>
-          <p class="product-desc">14 weeks for runners who've done a half marathon and are ready to race one faster. Tempo runs, mile repeats, and race pace long runs that build real competitive edge.</p>
-          <ul class="product-includes">
-            <li>14 weeks of structured training</li>
-            <li>Two built-in deload weeks</li>
-            <li>Tempo and interval sessions</li>
-            <li>Race pace development built in</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price">$37</div>
-            <a href="https://buy.stripe.com/9B6dRa0qq9BSeEGe8H1ZS03" target="_blank" class="btn-product">Get This Plan →</a>
-          </div>
-          <div class="product-instant">⚡ Instant download</div>
-        </div>
-        <div class="product-card">
-          <div class="product-badge">New</div>
-          <div class="product-result">For runners ready to step up from a 5K</div>
-          <h3>8-Week 10K Plan</h3>
-          <p class="product-desc">Eight weeks. Four runs per week. Tempo work, interval sessions, and a long run that peaks at 7 miles before you taper into race week.</p>
-          <ul class="product-includes">
-            <li>8 weeks, 4 runs per week</li>
-            <li>Interval and tempo sessions</li>
-            <li>Long run peaks at 7 miles</li>
-            <li>Built-in deload and race week taper</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price">$22</div>
-            <a href="https://buy.stripe.com/cNicN63CC3dufIK4y71ZS09" target="_blank" rel="noopener" class="btn-product">Get This Plan →</a>
-          </div>
-          <div class="product-instant">⚡ Instant download</div>
-        </div>
-      </div>
-      <div class="products-category-label">Short Race Plans</div>
-      <div class="products-grid">
-        <div class="product-card">
-          <div class="product-badge">New</div>
-          <div class="product-result">Built for your first or fastest 5K</div>
-          <h3>6-Week 5K Plan</h3>
-          <p class="product-desc">Six weeks. Three runs per week. Easy runs, one tempo session, and a race week taper that actually prepares you. No complicated workouts — just the structure you need to cross the line strong.</p>
-          <ul class="product-includes">
-            <li>6 weeks, 3 runs per week</li>
-            <li>Tempo and easy run progressions</li>
-            <li>Race week taper included</li>
-            <li>Under 45 minutes per session</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price">$17</div>
-            <a href="https://buy.stripe.com/28EbJ28WW15meEG3u31ZS08" target="_blank" rel="noopener" class="btn-product">Get This Plan →</a>
-          </div>
-          <div class="product-instant">⚡ Instant download</div>
-        </div>
-        <div class="product-card product-card--featured">
-          <div class="product-badge" style="background:transparent;border:1px solid #c8a96e;color:#c8a96e;">Free</div>
-          <div class="product-result">Find the right plan for your exact situation</div>
-          <h3>Athlete Match Quiz</h3>
-          <p class="product-desc">Not sure where to start? Answer 6 quick questions about your background, goals, and schedule. We'll match you with the right plan — or tell you if 1-on-1 coaching is the better move.</p>
-          <ul class="product-includes">
-            <li>6 quick questions</li>
-            <li>Personalized plan recommendation</li>
-            <li>Takes under 2 minutes</li>
-            <li>No email required</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price" style="color:#c8a96e;">Free</div>
-            <a href="quiz.html" class="btn-product">Take the Quiz →</a>
-          </div>
-        </div>
-      </div>
-      <div class="products-category-label">Strength Plans</div>
-      <div class="products-grid products-grid--three">
-        <div class="product-card">
-          <div class="product-result">For serious lifters ready to push</div>
-          <h3>8-Week Advanced Strength</h3>
-          <p class="product-desc">Six days per week. Heavy compound movements, conditioning finishers, and two peak weeks. This program finds your ceiling — then removes it.</p>
-          <ul class="product-includes">
-            <li>8 weeks, 5–6 days per week</li>
-            <li>Two peak weeks built in</li>
-            <li>Full warm-up and cool-down protocols</li>
-            <li>Progressive overload every week</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price">$37</div>
-            <a href="https://buy.stripe.com/aFa28s1uu7tK68a3u31ZS07" target="_blank" class="btn-product">Get This Plan →</a>
-          </div>
-          <div class="product-instant">⚡ Instant download</div>
-        </div>
-        <div class="product-card">
-          <div class="product-result">For athletes ready to train with structure</div>
-          <h3>6-Week Intermediate Strength</h3>
-          <p class="product-desc">Four days per week. Two strength days, two functional movement days. Progressive overload built in every week. This is where real change happens.</p>
-          <ul class="product-includes">
-            <li>6 weeks, 4 days per week</li>
-            <li>Strength + functional days</li>
-            <li>Progressive overload every week</li>
-            <li>Full gym required</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price">$27</div>
-            <a href="https://buy.stripe.com/14AfZic98cO44023u31ZS06" target="_blank" class="btn-product">Get This Plan →</a>
-          </div>
-          <div class="product-instant">⚡ Instant download</div>
-        </div>
-        <div class="product-card">
-          <div class="product-result">The foundation every athlete needs</div>
-          <h3>4-Week Beginner Strength</h3>
-          <p class="product-desc">Three workouts per week. Under 30 minutes each. Learn the movements, build the habit, come out stronger. Dumbbells and a bench — that's all you need.</p>
-          <ul class="product-includes">
-            <li>4 weeks, 3 days per week</li>
-            <li>Under 30 minutes per session</li>
-            <li>Dumbbells only — no barbell needed</li>
-            <li>Progressions built into weeks 3–4</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price">$17</div>
-            <a href="https://buy.stripe.com/6oU6oI5KK15m1RU5Cb1ZS05" target="_blank" class="btn-product">Get This Plan →</a>
-          </div>
-          <div class="product-instant">⚡ Instant download</div>
-          <div class="product-quote">
-            <p>"Once I had a real plan, I felt 100% every session. The structure made all the difference."</p>
-            <cite>— Tom, ARA Client</cite>
-          </div>
-        </div>
-      </div>
-      <div class="products-category-label">Training Tools</div>
-      <div class="products-grid">
-        <div class="product-card">
-          <div class="product-badge">New</div>
-          <div class="product-result">Track every session like a real athlete</div>
-          <h3>12-Week Training Log</h3>
-          <p class="product-desc">A structured 12-week PDF template built for athletes who want to track their training seriously. Log sets, reps, pace, RPE, sleep, and notes — every session, every week.</p>
-          <ul class="product-includes">
-            <li>12 weekly tracking sheets</li>
-            <li>Daily log: sets, reps, pace, RPE, notes</li>
-            <li>Weekly reflection and goal-setting prompts</li>
-            <li>Month-over-month performance comparison</li>
-            <li>Printable + fillable PDF</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price">$17</div>
-            <a href="https://buy.stripe.com/00w3cw5KK9BSbsu2pZ1ZS0b" target="_blank" rel="noopener" class="btn-product">Get the Log →</a>
-          </div>
-          <div class="product-instant">⚡ Instant download</div>
-        </div>
-        <div class="product-card" style="background:transparent;border-color:rgba(255,255,255,0.04);">
-        </div>
-      </div>
-    </div><!-- end .all-plans -->
+    <div id="plans-all" style="display:none;margin-top:40px;">
+      <p style="text-align:center;color:rgba(244,242,239,0.5);font-size:0.9rem;margin-bottom:32px;">Running plans from $17 · Strength plans from $17 · <a href="quiz.html" style="color:var(--accent);text-decoration:none;">Take the quiz to find your match →</a></p>
+    </div>
 
   </div>
 </section>
 
-<section class="guarantee">
-  <div class="container">
-    <div class="section-label" style="text-align:center">The Guarantee</div>
-    <div class="guarantee-box">
-      <div class="guarantee-badge">100%</div>
-      <div class="guarantee-title">The Do The Work <em>Guarantee</em></div>
-      <p class="guarantee-text">Complete all 12 weeks of The Athletic Rebuild — attend your check-ins, submit your form videos, follow the nutrition framework, and show up to your sessions.</p>
-      <p class="guarantee-text"><strong style="color:var(--white)">If you don't feel stronger, leaner, and more athletic than when you started — I'll coach you for free for an additional 4 weeks until you do.</strong></p>
-      <p class="guarantee-text" style="font-size:0.85rem;margin-top:8px;">No fine print. No hoops. Just results.</p>
-    </div>
-  </div>
-</section>
 
 <section class="faq">
   <div class="container">
@@ -916,9 +610,8 @@
     <p>Applications are reviewed and accepted on a rolling basis. Spots are intentionally limited — every client gets a real coaching experience, not a cattle call.</p>
     <div class="cta-actions">
       <a href="#apply" class="btn-primary btn-large" onclick="openApplyModal();return false;">Apply for The Athletic Rebuild →</a>
-      <a href="https://calendly.com/tylerreddy96/30min" class="btn-ghost btn-large" target="_blank" rel="noopener">Schedule a Free Call First</a>
     </div>
-    <p style="margin-top:24px;font-size:0.85rem;color:rgba(244,242,239,0.4);">Real coaching. Real commitment. Built for athletes who know the difference.</p>
+    <p style="margin-top:20px;font-size:0.85rem;color:rgba(244,242,239,0.4);">Prefer to talk first? <a href="https://calendly.com/tylerreddy96/30min" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">Schedule a free 30-min call →</a></p>
   </div>
 </section>
 
