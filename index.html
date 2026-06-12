@@ -48,21 +48,6 @@
     nav { position:fixed; top:var(--announce-h); left:0; right:0; z-index:100; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; background:rgba(10,10,10,0.92); backdrop-filter:blur(10px); border-bottom:1px solid rgba(200,169,110,0.15); }
     .nav-logo { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1.1rem; letter-spacing:0.05em; text-transform:uppercase; color:var(--white); text-decoration:none; }
     .nav-logo span { color:var(--accent); }
-    .nav-links { display:flex; gap:28px; align-items:center; }
-    .nav-links a { font-family:'Barlow Condensed',sans-serif; font-size:0.82rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#888888; text-decoration:none; transition:color 0.2s; }
-    .nav-links a:hover { color:#f4f2ef; }
-    .nav-hamburger { display:none; flex-direction:column; justify-content:center; gap:5px; cursor:pointer; padding:4px; background:none; border:none; flex-shrink:0; }
-    .nav-hamburger span { display:block; width:22px; height:2px; background:#f4f2ef; border-radius:2px; transition:all .25s; }
-    .nav-hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
-    .nav-hamburger.open span:nth-child(2) { opacity:0; }
-    .nav-hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
-    .mobile-menu { display:none; position:fixed; top:53px; left:0; right:0; background:#0d0d0d; border-bottom:1px solid rgba(200,169,110,0.15); z-index:99; padding:8px 0 16px; }
-    .mobile-menu a { display:block; padding:14px 22px; font-family:'Barlow Condensed',sans-serif; font-size:1.05rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#888; text-decoration:none; border-bottom:.5px solid rgba(255,255,255,0.04); transition:color .2s; }
-    .mobile-menu a:hover { color:#f4f2ef; }
-    .mobile-menu .mobile-cta { color:#c8a96e; border-bottom:none; margin-top:4px; }
-    .mobile-menu .mobile-apply { display:block; margin:12px 22px 0; padding:13px; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:.95rem; letter-spacing:.08em; text-transform:uppercase; text-align:center; color:#0a0a0a; background:#c8a96e; text-decoration:none; border-radius:2px; transition:background .2s; }
-    .mobile-menu .mobile-apply:hover { background:#a8893e; }
-    .nav-actions { display:flex; gap:12px; align-items:center; }
     .btn-ghost { font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--white); text-decoration:none; padding:8px 16px; border:1px solid rgba(255,255,255,0.2); border-radius:2px; transition:all 0.2s; white-space:nowrap; background:none; cursor:pointer; }
     .btn-ghost:hover { border-color:var(--accent); color:var(--accent); }
     .btn-primary { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.9rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--black); background:var(--accent); text-decoration:none; padding:10px 20px; border-radius:2px; border:none; cursor:pointer; transition:all 0.2s; display:inline-block; white-space:nowrap; }
@@ -228,18 +213,11 @@
       section { padding:60px 0; }
       nav { padding:14px 16px; }
       .nav-logo { font-size:0.9rem; }
-      .btn-ghost.nav-hide { display:none; }
-      .nav-links { display:none; }
-      .nav-hamburger { display:flex; }
-      .mobile-menu.open { display:block; }
-      .btn-primary { font-size:0.8rem; padding:9px 16px; }
+      .btn-primary { font-size:0.8rem; padding:9px 14px; }
       .hero { min-height:100svh; padding-top:calc(70px + var(--announce-h)); }
       .hero-sub { font-size:1rem; margin-bottom:28px; }
-      .hero-stats { gap:20px; flex-wrap:wrap; }
       .hero-actions { flex-direction:column; align-items:stretch; gap:12px; }
-      .hero-actions .btn-primary,.hero-actions .btn-ghost { width:100%; text-align:center; display:block; padding:14px 20px; font-size:0.9rem; }
-      .badge-row { gap:8px; }
-      .badge { font-size:0.68rem; padding:5px 10px; }
+      .hero-actions .btn-primary { width:100%; text-align:center; display:block; padding:14px 20px; font-size:0.9rem; }
       .problem-grid { grid-template-columns:1fr; gap:40px; }
       .pillars-grid { grid-template-columns:1fr 1fr; }
       .includes-grid { grid-template-columns:1fr; gap:20px; }
@@ -264,9 +242,6 @@
     }
     @media(max-width:480px) {
       .pillars-grid { grid-template-columns:1fr; }
-      .hero-stat-num { font-size:1.5rem; }
-      .hero-stat-label { font-size:0.72rem; }
-      .hero-stats { gap:16px; }
       .system-card { padding:20px; }
       .system-card h3 { font-size:1.8rem; }
       .guarantee-box { padding:24px 16px; }
@@ -334,53 +309,16 @@
 
 <nav>
   <a href="#" class="nav-logo">Always <span>Reddy</span> Athletics</a>
-  <div class="nav-links">
-    <a href="#athletic-rebuild">Programs</a>
-    <a href="plans/">Plans</a>
-    <a href="quiz.html">Quiz</a>
-    <a href="#about">About</a>
-    <a href="blog/">Blog</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  <div class="nav-actions">
-    <a href="#apply" class="btn-primary" onclick="openApplyModal();return false;">Apply Now</a>
-    <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+  <a href="#apply" class="btn-primary" onclick="openApplyModal();return false;">Apply for The Athletic Rebuild →</a>
 </nav>
-
-<div class="mobile-menu" id="mobile-menu">
-  <a href="#athletic-rebuild" onclick="closeMobileMenu()">Programs</a>
-  <a href="plans/" onclick="closeMobileMenu()">Plans</a>
-  <a href="quiz.html" onclick="closeMobileMenu()">Quiz</a>
-  <a href="#about" onclick="closeMobileMenu()">About</a>
-  <a href="blog/" onclick="closeMobileMenu()">Blog</a>
-  <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
-  <a href="subscribe.html" class="mobile-cta" onclick="closeMobileMenu()">Free Training Guide</a>
-  <a href="#apply" class="mobile-apply" onclick="openApplyModal();closeMobileMenu();return false;">Apply for Coaching →</a>
-</div>
 
 <section class="hero">
   <div class="container">
-    <div class="hero-eyebrow">Limited Spots — The Athletic Rebuild</div>
-    <h1 class="hero-title">You Were Built<br><em>To Compete.</em><br>Start Again.</h1>
-    <p class="hero-sub">You spent years training like an athlete. Then real life happened. Now you're strong enough to remember what you had — and hungry enough to get it back.</p>
-    <div class="badge-row">
-      <span class="badge">Former Athletes Only</span>
-      <span class="badge">1-on-1 Private Coaching</span>
-      <span class="badge">Custom Plan — No Templates</span>
-      <span class="badge">Community Included</span>
-    </div>
+    <div class="hero-eyebrow">— The Athletic Rebuild —</div>
+    <h1 class="hero-title">You Were Built<br><em>To Compete.</em></h1>
+    <p class="hero-sub">A 12-week 1-on-1 rebuild for former athletes who are done going through the motions.</p>
     <div class="hero-actions">
       <a href="#apply" class="btn-primary btn-large" onclick="openApplyModal();return false;">Apply for The Athletic Rebuild →</a>
-    </div>
-    <p style="font-size:0.85rem;color:rgba(244,242,239,0.4);margin-bottom:40px;">Not ready to apply? <a href="#guide" onclick="openGuideModal();return false;" style="color:var(--accent);text-decoration:none;">Get the free training guide →</a></p>
-    <div class="hero-stats">
-      <div><div class="hero-stat-num">12</div><div class="hero-stat-label">Week Program</div></div>
-      <div><div class="hero-stat-num">1:1</div><div class="hero-stat-label">Private Coaching</div></div>
-      <div><div class="hero-stat-num">100%</div><div class="hero-stat-label">Client PR Rate</div></div>
-      <div><div class="hero-stat-num">1:18</div><div class="hero-stat-label">Faster. Same course. Under 12 months.</div></div>
     </div>
   </div>
 </section>
