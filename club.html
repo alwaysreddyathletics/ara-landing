@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Rebuild Club — Always Reddy Athletics</title>
+<meta name="description" content="Monthly athlete programming for former athletes with desk jobs. Running, strength, mobility, challenges. Founding rate $67/mo — first 50 members only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0D0D0D; --ink:#181818; --line:#2A2A2A;
+    --gold:#D4A017; --gold-hot:#F0B429;
+    --bone:#F2EFE9; --mut:#9A968E;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--black);color:var(--bone);font-family:'Barlow',sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;line-height:.95;letter-spacing:.01em}
+  /* lane-line divider — the track motif */
+  .lane{border:0;height:7px;margin:64px 0;background:
+    linear-gradient(var(--gold),var(--gold)) top/100% 2px no-repeat,
+    linear-gradient(var(--gold),var(--gold)) bottom/100% 2px no-repeat;opacity:.55}
+  .eyebrow{font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.22em;font-size:.82rem;color:var(--gold)}
+  /* HERO */
+  header{padding:84px 0 56px;text-align:left}
+  .h-title{font-weight:900;font-size:clamp(3.4rem,11vw,5.6rem);margin:14px 0 6px}
+  .h-title .struck{position:relative;color:var(--mut);white-space:nowrap}
+  .h-title .struck::after{content:"";position:absolute;left:-2%;right:-2%;top:52%;height:.09em;background:var(--gold);transform:rotate(-2deg)}
+  .h-title .still{color:var(--gold)}
+  .h-sub{color:var(--mut);max-width:34em;margin-top:18px}
+  .stats{display:flex;gap:0;margin-top:40px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stat{flex:1;padding:16px 6px;text-align:center;border-left:1px solid var(--line)}
+  .stat:first-child{border-left:0}
+  .stat b{display:block;font-family:'Barlow Condensed';font-weight:900;font-size:1.9rem;color:var(--bone)}
+  .stat span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+  /* CTA */
+  .btn{display:block;text-align:center;background:var(--gold);color:var(--black);font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:1.25rem;padding:18px 28px;text-decoration:none;margin-top:34px;transition:background .15s ease}
+  .btn:hover{background:var(--gold-hot)}
+  .btn:focus-visible{outline:3px solid var(--bone);outline-offset:3px}
+  .under{display:block;text-align:center;color:var(--mut);font-size:.85rem;margin-top:10px}
+  .under a{color:var(--gold);text-decoration:none}
+  /* STORY */
+  .story p{margin-bottom:1.1em}
+  .story .kick{font-family:'Barlow Condensed';font-weight:700;font-size:1.5rem;text-transform:uppercase;color:var(--bone)}
+  /* OFFER */
+  h2{font-weight:900;font-size:clamp(2.2rem,7vw,3.2rem);margin-bottom:26px}
+  .item{display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
+  .item:last-of-type{border-bottom:1px solid var(--line)}
+  .tick{flex:0 0 auto;width:12px;height:12px;margin-top:8px;background:var(--gold)}
+  .item h3{font-size:1.35rem;font-weight:700;margin-bottom:4px}
+  .item p{color:var(--mut);font-size:.95rem}
+  /* PRICING */
+  .price-card{border:2px solid var(--gold);background:var(--ink);padding:36px 28px;margin-top:8px}
+  .price-card .eyebrow{display:block;text-align:center}
+  .price{display:flex;align-items:baseline;justify-content:center;gap:10px;margin:14px 0 4px}
+  .price b{font-family:'Barlow Condensed';font-weight:900;font-size:5rem;color:var(--bone)}
+  .price s{color:var(--mut);font-size:1.4rem}
+  .price em{color:var(--mut);font-style:normal}
+  .locked{text-align:center;color:var(--gold);font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+  /* founding meter — 50 spots */
+  .meter{display:grid;grid-template-columns:repeat(25,1fr);gap:3px;margin:26px 0 8px}
+  .meter i{display:block;height:14px;background:var(--line)}
+  .meter i.f{background:var(--gold)}
+  .meter-label{display:flex;justify-content:space-between;color:var(--mut);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}
+  .guarantee{margin-top:40px;border-left:3px solid var(--gold);padding:6px 0 6px 20px;color:var(--mut)}
+  .guarantee b{color:var(--bone)}
+  /* FAQ */
+  details{border-top:1px solid var(--line);padding:18px 0}
+  details:last-of-type{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;font-family:'Barlow Condensed';font-weight:700;font-size:1.25rem;text-transform:uppercase;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";float:right;color:var(--gold);font-weight:900}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--mut);margin-top:10px;font-size:.97rem}
+  /* CLOSE */
+  .close-line{font-family:'Barlow Condensed';font-weight:900;font-size:clamp(1.9rem,6vw,2.7rem);text-transform:uppercase;line-height:1.05}
+  .close-line span{color:var(--gold)}
+  footer{padding:70px 0 40px;color:var(--mut);font-size:.8rem;text-align:center}
+  footer a{color:var(--mut)}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <span class="eyebrow">Always Reddy Athletics presents</span>
+  <h1 class="h-title">You <span class="struck">used to be</span><br><span class="still">are still</span> an athlete.</h1>
+  <p class="h-sub">Then came the desk. The commute. The meetings that could have been emails. Here's the truth nobody tells you: the athlete didn't leave — the system did. You didn't get soft. You got busy, and nobody handed you a plan built for the life you actually live.</p>
+  <p class="h-sub" style="color:var(--bone);font-weight:600;margin-top:14px">The Rebuild Club is that plan.</p>
+
+  <div class="stats" aria-label="Coach results">
+    <div class="stat"><b>3:27</b><span>Marathon PR</span></div>
+    <div class="stat"><b>1 HR+</b><span>Faster in under a year</span></div>
+    <div class="stat"><b>ULTRA</b><span>37 mi · 8,000 ft of elevation</span></div>
+  </div>
+
+  <a class="btn" href="https://www.skool.com/always-reddy-athletics-9861/about">Claim a founding spot — $67/mo</a>
+  <span class="under">Not ready? <a href="#FREE_STARTER">Start with the free 5-day starter →</a></span>
+</header>
+
+<div class="wrap"><hr class="lane"></div>
+
+<section class="wrap story">
+  <span class="eyebrow">The story</span>
+  <h2>Built with a full-time job</h2>
+  <p class="kick">I'm not a genetic freak, and I don't train four hours a day.</p>
+  <p>But in the last fourteen months, on a system built around a real schedule, I took my marathon from 4:45 to 3:27 on the same course. I ran 37 miles with 8,000 feet of climbing through the mountains. Two weeks later I was on a track running quarter-mile repeats at a pace I couldn't touch in high school.</p>
+  <p>Not because I found more time. Because I stopped training randomly and started training like an athlete again — running that builds an engine, lifting that builds a frame, mobility that keeps a desk-job body moving like it did at 18.</p>
+  <p style="color:var(--bone)">That system is what I coach. And now it's what you can train on, every single month.</p>
+</section>
+
+<div class="wrap"><hr class="lane"></div>
+
+<section class="wrap">
+  <span class="eyebrow">What's inside</span>
+  <h2>Everything you need to train like an athlete again</h2>
+
+  <div class="item"><i class="tick"></i><div><h3>Monthly running programs</h3><p>Two tracks — Speed (5K/10K) and Endurance (half/marathon). Real paces, real structure, a fresh 4-week block every month.</p></div></div>
+  <div class="item"><i class="tick"></i><div><h3>Athlete strength sessions</h3><p>Purposeful, unilateral, functional. Built to keep you fast <em>and</em> strong — sets, reps, tempos, all of it.</p></div></div>
+  <div class="item"><i class="tick"></i><div><h3>Weekly mobility flows</h3><p>10–15 minute follow-alongs that undo the desk.</p></div></div>
+  <div class="item"><i class="tick"></i><div><h3>Monthly challenges + leaderboard</h3><p>Mile time trials, hill repeats, plank ladders. You miss competing — I know you do.</p></div></div>
+  <div class="item"><i class="tick"></i><div><h3>Monthly live Q&amp;A with me</h3><p>Bring your training, your race, your plateau.</p></div></div>
+  <div class="item"><i class="tick"></i><div><h3>The PR Playbooks</h3><p>My exact taper, pacing, and race-week protocols.</p></div></div>
+</section>
+
+<div class="wrap"><hr class="lane"></div>
+
+<section class="wrap">
+  <span class="eyebrow">Founding membership</span>
+  <div class="price-card">
+    <span class="eyebrow">Over $300/month of coaching. Founding members pay:</span>
+    <div class="price"><s>$97</s><b>$67</b><em>/month</em></div>
+    <p class="locked">Locked for life · First 50 athletes only</p>
+    <div class="meter" aria-label="Founding spots taken">
+      <i class="f"></i><i class="f"></i><i class="f"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <div class="meter-label"><span>Spot 1</span><span>Member 51 pays $97</span></div>
+    <a class="btn" href="https://www.skool.com/always-reddy-athletics-9861/about">Join the Rebuild Club</a>
+  </div>
+  <p class="guarantee"><b>The 14-day guarantee.</b> If you don't feel like an athlete again — if the training doesn't feel purposeful, if you don't catch yourself checking the leaderboard — email me and I'll refund every cent. No forms, no friction.</p>
+</section>
+
+<div class="wrap"><hr class="lane"></div>
+
+<section class="wrap">
+  <span class="eyebrow">Questions</span>
+  <h2>Straight answers</h2>
+  <details><summary>Is this 1-on-1 coaching?</summary><p>No — the Club is group programming. Every month you get my full training system (running, strength, mobility) in two tracks — Speed (5K/10K) and Endurance (half/marathon); you pick yours and train alongside the whole Club. If you want a plan built specifically around you with direct check-ins, that's <a href="/index.html" style="color:var(--gold)">The Athletic Rebuild</a>, my 1-on-1 coaching.</p></details>
+  <details><summary>How much time does it take?</summary><p>45–60 minutes a day, five to six days a week. Built for a person with a job, not a pro with a nap schedule.</p></details>
+  <details><summary>I haven't trained seriously in years. Is this for me?</summary><p>It's built for exactly you. Every program has an on-ramp tier, and the strength work scales from bodyweight up. You start where you are.</p></details>
+  <details><summary>What happens after I join?</summary><p>You're in the Club instantly — checkout and membership both live on Skool. The pinned Start Here post walks you through picking your track (Speed: 5K/10K, or Endurance: half/marathon), posting an intro, and starting this week's training. Cancel anytime in two clicks from your settings.</p></details>
+</section>
+
+<div class="wrap"><hr class="lane"></div>
+
+<section class="wrap" style="padding-bottom:20px">
+  <p class="close-line">A year from now you'll either be the person who <span>used to be</span> an athlete —<br>or the person who <span>came back</span>.</p>
+  <p style="color:var(--mut);margin-top:16px">$67 a month decides which story you tell.</p>
+  <a class="btn" href="https://www.skool.com/always-reddy-athletics-9861/about">Claim a founding spot</a>
+  <span class="under">14-day full refund · Cancel anytime · <a href="#FREE_STARTER">or start free</a></span>
+</section>
+
+<footer class="wrap">
+  <p>© 2026 Always Reddy Athletics · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
+</footer>
+
+</body>
+</html>
