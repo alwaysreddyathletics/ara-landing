@@ -122,6 +122,7 @@
     .btn.danger:hover { border-color:#c0554f; color:#c0554f; }
     .save-indicator { font-size:0.78rem; color:var(--accent); opacity:0; transition:opacity .3s; }
     .save-indicator.show { opacity:1; }
+    .sync-note { font-size:0.78rem; color:var(--muted); width:100%; margin-top:4px; }
 
     .footer-note { padding:40px 0 60px; text-align:center; color:var(--muted); font-size:0.9rem; }
     .footer-note a { color:var(--accent); text-decoration:none; }
@@ -185,7 +186,7 @@
     <div class="wrap">
       <div class="section-head">
         <h2>Your Training Log</h2>
-        <p>Log miles, pace, and average heart rate after each run. Everything below saves automatically in this browser as you type.</p>
+        <p>Log miles, pace, and average heart rate after each run. Everything below saves automatically in this browser as you type — and sends your coach an update.</p>
       </div>
 
       <div class="log-summary">
@@ -199,8 +200,10 @@
       <div class="toolbar">
         <button class="btn primary" id="exportBtn">Export CSV</button>
         <button class="btn" id="printBtn">Print / Save PDF</button>
+        <button class="btn" id="resendBtn">Resend All to Coach</button>
         <button class="btn danger" id="clearBtn">Clear Log Data</button>
         <span class="save-indicator" id="saveIndicator">Saved ✓</span>
+        <span class="save-indicator" id="syncIndicator">Sent to coach ✓</span>
       </div>
     </div>
   </section>
@@ -211,6 +214,15 @@
   </div>
 
 <script>
+// ---- Coach sync config ----
+// Paste your Web3Forms access key below to email Coach Tyler on every logged run.
+// Optional: paste a Google Apps Script Web App URL to also append each run to a Google Sheet.
+// Leaving these blank keeps the page fully working (autosave only) with sync silently disabled.
+const CONFIG = {
+  web3formsAccessKey: '',
+  sheetWebAppUrl: '',
+};
+
 const WEEKS = [
   { n:1, dates:'Aug 3–9', start:'2026-08-03', end:'2026-08-09', target:'10 mi', phase:'BASE', tag:null,
     focus:'Slower than feels natural. Keep easy days easy.',
@@ -491,6 +503,7 @@ function renderLogRow(w, row, idx, weekWrap) {
       saveLog(logData);
       refreshWeekLoggedLabel(w, weekWrap);
       updateSummary();
+      scheduleSync(w, idx);
     });
   });
   r.querySelector('.remove-row').addEventListener('click', () => {
@@ -503,6 +516,77 @@ function renderLogRow(w, row, idx, weekWrap) {
     updateSummary();
   });
   return r;
+}
+
+// ---- Sync to coach (Web3Forms email + optional Google Sheet) ----
+const syncTimers = {};
+const SYNC_DELAY = 1200;
+
+function isConfigured() {
+  return !!(CONFIG.web3formsAccessKey || CONFIG.sheetWebAppUrl);
+}
+
+function rowHash(row) {
+  return JSON.stringify([row.date, row.miles, row.pace, row.bpm]);
+}
+
+async function sendRowUpdate(w, row) {
+  const payload = {
+    access_key: CONFIG.web3formsAccessKey,
+    subject: `Ellese logged a run — Week ${w.n}`,
+    from_name: 'Ellese — Poconos Half Log',
+    athlete: 'Ellese',
+    week: w.n,
+    week_dates: w.dates,
+    date: row.date || '',
+    miles: row.miles || '',
+    pace: row.pace || '',
+    avg_bpm: row.bpm || '',
+    message: `Week ${w.n} (${w.dates}) — ${row.date || 'no date'}: ${row.miles || '?'} mi, pace ${row.pace || '—'}, avg BPM ${row.bpm || '—'}`
+  };
+
+  if (CONFIG.web3formsAccessKey) {
+    try {
+      await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    } catch (e) { /* will retry on next edit or manual resend */ }
+  }
+
+  if (CONFIG.sheetWebAppUrl) {
+    try {
+      await fetch(CONFIG.sheetWebAppUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify(payload)
+      });
+    } catch (e) { /* will retry on next edit or manual resend */ }
+  }
+}
+
+function flashSyncIndicator() {
+  const ind = document.getElementById('syncIndicator');
+  ind.classList.add('show');
+  clearTimeout(flashSyncIndicator._t);
+  flashSyncIndicator._t = setTimeout(() => ind.classList.remove('show'), 2000);
+}
+
+function scheduleSync(w, idx) {
+  if (!isConfigured()) return;
+  const key = 'w' + w.n + '-' + idx;
+  clearTimeout(syncTimers[key]);
+  syncTimers[key] = setTimeout(async () => {
+    const row = getWeekRows(w)[idx];
+    if (!row || !row.date || !row.miles) return;
+    const hash = rowHash(row);
+    if (row._sentHash === hash) return;
+    await sendRowUpdate(w, row);
+    row._sentHash = hash;
+    saveLog(logData);
+    flashSyncIndicator();
+  }, SYNC_DELAY);
 }
 
 function refreshWeekLoggedLabel(w, weekWrap) {
@@ -542,6 +626,23 @@ document.getElementById('exportBtn').addEventListener('click', () => {
 });
 
 document.getElementById('printBtn').addEventListener('click', () => window.print());
+
+document.getElementById('resendBtn').addEventListener('click', async () => {
+  if (!isConfigured()) { alert('Coach sync isn\'t set up on this page yet.'); return; }
+  let count = 0;
+  for (const w of WEEKS) {
+    for (const row of getWeekRows(w)) {
+      if (row.date && row.miles) {
+        await sendRowUpdate(w, row);
+        row._sentHash = rowHash(row);
+        count++;
+      }
+    }
+  }
+  saveLog(logData);
+  flashSyncIndicator();
+  alert(count ? `Resent ${count} log entr${count === 1 ? 'y' : 'ies'} to your coach.` : 'No logged runs to send yet.');
+});
 
 document.getElementById('clearBtn').addEventListener('click', () => {
   if (!confirm('Clear all logged training data in this browser? This cannot be undone.')) return;
