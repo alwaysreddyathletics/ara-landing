@@ -92,6 +92,40 @@
     .lift-items { list-style:none; }
     .lift-items li { font-size:0.82rem; color:#c9c6c2; padding:1px 0; }
 
+    .block { position:relative; cursor:pointer; border-radius:5px; padding:6px 34px 6px 8px; margin:-6px -8px; transition:background .15s; }
+    .block:hover, .block:active { background:rgba(200,169,110,0.07); }
+    .share-hint { position:absolute; top:6px; right:8px; font-family:'Barlow Condensed',sans-serif; font-size:0.58rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); opacity:0.6; white-space:nowrap; }
+    .block:hover .share-hint { color:var(--accent); opacity:1; }
+
+    /* Share card modal */
+    .share-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.82); backdrop-filter:blur(4px); display:none; align-items:center; justify-content:center; z-index:1000; padding:28px 16px; }
+    .share-overlay.open { display:flex; }
+    .share-close { position:absolute; top:20px; right:20px; width:38px; height:38px; border-radius:50%; border:1px solid rgba(255,255,255,0.2); background:rgba(0,0,0,0.4); color:var(--white); font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+    .share-close:hover { border-color:var(--accent); color:var(--accent); }
+    .share-card { position:relative; display:flex; flex-direction:column; width:100%; max-width:420px; max-height:88vh; overflow:hidden; background:linear-gradient(165deg,#161514,#0a0a0a 65%); border:1px solid rgba(200,169,110,0.4); border-radius:10px; box-shadow:0 25px 70px rgba(0,0,0,0.65), 0 0 0 1px rgba(200,169,110,0.08); }
+    .share-card::before { content:''; display:block; height:5px; background:linear-gradient(90deg, var(--accent-dark), var(--accent) 50%, var(--accent-dark)); }
+    .share-card-top { flex-shrink:0; padding:24px 28px 20px; text-align:center; border-bottom:1px solid rgba(200,169,110,0.18); }
+    .share-wordmark { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:1.2rem; letter-spacing:0.14em; text-transform:uppercase; }
+    .share-wordmark span { color:var(--accent); }
+    .share-tagline { font-size:0.58rem; letter-spacing:0.28em; color:var(--muted); text-transform:uppercase; margin-top:6px; }
+    .share-badge { display:inline-block; margin-top:14px; padding:5px 14px; border:1px solid rgba(200,169,110,0.55); border-radius:20px; background:rgba(200,169,110,0.08); font-family:'Barlow Condensed',sans-serif; font-size:0.62rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); }
+    .share-card-body { flex:1; overflow-y:auto; padding:28px 28px 26px; text-align:center; }
+    .share-owner { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:1.55rem; letter-spacing:0.03em; color:var(--accent); text-transform:uppercase; margin-bottom:6px; }
+    .share-meta { font-family:'Barlow Condensed',sans-serif; font-size:0.74rem; font-weight:700; letter-spacing:0.08em; color:var(--muted); text-transform:uppercase; margin-bottom:22px; }
+    .share-title { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(1.7rem,6vw,2.3rem); line-height:1.05; margin-bottom:16px; }
+    .share-sub { font-size:1rem; color:#dcd9d5; line-height:1.6; }
+    .share-lift-groups { margin-top:6px; text-align:left; }
+    .share-lift-group { margin-bottom:16px; }
+    .share-lift-group:last-child { margin-bottom:0; }
+    .share-lift-group-name { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:800; letter-spacing:0.1em; color:var(--lift); text-transform:uppercase; margin-bottom:8px; border-bottom:1px solid rgba(143,168,194,0.25); padding-bottom:5px; }
+    .share-lift-items { list-style:none; }
+    .share-lift-items li { font-size:0.95rem; color:#e6e3df; padding:4px 0; }
+    .share-card-bottom { flex-shrink:0; padding:20px 28px 24px; background:rgba(200,169,110,0.08); border-top:1px solid rgba(200,169,110,0.22); text-align:center; }
+    .share-bottom-tagline { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.66rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--white); opacity:0.8; margin-bottom:10px; }
+    .share-footer-url { display:inline-block; font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:0.85rem; letter-spacing:0.06em; color:var(--black); text-transform:uppercase; background:var(--accent); padding:9px 20px; border-radius:20px; }
+    .share-footer-handle { font-size:0.74rem; color:var(--muted); margin-top:8px; }
+    .share-instructions { text-align:center; color:var(--muted); font-size:0.78rem; margin-top:14px; max-width:420px; }
+
     /* Log */
     .log-summary { display:flex; gap:1px; background:var(--line); border:1px solid var(--line); margin-bottom:24px; flex-wrap:wrap; }
     .log-summary .box { flex:1; min-width:140px; background:var(--panel2); padding:16px; text-align:center; }
@@ -139,7 +173,7 @@
       .remove-row { grid-column:1 / -1; width:100%; }
     }
     @media print {
-      .topbar, .toolbar, .add-row, .remove-row, .status-banner { display:none !important; }
+      .topbar, .toolbar, .add-row, .remove-row, .status-banner, .share-overlay { display:none !important; }
       body { background:#fff; color:#000; }
       .week-body, .log-week-body { display:block !important; }
     }
@@ -179,11 +213,36 @@
     <div class="wrap">
       <div class="section-head">
         <h2>The Plan</h2>
-        <p>Tap a week to see the full breakdown — running and lifting together, day by day.</p>
+        <p>Tap a week to see the full breakdown — running and lifting together, day by day. Tap any workout to pull up a shareable card for Strava or Instagram.</p>
       </div>
       <div id="phaseGroups"></div>
     </div>
   </section>
+
+  <div class="share-overlay" id="shareOverlay">
+    <button class="share-close" id="shareClose" type="button" aria-label="Close">✕</button>
+    <div>
+      <div class="share-card" id="shareCard">
+        <div class="share-card-top">
+          <div class="share-wordmark">ALWAYS REDDY <span>ATHLETICS</span></div>
+          <div class="share-tagline">Fitness · Lifestyle · Performance</div>
+          <div class="share-badge">Personalized Training Plan</div>
+        </div>
+        <div class="share-card-body">
+          <div class="share-owner" id="shareOwner"></div>
+          <div class="share-meta" id="shareMeta"></div>
+          <div class="share-title" id="shareTitle"></div>
+          <div id="shareBody"></div>
+        </div>
+        <div class="share-card-bottom">
+          <div class="share-bottom-tagline">Coached by Always Reddy Athletics</div>
+          <div class="share-footer-url">alwaysreddyathletics.com</div>
+          <div class="share-footer-handle">@alwaysreddyathletics</div>
+        </div>
+      </div>
+      <div class="share-instructions">Screenshot this card to share your workout on Strava or Instagram.</div>
+    </div>
+  </div>
 
   <section class="section" id="log-section">
     <div class="wrap">
@@ -340,6 +399,7 @@ if (todayISO < WEEKS[0].start) {
 }
 
 // ---- Render plan ----
+const blockRegistry = {};
 const phaseOrder = ['BUILD'];
 const groupsEl = document.getElementById('phaseGroups');
 phaseOrder.forEach(phase => {
@@ -356,19 +416,24 @@ phaseOrder.forEach(phase => {
   groupsEl.appendChild(group);
 });
 
-function renderBlock(b) {
+function renderBlock(w, day, b, idx) {
+  const key = `${w.n}-${day.d}-${idx}`;
+  blockRegistry[key] = { weekN: w.n, weekDates: w.dates, day: day.d, block: b };
+
   if (b.type === 'lift') {
     const groupsHtml = b.groups.map(g => `
       <div class="lift-group">
         <div class="lift-group-name">${g.name}</div>
         <ul class="lift-items">${g.items.map(it => `<li>${it}</li>`).join('')}</ul>
       </div>`).join('');
-    return `<div class="block block-lift">
+    return `<div class="block block-lift" data-key="${key}">
+      <span class="share-hint">Tap to Share</span>
       <div class="block-title">${b.title}</div>
       <div class="lift-groups">${groupsHtml}</div>
     </div>`;
   }
-  return `<div class="block block-${b.type}">
+  return `<div class="block block-${b.type}" data-key="${key}">
+    <span class="share-hint">Tap to Share</span>
     <div class="block-title">${b.title}</div>
     ${b.sub ? `<div class="block-sub">${b.sub}</div>` : ''}
   </div>`;
@@ -383,7 +448,7 @@ function renderWeekCard(w) {
   const daysHTML = w.days.map(d => `
     <div class="day-row ${d.accent ? 'accent-' + d.accent : ''}">
       <div class="d">${d.d}</div>
-      <div class="blocks">${d.blocks.map(renderBlock).join('')}</div>
+      <div class="blocks">${d.blocks.map((b, idx) => renderBlock(w, d, b, idx)).join('')}</div>
     </div>`).join('');
 
   card.innerHTML = `
@@ -633,6 +698,56 @@ document.getElementById('clearBtn').addEventListener('click', () => {
   logWeeksEl.innerHTML = '';
   WEEKS.forEach(w => logWeeksEl.appendChild(renderLogWeek(w)));
   updateSummary();
+});
+
+// ---- Shareable workout cards ----
+const DAY_NAMES = { MON:'Monday', TUE:'Tuesday', WED:'Wednesday', THU:'Thursday', FRI:'Friday', SAT:'Saturday', SUN:'Sunday' };
+const GOAL_RACE = 'Trail Half';
+
+const shareOverlay = document.getElementById('shareOverlay');
+const shareOwner = document.getElementById('shareOwner');
+const shareMeta = document.getElementById('shareMeta');
+const shareTitle = document.getElementById('shareTitle');
+const shareBody = document.getElementById('shareBody');
+
+function openShareCard(entry) {
+  const { weekN, weekDates, day, block } = entry;
+  shareOwner.textContent = `${ATHLETE}'S PLAN`;
+  shareMeta.textContent = `${GOAL_RACE} · Week ${weekN} (${weekDates}) · ${DAY_NAMES[day] || day}`;
+  shareTitle.textContent = block.title;
+
+  if (block.type === 'lift') {
+    shareBody.innerHTML = `<div class="share-lift-groups">${block.groups.map(g => `
+      <div class="share-lift-group">
+        <div class="share-lift-group-name">${g.name}</div>
+        <ul class="share-lift-items">${g.items.map(it => `<li>${it}</li>`).join('')}</ul>
+      </div>`).join('')}</div>`;
+  } else {
+    shareBody.innerHTML = block.sub ? `<div class="share-sub">${block.sub}</div>` : '';
+  }
+
+  shareOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeShareCard() {
+  shareOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('phaseGroups').addEventListener('click', (e) => {
+  const blockEl = e.target.closest('.block');
+  if (!blockEl) return;
+  const entry = blockRegistry[blockEl.dataset.key];
+  if (entry) openShareCard(entry);
+});
+
+document.getElementById('shareClose').addEventListener('click', closeShareCard);
+shareOverlay.addEventListener('click', (e) => {
+  if (e.target === shareOverlay) closeShareCard();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && shareOverlay.classList.contains('open')) closeShareCard();
 });
 </script>
 
