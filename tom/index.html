@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tom's Pittsburgh Great Race Training Plan | Always Reddy Athletics</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --black:#0a0a0a; --panel:#111111; --panel2:#0d0d0d; --white:#f4f2ef; --muted:#8a8785; --accent:#c8a96e; --accent-dark:#a8893e; --line:rgba(255,255,255,0.08); }
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Barlow',sans-serif; background:var(--black); color:var(--white); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+    h1,h2,h3,h4 { font-family:'Barlow Condensed',sans-serif; line-height:1.05; letter-spacing:-0.01em; }
+    em { font-style:normal; color:var(--accent); }
+    a { color:inherit; }
+    .wrap { max-width:920px; margin:0 auto; padding:0 20px; }
+    .eyebrow { font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); }
+
+    /* Topbar */
+    .topbar { padding:18px 20px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+    .logo { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1rem; letter-spacing:0.05em; text-transform:uppercase; text-decoration:none; color:var(--white); }
+    .logo span { color:var(--accent); }
+    .topbar .tag { font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); }
+
+    /* Hero */
+    .hero { padding:56px 0 40px; border-bottom:1px solid var(--line); background:linear-gradient(180deg,rgba(200,169,110,0.06),transparent 60%); }
+    .hero h1 { font-size:clamp(2.2rem,7vw,3.6rem); font-weight:900; margin:10px 0 6px; }
+    .hero .sub { font-family:'Barlow Condensed',sans-serif; font-size:1.05rem; font-weight:600; color:var(--accent); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:28px; }
+    .stat-row { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+    .stat { background:var(--panel2); padding:16px 14px; text-align:center; }
+    .stat .num { font-family:'Barlow Condensed',sans-serif; font-size:1.5rem; font-weight:800; color:var(--accent); line-height:1; }
+    .stat .lbl { font-size:0.68rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-top:6px; }
+    .status-banner { margin-top:20px; padding:14px 18px; border:1px solid rgba(200,169,110,0.3); background:rgba(200,169,110,0.07); border-radius:3px; font-size:0.92rem; color:var(--white); }
+    .status-banner strong { color:var(--accent); }
+
+    /* Legend */
+    .legend { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; margin-top:24px; }
+    .legend-item { background:var(--panel2); border:1px solid var(--line); padding:14px 16px; border-radius:3px; }
+    .legend-item .term { font-family:'Barlow Condensed',sans-serif; font-weight:800; color:var(--accent); font-size:0.85rem; letter-spacing:0.06em; margin-bottom:4px; }
+    .legend-item .def { font-size:0.82rem; color:var(--muted); line-height:1.45; }
+
+    section.section { padding:48px 0; border-bottom:1px solid var(--line); }
+    .section-head { margin-bottom:24px; }
+    .section-head h2 { font-size:clamp(1.7rem,4vw,2.3rem); font-weight:800; }
+    .section-head p { color:var(--muted); font-size:0.95rem; margin-top:6px; max-width:640px; }
+
+    /* Phase group */
+    .phase-group { margin-bottom:32px; }
+    .phase-title-row { display:flex; align-items:baseline; gap:12px; margin-bottom:6px; flex-wrap:wrap; }
+    .phase-title-row h3 { font-size:1.4rem; font-weight:800; }
+    .phase-title-row .weeks { font-size:0.78rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; font-family:'Barlow Condensed',sans-serif; font-weight:700; }
+    .phase-desc { color:var(--muted); font-size:0.88rem; margin-bottom:16px; max-width:640px; }
+
+    /* Week card (plan) */
+    .week-card { border:1px solid var(--line); background:var(--panel2); border-radius:4px; margin-bottom:10px; overflow:hidden; }
+    .week-card.current { border-color:var(--accent); }
+    .week-head { display:flex; align-items:center; gap:14px; padding:14px 16px; cursor:pointer; user-select:none; }
+    .week-head:hover { background:rgba(255,255,255,0.02); }
+    .week-num { font-family:'Barlow Condensed',sans-serif; font-size:1.5rem; font-weight:900; color:var(--white); min-width:56px; }
+    .week-meta { flex:1; min-width:0; }
+    .week-meta .dates { font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); }
+    .week-meta .target { font-size:0.85rem; color:var(--white); margin-top:2px; }
+    .badge { font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; padding:3px 9px; border-radius:20px; white-space:nowrap; }
+    .badge.this-week { background:var(--accent); color:var(--black); }
+    .badge.cutback { background:rgba(255,255,255,0.08); color:var(--muted); border:1px solid var(--line); }
+    .badge.peak { background:rgba(200,169,110,0.15); color:var(--accent); border:1px solid rgba(200,169,110,0.35); }
+    .badge.race { background:#c8a96e; color:var(--black); }
+    .chev { font-size:0.8rem; color:var(--muted); transition:transform .2s; flex-shrink:0; }
+    .week-card.open .chev { transform:rotate(180deg); }
+    .week-body { display:none; padding:0 16px 18px; }
+    .week-card.open .week-body { display:block; }
+    .focus-note { font-size:0.88rem; color:#c9c6c2; background:rgba(255,255,255,0.03); border-left:2px solid var(--accent); padding:10px 14px; margin-bottom:14px; border-radius:2px; }
+    .day-row { display:flex; align-items:center; gap:14px; padding:9px 0; border-bottom:1px solid rgba(255,255,255,0.05); border-left:3px solid transparent; padding-left:10px; position:relative; }
+    .day-row:last-child { border-bottom:none; }
+    .day-row .d { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:0.75rem; letter-spacing:0.06em; color:var(--muted); min-width:38px; }
+    .day-row .info { flex:1; }
+    .day-row .title { font-weight:600; font-size:0.92rem; }
+    .day-row .sub { font-size:0.78rem; color:var(--muted); margin-top:1px; }
+    .day-row.type-rest .title, .day-row.type-optional .title { color:var(--muted); font-weight:500; }
+    .day-row.type-interval { border-left-color:var(--accent); }
+    .day-row.type-interval .title { color:var(--accent); }
+    .day-row.type-tempo { border-left-color:var(--accent); }
+    .day-row.type-tempo .title { color:var(--accent); }
+    .day-row.type-long { border-left-color:rgba(200,169,110,0.5); }
+    .day-row.type-race { border-left-color:var(--accent); }
+    .day-row.type-race .title { color:var(--accent); font-size:1.05rem; font-weight:800; }
+    .day-row.shareable { cursor:pointer; border-radius:5px; padding-right:80px; transition:background .15s; }
+    .day-row.shareable:hover, .day-row.shareable:active { background:rgba(200,169,110,0.07); }
+    .share-hint { position:absolute; top:9px; right:10px; font-family:'Barlow Condensed',sans-serif; font-size:0.58rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); opacity:0.6; white-space:nowrap; }
+    .day-row.shareable:hover .share-hint { color:var(--accent); opacity:1; }
+
+    /* Share card modal */
+    .share-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.82); backdrop-filter:blur(4px); display:none; align-items:center; justify-content:center; z-index:1000; padding:28px 16px; }
+    .share-overlay.open { display:flex; }
+    .share-close { position:absolute; top:20px; right:20px; width:38px; height:38px; border-radius:50%; border:1px solid rgba(255,255,255,0.2); background:rgba(0,0,0,0.4); color:var(--white); font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+    .share-close:hover { border-color:var(--accent); color:var(--accent); }
+    .share-card { position:relative; display:flex; flex-direction:column; width:100%; max-width:420px; max-height:88vh; overflow:hidden; background:linear-gradient(165deg,#161514,#0a0a0a 65%); border:1px solid rgba(200,169,110,0.4); border-radius:10px; box-shadow:0 25px 70px rgba(0,0,0,0.65), 0 0 0 1px rgba(200,169,110,0.08); }
+    .share-card::before { content:''; display:block; height:5px; background:linear-gradient(90deg, var(--accent-dark), var(--accent) 50%, var(--accent-dark)); }
+    .share-card-top { flex-shrink:0; padding:24px 28px 20px; text-align:center; border-bottom:1px solid rgba(200,169,110,0.18); }
+    .share-wordmark { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:1.2rem; letter-spacing:0.14em; text-transform:uppercase; }
+    .share-wordmark span { color:var(--accent); }
+    .share-tagline { font-size:0.58rem; letter-spacing:0.28em; color:var(--muted); text-transform:uppercase; margin-top:6px; }
+    .share-badge { display:inline-block; margin-top:14px; padding:5px 14px; border:1px solid rgba(200,169,110,0.55); border-radius:20px; background:rgba(200,169,110,0.08); font-family:'Barlow Condensed',sans-serif; font-size:0.62rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); }
+    .share-card-body { flex:1; overflow-y:auto; padding:28px 28px 26px; text-align:center; }
+    .share-owner { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:1.55rem; letter-spacing:0.03em; color:var(--accent); text-transform:uppercase; margin-bottom:6px; }
+    .share-meta { font-family:'Barlow Condensed',sans-serif; font-size:0.74rem; font-weight:700; letter-spacing:0.08em; color:var(--muted); text-transform:uppercase; margin-bottom:22px; }
+    .share-title { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(1.7rem,6vw,2.3rem); line-height:1.05; margin-bottom:16px; }
+    .share-sub { font-size:1rem; color:#dcd9d5; line-height:1.6; }
+    .share-chart { display:flex; align-items:flex-end; gap:5px; height:84px; margin-bottom:18px; }
+    .share-chart .bar { flex:1; border-radius:5px 5px 2px 2px; background:rgba(255,255,255,0.1); }
+    .share-chart .bar.warmup, .share-chart .bar.cooldown { height:42%; }
+    .share-chart .bar.rest { height:24%; background:rgba(255,255,255,0.06); }
+    .share-chart .bar.work { height:100%; background:linear-gradient(180deg, var(--accent), var(--accent-dark)); }
+    .share-chart-caption { font-family:'Barlow Condensed',sans-serif; font-size:0.66rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:16px; }
+    .share-chart-caption span { color:var(--accent); }
+    .share-card-bottom { flex-shrink:0; padding:20px 28px 24px; background:rgba(200,169,110,0.08); border-top:1px solid rgba(200,169,110,0.22); text-align:center; }
+    .share-bottom-tagline { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.66rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--white); opacity:0.8; margin-bottom:10px; }
+    .share-footer-url { display:inline-block; font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:0.85rem; letter-spacing:0.06em; color:var(--black); text-transform:uppercase; background:var(--accent); padding:9px 20px; border-radius:20px; }
+    .share-footer-handle { font-size:0.74rem; color:var(--muted); margin-top:8px; }
+
+    /* Log */
+    .log-summary { display:flex; gap:1px; background:var(--line); border:1px solid var(--line); margin-bottom:24px; flex-wrap:wrap; }
+    .log-summary .box { flex:1; min-width:140px; background:var(--panel2); padding:16px; text-align:center; }
+    .log-summary .box .num { font-family:'Barlow Condensed',sans-serif; font-size:1.7rem; font-weight:900; color:var(--accent); }
+    .log-summary .box .lbl { font-size:0.68rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-top:4px; }
+
+    .log-week { border:1px solid var(--line); background:var(--panel2); border-radius:4px; margin-bottom:10px; overflow:hidden; }
+    .log-week.current { border-color:var(--accent); }
+    .log-week-head { display:flex; align-items:center; gap:14px; padding:14px 16px; cursor:pointer; user-select:none; }
+    .log-week-head:hover { background:rgba(255,255,255,0.02); }
+    .log-week-body { display:none; padding:6px 16px 18px; }
+    .log-week.open .log-week-body { display:block; }
+    .log-week.open .chev { transform:rotate(180deg); }
+    .week-logged { font-size:0.78rem; color:var(--muted); margin-top:2px; }
+    .week-logged strong { color:var(--accent); }
+
+    .log-row { display:grid; grid-template-columns:repeat(4,1fr) 34px; gap:8px; align-items:end; margin-bottom:10px; }
+    .log-field label { display:block; font-size:0.62rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.07em; margin-bottom:4px; font-family:'Barlow Condensed',sans-serif; font-weight:700; }
+    .log-field input { width:100%; background:#0a0a0a; border:1px solid var(--line); color:var(--white); padding:9px 10px; border-radius:3px; font-family:'Barlow',sans-serif; font-size:0.88rem; }
+    .log-field input:focus { outline:none; border-color:var(--accent); }
+    .log-field input[type="date"] { color-scheme:dark; }
+    .remove-row { background:none; border:1px solid var(--line); color:var(--muted); border-radius:3px; height:37px; cursor:pointer; font-size:0.9rem; }
+    .remove-row:hover { border-color:#c0554f; color:#c0554f; }
+    .add-row { margin-top:6px; background:none; border:1px dashed var(--line); color:var(--muted); padding:9px 14px; border-radius:3px; font-family:'Barlow Condensed',sans-serif; font-size:0.78rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; cursor:pointer; width:100%; }
+    .add-row:hover { border-color:var(--accent); color:var(--accent); }
+
+    .toolbar { display:flex; gap:10px; flex-wrap:wrap; margin:20px 0 8px; align-items:center; }
+    .btn { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.82rem; letter-spacing:0.07em; text-transform:uppercase; padding:11px 18px; border-radius:3px; border:1px solid var(--line); background:none; color:var(--white); cursor:pointer; transition:all .15s; }
+    .btn:hover { border-color:var(--accent); color:var(--accent); }
+    .btn.primary { background:var(--accent); color:var(--black); border-color:var(--accent); }
+    .btn.primary:hover { background:var(--accent-dark); color:var(--black); }
+    .btn.danger:hover { border-color:#c0554f; color:#c0554f; }
+    .save-indicator { font-size:0.78rem; color:var(--accent); opacity:0; transition:opacity .3s; }
+    .save-indicator.show { opacity:1; }
+
+    .footer-note { padding:40px 0 60px; text-align:center; color:var(--muted); font-size:0.9rem; }
+    .footer-note a { color:var(--accent); text-decoration:none; }
+    .footer-note a:hover { text-decoration:underline; }
+
+    @media (max-width:640px) {
+      .stat-row { grid-template-columns:repeat(2,1fr); }
+      .week-meta .target { display:none; }
+      .log-row { grid-template-columns:1fr 1fr; }
+      .remove-row { grid-column:1 / -1; width:100%; }
+    }
+    @media print {
+      .topbar, .toolbar, .add-row, .remove-row, .status-banner, .share-overlay { display:none !important; }
+      body { background:#fff; color:#000; }
+      .week-body, .log-week-body { display:block !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <a class="logo" href="/">ALWAYS REDDY <span>ATHLETICS</span></a>
+    <div class="tag">Private Plan · Tom</div>
+  </div>
+
+  <div class="hero">
+    <div class="wrap">
+      <div class="eyebrow">7-Week 10K Training Plan</div>
+      <h1>Pittsburgh <em>Great Race</em></h1>
+      <div class="sub">Built for Tom · Build · Peak · Taper &amp; Race · Goal: Sub-44:00</div>
+
+      <div class="stat-row">
+        <div class="stat"><div class="num">Sept 27</div><div class="lbl">Race Day</div></div>
+        <div class="stat"><div class="num">6.2 mi</div><div class="lbl">Distance</div></div>
+        <div class="stat"><div class="num">5 + Optional</div><div class="lbl">Run Days</div></div>
+        <div class="stat"><div class="num">32 mi</div><div class="lbl">Peak Week</div></div>
+      </div>
+
+      <div class="status-banner" id="statusBanner"></div>
+
+      <div class="legend">
+        <div class="legend-item"><div class="term">10K Goal Pace</div><div class="def">7:00–7:05/mi. Targeting 44:00, with 43:30 the fast-end reach.</div></div>
+        <div class="legend-item"><div class="term">Tempo Pace</div><div class="def">6:50–6:55/mi. Comfortably hard, sustained — builds the threshold under race pace.</div></div>
+        <div class="legend-item"><div class="term">Interval Pace</div><div class="def">6:30–6:40/mi. Short reps faster than race pace, for a speed reserve.</div></div>
+        <div class="legend-item"><div class="term">Easy</div><div class="def">Conversational. If you can't chat, slow down. Easy days stay easy.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" id="plan-section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>The Plan</h2>
+        <p>Tap a week to see the full breakdown. Your current week is highlighted and open by default. Tap any workout to pull up a shareable card for Strava or Instagram.</p>
+      </div>
+      <div id="phaseGroups"></div>
+    </div>
+  </section>
+
+  <div class="share-overlay" id="shareOverlay">
+    <button class="share-close" id="shareClose" type="button" aria-label="Close">✕</button>
+    <div>
+      <div class="share-card" id="shareCard">
+        <div class="share-card-top">
+          <div class="share-wordmark">ALWAYS REDDY <span>ATHLETICS</span></div>
+          <div class="share-tagline">Fitness · Lifestyle · Performance</div>
+          <div class="share-badge">Personalized Training Plan</div>
+        </div>
+        <div class="share-card-body">
+          <div class="share-owner" id="shareOwner"></div>
+          <div class="share-meta" id="shareMeta"></div>
+          <div class="share-title" id="shareTitle"></div>
+          <div id="shareChart"></div>
+          <div id="shareBody"></div>
+        </div>
+        <div class="share-card-bottom">
+          <div class="share-bottom-tagline">Coached by Always Reddy Athletics</div>
+          <div class="share-footer-url">alwaysreddyathletics.com</div>
+          <div class="share-footer-handle">@alwaysreddyathletics</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" id="log-section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Your Training Log</h2>
+        <p>Log miles, pace, and average heart rate after each run. Everything below saves automatically in this browser as you type — and sends your coach an update.</p>
+      </div>
+
+      <div class="log-summary">
+        <div class="box"><div class="num" id="totalMilesLogged">0</div><div class="lbl">Miles Logged</div></div>
+        <div class="box"><div class="num">~179</div><div class="lbl">Plan Volume (mi)</div></div>
+        <div class="box"><div class="num" id="totalRunsLogged">0</div><div class="lbl">Runs Logged</div></div>
+      </div>
+
+      <div id="logWeeks"></div>
+
+      <div class="toolbar">
+        <button class="btn primary" id="exportBtn">Export CSV</button>
+        <button class="btn" id="printBtn">Print / Save PDF</button>
+        <button class="btn" id="resendBtn">Resend All to Coach</button>
+        <button class="btn danger" id="clearBtn">Clear Log Data</button>
+        <span class="save-indicator" id="saveIndicator">Saved ✓</span>
+        <span class="save-indicator" id="syncIndicator">Sent to coach ✓</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-note">
+    Questions about a week or need to adjust something? Reach out to Coach Tyler via <a href="/contact.html">the contact page</a>.<br>
+    Always Reddy Athletics · alwaysreddyathletics.com
+  </div>
+
+<script>
+// ---- Coach sync config ----
+const CONFIG = {
+  web3formsAccessKey: '4e30863e-536f-43dc-8273-8c26d3506ea6',
+  sheetWebAppUrl: '',
+};
+const ATHLETE = 'Tom';
+
+const WEEKS = [
+  { n:1, dates:'Aug 10–16', start:'2026-08-10', end:'2026-08-16', target:'24.5 mi', phase:'BUILD', tag:null,
+    focus:'First week of the block. Interval and tempo paces should feel controlled, not maxed out — we build from here.',
+    days:[
+      {d:'MON',type:'optional',title:'Optional Run',sub:'1–2 mi · easy'},
+      {d:'TUE',type:'easy',title:'Easy Run',sub:'4 mi'},
+      {d:'WED',type:'interval',title:'Interval Run',sub:'1 mi warm-up · 6x2min @ Interval pace (6:30–6:40) · 90 sec jog rest · 1 mi cooldown',intervals:{warmup:true,reps:6,rest:true,cooldown:true}},
+      {d:'THU',type:'easy',title:'Easy Run',sub:'4 mi'},
+      {d:'FRI',type:'rest',title:'Rest',sub:''},
+      {d:'SAT',type:'long',title:'Long Run',sub:'8 mi'},
+      {d:'SUN',type:'tempo',title:'Tempo Run',sub:'1 mi warm-up · 2 mi @ Tempo pace (6:50–6:55) · 1 mi cooldown',intervals:{warmup:true,reps:1,rest:false,cooldown:true}},
+    ]},
+  { n:2, dates:'Aug 17–23', start:'2026-08-17', end:'2026-08-23', target:'27.5 mi', phase:'BUILD', tag:null,
+    focus:'Volume ticks up across the board. Keep easy days honestly easy so the quality days can be quality.',
+    days:[
+      {d:'MON',type:'optional',title:'Optional Run',sub:'1–2 mi · easy'},
+      {d:'TUE',type:'easy',title:'Easy Run',sub:'4.5 mi'},
+      {d:'WED',type:'interval',title:'Interval Run',sub:'1 mi warm-up · 7x2min @ Interval pace (6:30–6:40) · 90 sec jog rest · 1 mi cooldown',intervals:{warmup:true,reps:7,rest:true,cooldown:true}},
+      {d:'THU',type:'easy',title:'Easy Run',sub:'4.5 mi'},
+      {d:'FRI',type:'rest',title:'Rest',sub:''},
+      {d:'SAT',type:'long',title:'Long Run',sub:'9 mi'},
+      {d:'SUN',type:'tempo',title:'Tempo Run',sub:'1 mi warm-up · 2.5 mi @ Tempo pace (6:50–6:55) · 1 mi cooldown',intervals:{warmup:true,reps:1,rest:false,cooldown:true}},
+    ]},
+  { n:3, dates:'Aug 24–30', start:'2026-08-24', end:'2026-08-30', target:'23 mi', phase:'BUILD', tag:'CUTBACK',
+    focus:"Cutback week, on purpose. Recovery is the work this week — don't add extra.",
+    days:[
+      {d:'MON',type:'optional',title:'Optional Run',sub:'1–2 mi · easy'},
+      {d:'TUE',type:'easy',title:'Easy Run',sub:'4 mi'},
+      {d:'WED',type:'interval',title:'Interval Run',sub:'1 mi warm-up · 5x2min @ Interval pace (6:30–6:40) · 2 min jog rest · 1 mi cooldown',intervals:{warmup:true,reps:5,rest:true,cooldown:true}},
+      {d:'THU',type:'easy',title:'Easy Run',sub:'4 mi'},
+      {d:'FRI',type:'rest',title:'Rest',sub:''},
+      {d:'SAT',type:'long',title:'Long Run',sub:'7 mi'},
+      {d:'SUN',type:'tempo',title:'Tempo Run',sub:'1 mi warm-up · 2 mi @ Tempo pace (6:50–6:55) · 1 mi cooldown',intervals:{warmup:true,reps:1,rest:false,cooldown:true}},
+    ]},
+  { n:4, dates:'Aug 31–Sept 6', start:'2026-08-31', end:'2026-09-06', target:'30.5 mi', phase:'BUILD', tag:null,
+    focus:'Biggest volume week of the build. Interval reps step up to 8 — stay smooth and controlled through the last ones.',
+    days:[
+      {d:'MON',type:'optional',title:'Optional Run',sub:'1–2 mi · easy'},
+      {d:'TUE',type:'easy',title:'Easy Run',sub:'5 mi'},
+      {d:'WED',type:'interval',title:'Interval Run',sub:'1 mi warm-up · 8x2min @ Interval pace (6:30–6:40) · 90 sec jog rest · 1 mi cooldown',intervals:{warmup:true,reps:8,rest:true,cooldown:true}},
+      {d:'THU',type:'easy',title:'Easy Run',sub:'5 mi'},
+      {d:'FRI',type:'rest',title:'Rest',sub:''},
+      {d:'SAT',type:'long',title:'Long Run',sub:'10 mi'},
+      {d:'SUN',type:'tempo',title:'Tempo Run',sub:'1 mi warm-up · 3 mi @ Tempo pace (6:50–6:55) · 1 mi cooldown',intervals:{warmup:true,reps:1,rest:false,cooldown:true}},
+    ]},
+  { n:5, dates:'Sept 7–13', start:'2026-09-07', end:'2026-09-13', target:'32 mi', phase:'PEAK', tag:'PEAK',
+    focus:"Peak week. Reps get longer (3min) and Sunday's tempo shifts to goal race pace — first real test of 44:00 effort.",
+    days:[
+      {d:'MON',type:'optional',title:'Optional Run',sub:'1–2 mi · easy'},
+      {d:'TUE',type:'easy',title:'Easy Run',sub:'5 mi'},
+      {d:'WED',type:'interval',title:'Interval Run',sub:'1 mi warm-up · 6x3min @ Interval pace (6:30–6:40) · 2 min jog rest · 1 mi cooldown',intervals:{warmup:true,reps:6,rest:true,cooldown:true}},
+      {d:'THU',type:'easy',title:'Easy Run',sub:'5 mi'},
+      {d:'FRI',type:'rest',title:'Rest',sub:''},
+      {d:'SAT',type:'long',title:'Long Run',sub:'11 mi'},
+      {d:'SUN',type:'tempo',title:'Goal Pace Tempo',sub:'1 mi warm-up · 3.5 mi @ 10K Goal Pace (7:00–7:05) · 1 mi cooldown',intervals:{warmup:true,reps:1,rest:false,cooldown:true}},
+    ]},
+  { n:6, dates:'Sept 14–20', start:'2026-09-14', end:'2026-09-20', target:'26.5 mi', phase:'PEAK', tag:null,
+    focus:'Volume starts coming down while intensity holds. This is where the fitness locks in before the taper.',
+    days:[
+      {d:'MON',type:'optional',title:'Optional Run',sub:'1–2 mi · easy'},
+      {d:'TUE',type:'easy',title:'Easy Run',sub:'4 mi'},
+      {d:'WED',type:'interval',title:'Interval Run',sub:'1 mi warm-up · 5x3min @ Interval pace (6:30–6:40) · 2 min jog rest · 1 mi cooldown',intervals:{warmup:true,reps:5,rest:true,cooldown:true}},
+      {d:'THU',type:'easy',title:'Easy Run',sub:'4 mi'},
+      {d:'FRI',type:'rest',title:'Rest',sub:''},
+      {d:'SAT',type:'long',title:'Long Run',sub:'9 mi'},
+      {d:'SUN',type:'tempo',title:'Goal Pace Tempo',sub:'1 mi warm-up · 2.5 mi @ 10K Goal Pace (7:00–7:05) · 1 mi cooldown',intervals:{warmup:true,reps:1,rest:false,cooldown:true}},
+    ]},
+  { n:7, dates:'Sept 21–27', start:'2026-09-21', end:'2026-09-27', target:'~15 mi', phase:'TAPER & RACE', tag:'RACE',
+    focus:'Race week! Short and sharp on Wednesday, no long run this week — Saturday is just a shakeout. Sleep well and trust the work.',
+    days:[
+      {d:'MON',type:'optional',title:'Optional Run',sub:'1–2 mi · easy'},
+      {d:'TUE',type:'easy',title:'Easy Run',sub:'3 mi'},
+      {d:'WED',type:'interval',title:'Interval Run',sub:'0.5 mi warm-up · 4x90sec @ Interval pace (6:30–6:40) · 90 sec jog rest · 0.5 mi cooldown',intervals:{warmup:true,reps:4,rest:true,cooldown:true}},
+      {d:'THU',type:'easy',title:'Easy Run',sub:'2 mi + strides'},
+      {d:'FRI',type:'rest',title:'Rest',sub:''},
+      {d:'SAT',type:'easy',title:'Shakeout Run',sub:'2 mi · easy'},
+      {d:'SUN',type:'race',title:'RACE DAY',sub:'Pittsburgh Great Race 10K · Goal: Sub-44:00 (targeting 43:30)'},
+    ]},
+];
+
+const PHASE_DESC = {
+  'BUILD': 'Volume and intensity build together — interval reps and tempo distance both grow week over week.',
+  'PEAK': 'Reps get longer and the Sunday tempo shifts to goal race pace. This is where 44:00 fitness gets built.',
+  'TAPER & RACE': 'Volume drops so freshness comes up. Stay sharp, stay healthy, and line up ready for race day.'
+};
+
+const todayISO = new Date().toISOString().slice(0,10);
+const today = new Date(todayISO + 'T00:00:00');
+const raceDate = new Date('2026-09-27T00:00:00');
+
+function currentWeekIndex() {
+  for (let i = 0; i < WEEKS.length; i++) {
+    if (todayISO >= WEEKS[i].start && todayISO <= WEEKS[i].end) return i;
+  }
+  return -1;
+}
+const curIdx = currentWeekIndex();
+
+// ---- Status banner ----
+const banner = document.getElementById('statusBanner');
+const msPerDay = 86400000;
+if (todayISO < WEEKS[0].start) {
+  const days = Math.ceil((new Date(WEEKS[0].start) - today) / msPerDay);
+  banner.innerHTML = `Training starts <strong>${days} day${days===1?'':'s'}</strong> from now (${WEEKS[0].dates}).`;
+} else if (todayISO > WEEKS[WEEKS.length-1].end) {
+  banner.innerHTML = `🎉 <strong>Race complete!</strong> Pittsburgh Great Race — hope it went great.`;
+} else if (curIdx >= 0) {
+  const daysToRace = Math.ceil((raceDate - today) / msPerDay);
+  const w = WEEKS[curIdx];
+  banner.innerHTML = `You're in <strong>Week ${w.n}</strong> (${w.dates}, ${w.phase}) · <strong>${daysToRace}</strong> day${daysToRace===1?'':'s'} to race day.`;
+}
+
+// ---- Render plan ----
+const blockRegistry = {};
+const phaseOrder = ['BUILD','PEAK','TAPER & RACE'];
+const groupsEl = document.getElementById('phaseGroups');
+phaseOrder.forEach(phase => {
+  const weeks = WEEKS.filter(w => w.phase === phase);
+  if (!weeks.length) return;
+  const group = document.createElement('div');
+  group.className = 'phase-group';
+  const wkRange = weeks.length > 1 ? `Weeks ${weeks[0].n}–${weeks[weeks.length-1].n}` : `Week ${weeks[0].n}`;
+  group.innerHTML = `
+    <div class="phase-title-row"><h3>${phase}</h3><span class="weeks">${wkRange}</span></div>
+    <div class="phase-desc">${PHASE_DESC[phase] || ''}</div>
+  `;
+  weeks.forEach(w => group.appendChild(renderWeekCard(w)));
+  groupsEl.appendChild(group);
+});
+
+function renderWeekCard(w) {
+  const isCurrent = curIdx >= 0 && WEEKS[curIdx].n === w.n;
+  const card = document.createElement('div');
+  card.className = 'week-card' + (isCurrent ? ' open current' : '');
+  let badges = '';
+  if (isCurrent) badges += `<span class="badge this-week">This Week</span>`;
+  if (w.tag === 'CUTBACK') badges += `<span class="badge cutback">Cutback</span>`;
+  if (w.tag === 'PEAK') badges += `<span class="badge peak">Peak</span>`;
+  if (w.tag === 'RACE') badges += `<span class="badge race">Race Week</span>`;
+
+  const daysHTML = w.days.map(d => {
+    const shareable = d.type !== 'rest';
+    const key = `${w.n}-${d.d}`;
+    if (shareable) blockRegistry[key] = { weekN: w.n, weekDates: w.dates, day: d.d, title: d.title, sub: d.sub, intervals: d.intervals };
+    return `
+    <div class="day-row type-${d.type}${shareable ? ' shareable' : ''}"${shareable ? ` data-key="${key}"` : ''}>
+      <div class="d">${d.d}</div>
+      <div class="info">
+        <div class="title">${d.title}</div>
+        ${d.sub ? `<div class="sub">${d.sub}</div>` : ''}
+      </div>
+      ${shareable ? '<span class="share-hint">Tap to Share</span>' : ''}
+    </div>`;
+  }).join('');
+
+  card.innerHTML = `
+    <div class="week-head">
+      <div class="week-num">W${w.n}</div>
+      <div class="week-meta">
+        <div class="dates">${w.dates}</div>
+        <div class="target">Target: ${w.target}</div>
+      </div>
+      ${badges}
+      <div class="chev">▾</div>
+    </div>
+    <div class="week-body">
+      <div class="focus-note">${w.focus}</div>
+      ${daysHTML}
+    </div>
+  `;
+  card.querySelector('.week-head').addEventListener('click', () => card.classList.toggle('open'));
+  return card;
+}
+
+// ---- Training log ----
+const STORAGE_KEY = 'araTomLog_v1';
+function loadLog() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+  catch (e) { return {}; }
+}
+function saveLog(data) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  const ind = document.getElementById('saveIndicator');
+  ind.classList.add('show');
+  clearTimeout(saveLog._t);
+  saveLog._t = setTimeout(() => ind.classList.remove('show'), 1500);
+}
+
+let logData = loadLog();
+const DEFAULT_ROWS = 5;
+
+const logWeeksEl = document.getElementById('logWeeks');
+WEEKS.forEach(w => logWeeksEl.appendChild(renderLogWeek(w)));
+updateSummary();
+
+function getWeekRows(w) {
+  const key = 'w' + w.n;
+  if (!logData[key] || !logData[key].length) {
+    logData[key] = Array.from({length: DEFAULT_ROWS}, () => ({date:'', miles:'', pace:'', bpm:''}));
+  }
+  return logData[key];
+}
+
+function renderLogWeek(w) {
+  const isCurrent = curIdx >= 0 && WEEKS[curIdx].n === w.n;
+  const wrap = document.createElement('div');
+  wrap.className = 'log-week' + (isCurrent ? ' open current' : '');
+  wrap.innerHTML = `
+    <div class="log-week-head">
+      <div class="week-num">W${w.n}</div>
+      <div class="week-meta">
+        <div class="dates">${w.dates} · Target ${w.target}</div>
+        <div class="week-logged">Logged: <strong class="logged-mi">0 mi</strong></div>
+      </div>
+      <div class="chev">▾</div>
+    </div>
+    <div class="log-week-body">
+      <div class="rows-container"></div>
+      <button class="add-row" type="button">+ Add Row</button>
+    </div>
+  `;
+  wrap.querySelector('.log-week-head').addEventListener('click', () => wrap.classList.toggle('open'));
+
+  const rowsContainer = wrap.querySelector('.rows-container');
+  const rows = getWeekRows(w);
+  rows.forEach((row, i) => rowsContainer.appendChild(renderLogRow(w, row, i, wrap)));
+
+  wrap.querySelector('.add-row').addEventListener('click', () => {
+    const rows = getWeekRows(w);
+    rows.push({date:'', miles:'', pace:'', bpm:''});
+    saveLog(logData);
+    rowsContainer.appendChild(renderLogRow(w, rows[rows.length-1], rows.length-1, wrap));
+  });
+
+  refreshWeekLoggedLabel(w, wrap);
+  return wrap;
+}
+
+function renderLogRow(w, row, idx, weekWrap) {
+  const r = document.createElement('div');
+  r.className = 'log-row';
+  r.innerHTML = `
+    <div class="log-field"><label>Date</label><input type="date" value="${row.date || ''}" data-field="date"></div>
+    <div class="log-field"><label>Miles</label><input type="number" step="0.1" min="0" placeholder="0.0" value="${row.miles || ''}" data-field="miles"></div>
+    <div class="log-field"><label>Pace</label><input type="text" placeholder="e.g. 7:05" value="${row.pace || ''}" data-field="pace"></div>
+    <div class="log-field"><label>Avg BPM</label><input type="number" min="0" placeholder="0" value="${row.bpm || ''}" data-field="bpm"></div>
+    <button class="remove-row" type="button" title="Remove row">✕</button>
+  `;
+  r.querySelectorAll('input').forEach(inp => {
+    inp.addEventListener('input', () => {
+      const rows = getWeekRows(w);
+      rows[idx][inp.dataset.field] = inp.value;
+      saveLog(logData);
+      refreshWeekLoggedLabel(w, weekWrap);
+      updateSummary();
+      scheduleSync(w, idx);
+    });
+  });
+  r.querySelector('.remove-row').addEventListener('click', () => {
+    const rows = getWeekRows(w);
+    rows.splice(idx, 1);
+    saveLog(logData);
+    weekWrap.querySelector('.rows-container').innerHTML = '';
+    rows.forEach((row2, i2) => weekWrap.querySelector('.rows-container').appendChild(renderLogRow(w, row2, i2, weekWrap)));
+    refreshWeekLoggedLabel(w, weekWrap);
+    updateSummary();
+  });
+  return r;
+}
+
+// ---- Sync to coach (Web3Forms email + optional Google Sheet) ----
+const syncTimers = {};
+const SYNC_DELAY = 1200;
+
+function isConfigured() {
+  return !!(CONFIG.web3formsAccessKey || CONFIG.sheetWebAppUrl);
+}
+
+function rowHash(row) {
+  return JSON.stringify([row.date, row.miles, row.pace, row.bpm]);
+}
+
+async function sendRowUpdate(w, row) {
+  const payload = {
+    access_key: CONFIG.web3formsAccessKey,
+    subject: `${ATHLETE} logged a run — Week ${w.n}`,
+    from_name: `${ATHLETE} — Training Log`,
+    athlete: ATHLETE,
+    week: w.n,
+    week_dates: w.dates,
+    date: row.date || '',
+    miles: row.miles || '',
+    pace: row.pace || '',
+    avg_bpm: row.bpm || '',
+    message: `${ATHLETE} — Week ${w.n} (${w.dates}) — ${row.date || 'no date'}: ${row.miles || '?'} mi, pace ${row.pace || '—'}, avg BPM ${row.bpm || '—'}`
+  };
+
+  if (CONFIG.web3formsAccessKey) {
+    try {
+      await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    } catch (e) { /* will retry on next edit or manual resend */ }
+  }
+
+  if (CONFIG.sheetWebAppUrl) {
+    try {
+      await fetch(CONFIG.sheetWebAppUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify(payload)
+      });
+    } catch (e) { /* will retry on next edit or manual resend */ }
+  }
+}
+
+function flashSyncIndicator() {
+  const ind = document.getElementById('syncIndicator');
+  ind.classList.add('show');
+  clearTimeout(flashSyncIndicator._t);
+  flashSyncIndicator._t = setTimeout(() => ind.classList.remove('show'), 2000);
+}
+
+function scheduleSync(w, idx) {
+  if (!isConfigured()) return;
+  const key = 'w' + w.n + '-' + idx;
+  clearTimeout(syncTimers[key]);
+  syncTimers[key] = setTimeout(async () => {
+    const row = getWeekRows(w)[idx];
+    if (!row || !row.date || !row.miles) return;
+    const hash = rowHash(row);
+    if (row._sentHash === hash) return;
+    await sendRowUpdate(w, row);
+    row._sentHash = hash;
+    saveLog(logData);
+    flashSyncIndicator();
+  }, SYNC_DELAY);
+}
+
+function refreshWeekLoggedLabel(w, weekWrap) {
+  const rows = getWeekRows(w);
+  const mi = rows.reduce((sum, r) => sum + (parseFloat(r.miles) || 0), 0);
+  weekWrap.querySelector('.logged-mi').textContent = mi.toFixed(1) + ' mi';
+}
+
+function updateSummary() {
+  let totalMiles = 0, totalRuns = 0;
+  WEEKS.forEach(w => {
+    getWeekRows(w).forEach(r => {
+      const mi = parseFloat(r.miles);
+      if (!isNaN(mi) && mi > 0) { totalMiles += mi; totalRuns++; }
+    });
+  });
+  document.getElementById('totalMilesLogged').textContent = totalMiles.toFixed(1);
+  document.getElementById('totalRunsLogged').textContent = totalRuns;
+}
+
+// ---- Toolbar actions ----
+document.getElementById('exportBtn').addEventListener('click', () => {
+  let csv = 'Week,Dates,Date,Miles,Pace,Avg BPM\n';
+  WEEKS.forEach(w => {
+    getWeekRows(w).forEach(r => {
+      if (!r.date && !r.miles && !r.pace && !r.bpm) return;
+      csv += `${w.n},"${w.dates}",${r.date || ''},${r.miles || ''},${r.pace || ''},${r.bpm || ''}\n`;
+    });
+  });
+  const blob = new Blob([csv], {type:'text/csv'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'tom-pittsburgh-great-race-training-log.csv';
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+document.getElementById('printBtn').addEventListener('click', () => window.print());
+
+document.getElementById('resendBtn').addEventListener('click', async () => {
+  if (!isConfigured()) { alert('Coach sync isn\'t set up on this page yet.'); return; }
+  let count = 0;
+  for (const w of WEEKS) {
+    for (const row of getWeekRows(w)) {
+      if (row.date && row.miles) {
+        await sendRowUpdate(w, row);
+        row._sentHash = rowHash(row);
+        count++;
+      }
+    }
+  }
+  saveLog(logData);
+  flashSyncIndicator();
+  alert(count ? `Resent ${count} log entr${count === 1 ? 'y' : 'ies'} to your coach.` : 'No logged runs to send yet.');
+});
+
+document.getElementById('clearBtn').addEventListener('click', () => {
+  if (!confirm('Clear all logged training data in this browser? This cannot be undone.')) return;
+  localStorage.removeItem(STORAGE_KEY);
+  logData = {};
+  logWeeksEl.innerHTML = '';
+  WEEKS.forEach(w => logWeeksEl.appendChild(renderLogWeek(w)));
+  updateSummary();
+});
+
+// ---- Shareable workout cards ----
+const GOAL_RACE = 'Pittsburgh Great Race 10K';
+const DAY_NAMES = { MON:'Monday', TUE:'Tuesday', WED:'Wednesday', THU:'Thursday', FRI:'Friday', SAT:'Saturday', SUN:'Sunday' };
+
+const shareOverlay = document.getElementById('shareOverlay');
+const shareOwner = document.getElementById('shareOwner');
+const shareMeta = document.getElementById('shareMeta');
+const shareTitle = document.getElementById('shareTitle');
+const shareChart = document.getElementById('shareChart');
+const shareBody = document.getElementById('shareBody');
+
+function buildIntervalSegments(iv) {
+  const segs = [];
+  if (iv.warmup) segs.push('warmup');
+  for (let i = 0; i < iv.reps; i++) {
+    segs.push('work');
+    if (iv.rest && i < iv.reps - 1) segs.push('rest');
+  }
+  if (iv.cooldown) segs.push('cooldown');
+  return segs;
+}
+
+function intervalCaption(iv) {
+  if (iv.reps > 1) return `<span>${iv.reps}×</span> Work Intervals`;
+  const parts = [];
+  if (iv.warmup) parts.push('Warm-up');
+  parts.push('Effort');
+  if (iv.cooldown) parts.push('Cooldown');
+  return parts.join(' <span>→</span> ');
+}
+
+function renderIntervalChart(iv) {
+  const segs = buildIntervalSegments(iv);
+  const bars = segs.map(type => `<div class="bar ${type}"></div>`).join('');
+  return `<div class="share-chart">${bars}</div><div class="share-chart-caption">${intervalCaption(iv)}</div>`;
+}
+
+function openShareCard(entry) {
+  const { weekN, weekDates, day, title, sub, intervals } = entry;
+  shareOwner.textContent = `${ATHLETE.toUpperCase()}'S PLAN`;
+  shareMeta.textContent = `${GOAL_RACE} · Week ${weekN} (${weekDates}) · ${DAY_NAMES[day] || day}`;
+  shareTitle.textContent = title;
+  shareChart.innerHTML = intervals ? renderIntervalChart(intervals) : '';
+  shareBody.innerHTML = sub ? `<div class="share-sub">${sub}</div>` : '';
+  shareOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeShareCard() {
+  shareOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('phaseGroups').addEventListener('click', (e) => {
+  const rowEl = e.target.closest('.day-row.shareable');
+  if (!rowEl) return;
+  const entry = blockRegistry[rowEl.dataset.key];
+  if (entry) openShareCard(entry);
+});
+
+document.getElementById('shareClose').addEventListener('click', closeShareCard);
+shareOverlay.addEventListener('click', (e) => {
+  if (e.target === shareOverlay) closeShareCard();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && shareOverlay.classList.contains('open')) closeShareCard();
+});
+</script>
+
+</body>
+</html>
