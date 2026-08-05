@@ -109,11 +109,17 @@
     .share-meta { font-family:'Barlow Condensed',sans-serif; font-size:0.74rem; font-weight:700; letter-spacing:0.08em; color:var(--muted); text-transform:uppercase; margin-bottom:22px; }
     .share-title { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(1.7rem,6vw,2.3rem); line-height:1.05; margin-bottom:16px; }
     .share-sub { font-size:1rem; color:#dcd9d5; line-height:1.6; }
+    .share-chart { display:flex; align-items:flex-end; gap:5px; height:84px; margin-bottom:18px; }
+    .share-chart .bar { flex:1; border-radius:5px 5px 2px 2px; background:rgba(255,255,255,0.1); }
+    .share-chart .bar.warmup, .share-chart .bar.cooldown { height:42%; }
+    .share-chart .bar.rest { height:24%; background:rgba(255,255,255,0.06); }
+    .share-chart .bar.work { height:100%; background:linear-gradient(180deg, var(--accent), var(--accent-dark)); }
+    .share-chart-caption { font-family:'Barlow Condensed',sans-serif; font-size:0.66rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:16px; }
+    .share-chart-caption span { color:var(--accent); }
     .share-card-bottom { flex-shrink:0; padding:20px 28px 24px; background:rgba(200,169,110,0.08); border-top:1px solid rgba(200,169,110,0.22); text-align:center; }
     .share-bottom-tagline { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.66rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--white); opacity:0.8; margin-bottom:10px; }
     .share-footer-url { display:inline-block; font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:0.85rem; letter-spacing:0.06em; color:var(--black); text-transform:uppercase; background:var(--accent); padding:9px 20px; border-radius:20px; }
     .share-footer-handle { font-size:0.74rem; color:var(--muted); margin-top:8px; }
-    .share-instructions { text-align:center; color:var(--muted); font-size:0.78rem; margin-top:14px; max-width:420px; }
 
     /* Log */
     .log-summary { display:flex; gap:1px; background:var(--line); border:1px solid var(--line); margin-bottom:24px; flex-wrap:wrap; }
@@ -222,6 +228,7 @@
           <div class="share-owner" id="shareOwner"></div>
           <div class="share-meta" id="shareMeta"></div>
           <div class="share-title" id="shareTitle"></div>
+          <div id="shareChart"></div>
           <div id="shareBody"></div>
         </div>
         <div class="share-card-bottom">
@@ -230,7 +237,6 @@
           <div class="share-footer-handle">@alwaysreddyathletics</div>
         </div>
       </div>
-      <div class="share-instructions">Screenshot this card to share your workout on Strava or Instagram.</div>
     </div>
   </div>
 
@@ -326,7 +332,7 @@ const WEEKS = [
       {d:'MON',type:'optional',title:'Optional Run',sub:'1–2 mi · easy'},
       {d:'TUE',type:'easy',title:'Easy Run',sub:'4 mi'},
       {d:'WED',type:'class',title:'Ass Class',sub:''},
-      {d:'THU',type:'pace',title:'HM Pace Work',sub:'4 mi · last 2 @ HMGP'},
+      {d:'THU',type:'pace',title:'HM Pace Work',sub:'4 mi · last 2 @ HMGP',intervals:{warmup:true,reps:1,rest:false,cooldown:false}},
       {d:'FRI',type:'rest',title:'Rest',sub:''},
       {d:'SAT',type:'class',title:'Ass Class',sub:''},
       {d:'SUN',type:'long',title:'Long Run',sub:'7 mi'},
@@ -337,7 +343,7 @@ const WEEKS = [
       {d:'MON',type:'optional',title:'Optional Run',sub:'1–2 mi · easy'},
       {d:'TUE',type:'easy',title:'Easy Run',sub:'4 mi + 5 strides'},
       {d:'WED',type:'class',title:'Ass Class',sub:''},
-      {d:'THU',type:'pace',title:'HM Pace Work',sub:'4.5 mi · last 2 @ HMGP'},
+      {d:'THU',type:'pace',title:'HM Pace Work',sub:'4.5 mi · last 2 @ HMGP',intervals:{warmup:true,reps:1,rest:false,cooldown:false}},
       {d:'FRI',type:'rest',title:'Rest',sub:''},
       {d:'SAT',type:'class',title:'Ass Class',sub:''},
       {d:'SUN',type:'long',title:'Long Run',sub:'8 mi'},
@@ -348,10 +354,10 @@ const WEEKS = [
       {d:'MON',type:'optional',title:'Optional Run',sub:'1–2 mi · easy'},
       {d:'TUE',type:'easy',title:'Easy Run',sub:'4 mi'},
       {d:'WED',type:'class',title:'Ass Class',sub:''},
-      {d:'THU',type:'pace',title:'HM Pace Work',sub:'5 mi · last 3 @ HMGP'},
+      {d:'THU',type:'pace',title:'HM Pace Work',sub:'5 mi · last 3 @ HMGP',intervals:{warmup:true,reps:1,rest:false,cooldown:false}},
       {d:'FRI',type:'rest',title:'Rest',sub:''},
       {d:'SAT',type:'class',title:'Ass Class',sub:''},
-      {d:'SUN',type:'long',title:'HM Pace Long Run',sub:'10 mi · last 2 @ HMGP'},
+      {d:'SUN',type:'long',title:'HM Pace Long Run',sub:'10 mi · last 2 @ HMGP',intervals:{warmup:true,reps:1,rest:false,cooldown:false}},
     ]},
   { n:8, dates:'Sept 21–27', start:'2026-09-21', end:'2026-09-27', target:'20 mi', phase:'BUILD', tag:'PEAK',
     focus:"Long run is one mile off the half — finish strong, you're basically there. Taper starts from here.",
@@ -362,7 +368,7 @@ const WEEKS = [
       {d:'THU',type:'easy',title:'Easy Run',sub:'4 mi'},
       {d:'FRI',type:'rest',title:'Rest',sub:''},
       {d:'SAT',type:'class',title:'Ass Class',sub:''},
-      {d:'SUN',type:'long',title:'HM Pace Long Run',sub:'12 mi · last 2 @ HMGP'},
+      {d:'SUN',type:'long',title:'HM Pace Long Run',sub:'12 mi · last 2 @ HMGP',intervals:{warmup:true,reps:1,rest:false,cooldown:false}},
     ]},
   { n:9, dates:'Sept 28–Oct 4', start:'2026-09-28', end:'2026-10-04', target:'16 mi', phase:'TAPER & RACE', tag:null,
     focus:'Heavy, flat legs are normal here — the taper is working. Focus on staying healthy and recovering.',
@@ -370,7 +376,7 @@ const WEEKS = [
       {d:'MON',type:'optional',title:'Optional Run',sub:'1–2 mi · easy'},
       {d:'TUE',type:'easy',title:'Easy Run',sub:'4 mi + 5 strides'},
       {d:'WED',type:'class',title:'Ass Class',sub:''},
-      {d:'THU',type:'pace',title:'HM Pace Work',sub:'4 mi · last 2 @ HMGP'},
+      {d:'THU',type:'pace',title:'HM Pace Work',sub:'4 mi · last 2 @ HMGP',intervals:{warmup:true,reps:1,rest:false,cooldown:false}},
       {d:'FRI',type:'rest',title:'Rest',sub:''},
       {d:'SAT',type:'class',title:'Ass Class',sub:''},
       {d:'SUN',type:'long',title:'Long Run',sub:'8 mi'},
@@ -450,7 +456,7 @@ function renderWeekCard(w) {
   const daysHTML = w.days.map(d => {
     const shareable = d.type !== 'rest';
     const key = `${w.n}-${d.d}`;
-    if (shareable) blockRegistry[key] = { weekN: w.n, weekDates: w.dates, day: d.d, title: d.title, sub: d.sub };
+    if (shareable) blockRegistry[key] = { weekN: w.n, weekDates: w.dates, day: d.d, title: d.title, sub: d.sub, intervals: d.intervals };
     return `
     <div class="day-row type-${d.type}${shareable ? ' shareable' : ''}"${shareable ? ` data-key="${key}"` : ''}>
       <div class="d">${d.d}</div>
@@ -720,13 +726,41 @@ const shareOverlay = document.getElementById('shareOverlay');
 const shareOwner = document.getElementById('shareOwner');
 const shareMeta = document.getElementById('shareMeta');
 const shareTitle = document.getElementById('shareTitle');
+const shareChart = document.getElementById('shareChart');
 const shareBody = document.getElementById('shareBody');
 
+function buildIntervalSegments(iv) {
+  const segs = [];
+  if (iv.warmup) segs.push('warmup');
+  for (let i = 0; i < iv.reps; i++) {
+    segs.push('work');
+    if (iv.rest && i < iv.reps - 1) segs.push('rest');
+  }
+  if (iv.cooldown) segs.push('cooldown');
+  return segs;
+}
+
+function intervalCaption(iv) {
+  if (iv.reps > 1) return `<span>${iv.reps}×</span> Work Intervals`;
+  const parts = [];
+  if (iv.warmup) parts.push('Warm-up');
+  parts.push('Effort');
+  if (iv.cooldown) parts.push('Cooldown');
+  return parts.join(' <span>→</span> ');
+}
+
+function renderIntervalChart(iv) {
+  const segs = buildIntervalSegments(iv);
+  const bars = segs.map(type => `<div class="bar ${type}"></div>`).join('');
+  return `<div class="share-chart">${bars}</div><div class="share-chart-caption">${intervalCaption(iv)}</div>`;
+}
+
 function openShareCard(entry) {
-  const { weekN, weekDates, day, title, sub } = entry;
+  const { weekN, weekDates, day, title, sub, intervals } = entry;
   shareOwner.textContent = `ELLESE'S PLAN`;
   shareMeta.textContent = `${GOAL_RACE} · Week ${weekN} (${weekDates}) · ${DAY_NAMES[day] || day}`;
   shareTitle.textContent = title;
+  shareChart.innerHTML = intervals ? renderIntervalChart(intervals) : '';
   shareBody.innerHTML = sub ? `<div class="share-sub">${sub}</div>` : '';
   shareOverlay.classList.add('open');
   document.body.style.overflow = 'hidden';
