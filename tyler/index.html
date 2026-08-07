@@ -211,7 +211,6 @@
           <div id="shareBody"></div>
         </div>
         <div class="share-card-bottom">
-          <div class="share-bottom-tagline">Coached by Always Reddy Athletics</div>
           <div class="share-footer-url">alwaysreddyathletics.com</div>
           <div class="share-footer-handle">@alwaysreddyathletics</div>
         </div>
@@ -459,7 +458,7 @@ function renderIntervalChart(iv) {
 
 function openShareCard(entry) {
   const { weekN, weekDates, day, block } = entry;
-  shareOwner.textContent = `COACH TYLER`;
+  shareOwner.textContent = `TYLER'S PLAN`;
   shareMeta.textContent = `Build Phase · Week ${weekN} (${weekDates}) · ${DAY_NAMES[day] || day}`;
   shareTitle.textContent = block.title;
   shareChart.innerHTML = block.intervals ? renderIntervalChart(block.intervals) : '';
