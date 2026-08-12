@@ -13,7 +13,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Athlete Match Quiz | Always Reddy Athletics</title>
-  <meta name="description" content="Answer 6 quick questions and we'll match you with the right plan or tell you if 1-on-1 coaching is the better move.">
+  <meta name="description" content="Answer 6 quick questions and we'll match you with the right plan — pre-built, custom-built, or 1-on-1 coaching, whichever fits.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,7 +93,7 @@
     <div id="intro">
       <div class="eyebrow">Free Quiz</div>
       <h1 class="intro" style="font-size:clamp(2.4rem,6vw,3.8rem);font-weight:900;margin-bottom:16px;font-family:'Barlow Condensed',sans-serif;">Find Your <em>Right Plan.</em></h1>
-      <p style="font-size:1rem;color:rgba(244,242,239,0.65);line-height:1.75;margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;text-align:center;">Answer 6 questions about your background, goals, and schedule. We'll match you with the exact plan — or tell you if 1-on-1 coaching is the better move.</p>
+      <p style="font-size:1rem;color:rgba(244,242,239,0.65);line-height:1.75;margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;text-align:center;">Answer 6 questions about your background, goals, and schedule. We'll match you with the right fit — a ready-made plan, one custom-built around your numbers, or 1-on-1 coaching.</p>
       <div style="text-align:center;margin-bottom:12px;">
         <button class="btn-primary" onclick="startQuiz()">Start the Quiz →</button>
       </div>
@@ -302,7 +302,7 @@
     if (goal === 'race-long') {
       if (currentTraining === 'none' || currentTraining === 'light') return 'beginner-half';
       if (currentTraining === 'moderate') return 'intermediate-half';
-      return 'sub145-half';
+      return 'custom-plan';
     }
 
     if (goal === 'strength') {
@@ -325,6 +325,16 @@
       cta1: { label: 'Start the Free Course →', href: 'return-to-training.html', primary: true },
       cta2: { label: 'Browse All Plans', href: '/#plans', primary: false }
     },
+    'custom-plan': {
+      badge: 'Best Fit',
+      title: 'Custom Interactive Plan',
+      desc: 'You already have the fitness and a specific goal — you need a plan built around your actual paces and race date, not a generic template. Coach Tyler builds this by hand from your real numbers.',
+      cardLabel: 'From $99 · Delivered in 3–5 Days',
+      cardTitle: 'Custom Interactive Plan',
+      cardDesc: 'Built from your real PRs and goal race. Paces computed for every workout, delivered as your own private, interactive training page — not a PDF. Auto-tracks every run and gives you shareable workout cards.',
+      cta1: { label: 'Get Your Custom Plan →', href: '/custom-plan.html', primary: true },
+      cta2: { label: 'Browse All Plans', href: '/#plans', primary: false }
+    },
     'coaching': {
       badge: 'Best Fit',
       title: 'The Athletic Rebuild — 1-on-1 Coaching',
@@ -332,7 +342,7 @@
       cardLabel: '12-Week Coaching Program',
       cardTitle: 'The Athletic Rebuild',
       cardDesc: 'A 12-week 1-on-1 coaching program engineered around your athletic history, your current life, and exactly where you want to be. Not a template. Not a PDF. Real coaching.',
-      cta1: { label: 'Apply for The Athletic Rebuild →', href: '/', primary: true },
+      cta1: { label: 'Apply for The Athletic Rebuild →', href: '/coaching.html', primary: true },
       cta2: { label: 'Book a Free Call First', href: 'https://calendly.com/tylerreddy96/30min', primary: false }
     },
     '5k-plan': {
