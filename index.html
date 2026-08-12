@@ -347,7 +347,7 @@
     <a href="contact.html">Contact</a>
   </div>
   <div class="nav-actions">
-    <a href="#apply" class="btn-primary" onclick="openApplyModal();return false;">Apply Now</a>
+    <a href="/custom-plan.html" class="btn-primary">Get Your Plan</a>
     <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -362,22 +362,23 @@
   <a href="#about" onclick="closeMobileMenu()">About</a>
   <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
   <a href="subscribe.html" class="mobile-cta" onclick="closeMobileMenu()">Free Training Guide</a>
-  <a href="#apply" class="mobile-apply" onclick="openApplyModal();closeMobileMenu();return false;">Apply for Coaching →</a>
+  <a href="/custom-plan.html" class="mobile-apply" onclick="closeMobileMenu()">Get Your Custom Plan →</a>
+  <a href="#apply" onclick="openApplyModal();closeMobileMenu();return false;">Or Apply for Full Coaching →</a>
 </div>
 
 <section class="hero">
   <div class="container">
-    <div class="hero-eyebrow">Limited Spots — The Athletic Rebuild</div>
+    <div class="hero-eyebrow">Personalized Training — Built From Your Numbers</div>
     <h1 class="hero-title">You Were Built<br><em>To Compete.</em><br>Start Again.</h1>
     <p class="hero-sub">You spent years training like an athlete. Then real life happened. Now you're strong enough to remember what you had — and hungry enough to get it back.</p>
     <div class="badge-row">
       <span class="badge">Former Athletes Only</span>
-      <span class="badge">1-on-1 Private Coaching</span>
+      <span class="badge">Built From Your Real PRs</span>
       <span class="badge">Custom Plan — No Templates</span>
       <span class="badge">Community Included</span>
     </div>
     <div class="hero-actions">
-      <a href="#apply" class="btn-primary btn-large" onclick="openApplyModal();return false;">Apply for The Athletic Rebuild →</a>
+      <a href="/custom-plan.html" class="btn-primary btn-large">Get Your Custom Plan →</a>
     </div>
     <p style="font-size:0.85rem;color:rgba(244,242,239,0.4);margin-bottom:40px;">Not ready to apply? <a href="#guide" onclick="openGuideModal();return false;" style="color:var(--accent);text-decoration:none;">Get the free training guide →</a></p>
     <div class="hero-stats">
@@ -385,6 +386,48 @@
       <div><div class="hero-stat-num">1:1</div><div class="hero-stat-label">Private Coaching</div></div>
       <div><div class="hero-stat-num">100%</div><div class="hero-stat-label">Client PR Rate</div></div>
       <div><div class="hero-stat-num">1:18</div><div class="hero-stat-label">Faster. Same course. Under 12 months.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="custom-plan">
+  <div class="container">
+    <div class="section-label">Your Custom Plan</div>
+    <h2>Get a Plan Built<br>Just <em>For You.</em></h2>
+    <p class="products-sub">A real coach builds this from your actual PRs and goal race — not a template off the shelf. Delivered as your own private, interactive training page: paces computed for you, auto-tracks every run, and gives you shareable workout cards for Strava and IG.</p>
+    <div class="pricing-grid" style="grid-template-columns:1fr 1fr;">
+      <div class="pricing-card">
+        <div class="pricing-tier">Build &amp; Deliver</div>
+        <div class="pricing-name">Custom Interactive Plan</div>
+        <div class="pricing-price">$129</div>
+        <div class="pricing-period">One-time · 6–10 week block</div>
+        <ul class="pricing-features">
+          <li>Built from your real PRs and goal race</li>
+          <li>Paces computed for every workout — no guessing</li>
+          <li>Your own private training page, not a PDF</li>
+          <li>Auto-tracks every logged run</li>
+          <li>Shareable workout cards for Strava/IG</li>
+          <li>Delivered within 3–5 business days</li>
+        </ul>
+        <a href="/custom-plan.html?tier=plan" class="btn-ghost" style="display:block;text-align:center;">Get Your Custom Plan →</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="featured-tag">Recommended</div>
+        <div class="pricing-tier">Build, Deliver &amp; Check In</div>
+        <div class="pricing-name">Plan + Check-Ins</div>
+        <div class="pricing-price">$199</div>
+        <div class="pricing-period">One-time · 6–10 week block</div>
+        <ul class="pricing-features">
+          <li>Everything in the Custom Interactive Plan</li>
+          <li>Coach reviews your logged training every 1–2 weeks</li>
+          <li>1–2 plan adjustments during your block</li>
+          <li>Direct line to Coach Tyler if something's off</li>
+        </ul>
+        <a href="/custom-plan.html?tier=checkins" class="btn-primary" style="display:block;text-align:center;width:100%;">Get Plan + Check-Ins →</a>
+      </div>
+    </div>
+    <div class="not-ready">
+      Or are you ready for full coaching? <a href="#athletic-rebuild">See The Athletic Rebuild →</a>
     </div>
   </div>
 </section>
@@ -510,48 +553,6 @@
     </div>
     <div class="not-ready">
       Not ready to apply yet? No pressure. <a href="https://calendly.com/tylerreddy96/30min" target="_blank" rel="noopener">Schedule a free 30-minute call with Tyler →</a>
-    </div>
-  </div>
-</section>
-
-<section class="pricing" id="custom-plan">
-  <div class="container">
-    <div class="section-label">Something In Between</div>
-    <h2>Not Ready for Full Coaching?<br><em>Your Plan, Still Personal.</em></h2>
-    <p class="products-sub">A real coach builds this from your actual PRs and goal race — not a template off the shelf. Delivered as your own private, interactive training page: paces computed for you, auto-tracks every run, and gives you shareable workout cards for Strava and IG.</p>
-    <div class="pricing-grid" style="grid-template-columns:1fr 1fr;">
-      <div class="pricing-card">
-        <div class="pricing-tier">Build &amp; Deliver</div>
-        <div class="pricing-name">Custom Interactive Plan</div>
-        <div class="pricing-price">$129</div>
-        <div class="pricing-period">One-time · 6–10 week block</div>
-        <ul class="pricing-features">
-          <li>Built from your real PRs and goal race</li>
-          <li>Paces computed for every workout — no guessing</li>
-          <li>Your own private training page, not a PDF</li>
-          <li>Auto-tracks every logged run</li>
-          <li>Shareable workout cards for Strava/IG</li>
-          <li>Delivered within 3–5 business days</li>
-        </ul>
-        <a href="/custom-plan.html?tier=plan" class="btn-ghost" style="display:block;text-align:center;">Get Your Custom Plan →</a>
-      </div>
-      <div class="pricing-card featured">
-        <div class="featured-tag">Recommended</div>
-        <div class="pricing-tier">Build, Deliver &amp; Check In</div>
-        <div class="pricing-name">Plan + Check-Ins</div>
-        <div class="pricing-price">$199</div>
-        <div class="pricing-period">One-time · 6–10 week block</div>
-        <ul class="pricing-features">
-          <li>Everything in the Custom Interactive Plan</li>
-          <li>Coach reviews your logged training every 1–2 weeks</li>
-          <li>1–2 plan adjustments during your block</li>
-          <li>Direct line to Coach Tyler if something's off</li>
-        </ul>
-        <a href="/custom-plan.html?tier=checkins" class="btn-primary" style="display:block;text-align:center;width:100%;">Get Plan + Check-Ins →</a>
-      </div>
-    </div>
-    <div class="not-ready">
-      Training for a marathon, or want ongoing calls and direct access? <a href="#athletic-rebuild">Full 1-on-1 coaching might be the better fit →</a>
     </div>
   </div>
 </section>
