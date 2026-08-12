@@ -82,7 +82,31 @@
     .success p{font-size:.93rem;color:rgba(244,242,239,0.6);line-height:1.75;margin-bottom:24px}
     .btn-back{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:#c8a96e;border:1px solid rgba(200,169,110,0.35);padding:10px 22px;border-radius:2px;display:inline-block;transition:background .2s;text-decoration:none}
     .btn-back:hover{background:rgba(200,169,110,0.08);text-decoration:none}
-    @media(max-width:500px){.nav-links{display:none}.nav-hamburger{display:flex}.mobile-menu.open{display:block}.form-row{grid-template-columns:1fr}}
+    .block-heading{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.5rem;margin:0 0 22px;letter-spacing:.01em}
+    .block-heading em{font-style:normal;color:#c8a96e}
+    .steps{display:flex;flex-direction:column;gap:22px;margin-bottom:52px}
+    .step{display:flex;gap:16px;align-items:flex-start}
+    .step-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;border:1px solid rgba(200,169,110,0.4);color:#c8a96e;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;display:flex;align-items:center;justify-content:center}
+    .step-body h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:5px}
+    .step-body p{font-size:.88rem;color:rgba(244,242,239,0.6);line-height:1.65;font-weight:300}
+    .proof-sub{font-size:.9rem;color:rgba(244,242,239,0.55);line-height:1.7;font-weight:300;margin-bottom:22px}
+    .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:10px}
+    .proof-item img{width:100%;border-radius:6px;border:1px solid rgba(255,255,255,0.12);display:block;margin-bottom:10px}
+    .proof-caption{font-size:.78rem;color:#666;line-height:1.5}
+    .proof-section{margin-bottom:52px}
+    .testimonials{display:flex;flex-direction:column;gap:22px;margin-bottom:52px}
+    .testimonial{border-left:2px solid #c8a96e;padding-left:18px}
+    .testimonial p{font-size:.95rem;font-style:italic;line-height:1.7;color:rgba(244,242,239,0.85);margin-bottom:8px}
+    .testimonial cite{font-family:'Barlow Condensed',sans-serif;font-style:normal;font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#c8a96e}
+    .faq{margin-bottom:52px}
+    .faq-item{border-bottom:.5px solid rgba(255,255,255,0.1);padding:16px 0}
+    .faq-item summary{cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-item summary::after{content:'+';font-size:1.3rem;color:#c8a96e;flex-shrink:0}
+    .faq-item[open] summary::after{content:'\2212'}
+    .faq-item p{font-size:.88rem;color:rgba(244,242,239,0.6);line-height:1.7;margin-top:10px;font-weight:300}
+    .form-divider{border-top:.5px solid rgba(200,169,110,0.25);padding-top:44px;margin-bottom:24px}
+    @media(max-width:500px){.nav-links{display:none}.nav-hamburger{display:flex}.mobile-menu.open{display:block}.form-row{grid-template-columns:1fr}.proof-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -91,7 +115,7 @@
   <a href="/" class="nav-logo">Always <span>Reddy</span> Athletics</a>
   <div class="nav-links">
     <a href="/#plans">Programs</a>
-    <a href="/quiz.html">Quiz</a>
+    <a href="/custom-plan.html" class="active">Custom Plan</a>
     <a href="/#about">About</a>
     <a href="/#testimonials">Reviews</a>
     <a href="/contact.html">Contact</a>
@@ -106,7 +130,7 @@
 
 <div class="mobile-menu" id="mobile-menu">
   <a href="/#plans" onclick="closeMobileMenu()">Programs</a>
-  <a href="/quiz.html" onclick="closeMobileMenu()">Quiz</a>
+  <a href="/custom-plan.html" onclick="closeMobileMenu()">Custom Plan</a>
   <a href="/#about" onclick="closeMobileMenu()">About</a>
   <a href="/#testimonials" onclick="closeMobileMenu()">Reviews</a>
   <a href="/contact.html" onclick="closeMobileMenu()">Contact</a>
@@ -118,6 +142,85 @@
     <div class="eyebrow">Custom Interactive Plan</div>
     <h1>Let's Build <em>Your Plan.</em></h1>
     <p class="sub">Tell us about your goal and current fitness. Coach Tyler will build your paces and week-by-week plan personally, then deliver it as your own private training page within 3–5 business days.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Tell Us About You</h3>
+          <p>Fill out the form below — your goal race, current fitness, and any recent PRs. Takes about three minutes.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Tyler Builds Your Plan</h3>
+          <p>He calculates your training paces from your real numbers and builds your week-by-week plan by hand — not a template. Delivered in 3–5 business days.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Train From Your Own Page</h3>
+          <p>You get a private, interactive training link. Log every run right on the page — it autosaves — and grab shareable workout cards for Strava or IG as you go.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof-section">
+      <div class="block-heading">See It <em>In Action.</em></div>
+      <p class="proof-sub">A real page from a real athlete's plan — this is the same format yours will be built in, just with your paces and your race.</p>
+      <div class="proof-grid">
+        <div class="proof-item">
+          <img src="/assets/preview-plan.png" alt="Screenshot of a personalized weekly training plan with lift groups and pace targets" loading="lazy">
+          <div class="proof-caption">Your week, broken down day by day — paces, sets, and reps calculated for you.</div>
+        </div>
+        <div class="proof-item">
+          <img src="/assets/preview-sharecard.png" alt="Screenshot of a shareable workout card with an interval bar chart" loading="lazy">
+          <div class="proof-caption">Every workout comes with a shareable card — built for Strava or Instagram.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonials">
+      <div class="block-heading" style="margin-bottom:0;">What Athletes <em>Are Saying.</em></div>
+      <div class="testimonial">
+        <p>"I ran my first half-marathon thanks to Always Reddy Athletics. Couldn't have done it without the programming."</p>
+        <cite>— Jake, ARA Client</cite>
+      </div>
+      <div class="testimonial">
+        <p>"Running longer distances faster kept getting easier — and I was still hitting my strength work."</p>
+        <cite>— Riana, ARA Client</cite>
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="block-heading">Questions.</div>
+      <details class="faq-item">
+        <summary>How long until I get my plan?</summary>
+        <p>3–5 business days after your form and payment are both in. If your race is coming up fast, mention it in your notes and we'll prioritize it.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How is this different from the static PDF plans?</summary>
+        <p>Those are templates built for a general fitness level. This is built from your actual PRs and goal race, and it's delivered as a living page — it tracks your training, computes your paces, and adjusts to your specific timeline instead of a one-size-fits-all download.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I upgrade to check-ins later?</summary>
+        <p>Yes. Reach out anytime through the contact page and Tyler can add check-ins to an existing plan.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if my race is more than 10 weeks out?</summary>
+        <p>No problem — just tell us your race date on the form. We'll size the plan to fit your actual timeline.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need a specific watch or app?</summary>
+        <p>No. Any watch or phone works — you just log your paces and mileage right on your training page as you go.</p>
+      </details>
+    </div>
+
+    <div class="form-divider">
+      <div class="block-heading">Ready? <em>Let's Go.</em></div>
+    </div>
 
     <div class="paid-banner" id="paidBanner">✓ Payment received. Fill in your info below and Tyler will start building your plan.</div>
 
