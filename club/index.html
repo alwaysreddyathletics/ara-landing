@@ -8,141 +8,182 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --black:#0a0a0a; --near:#111111; --panel:#111111;
-    --gold:#c8a96e; --gold-dk:#a8893e;
-    --white:#f4f2ef; --muted:#888; --line:#242424;
-    --cream:#f4f2ef;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{background:var(--black);color:var(--white);font-family:'Barlow',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
-  .display{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;line-height:1.02;letter-spacing:.01em}
-  .eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.22em;font-size:13px;color:var(--gold)}
-  .btn{display:inline-block;background:var(--gold);color:var(--black);font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:18px;padding:16px 44px;text-decoration:none;transition:background .15s;border:none;cursor:pointer}
-  .btn:hover{background:var(--gold-dk)}
-  .btn-outline{display:inline-block;background:transparent;color:var(--gold);border:1px solid var(--gold-dk);font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:14px;padding:10px 22px;text-decoration:none}
+  :root { --black:#0a0a0a; --white:#f4f2ef; --muted:#888; --accent:#c8a96e; --accent-dark:#a8893e; }
+  *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Barlow',sans-serif; background:var(--black); color:var(--white); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4 { font-family:'Barlow Condensed',sans-serif; line-height:1.05; letter-spacing:-0.01em; text-transform:uppercase; }
+  em { font-style:normal; color:var(--accent); }
+  .container { max-width:1100px; margin:0 auto; padding:0 20px; }
+  section { padding:80px 0; }
+  .section-label { font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:16px; text-align:center; }
 
-  .bar{border-bottom:1px solid var(--line);padding:18px 0}
-  .bar .wrap{display:flex;justify-content:space-between;align-items:center}
-  .brand{font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.14em;font-size:15px;text-transform:uppercase;color:var(--white);text-decoration:none}
-  .brand span{color:var(--gold)}
-  .bar-tag{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-family:'Barlow Condensed',sans-serif;font-weight:600}
+  /* nav — matches shared site pattern */
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; background:rgba(10,10,10,0.92); backdrop-filter:blur(10px); border-bottom:1px solid rgba(200,169,110,0.15); }
+  .nav-logo { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1.1rem; letter-spacing:0.05em; text-transform:uppercase; color:var(--white); text-decoration:none; }
+  .nav-logo span { color:var(--accent); }
+  .nav-links { display:flex; gap:28px; align-items:center; }
+  .nav-links a { font-family:'Barlow Condensed',sans-serif; font-size:0.82rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#888888; text-decoration:none; transition:color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color:#f4f2ef; }
+  .nav-hamburger { display:none; flex-direction:column; justify-content:center; gap:5px; cursor:pointer; padding:4px; background:none; border:none; flex-shrink:0; }
+  .nav-hamburger span { display:block; width:22px; height:2px; background:#f4f2ef; border-radius:2px; transition:all .25s; }
+  .nav-hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity:0; }
+  .nav-hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+  .mobile-menu { display:none; position:fixed; top:53px; left:0; right:0; background:#0d0d0d; border-bottom:1px solid rgba(200,169,110,0.15); z-index:99; padding:8px 0 16px; }
+  .mobile-menu a { display:block; padding:14px 22px; font-family:'Barlow Condensed',sans-serif; font-size:1.05rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; text-align:center; color:#888; text-decoration:none; border-bottom:.5px solid rgba(255,255,255,0.04); transition:color .2s; }
+  .mobile-menu a:hover { color:#f4f2ef; }
+  .mobile-menu.open { display:block; }
+  .nav-actions { display:flex; gap:12px; align-items:center; }
+  .btn-ghost { font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--white); text-decoration:none; padding:8px 16px; border:1px solid rgba(255,255,255,0.2); border-radius:2px; transition:all 0.2s; white-space:nowrap; background:none; cursor:pointer; }
+  .btn-ghost:hover { border-color:var(--accent); color:var(--accent); }
+  .btn-primary { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.9rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--black); background:var(--accent); text-decoration:none; padding:10px 20px; border-radius:2px; border:none; cursor:pointer; transition:all 0.2s; display:inline-block; white-space:nowrap; }
+  .btn-primary:hover { background:var(--accent-dark); transform:translateY(-1px); }
+  .btn-large { font-size:1.1rem; padding:16px 36px; letter-spacing:0.1em; }
 
-  .hero{padding:72px 0 40px;text-align:center;position:relative}
-  .hero::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:72px;height:3px;background:var(--gold)}
-  .hero .kicker{font-family:'Barlow Condensed',sans-serif;font-weight:600;letter-spacing:.02em;font-size:22px;color:var(--muted);margin-bottom:4px}
-  .hero h1{font-size:clamp(36px,7vw,64px);margin:6px 0 18px;line-height:1.08}
-  .hero h1 .g{color:var(--gold)}
-  .hero .sub{max-width:640px;margin:0 auto;color:var(--muted);font-size:17px}
-  .hero .cta{margin-top:32px}
-  .hero .cta-sub{margin-top:14px;font-size:14px;color:#8a8a8a}
-  .hero .cta-sub a{color:var(--gold-dk);text-decoration:none}
+  /* ---------- hero ---------- */
+  .hero { padding:calc(90px + 72px) 0 40px; text-align:center; position:relative; }
+  .hero::after { content:""; position:absolute; left:50%; bottom:0; transform:translateX(-50%); width:72px; height:3px; background:var(--accent); }
+  .hero-eyebrow { font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:20px; display:flex; align-items:center; justify-content:center; gap:12px; }
+  .hero .kicker { font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:.02em; font-size:1.3rem; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .hero h1 { font-size:clamp(2.4rem,7vw,4.5rem); font-weight:900; margin:6px 0 18px; line-height:1.08; }
+  .hero .sub { max-width:640px; margin:0 auto; color:var(--muted); font-size:1.05rem; font-weight:300; }
+  .hero .sub strong { color:var(--white); font-weight:500; }
+  .hero .cta { margin-top:32px; }
+  .hero .cta-sub { margin-top:14px; font-size:0.85rem; color:var(--muted); }
+  .hero .cta-sub a { color:var(--accent); text-decoration:none; }
 
-  .stats{padding:44px 0;border-bottom:1px solid var(--line)}
-  .stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
-  .stat b{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:38px;color:var(--gold);line-height:1}
-  .stat span{display:block;margin-top:6px;font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:12px;color:var(--muted)}
+  .stats { padding:44px 0; border-bottom:1px solid rgba(255,255,255,0.08); }
+  .stats .container { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; text-align:center; }
+  .stat b { display:block; font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:2.4rem; color:var(--accent); line-height:1; }
+  .stat span { display:block; margin-top:6px; font-family:'Barlow Condensed',sans-serif; font-weight:600; text-transform:uppercase; letter-spacing:.1em; font-size:0.78rem; color:var(--muted); }
 
-  .section{padding:68px 0}
-  .section .head{text-align:center;margin-bottom:40px}
-  .section .head h2{font-size:clamp(28px,4.5vw,42px);margin-top:10px}
-  .section .head p{color:var(--muted);max-width:580px;margin:14px auto 0;font-size:15.5px}
+  .section .head { text-align:center; margin-bottom:48px; }
+  .section .head h2 { font-size:clamp(1.8rem,4.5vw,2.8rem); font-weight:800; margin-top:10px; }
+  .section .head p { color:var(--muted); max-width:580px; margin:14px auto 0; font-size:0.98rem; }
 
-  .story p{color:var(--muted);font-size:16px;max-width:680px;margin:0 auto 18px}
-  .story p:last-child{margin-bottom:0}
-  .story strong{color:var(--white);font-weight:500}
+  .story p { color:var(--muted); font-size:1rem; max-width:680px; margin:0 auto 18px; }
+  .story p:last-child { margin-bottom:0; }
+  .story strong { color:var(--white); font-weight:500; }
 
-  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-  .path-card{background:var(--panel);border:1px solid var(--line);padding:32px 28px}
-  .path-card .tag{font-family:'Barlow Condensed',sans-serif;font-weight:600;color:var(--gold-dk);letter-spacing:.12em;font-size:13px;text-transform:uppercase}
-  .path-card h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:28px;text-transform:uppercase;margin:8px 0 12px}
-  .path-card p{color:var(--muted);font-size:15px}
+  .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .path-card { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); border-radius:2px; padding:32px 28px; }
+  .path-card .tag { font-family:'Barlow Condensed',sans-serif; font-weight:600; color:var(--accent-dark); letter-spacing:.12em; font-size:0.8rem; text-transform:uppercase; }
+  .path-card h3 { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1.7rem; text-transform:uppercase; margin:8px 0 12px; }
+  .path-card p { color:var(--muted); font-size:0.92rem; }
 
-  .feature-row{display:flex;align-items:flex-start;gap:20px;padding:20px 8px;border-bottom:1px solid var(--line)}
-  .feature-row:first-of-type{border-top:1px solid var(--line)}
-  .feature-row .num{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:28px;color:var(--gold);min-width:42px;line-height:1.2}
-  .feature-row h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:18px;letter-spacing:.02em;margin-bottom:4px}
-  .feature-row p{color:var(--muted);font-size:14.5px;max-width:640px}
+  .feature-row { display:flex; align-items:flex-start; gap:20px; padding:20px 8px; border-bottom:1px solid rgba(255,255,255,0.06); }
+  .feature-row:first-of-type { border-top:1px solid rgba(255,255,255,0.06); }
+  .feature-row .num { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:1.8rem; color:rgba(200,169,110,0.35); min-width:42px; line-height:1.2; }
+  .feature-row h3 { font-family:'Barlow Condensed',sans-serif; font-weight:700; text-transform:uppercase; font-size:1.1rem; letter-spacing:.02em; margin-bottom:4px; }
+  .feature-row p { color:var(--muted); font-size:0.9rem; max-width:640px; }
 
-  .who-list{max-width:640px;margin:0 auto}
-  .who-list li{color:var(--muted);font-size:15.5px;padding:6px 0;list-style:none}
-  .who-list li::before{content:"\2014  ";color:var(--gold-dk)}
+  .who-list { max-width:640px; margin:0 auto; }
+  .who-list li { color:var(--muted); font-size:0.95rem; padding:6px 0; list-style:none; }
+  .who-list li::before { content:"\2014  "; color:var(--accent-dark); }
 
-  .pricing{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--gold);max-width:520px;margin:0 auto;padding:40px 36px;text-align:center}
-  .pricing .badge{display:inline-block;background:var(--gold);color:var(--black);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;margin-bottom:18px}
-  .pricing .value-line{color:#8a8a8a;font-size:13.5px;margin-bottom:6px}
-  .pricing .price{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:56px;color:var(--white)}
-  .pricing .price .strike{font-size:26px;color:#6f6f6f;text-decoration:line-through;margin-right:10px;font-weight:400}
-  .pricing .price span{font-size:20px;color:var(--muted);font-family:'Barlow',sans-serif}
-  .pricing .note{color:var(--gold-dk);font-family:'Barlow Condensed',sans-serif;font-weight:600;letter-spacing:.04em;font-size:15px;margin:10px 0 4px}
-  .pricing .spotnum{font-size:13px;color:#8a8a8a;margin-bottom:24px}
-  .pricing .guarantee{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted);text-align:left}
-  .pricing .guarantee strong{color:var(--white)}
+  .pricing { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); border-top:3px solid var(--accent); border-radius:2px; max-width:520px; margin:0 auto; padding:40px 36px; text-align:center; }
+  .pricing .badge { display:inline-block; background:var(--accent); color:var(--black); font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.7rem; letter-spacing:.1em; text-transform:uppercase; padding:5px 14px; margin-bottom:18px; }
+  .pricing .value-line { color:var(--muted); font-size:0.82rem; margin-bottom:6px; }
+  .pricing .price { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:3rem; color:var(--white); }
+  .pricing .price .strike { font-size:1.5rem; color:#6f6f6f; text-decoration:line-through; margin-right:10px; font-weight:400; }
+  .pricing .price span { font-size:1.1rem; color:var(--muted); font-family:'Barlow',sans-serif; }
+  .pricing .note { color:var(--accent-dark); font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:.04em; font-size:0.9rem; margin:10px 0 4px; text-transform:uppercase; }
+  .pricing .spotnum { font-size:0.8rem; color:var(--muted); margin-bottom:24px; }
+  .pricing .guarantee { margin-top:22px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.08); font-size:0.82rem; color:var(--muted); text-align:left; }
+  .pricing .guarantee strong { color:var(--white); }
 
-  .faq{max-width:720px;margin:0 auto}
-  .faq-item{padding:22px 0;border-bottom:1px solid var(--line)}
-  .faq-item:first-child{border-top:1px solid var(--line)}
-  .faq-item h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:19px;margin-bottom:8px}
-  .faq-item p{color:var(--muted);font-size:15px}
-  .faq-item a{color:var(--gold-dk)}
+  .faq-max { max-width:720px; margin:0 auto; }
+  .faq-item { padding:22px 0; border-bottom:1px solid rgba(255,255,255,0.06); }
+  .faq-item:first-child { border-top:1px solid rgba(255,255,255,0.06); }
+  .faq-item h3 { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:1.1rem; margin-bottom:8px; text-transform:none; }
+  .faq-item p { color:var(--muted); font-size:0.9rem; }
+  .faq-item a { color:var(--accent); }
 
-  .final{padding:80px 0 92px;text-align:center}
-  .final h2{font-size:clamp(30px,5vw,46px);line-height:1.15}
-  .final h2 .g{color:var(--gold)}
-  .final .decide{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:19px;color:var(--muted);margin:18px 0 30px}
-  .final .decide strong{color:var(--gold)}
+  .cta-footer { background:var(--black); padding:100px 0; text-align:center; }
+  .cta-footer h2 { font-size:clamp(1.8rem,5vw,3rem); font-weight:900; line-height:1.15; margin-bottom:18px; }
+  .cta-footer .decide { font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:1.05rem; text-transform:none; letter-spacing:0; color:var(--muted); margin-bottom:30px; }
 
-  footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;font-size:13px;color:#6f6f6f}
-  footer a{color:#9a9a9a;text-decoration:none}
-  footer a:hover{color:var(--gold)}
+  footer { background:#060606; border-top:1px solid rgba(255,255,255,0.06); padding:32px 20px; text-align:center; }
+  .footer-logo { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1rem; letter-spacing:0.05em; text-transform:uppercase; color:var(--white); margin-bottom:12px; }
+  .footer-logo span { color:var(--accent); }
+  .footer-links { display:flex; gap:24px; justify-content:center; margin-bottom:16px; flex-wrap:wrap; }
+  .footer-links a { font-size:0.8rem; color:var(--muted); text-decoration:none; transition:color 0.2s; }
+  .footer-links a:hover { color:var(--accent); }
+  .footer-copy { font-size:0.78rem; color:rgba(136,136,136,0.5); }
 
-  @media (max-width:700px){
-    .grid-2{grid-template-columns:1fr}
-    .stats .wrap{grid-template-columns:1fr;gap:20px}
-    .feature-row{flex-wrap:wrap}
-    .pricing{padding:30px 22px}
+  @media(max-width:980px) and (min-width:769px) { .nav-links { display:none; } .nav-hamburger { display:flex; } }
+  @media(max-width:768px) {
+    section { padding:60px 0; }
+    nav { padding:14px 16px; }
+    .nav-logo { font-size:0.9rem; }
+    .nav-links { display:none; }
+    .nav-hamburger { display:flex; }
+    .hero { padding:calc(70px + 52px) 0 32px; }
+    .grid-2 { grid-template-columns:1fr; }
+    .stats .container { grid-template-columns:1fr; gap:20px; }
+    .feature-row { flex-wrap:wrap; }
+    .pricing { padding:30px 22px; }
   }
 </style>
 </head>
 <body>
 
-<div class="bar">
-  <div class="wrap">
-    <a class="brand" href="/index.html">ALWAYS <span>REDDY</span> ATHLETICS</a>
-    <div class="bar-tag">The Rebuild Club</div>
+<nav>
+  <a href="/" class="nav-logo">Always <span>Reddy</span> Athletics</a>
+  <div class="nav-links">
+    <a href="/reset">FREE RESET</a>
+    <a href="/coaching.html">Coaching</a>
+    <a href="/club/" class="active">Club</a>
+    <a href="/custom-plan.html">Custom Plan</a>
+    <a href="/#about">About</a>
+    <a href="/contact.html">Contact</a>
   </div>
+  <div class="nav-actions">
+    <a href="https://www.skool.com/always-reddy-athletics-9861/about" target="_blank" rel="noopener" class="btn-primary">Join Free →</a>
+    <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/reset" onclick="closeMobileMenu()">FREE RESET</a>
+  <a href="/coaching.html" onclick="closeMobileMenu()">Coaching</a>
+  <a href="/club/" onclick="closeMobileMenu()">Club</a>
+  <a href="/custom-plan.html" onclick="closeMobileMenu()">Custom Plan</a>
+  <a href="/#about" onclick="closeMobileMenu()">About</a>
+  <a href="/contact.html" onclick="closeMobileMenu()">Contact</a>
 </div>
 
 <section class="hero">
-  <div class="wrap">
-    <div class="eyebrow">Founding Access Open &nbsp;·&nbsp; First 50 Athletes Free</div>
+  <div class="container">
+    <div class="hero-eyebrow">Founding Access Open &nbsp;·&nbsp; First 50 Athletes Free</div>
     <div class="kicker">You used to be —</div>
-    <h1 class="display">are still <span class="g">an athlete.</span></h1>
+    <h1>are still <em>an athlete.</em></h1>
     <p class="sub">Then came the desk. The commute. The meetings that could've been emails. Here's the truth nobody tells you: <strong>the athlete didn't leave — the system did.</strong> You didn't get soft. You got busy, and nobody handed you a plan built for the life you actually live. The Rebuild Club is that plan.</p>
     <div class="cta">
-      <a class="btn" href="https://www.skool.com/always-reddy-athletics-9861/about" target="_blank" rel="noopener">Claim a Free Founding Spot →</a>
+      <a href="https://www.skool.com/always-reddy-athletics-9861/about" target="_blank" rel="noopener" class="btn-primary btn-large">Claim a Free Founding Spot →</a>
     </div>
     <div class="cta-sub">Not ready? <a href="/reset/">Start with the free 5-Day Reset →</a></div>
   </div>
 </section>
 
 <section class="stats">
-  <div class="wrap">
+  <div class="container">
     <div class="stat"><b>3:27</b><span>Marathon</span></div>
     <div class="stat"><b>5:36</b><span>Mile</span></div>
     <div class="stat"><b>19:37</b><span>5K</span></div>
   </div>
 </section>
 
-<section class="section story">
-  <div class="wrap">
+<section class="story">
+  <div class="container">
     <div class="head">
-      <div class="eyebrow">The Story</div>
-      <h2 class="display">Built With a Full-Time Job</h2>
+      <div class="section-label">The Story</div>
+      <h2>Built With a Full-Time Job</h2>
     </div>
     <p>I'm not a genetic freak, and I don't train four hours a day.</p>
     <p>But in the last fourteen months, on a system built around a real schedule, I took my marathon from 4:45 to 3:27 on the same course. I ran 37 miles with 8,000 feet of climbing through the mountains. Two weeks later I was on a track running quarter-mile repeats at a pace I couldn't touch in high school.</p>
@@ -151,11 +192,11 @@
   </div>
 </section>
 
-<section class="section" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="wrap">
+<section style="background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)">
+  <div class="container">
     <div class="head">
-      <div class="eyebrow">One System, Two Paths</div>
-      <h2 class="display">Pick What You're Chasing</h2>
+      <div class="section-label">One System, Two Paths</div>
+      <h2>Pick What You're Chasing</h2>
     </div>
     <div class="grid-2">
       <div class="path-card">
@@ -172,11 +213,11 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="wrap">
+<section>
+  <div class="container">
     <div class="head">
-      <div class="eyebrow">What's Inside</div>
-      <h2 class="display">Everything You Need to Train Like an Athlete Again</h2>
+      <div class="section-label">What's Inside</div>
+      <h2>Everything You Need to Train Like an Athlete Again</h2>
     </div>
 
     <div class="feature-row">
@@ -206,11 +247,11 @@
   </div>
 </section>
 
-<section class="section" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="wrap">
+<section style="background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)">
+  <div class="container">
     <div class="head">
-      <div class="eyebrow">Who This Is For</div>
-      <h2 class="display">Sound Familiar?</h2>
+      <div class="section-label">Who This Is For</div>
+      <h2>Sound Familiar?</h2>
     </div>
     <ul class="who-list">
       <li>You played sports — high school, club, college — and haven't had a "season" since.</li>
@@ -222,10 +263,10 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="wrap">
+<section>
+  <div class="container">
     <div class="head">
-      <div class="eyebrow">Founding Membership</div>
+      <div class="section-label">Founding Membership</div>
     </div>
     <div class="pricing">
       <div class="badge">First 50 Athletes Only</div>
@@ -233,19 +274,19 @@
       <div class="price"><span class="strike">$97/mo</span>Free</div>
       <div class="note">Free — Locked In For Life</div>
       <div class="spotnum">First 50 Free &nbsp;·&nbsp; Member 51 Pays $97/mo</div>
-      <a class="btn" href="https://www.skool.com/always-reddy-athletics-9861/about" target="_blank" rel="noopener">Join The Rebuild Club</a>
+      <a href="https://www.skool.com/always-reddy-athletics-9861/about" target="_blank" rel="noopener" class="btn-primary btn-large">Join The Rebuild Club →</a>
       <div class="guarantee"><strong>No catch.</strong> Free means free — no card required to join. If it's not for you, leave anytime in two clicks. No forms, no friction.</div>
     </div>
   </div>
 </section>
 
-<section class="section" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="wrap">
+<section style="background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)">
+  <div class="container">
     <div class="head">
-      <div class="eyebrow">Questions</div>
-      <h2 class="display">Straight Answers</h2>
+      <div class="section-label">Questions</div>
+      <h2>Straight Answers</h2>
     </div>
-    <div class="faq">
+    <div class="faq-max">
       <div class="faq-item">
         <h3>Is this 1-on-1 coaching?</h3>
         <p>No — the Club is group programming. Every month you get the full training system (running, strength, mobility) in two tracks — Speed (5K/10K) and Endurance (half/marathon); you pick yours and train alongside the whole Club. If you want a plan built specifically around you with direct check-ins, check out <a href="/custom-plan.html">a Custom Plan</a> or <a href="/coaching.html">The Athletic Rebuild</a>, my 1-on-1 coaching.</p>
@@ -266,20 +307,40 @@
   </div>
 </section>
 
-<section class="final">
-  <div class="wrap">
-    <h2 class="display">A year from now you'll either be the person who used to be an athlete —<br><span class="g">or the person who came back.</span></h2>
+<section class="cta-footer">
+  <div class="container">
+    <h2>A year from now you'll either be the person who used to be an athlete —<br><em>or the person who came back.</em></h2>
     <div class="decide">It's free to join. What you do with it decides which story you tell.</div>
-    <a class="btn" href="https://www.skool.com/always-reddy-athletics-9861/about" target="_blank" rel="noopener">Claim a Free Founding Spot</a>
-    <p style="margin-top:18px;color:#8a8a8a;font-size:13px">No card required · Cancel anytime · <a href="/reset/" style="color:var(--gold-dk)">or try the 5-Day Reset first →</a></p>
+    <a href="https://www.skool.com/always-reddy-athletics-9861/about" target="_blank" rel="noopener" class="btn-primary btn-large">Claim a Free Founding Spot →</a>
+    <p style="margin-top:20px;font-size:0.85rem;color:rgba(244,242,239,0.4);">No card required · Cancel anytime · <a href="/reset/" style="color:var(--accent);text-decoration:none;">or try the 5-Day Reset first →</a></p>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">
-    © 2026 Always Reddy Athletics &nbsp;·&nbsp; <a href="/index.html">Home</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="/terms.html">Terms</a>
+  <div class="footer-logo">Always <span>Reddy</span> Athletics</div>
+  <div class="footer-links">
+    <a href="https://alwaysreddyathletics.com/legal.html">Privacy Policy</a>
+    <a href="https://alwaysreddyathletics.com/legal.html">Terms &amp; Conditions</a>
+    <a href="https://alwaysreddyathletics.com/legal.html">Disclaimer</a>
   </div>
+  <div class="footer-copy">© 2026 Always Reddy Athletics · All Rights Reserved · Pennsylvania, USA</div>
 </footer>
+
+<script>
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const btn = document.getElementById('nav-hamburger');
+  const open = menu.classList.toggle('open');
+  btn.classList.toggle('open', open);
+  btn.setAttribute('aria-expanded', open);
+}
+function closeMobileMenu() {
+  document.getElementById('mobile-menu').classList.remove('open');
+  const btn = document.getElementById('nav-hamburger');
+  btn.classList.remove('open');
+  btn.setAttribute('aria-expanded', 'false');
+}
+</script>
 
 </body>
 </html>
