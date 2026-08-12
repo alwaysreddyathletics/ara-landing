@@ -51,9 +51,14 @@
     h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.4rem,7vw,3.8rem);font-weight:900;line-height:1.05;margin-bottom:14px}
     h1 em{font-style:normal;color:#c8a96e}
     .sub{font-size:.97rem;color:rgba(244,242,239,0.6);line-height:1.75;margin-bottom:32px;font-weight:300}
-    .tier-summary{border:1px solid rgba(200,169,110,0.3);background:rgba(200,169,110,0.05);border-radius:2px;padding:18px 20px;margin-bottom:36px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .tier-summary{border:1px solid rgba(200,169,110,0.3);background:rgba(200,169,110,0.05);border-radius:2px;padding:18px 20px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
     .tier-summary-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem}
-    .tier-summary-price{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:#c8a96e}
+    .tier-summary-price{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:#c8a96e;text-align:right}
+    .tier-pay-link{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0a0a0a;background:#c8a96e;padding:7px 14px;border-radius:2px;display:inline-block;margin-top:8px;text-decoration:none;transition:background .2s}
+    .tier-pay-link:hover{background:#a8893e;text-decoration:none}
+    .paid-banner{display:none;background:rgba(120,200,120,0.1);border:1px solid rgba(120,200,120,0.4);color:#a8e8a8;padding:14px 18px;border-radius:2px;margin-bottom:36px;font-size:.9rem;text-align:center;line-height:1.6}
+    .paid-banner.show{display:block}
+    .tier-summary.hide{display:none}
     .form-section-label{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#c8a96e;margin:32px 0 16px;padding-bottom:8px;border-bottom:.5px solid rgba(200,169,110,0.25)}
     .form-section-label:first-of-type{margin-top:0}
     .form-group{margin-bottom:18px}
@@ -114,12 +119,17 @@
     <h1>Let's Build <em>Your Plan.</em></h1>
     <p class="sub">Tell us about your goal and current fitness. Coach Tyler will build your paces and week-by-week plan personally, then deliver it as your own private training page within 3–5 business days.</p>
 
-    <div class="tier-summary">
+    <div class="paid-banner" id="paidBanner">✓ Payment received. Fill in your info below and Tyler will start building your plan.</div>
+
+    <div class="tier-summary" id="tierSummary">
       <div>
         <div class="form-section-label" style="margin:0;border:none;padding:0;">Selected Package</div>
         <div class="tier-summary-name" id="tierName">Custom Interactive Plan</div>
       </div>
-      <div class="tier-summary-price" id="tierPrice">$129</div>
+      <div>
+        <div class="tier-summary-price" id="tierPrice">$99</div>
+        <a href="https://buy.stripe.com/aFa8wQb5415m9kme8H1ZS0d" target="_blank" rel="noopener" class="tier-pay-link" id="tierPayLink">Pay Now →</a>
+      </div>
     </div>
 
     <form id="intake-form">
@@ -137,8 +147,8 @@
       <div class="form-group">
         <label for="package">Package</label>
         <select id="package" name="package">
-          <option value="Custom Interactive Plan ($129)">Custom Interactive Plan — $129</option>
-          <option value="Custom Plan + Check-Ins ($199)">Custom Plan + Check-Ins — $199</option>
+          <option value="Custom Interactive Plan ($99)">Custom Interactive Plan — $99</option>
+          <option value="Custom Plan + Check-Ins ($169)">Custom Plan + Check-Ins — $169</option>
         </select>
       </div>
 
@@ -185,7 +195,7 @@
 
       <div class="err" id="err-msg"></div>
       <button type="button" class="btn" id="submit-btn" onclick="submitIntake()">Submit →</button>
-      <p class="fine-print">Payment is handled separately — Tyler will follow up with a checkout link if you haven't already paid. Your plan is built and delivered within 3–5 business days of both.</p>
+      <p class="fine-print" id="finePrint">Already paid above? You're all set — just fill in your info. Haven't paid yet? Use the Pay Now button above first; your plan starts as soon as payment and this form are both in.</p>
     </form>
   </div>
 
@@ -212,23 +222,39 @@
     btn.setAttribute('aria-expanded', 'false');
   }
 
-  // Preselect package from ?tier=plan or ?tier=checkins
+  // Preselect package from ?tier=plan or ?tier=checkins, and reflect ?paid=1 from Stripe
   (function () {
+    const STRIPE_LINKS = {
+      plan: 'https://buy.stripe.com/aFa8wQb5415m9kme8H1ZS0d',
+      checkins: 'https://buy.stripe.com/28E8wQ2yy15mdACfcL1ZS0e'
+    };
     const params = new URLSearchParams(location.search);
     const tier = params.get('tier');
+    const paid = params.get('paid') === '1';
     const select = document.getElementById('package');
     const tierName = document.getElementById('tierName');
     const tierPrice = document.getElementById('tierPrice');
-    if (tier === 'checkins') {
-      select.value = 'Custom Plan + Check-Ins ($199)';
-      tierName.textContent = 'Custom Plan + Check-Ins';
-      tierPrice.textContent = '$199';
-    }
-    select.addEventListener('change', () => {
-      const isCheckins = select.value.includes('Check-Ins');
+    const tierPayLink = document.getElementById('tierPayLink');
+    const tierSummary = document.getElementById('tierSummary');
+    const paidBanner = document.getElementById('paidBanner');
+    const finePrint = document.getElementById('finePrint');
+
+    function applyTier(isCheckins) {
+      select.value = isCheckins ? 'Custom Plan + Check-Ins ($169)' : 'Custom Interactive Plan ($99)';
       tierName.textContent = isCheckins ? 'Custom Plan + Check-Ins' : 'Custom Interactive Plan';
-      tierPrice.textContent = isCheckins ? '$199' : '$129';
-    });
+      tierPrice.textContent = isCheckins ? '$169' : '$99';
+      tierPayLink.href = isCheckins ? STRIPE_LINKS.checkins : STRIPE_LINKS.plan;
+    }
+
+    applyTier(tier === 'checkins');
+
+    if (paid) {
+      tierSummary.classList.add('hide');
+      paidBanner.classList.add('show');
+      finePrint.textContent = "You're all set — Tyler has your payment and will start on your plan as soon as this form is in.";
+    }
+
+    select.addEventListener('change', () => applyTier(select.value.includes('Check-Ins')));
   })();
 
   async function submitIntake() {
