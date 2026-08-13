@@ -279,6 +279,7 @@
       .container { padding:0 16px; }
       .product-price { font-size:1.5rem; }
     }
+    @media(max-width:440px) { .nav-actions a { display:none; } }
     /* Announcement bar */
     .announce-bar { position:fixed; top:0; left:0; right:0; z-index:101; height:var(--announce-h); background:var(--accent); color:var(--black); display:flex; align-items:center; justify-content:center; gap:6px; padding:0 48px 0 20px; font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:600; letter-spacing:0.04em; overflow:hidden; }
     body.no-announce .announce-bar { display:none; }
@@ -357,7 +358,7 @@
 <div class="mobile-menu" id="mobile-menu">
   <a href="/quiz.html" onclick="closeMobileMenu()">Quiz</a>
   <a href="/coaching.html" onclick="closeMobileMenu()">Coaching</a>
-  <a href="/club/" onclick="closeMobileMenu()">The Rebuild Club</a>
+  <a href="/club/" onclick="closeMobileMenu()">The Comeback Club</a>
   <a href="/custom-plan.html" onclick="closeMobileMenu()">Custom Plan</a>
   <a href="#about" onclick="closeMobileMenu()">About</a>
   <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
