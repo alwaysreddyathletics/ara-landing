@@ -18,7 +18,7 @@
   em { font-style:normal; color:var(--accent); }
   .container { max-width:1100px; margin:0 auto; padding:0 20px; }
   section { padding:80px 0; }
-  .section-label { font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:16px; text-align:center; }
+  .section-label { font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:16px; }
 
   /* nav — matches shared site pattern */
   nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; background:rgba(10,10,10,0.92); backdrop-filter:blur(10px); border-bottom:1px solid rgba(200,169,110,0.15); }
@@ -60,9 +60,9 @@
   .stat b { display:block; font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:2.4rem; color:var(--accent); line-height:1; }
   .stat span { display:block; margin-top:6px; font-family:'Barlow Condensed',sans-serif; font-weight:600; text-transform:uppercase; letter-spacing:.1em; font-size:0.78rem; color:var(--muted); }
 
-  .section .head { text-align:center; margin-bottom:48px; }
-  .section .head h2 { font-size:clamp(1.8rem,4.5vw,2.8rem); font-weight:800; margin-top:10px; }
-  .section .head p { color:var(--muted); max-width:580px; margin:14px auto 0; font-size:0.98rem; }
+  .head { margin-bottom:48px; }
+  .head h2 { font-size:clamp(1.8rem,4.5vw,2.8rem); font-weight:800; margin-top:10px; }
+  .head p { color:var(--muted); max-width:580px; margin:14px 0 0; font-size:0.98rem; }
 
   .story p { color:var(--muted); font-size:1rem; max-width:680px; margin:0 auto 18px; }
   .story p:last-child { margin-bottom:0; }
@@ -134,7 +134,7 @@
 <nav>
   <a href="/" class="nav-logo">Always <span>Reddy</span> Athletics</a>
   <div class="nav-links">
-    <a href="/reset">FREE RESET</a>
+    <a href="/quiz.html">Quiz</a>
     <a href="/coaching.html">Coaching</a>
     <a href="/club/" class="active">Club</a>
     <a href="/custom-plan.html">Custom Plan</a>
@@ -150,7 +150,7 @@
 </nav>
 
 <div class="mobile-menu" id="mobile-menu">
-  <a href="/reset" onclick="closeMobileMenu()">FREE RESET</a>
+  <a href="/quiz.html" onclick="closeMobileMenu()">Quiz</a>
   <a href="/coaching.html" onclick="closeMobileMenu()">Coaching</a>
   <a href="/club/" onclick="closeMobileMenu()">Club</a>
   <a href="/custom-plan.html" onclick="closeMobileMenu()">Custom Plan</a>
@@ -319,6 +319,7 @@
 <footer>
   <div class="footer-logo">Always <span>Reddy</span> Athletics</div>
   <div class="footer-links">
+    <a href="/reset">Free 5-Day Reset</a>
     <a href="https://alwaysreddyathletics.com/legal.html">Privacy Policy</a>
     <a href="https://alwaysreddyathletics.com/legal.html">Terms &amp; Conditions</a>
     <a href="https://alwaysreddyathletics.com/legal.html">Disclaimer</a>
