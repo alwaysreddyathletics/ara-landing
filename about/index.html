@@ -42,17 +42,18 @@
     .btn-ghost { font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--white); text-decoration:none; padding:8px 16px; border:1px solid rgba(255,255,255,0.2); border-radius:2px; transition:all 0.2s; white-space:nowrap; background:none; cursor:pointer; }
     .btn-ghost:hover { border-color:var(--accent); color:var(--accent); }
 
-    .about-hero { padding:calc(90px + 40px) 0 0; text-align:center; }
+    .about-hero { padding:calc(90px + 64px) 0 24px; text-align:center; }
     .about-hero .section-label { justify-content:center; display:flex; }
 
-    .coach { background:var(--black); }
-    .coach-grid { display:grid; grid-template-columns:300px 1fr; gap:60px; align-items:start; margin-top:8px; }
-    .coach-img { width:100%; aspect-ratio:1/2; object-fit:cover; border-radius:2px; filter:grayscale(20%); }
-    .coach-name { font-family:'Barlow Condensed',sans-serif; font-size:2.5rem; font-weight:900; margin-bottom:4px; }
-    .coach-title { font-size:0.85rem; color:var(--accent); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:24px; }
-    .coach-bio { font-size:1rem; color:rgba(244,242,239,0.75); line-height:1.75; margin-bottom:32px; }
-    .coach-bio p { margin-bottom:16px; }
-    .coach-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; padding-top:32px; border-top:1px solid rgba(255,255,255,0.08); }
+    .coach { background:var(--black); padding:64px 0 96px; }
+    .coach-grid { display:grid; grid-template-columns:300px 1fr; gap:64px; align-items:start; margin-top:0; }
+    .coach-img-frame { border:1px solid rgba(200,169,110,0.18); background:rgba(255,255,255,0.02); padding:14px; border-radius:6px; }
+    .coach-img { width:100%; aspect-ratio:1/2; object-fit:cover; border-radius:2px; filter:grayscale(20%); display:block; }
+    .coach-name { font-family:'Barlow Condensed',sans-serif; font-size:2.5rem; font-weight:900; margin-bottom:6px; }
+    .coach-title { font-size:0.85rem; color:var(--accent); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:32px; }
+    .coach-bio { font-size:1rem; color:rgba(244,242,239,0.75); line-height:1.8; margin-bottom:40px; }
+    .coach-bio p { margin-bottom:20px; }
+    .coach-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; padding-top:36px; border-top:1px solid rgba(255,255,255,0.08); }
     .coach-stat-num { font-family:'Barlow Condensed',sans-serif; font-size:1.6rem; font-weight:800; color:var(--accent); line-height:1; }
     .coach-stat-label { font-size:0.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.05em; margin-top:4px; line-height:1.35; }
 
@@ -115,7 +116,9 @@
 <section class="coach" id="about">
   <div class="container">
     <div class="coach-grid">
-      <img src="/tyler.jpg" alt="Coach Tyler Reddy" class="coach-img" onerror="this.style.display='none'">
+      <div class="coach-img-frame">
+        <img src="/tyler.jpg" alt="Coach Tyler Reddy" class="coach-img" onerror="this.parentElement.style.display='none'">
+      </div>
       <div>
         <div class="coach-name">Coach Tyler Reddy</div>
         <div class="coach-title">Founder · Always Reddy Athletics</div>
