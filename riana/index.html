@@ -402,18 +402,18 @@ const WEEKS = [
         { type:'yoga', title:'Yoga', sub:'20–30 min' },
       ]},
       { d:'THU', accent:'speed', blocks:[
-        { type:'tempo', title:'HM Pace Tempos', sub:'1.5 mi warm-up · 30 min @ HMGP (7:35–7:40) · 1 mi cooldown', intervals:{ warmup:true, reps:1, rest:false, cooldown:true } },
+        { type:'tempo', title:'HM Pace Repeats', sub:'1.5 mi warm-up · 3x2 mi @ HM goal pace (7:35–7:40) · 2 min jog recovery · 1 mi cooldown', intervals:{ warmup:true, reps:3, rest:true, cooldown:true } },
       ]},
       { d:'FRI', accent:'lift', blocks:[
-        { type:'optional', title:'Optional Easy Run', sub:'3–4 mi · 8:30–9:00' },
-        { type:'lift', title:'Optional Upper B Lift', groups:[
-          { name:'Compounds', items:['Push Ups 3x12','Flat DB Bench 3x12'] },
-          { name:'Secondary', items:['Chest Supported Row 3x12','Band Pull Aparts 2x12'] },
-          { name:'Accessories', items:['Suitcase Hold 2x40 sec/side'] },
+        { type:'optional', title:'Optional Easy Run', sub:'4 mi + 4 strides · 8:30–9:00 · Skip if legs need it' },
+        { type:'lift', title:'Optional Upper B Lift — Bonus Day', groups:[
+          { name:'Compounds', items:['Weighted Push-Up/Flat DB 3x10','Chest-Supported Row 3x10'] },
+          { name:'Secondary', items:['Band Pull-Apart 2x15'] },
+          { name:'Accessories', items:['Suitcase Carry 2x40 steps/side'] },
         ]},
       ]},
       { d:'SAT', accent:'long', blocks:[
-        { type:'long', title:'Long Run', sub:'10 mi · 9:00–9:30' },
+        { type:'long', title:'Long Run', sub:'11 mi · easy 9:00–9:30, last 3 mi @ HM pace (7:35–7:40)' },
       ]},
       { d:'SUN', accent:'', blocks:[
         { type:'mobility', title:'Mobility/Core', sub:'20–30 min' },
@@ -442,14 +442,18 @@ const WEEKS = [
         ]},
         { type:'yoga', title:'Yoga', sub:'20–30 min' },
       ]},
-      { d:'THU', accent:'speed', blocks:[
-        { type:'tempo', title:'HM Pace Tempos', sub:'1 mi warm-up · 15 min @ HMGP (7:35–7:40) · 1 mi cooldown', intervals:{ warmup:true, reps:1, rest:false, cooldown:true } },
+      { d:'THU', accent:'', blocks:[
+        { type:'run', title:'Easy-Moderate Run', sub:'1 mi warm-up · 15 min easy-moderate effort only · 1 mi cooldown' },
       ]},
-      { d:'FRI', accent:'', blocks:[
-        { type:'optional', title:'Optional Easy Run', sub:'3 mi · 8:30–9:00' },
+      { d:'FRI', accent:'lift', blocks:[
+        { type:'optional', title:'Optional Easy Run', sub:'3 mi + 4 strides · 8:30–9:00 · Skip if legs need it' },
+        { type:'lift', title:'Optional Upper B Lift — Light', groups:[
+          { name:'Compounds', items:['Push-Up/Flat DB 2x8','Chest-Supported Row 2x8'] },
+          { name:'Secondary', items:['Band Pull-Apart 2x12'] },
+        ]},
       ]},
       { d:'SAT', accent:'long', blocks:[
-        { type:'long', title:'Long Run', sub:'7 mi · 9:00–9:30' },
+        { type:'long', title:'Long Run', sub:'8 mi easy-steady · 9:00–9:30' },
       ]},
       { d:'SUN', accent:'', blocks:[
         { type:'mobility', title:'Mobility/Core', sub:'20–30 min' },
