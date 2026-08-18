@@ -38,7 +38,13 @@
     body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
     a{color:#c8a96e;text-decoration:none}
     a:hover{text-decoration:underline}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,10,0.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(200,169,110,0.15)}
+    .announce-bar{position:fixed;top:0;left:0;right:0;z-index:101;height:44px;background:#c8a96e;color:#0a0a0a;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 20px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:.03em;text-align:center}
+    .announce-bar strong{text-decoration:line-through;opacity:.65;margin-right:2px}
+    .announce-bar .arrow{opacity:.65}
+    .announce-bar a{color:#0a0a0a;text-decoration:underline;text-underline-offset:2px;margin-left:6px;white-space:nowrap}
+    .announce-short{display:none}
+    @media(max-width:600px){.announce-long{display:none}.announce-short{display:inline}.announce-bar{font-size:.78rem;padding:0 16px}}
+    nav{position:fixed;top:44px;left:0;right:0;z-index:100;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,10,0.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(200,169,110,0.15)}
     .nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:.05em;text-transform:uppercase;color:#f4f2ef;text-decoration:none}
     .nav-logo span{color:#c8a96e}
     .nav-links{display:flex;gap:28px;align-items:center}
@@ -49,7 +55,7 @@
     .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
     .nav-hamburger.open span:nth-child(2){opacity:0}
     .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-    .mobile-menu{display:none;position:fixed;top:53px;left:0;right:0;background:#0d0d0d;border-bottom:1px solid rgba(200,169,110,0.15);z-index:99;padding:8px 0 16px}
+    .mobile-menu{display:none;position:fixed;top:97px;left:0;right:0;background:#0d0d0d;border-bottom:1px solid rgba(200,169,110,0.15);z-index:99;padding:8px 0 16px}
     .mobile-menu a{display:block;padding:14px 22px;font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#888;text-decoration:none;border-bottom:.5px solid rgba(255,255,255,0.04);transition:color .2s}
     .mobile-menu a:hover{color:#f4f2ef}
     .mobile-menu .mobile-cta{color:#c8a96e;border-bottom:none}
@@ -57,7 +63,7 @@
     .nav-actions{display:flex;gap:12px;align-items:center}
     .btn-ghost{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:#f4f2ef;border:1px solid rgba(255,255,255,0.2);padding:8px 16px;border-radius:2px;text-decoration:none;transition:all .2s}
     .btn-ghost:hover{border-color:#c8a96e;color:#c8a96e;text-decoration:none}
-    .page{padding:140px 24px 100px;max-width:680px;margin:0 auto}
+    .page{padding:184px 24px 100px;max-width:680px;margin:0 auto}
     .eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#c8a96e;margin-bottom:16px;display:flex;align-items:center;gap:10px}
     .eyebrow::before,.eyebrow::after{content:'';flex:1;height:1.5px;background:rgba(200,169,110,0.3)}
     h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.4rem,7vw,3.8rem);font-weight:900;line-height:1.05;margin-bottom:18px}
@@ -123,10 +129,16 @@
     .form-divider{border-top:.5px solid rgba(200,169,110,0.25);padding-top:56px;margin-bottom:32px}
     @media(max-width:500px){.nav-links{display:none}.nav-hamburger{display:flex}.mobile-menu.open{display:block}.form-row{grid-template-columns:1fr}.proof-grid{grid-template-columns:1fr}}
     @media(max-width:440px){.nav-actions a{display:none}}
-    @media(max-width:600px){.page{padding:120px 20px 80px}.steps,.proof-section,.testimonials,.faq{margin-bottom:56px}}
+    @media(max-width:600px){.page{padding:164px 20px 80px}.steps,.proof-section,.testimonials,.faq{margin-bottom:56px}}
   </style>
 </head>
 <body>
+
+<div class="announce-bar">
+  <span class="announce-long"><strong>$99</strong><span class="arrow">→</span> Your plan is FREE for 4 weeks — sign up by August 31.</span>
+  <span class="announce-short"><strong>$99</strong><span class="arrow">→</span> FREE for 4 weeks. Sign up by Aug 31.</span>
+  <a href="#tierSummary">See details ↓</a>
+</div>
 
 <nav>
   <a href="/" class="nav-logo">Always <span>Reddy</span> Athletics</a>
@@ -161,7 +173,7 @@
     <div class="eyebrow">Custom Interactive Plan</div>
     <h1>Let's Build <em>Your Plan.</em></h1>
     <p class="sub">Tell us about your goal and current fitness. Coach Tyler will build your paces and week-by-week plan personally, then deliver it as your own private training page within 3–5 business days.</p>
-    <p class="page-urgency"><span class="tier-strike">$99</span> Free through August 31 — then back to normal pricing.</p>
+    <p class="page-urgency"><span class="tier-strike">$99</span> Free for 4 weeks from your sign-up date — sign up by August 31.</p>
     <div class="trust-strip">
       <span><strong>10+</strong> years coaching</span>
       <span class="dot">·</span>
@@ -253,7 +265,7 @@
       <div>
         <div class="form-section-label" style="margin:0;border:none;padding:0;">Selected Package</div>
         <div class="tier-summary-name" id="tierName">Custom Interactive Plan</div>
-        <div class="tier-urgency">Free through August 31 — then back to normal pricing</div>
+        <div class="tier-urgency">Free for 4 weeks from sign-up — sign up by August 31</div>
       </div>
       <div class="tier-summary-price"><span class="tier-strike" id="tierStrike">$99</span> Free</div>
     </div>
