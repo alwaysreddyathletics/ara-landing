@@ -460,6 +460,43 @@ const WEEKS = [
         { type:'yoga', title:'Yoga', sub:'20–30 min' },
       ]},
     ]},
+  { n:5, dates:'Aug 31–Sept 6', start:'2026-08-31', end:'2026-09-06', target:'34 mi', phase:'BUILD',
+    days:[
+      { d:'MON', accent:'', blocks:[
+        { type:'run', title:'Easy Run', sub:'4 mi · 8:30–9:30' },
+      ]},
+      { d:'TUE', accent:'lift', blocks:[
+        { type:'interval', title:'Interval Run', sub:'2 mi warm-up · 6x800m @ 10k pace (7:15–7:25) · 2 min jog rest · 1 mi cooldown', intervals:{ warmup:true, reps:6, rest:true, cooldown:true } },
+        { type:'lift', title:'Full Body Lift A', groups:[
+          { name:'Compounds', items:['Single Leg RDL 3x8','Split Squat 3x8/side','DB Incline Bench 3x8'] },
+          { name:'Accessories', items:['Cable Pushdown 3x12','Face Pull 3x15','Russian Twist 3x10/side'] },
+        ]},
+      ]},
+      { d:'WED', accent:'lift', blocks:[
+        { type:'run', title:'Easy Run', sub:'6 mi · 8:30–9:30' },
+        { type:'lift', title:'Full Body Lift B', groups:[
+          { name:'Compounds', items:['DB Shoulder Press 4x6','Lat Pulldown 4x6','DB Flat Bench 3x8'] },
+          { name:'Accessories', items:['Single Arm DB Row 4x8/side','Band Pull Apart 3x15','Deadbugs 2x8/side'] },
+        ]},
+      ]},
+      { d:'THU', accent:'speed', blocks:[
+        { type:'tempo', title:'Tempos — Key Session', sub:'1.5 mi warm-up · 5 mi @ HMGP (7:35–7:40) · 1 mi cooldown', intervals:{ warmup:true, reps:1, rest:false, cooldown:true } },
+      ]},
+      { d:'FRI', accent:'lift', blocks:[
+        { type:'optional', title:'Optional Easy Run', sub:'4 mi · 8:30–9:30' },
+        { type:'lift', title:'Optional Full Body Lift', groups:[
+          { name:'Compounds', items:['Close Grip Bench 3x10','Inverted Row 3x10','Flat DB Bench 3x10'] },
+          { name:'Accessories', items:['Face Pull 3x15','Suitcase Hold 3x40 sec/side'] },
+        ]},
+      ]},
+      { d:'SAT', accent:'long', blocks:[
+        { type:'long', title:'Long Run', sub:'10 mi · easy 9:00–9:30, middle 6 mi @ HM pace (7:35–7:40)' },
+      ]},
+      { d:'SUN', accent:'', blocks:[
+        { type:'mobility', title:'Mobility/Core', sub:'20–30 min' },
+        { type:'yoga', title:'Yoga', sub:'20–30 min' },
+      ]},
+    ]},
 ];
 
 const PHASE_DESC = {
