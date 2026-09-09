@@ -496,6 +496,31 @@ const WEEKS = [
         { type:'yoga', title:'Yoga', sub:'20–30 min' },
       ]},
     ]},
+  { n:6, dates:'Sept 7–13', start:'2026-09-07', end:'2026-09-13', target:'29 mi', phase:'BUILD',
+    days:[
+      { d:'MON', accent:'', blocks:[
+        { type:'run', title:'Easy Run', sub:'6 mi · 8:30–9:30' },
+      ]},
+      { d:'TUE', accent:'speed', blocks:[
+        { type:'interval', title:'Interval Run', sub:'2 mi warm-up · 4x3min @ 10k pace (7:15–7:25) · 2 min jog rest · 1 mi cooldown · Controlled — don\'t start hot, stop a rep early if it gets labored', intervals:{ warmup:true, reps:4, rest:true, cooldown:true } },
+      ]},
+      { d:'WED', accent:'', blocks:[
+        { type:'run', title:'Easy Run', sub:'3 mi · 8:30–9:30 · Held steady this week' },
+      ]},
+      { d:'THU', accent:'speed', blocks:[
+        { type:'tempo', title:'HM Pace Repeats — Final Rehearsal', sub:'1.5 mi warm-up · 3x1 mi @ HM goal pace (7:35–7:40) · full recovery jog between reps · 1 mi cooldown · Rehearsal, not a test — don\'t press faster', intervals:{ warmup:true, reps:3, rest:true, cooldown:true } },
+      ]},
+      { d:'FRI', accent:'', blocks:[
+        { type:'rest', title:'Rest Day', sub:'Run dropped this week — full recovery before Saturday\'s long run' },
+      ]},
+      { d:'SAT', accent:'long', blocks:[
+        { type:'long', title:'Long Run', sub:'8 mi · easy 9:00–9:30 · Genuinely easy — last long effort before the race' },
+      ]},
+      { d:'SUN', accent:'', blocks:[
+        { type:'mobility', title:'Mobility/Core', sub:'20–30 min' },
+        { type:'yoga', title:'Yoga', sub:'20–30 min' },
+      ]},
+    ]},
 ];
 
 const PHASE_DESC = {
