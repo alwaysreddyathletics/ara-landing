@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Comeback Club — Always Reddy Athletics</title>
-<meta name="description" content="Monthly athlete programming for former athletes with desk jobs. Running, strength, mobility, challenges. Free for the first 50 founding members.">
+<title>Rebuild Club — $29/mo | Always Reddy Athletics</title>
+<meta name="description" content="Monthly performance programming for former athletes with desk jobs — strength, conditioning, mobility, and running — with quarterly retests. $29/mo. First month free for Performance Block buyers.">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,8 +126,8 @@
     .stats .container { grid-template-columns:1fr; gap:20px; }
     .feature-row { flex-wrap:wrap; }
     .pricing { padding:30px 22px; }
+    .btn-large { display:block; width:100%; padding:16px 18px; font-size:1rem; white-space:normal; }
   }
-  @media(max-width:440px) { .nav-actions a { display:none; } }
 </style>
 </head>
 <body>
@@ -135,82 +135,30 @@
 <nav>
   <a href="/" class="nav-logo">Always <span>Reddy</span> Athletics</a>
   <div class="nav-links">
-    <a href="/quiz.html">Quiz</a>
-    <a href="/coaching.html">Coaching</a>
+    <a href="/">Performance Block</a>
     <a href="/club/" class="active">Club</a>
-    <a href="/custom-plan.html">Custom Plan</a>
     <a href="/about/">About</a>
-    <a href="/contact.html">Contact</a>
   </div>
-  <div class="nav-actions">
-    <a href="https://www.skool.com/always-reddy-athletics-9861/about" target="_blank" rel="noopener" class="btn-primary">Join Free →</a>
-    <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <div class="mobile-menu" id="mobile-menu">
-  <a href="/quiz.html" onclick="closeMobileMenu()">Quiz</a>
-  <a href="/coaching.html" onclick="closeMobileMenu()">Coaching</a>
+  <a href="/" onclick="closeMobileMenu()">Performance Block</a>
   <a href="/club/" onclick="closeMobileMenu()">Club</a>
-  <a href="/custom-plan.html" onclick="closeMobileMenu()">Custom Plan</a>
   <a href="/about/" onclick="closeMobileMenu()">About</a>
-  <a href="/contact.html" onclick="closeMobileMenu()">Contact</a>
 </div>
 
 <section class="hero">
   <div class="container">
-    <div class="hero-eyebrow">Founding Access Open &nbsp;·&nbsp; First 50 Athletes Free</div>
-    <div class="kicker">You used to be —</div>
-    <h1>are still <em>an athlete.</em></h1>
-    <p class="sub">Then came the desk. The commute. The meetings that could've been emails. Here's the truth nobody tells you: <strong>the athlete didn't leave — the system did.</strong> You didn't get soft. You got busy, and nobody handed you a plan built for the life you actually live. The Comeback Club is that plan.</p>
+    <div class="hero-eyebrow">The Rebuild Club · $29/mo</div>
+    <h1>Keep training <em>like an athlete.</em></h1>
+    <p class="sub">Monthly performance programming — <strong>strength, conditioning, mobility, and running</strong> — with a retest every quarter. Built for former athletes with desk jobs.</p>
     <div class="cta">
-      <a href="https://www.skool.com/always-reddy-athletics-9861/about" target="_blank" rel="noopener" class="btn-primary btn-large">Claim a Free Founding Spot →</a>
+      <a href="https://www.skool.com/always-reddy-athletics-9861/about" target="_blank" rel="noopener" class="btn-primary btn-large">Join the Rebuild Club – $29/mo</a>
     </div>
-    <div class="cta-sub">Not ready? <a href="/reset/">Start with the free 5-Day Reset →</a></div>
-  </div>
-</section>
-
-<section class="stats">
-  <div class="container">
-    <div class="stat"><b>3:27</b><span>Marathon</span></div>
-    <div class="stat"><b>5:36</b><span>Mile</span></div>
-    <div class="stat"><b>19:37</b><span>5K</span></div>
-  </div>
-</section>
-
-<section class="story">
-  <div class="container">
-    <div class="head">
-      <div class="section-label">The Story</div>
-      <h2>Built With a Full-Time Job</h2>
-    </div>
-    <p>I'm not a genetic freak, and I don't train four hours a day.</p>
-    <p>But in the last fourteen months, on a system built around a real schedule, I took my marathon from 4:45 to 3:27 on the same course. I ran 37 miles with 8,000 feet of climbing through the mountains. Two weeks later I was on a track running quarter-mile repeats at a pace I couldn't touch in high school.</p>
-    <p>This summer that same system took my mile to 5:36 and my 5K from 20:02 to <strong>19:37</strong> — in a single week. Not because I found more time. Because I stopped training randomly and started training like an athlete again — running that builds an engine, lifting that builds a frame, mobility that keeps a desk-job body moving like it did at 18.</p>
-    <p>That system is what I coach. And now it's what you can train on, every single month.</p>
-  </div>
-</section>
-
-<section style="background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)">
-  <div class="container">
-    <div class="head">
-      <div class="section-label">One System, Two Paths</div>
-      <h2>Pick What You're Chasing</h2>
-    </div>
-    <div class="grid-2">
-      <div class="path-card">
-        <div class="tag">Track 01</div>
-        <h3>Speed</h3>
-        <p>5K / 10K. Shorter, sharper run workouts — intervals, strides, top-end speed. Built for the feeling of being fast again.</p>
-      </div>
-      <div class="path-card">
-        <div class="tag">Track 02</div>
-        <h3>Endurance</h3>
-        <p>Half / Marathon. The long run is the anchor and grows every month. Built for the athlete who can go forever.</p>
-      </div>
-    </div>
+    <div class="cta-sub">Finished a Performance Block? Your first month is free.</div>
   </div>
 </section>
 
@@ -218,32 +166,33 @@
   <div class="container">
     <div class="head">
       <div class="section-label">What's Inside</div>
-      <h2>Everything You Need to Train Like an Athlete Again</h2>
+      <h2>Monthly Programming. <em>Quarterly Retests.</em></h2>
+      <p>The Performance Block gets you moving like an athlete again. The Club keeps you there.</p>
     </div>
 
     <div class="feature-row">
       <div class="num">01</div>
-      <div><h3>Monthly Running Programs</h3><p>Two tracks — Speed (5K/10K) and Endurance (half/marathon). Real paces, real structure, a fresh 4-week block every month.</p></div>
+      <div><h3>New Training Every Month</h3><p>A fresh 4-week block each month. Strength, conditioning, mobility, and running programmed together — not four separate apps.</p></div>
     </div>
     <div class="feature-row">
       <div class="num">02</div>
-      <div><h3>Athlete Strength Sessions</h3><p>Purposeful, unilateral, functional — built on hinge, squat, push, pull, carry. Keeps you fast <em>and</em> strong. Dumbbells or a basic gym, bodyweight versions for everything.</p></div>
+      <div><h3>Strength</h3><p>Hinge, squat, push, pull, carry. Gym, dumbbells, or bodyweight versions for every session.</p></div>
     </div>
     <div class="feature-row">
       <div class="num">03</div>
-      <div><h3>Weekly Mobility Flows</h3><p>10–15 minute follow-alongs that undo the desk and keep training sustainable past week six — where most comebacks quietly die.</p></div>
+      <div><h3>Conditioning + Running</h3><p>Intervals, tempo work, and engine building that carries over to a race, a rec-league season, or a Hyrox-style event.</p></div>
     </div>
     <div class="feature-row">
       <div class="num">04</div>
-      <div><h3>Monthly Challenges + Leaderboard</h3><p>Mile time trials, hill repeats, plank ladders. Baseline in August, retest in December — the gap between the two is the real scoreboard. You miss competing. I know you do.</p></div>
+      <div><h3>Mobility</h3><p>Short follow-along sessions that undo the desk and keep you training without breaking down.</p></div>
     </div>
     <div class="feature-row">
       <div class="num">05</div>
-      <div><h3>Monthly Live Q&amp;A + Direct Access</h3><p>Bring your training, your race, your plateau. Questions answered in the community, form checks, plan adjustments when life gets in the way.</p></div>
+      <div><h3>Quarterly Retests</h3><p>Every three months, retest. Same tests, real numbers, so you know the work is working.</p></div>
     </div>
     <div class="feature-row">
       <div class="num">06</div>
-      <div><h3>The PR Playbooks</h3><p>My exact taper, pacing, and race-week protocols — the same ones behind the mile and 5K numbers above.</p></div>
+      <div><h3>Community + Q&amp;A</h3><p>Train alongside other former athletes. Ask questions, get answers from a coach.</p></div>
     </div>
   </div>
 </section>
@@ -251,15 +200,14 @@
 <section style="background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)">
   <div class="container">
     <div class="head">
-      <div class="section-label">Who This Is For</div>
+      <div class="section-label">Who It's For</div>
       <h2>Sound Familiar?</h2>
     </div>
     <ul class="who-list">
-      <li>You played sports — high school, club, college — and haven't had a "season" since.</li>
-      <li>You've got 45–60 minutes a day, not a training-camp schedule.</li>
+      <li>You played sports and miss training with a purpose.</li>
+      <li>You work a desk job and have 45–60 minutes a day.</li>
       <li>You're done with random workouts that don't build toward anything.</li>
-      <li>You miss the scoreboard more than you'll admit — the clock, the gun, the number that doesn't lie.</li>
-      <li>You want structure from someone who's actually doing the work himself, not just coaching it.</li>
+      <li>You finished a Performance Block and want to keep the momentum.</li>
     </ul>
   </div>
 </section>
@@ -267,16 +215,15 @@
 <section>
   <div class="container">
     <div class="head">
-      <div class="section-label">Founding Membership</div>
+      <div class="section-label">Membership</div>
     </div>
     <div class="pricing">
-      <div class="badge">First 50 Athletes Only</div>
-      <div class="value-line">Over $300/month of coaching value</div>
-      <div class="price"><span class="strike">$97/mo</span>Free</div>
-      <div class="note">Free — Locked In For Life</div>
-      <div class="spotnum">First 50 Free &nbsp;·&nbsp; Member 51 Pays $97/mo</div>
-      <a href="https://www.skool.com/always-reddy-athletics-9861/about" target="_blank" rel="noopener" class="btn-primary btn-large">Join The Comeback Club →</a>
-      <div class="guarantee"><strong>No catch.</strong> Free means free — no card required to join. If it's not for you, leave anytime in two clicks. No forms, no friction.</div>
+      <div class="badge">Performance Block Buyers: First Month Free</div>
+      <div class="price">$29<span>/mo</span></div>
+      <div class="note">Cancel Anytime</div>
+      <div class="spotnum">Monthly programming · Quarterly retests · Community</div>
+      <a href="https://www.skool.com/always-reddy-athletics-9861/about" target="_blank" rel="noopener" class="btn-primary btn-large">Join the Rebuild Club</a>
+      <div class="guarantee"><strong>Start with the block.</strong> New here? The <a href="/" style="color:var(--accent)">ARA Performance Block</a> ($97) builds your baseline with a custom 12-week plan — and your first Club month is free after.</div>
     </div>
   </div>
 </section>
@@ -290,19 +237,19 @@
     <div class="faq-max">
       <div class="faq-item">
         <h3>Is this 1-on-1 coaching?</h3>
-        <p>No — the Club is group programming. Every month you get the full training system (running, strength, mobility) in two tracks — Speed (5K/10K) and Endurance (half/marathon); you pick yours and train alongside the whole Club. If you want a plan built specifically around you with direct check-ins, check out <a href="/custom-plan.html">a Custom Plan</a> or <a href="/coaching.html">The Athletic Rebuild</a>, my 1-on-1 coaching.</p>
+        <p>No. The Club is group programming everyone trains from. If you want a plan built around you, start with the <a href="/">Performance Block</a>.</p>
       </div>
       <div class="faq-item">
         <h3>How much time does it take?</h3>
-        <p>45–60 minutes a day, five to six days a week. Built for a person with a job, not a pro with a nap schedule.</p>
+        <p>45–60 minutes a day, four to six days a week.</p>
       </div>
       <div class="faq-item">
-        <h3>I haven't trained seriously in years. Is this for me?</h3>
-        <p>It's built for exactly you. Every program has an on-ramp tier, and the strength work scales from bodyweight up. You start where you are.</p>
+        <h3>How do I get my free month?</h3>
+        <p>Buy the Performance Block. Your first month of the Club is free — details come with your plan.</p>
       </div>
       <div class="faq-item">
-        <h3>What happens after I join?</h3>
-        <p>You're in the Club instantly — membership is free and lives on Skool, no card required. The pinned Start Here post walks you through picking your track, posting an intro, and starting this week's training. Cancel anytime in two clicks from your settings.</p>
+        <h3>Can I cancel?</h3>
+        <p>Yes, anytime, from your account settings.</p>
       </div>
     </div>
   </div>
@@ -310,20 +257,18 @@
 
 <section class="cta-footer">
   <div class="container">
-    <h2>A year from now you'll either be the person who used to be an athlete —<br><em>or the person who came back.</em></h2>
-    <div class="decide">It's free to join. What you do with it decides which story you tell.</div>
-    <a href="https://www.skool.com/always-reddy-athletics-9861/about" target="_blank" rel="noopener" class="btn-primary btn-large">Claim a Free Founding Spot →</a>
-    <p style="margin-top:20px;font-size:0.85rem;color:rgba(244,242,239,0.4);">No card required · Cancel anytime · <a href="/reset/" style="color:var(--accent);text-decoration:none;">or try the 5-Day Reset first →</a></p>
+    <h2>Don't stop at week 12. <em>Keep going.</em></h2>
+    <div class="decide">Monthly programming. Quarterly retests. $29/mo.</div>
+    <a href="https://www.skool.com/always-reddy-athletics-9861/about" target="_blank" rel="noopener" class="btn-primary btn-large">Join the Rebuild Club</a>
   </div>
 </section>
 
 <footer>
   <div class="footer-logo">Always <span>Reddy</span> Athletics</div>
   <div class="footer-links">
-    <a href="/reset">Free 5-Day Reset</a>
-    <a href="https://alwaysreddyathletics.com/legal.html">Privacy Policy</a>
-    <a href="https://alwaysreddyathletics.com/legal.html">Terms &amp; Conditions</a>
-    <a href="https://alwaysreddyathletics.com/legal.html">Disclaimer</a>
+    <a href="https://www.instagram.com/alwaysreddyathletics/" target="_blank" rel="noopener">Instagram</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/legal.html">Privacy · Terms · Disclaimer</a>
   </div>
   <div class="footer-copy">© 2026 Always Reddy Athletics · All Rights Reserved · Pennsylvania, USA</div>
 </footer>
